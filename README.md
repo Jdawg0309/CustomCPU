@@ -1,0 +1,149 @@
+# CustomCPU
+
+**A gate-level ARMv4T CPU (and INT8 NPU), built from scratch in Logisim — every block understood down to the gate.**
+
+The rule of the project: *if I can't explain a block, I don't get to use it.* No behavioral shortcuts in the datapath — built-ins are allowed only where the underlying gates are understood, and `a*b`-style behavior is used only as a test oracle, never as hardware.
+
+The ARMv4T CPU is the learning artifact. The long-term target is an open-ISA machine with a hand-built INT8 systolic NPU, benchmarked gate-for-gate against commercial silicon (Hailo-8L).
+
+---
+
+## Progress
+
+```
+OVERALL (working single-cycle ARMv4T CPU)    ███████░░░░░░░░░░░░░░░  34%
+
+  Compute core (ALU + multiplier + decode)   ██████████████████████  100%
+  Datapath (regfile, shifter, CPSR, PC)      ██░░░░░░░░░░░░░░░░░░░░  10%
+  Memory & control flow (LDR/STR, branch)    ░░░░░░░░░░░░░░░░░░░░░░  0%
+  Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
+  NPU (INT8 systolic, gate-level MAC)        ███░░░░░░░░░░░░░░░░░░░  12%
+```
+
+**Next milestone (M1, "it's alive"):** register file + PC/fetch wired to the ALU → first instruction executes.
+
+---
+
+## What's done, block by block
+
+### ✅ Compute core — 100%
+| Block | Status | Notes |
+|-------|--------|-------|
+| `ks_32b` | ✅ sealed | 32-bit Kogge-Stone adder/subtractor (parallel-prefix carry) |
+| `ALU_logic_engine` | ✅ sealed | AND · EOR · ORR · MOV · BIC · MVN → out_mux slot 00 |
+| `ALU_arithmetic_engine` | ✅ sealed | ADD · SUB · RSB · ADC · SBC · RSC (invert layers + Cin mux) → slot 01 |
+| `mul_32b` | ✅ sealed | gate-level 32×32 → low-32 multiplier → slot 10 |
+| `ALU` | ✅ sealed | 16 data-processing ops + MUL, N/Z/C/V flags, verified vs oracle |
+| decode ROM (`opcode`) | ✅ sealed | opcode → 10-bit control word |
+
+### ⏳ Datapath — 10% (primitives exist in V1, not yet integrated)
+| Block | Status | Notes |
+|-------|--------|-------|
+| register file (16×32) | ⏳ have V1 `reg16x32` | needs 2-read / 1-write ports; where `write_enable` finally acts |
+| barrel shifter | ☐ todo | operand2 shift |
+| operand2 mux (I-bit) | ☐ todo | register vs immediate |
+| CPSR (flag register) | ☐ todo | latch N/Z/C/V |
+| condition check | ☐ todo | the ARM condition field |
+| PC / fetch | ⏳ have V1 `PC_fetch` | adapt into the datapath |
+| integration → first instruction | ☐ todo | the "it's alive" moment |
+
+### ☐ Memory & control flow — 0%
+LDR/STR, RAM, branch (B/BL), LDM/STM.
+
+### ☐ Pipeline — 0%
+5-stage, added *after* single-cycle works.
+
+### ⏳ NPU (INT8 systolic) — 12%
+V1 systolic array exists (`PE_cell`, `Systollic_2x2`, `systolic_4x4`, `matmul4x4`) using a black-box multiplier. Next step: replace that with the gate-level `mul_32b` to make the whole array transparent — the multiplier is the shared MAC primitive.
+
+---
+
+## Architecture — the compute core
+
+```
+        A(32)   B(32)
+          │       │
+   ┌──────┴───────┴─────────────────────────┐
+   │  logic_unit ──────────► out_mux 00      │
+   │  arithmetic_engine ───► out_mux 01      │   engine_sel(2) picks one
+   │    (ks_32b + invert + Cin mux)          │
+   │  mul_32b ─────────────► out_mux 10      │
+   │  (reserved: FPU) ─────► out_mux 11      │
+   └───────────────┬─────────────────────────┘
+                   ▼
+              result(32) ─► N Z C V
+```
+
+All three engines read the same operands and compute in parallel every cycle; the 4:1 `out_mux` selects one. Slot 11 is reserved headroom for a future FPU.
+
+### The multiplier — carry-save, fully gate-level
+
+`mul_32b` computes `Rm × Rs → low 32 bits` (ARM `MUL`, §4.7) the way a real CPU does — a carry-save reduction tree, **not** shift-and-add:
+
+```
+partial_products ──► CSA reduction (30 × 3:2 compressors) ──► ks_32b ──► product
+  32 AND rows            32 vectors → 2 vectors               one real add
+```
+
+- **partial_products** — 32 rows, `row_i = (Rm AND broadcast(Rs[i])) << i`. Broadcast is a sign-extended single bit; the shift is pure wire placement.
+- **csa_3to_2** — 3:2 compressor: `sum = X⊕Y⊕Z`, `carry = maj(X,Y,Z) << 1`, inter-bit carry **unchained** → constant delay, no ripple. That is the carry-save trick.
+- **csa_reduction_chain** — 30 tiles collapse 32 vectors to 2 (`32 − 2 = 30`; each 3:2 tile removes one vector).
+- **ks_32b** — the single carry-propagate add resolving the final `(sum, carry)` pair.
+
+Verified: `0xFFFFFFFF² = 0x1`, `0xDEADBEEF² = 0x216DA321`, `255² = 0xFE01`, `13×11 = 0x8F`, `0x9E3779B9 × 0x7F4A7C15 = 0xCFFC982D`.
+
+---
+
+## Verification — *trust the circuit, verify the human*
+
+Every sealed block gets a **discriminator test**: a single input that uniquely exposes the bug (e.g. all-zeros + Cin=1 → `0x1` for the adder; `0xFFFFFFFF² → 0x1` for the multiplier).
+
+`armv4t_alu.py` is the **golden software oracle** — the ALU's 16-op table, flag logic, and decode ROM modeled in Python. The gate-level ALU must match it bit-for-bit.
+
+```bash
+python3 armv4t_alu.py --test        # 10 golden edge cases (all pass)
+python3 armv4t_alu.py --decoder     # opcode → ROM word → controls → result + flags
+python3 armv4t_alu.py --legend      # full control-signal + flag reference
+python3 armv4t_alu.py 0xAA 0xBB 1   # any A, B, Cflag
+```
+
+---
+
+## Repository
+
+```
+armv4t.circ             Logisim Evolution project — the V2 build (sealed compute core + multiplier)
+ALU_modular_design.circ V1 build — datapath primitives (reg16x32, PC_fetch, ...) + V1 systolic NPU
+armv4t_alu.py           golden software oracle for the ALU
+opcode                  decode ROM image (Logisim v3.0 hex)
+```
+
+---
+
+## Roadmap
+
+```
+multiplier ─┬─► CPU MUL/MLA                              ✅ done
+            └─► NPU MAC → PE → systolic array → YOLO     (reuses mul_32b)
+
+register file ─► shifter/CPSR/cond/PC ─► integrate ─► FIRST INSTRUCTION   ◄ next (M1)
+        ↓
+  single-cycle CPU ─► +memory/branch ─► runs compiled C
+        ↓
+  5-stage pipeline ─► NPU (INT8) ─► benchmark vs Hailo-8L
+```
+
+---
+
+## A lesson worth keeping
+
+Logisim's multi-input XOR gate computes **"exactly one input high" (1-of-n), not odd parity**, for 3+ inputs — so a 3-input XOR gives `4 ⊕ 4 ⊕ 4 = 0`. Build parity from **chained 2-input XORs**. Every 2-input test passes, so this hides beautifully until a carry-save sum quietly drops bits.
+
+---
+
+## Hardware & references
+
+- **Design:** Logisim Evolution · **Synthesis:** Quartus Prime Lite
+- **Boards:** DE10-Lite (MAX 10) now; Arty A7 for the NPU scale-up
+- **Spec / oracle:** ARM DDI 0084D (ARM7TDMI-S)
+- **NPU benchmark target:** Hailo-8L + Raspberry Pi 5

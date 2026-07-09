@@ -17,7 +17,7 @@ OVERALL (working single-cycle ARMv4T CPU)    █████████░░�
   Datapath (regfile, fetch, shifter, CPSR)   ██████░░░░░░░░░░░░░░░░  25%
   Memory & control flow (LDR/STR, branch)    ░░░░░░░░░░░░░░░░░░░░░░  0%
   Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
-  NPU (INT8 systolic, gate-level MAC)        ███░░░░░░░░░░░░░░░░░░░  12%
+  NPU (gate-level systolic array)            ████████░░░░░░░░░░░░░░  35%
 ```
 
 Counting reusable components already built, the **M1 milestone is ~60% complete**.
@@ -59,8 +59,29 @@ LDR/STR, RAM, branch (B/BL), LDM/STM.
 ### ☐ Pipeline — 0%
 5-stage, added *after* single-cycle works.
 
-### ⏳ NPU (INT8 systolic) — 12%
-V1 systolic array exists (`PE_cell`, `Systollic_2x2`, `systolic_4x4`, `matmul4x4`) using a black-box multiplier. Next step: replace that with the gate-level `mul_32b` to make the whole array transparent — the multiplier is the shared MAC primitive.
+### ✅ NPU — 4×4 gate-level systolic array works (35%)
+
+A 4×4 weight-stationary systolic array with **no black boxes anywhere**.
+
+```
+matmul4x4  →  systolic_4x4 (16 PEs)  →  PE_cell
+                                          ├── mul_32b   (carry-save, hand-built)
+                                          ├── ks_32b    (Kogge-Stone accumulator)
+                                          └── 3 registers (W, activation, psum)
+```
+
+Logisim's built-in `Multiplier` and `Adder` have both been ripped out of `PE_cell` and replaced with the gate-level blocks from the CPU. **The multiplier is the shared primitive** — the CPU's `MUL` and the NPU's MAC are the same circuit.
+
+| Block | Status |
+|-------|--------|
+| `PE_cell` (weight-stationary MAC) | ✅ fully gate-level — `w=5, a=7, psum_in=3 → 0x26` |
+| `systolic_4x4` (16 PEs) | ✅ works |
+| `matmul4x4` (+ skew registers) | ✅ 16 real weight inputs; identity test passes |
+| INT8 (`mul_8b`) | ☐ 8× lighter → 8× more PEs per LUT |
+| Wallace tree (vs CSA chain) | ☐ raises clock (6-deep → ~3-deep) |
+| pipelined PE · scale · CPU dispatch | ☐ |
+
+**Cost of transparency:** `mul_32b` ≈ 7,300 gates × 16 PEs ≈ **117,000 gates**. Logisim crawls — which is exactly the argument for INT8 (`mul_8b` ≈ 950 gates). Array size is a *parameter*, not a design: get the PE right, then tile it N×N to whatever the silicon allows.
 
 ---
 

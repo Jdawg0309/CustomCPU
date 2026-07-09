@@ -11,16 +11,19 @@ The ARMv4T CPU is the learning artifact. The long-term target is an open-ISA mac
 ## Progress
 
 ```
-OVERALL (working single-cycle ARMv4T CPU)    ███████░░░░░░░░░░░░░░░  34%
+OVERALL (working single-cycle ARMv4T CPU)    █████████░░░░░░░░░░░░░  40%
 
   Compute core (ALU + multiplier + decode)   ██████████████████████  100%
-  Datapath (regfile, shifter, CPSR, PC)      ██░░░░░░░░░░░░░░░░░░░░  10%
+  Datapath (regfile, fetch, shifter, CPSR)   ██████░░░░░░░░░░░░░░░░  25%
   Memory & control flow (LDR/STR, branch)    ░░░░░░░░░░░░░░░░░░░░░░  0%
   Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
   NPU (INT8 systolic, gate-level MAC)        ███░░░░░░░░░░░░░░░░░░░  12%
 ```
 
-**Next milestone (M1, "it's alive"):** register file + PC/fetch wired to the ALU → first instruction executes.
+Counting reusable components already built, the **M1 milestone is ~60% complete**.
+
+**Next block:** the **barrel shifter** — the only genuinely-new datapath block left.
+**Next milestone (M1, "it's alive"):** shifter + operand2 mux + CPSR + condition check → integrate → first instruction executes.
 
 ---
 
@@ -36,16 +39,19 @@ OVERALL (working single-cycle ARMv4T CPU)    ███████░░░░�
 | `ALU` | ✅ sealed | 16 data-processing ops + MUL, N/Z/C/V flags, verified vs oracle |
 | decode ROM (`opcode`) | ✅ sealed | opcode → 10-bit control word |
 
-### ⏳ Datapath — 10% (primitives exist in V1, not yet integrated)
+### ⏳ Datapath — 25%
 | Block | Status | Notes |
 |-------|--------|-------|
-| register file (16×32) | ⏳ have V1 `reg16x32` | needs 2-read / 1-write ports; where `write_enable` finally acts |
-| barrel shifter | ☐ todo | operand2 shift |
+| `reg16x32` — register file (16×32) | ✅ **in V2, verified** | 2-read / 1-write. 16 regs + write decoder + 2 read muxes + 16 write-enable ANDs. Where `write_enable` finally acts. |
+| `pc_fetch` — PC + fetch | ✅ **in V2, verified** | PC register + 2 adders + branch mux |
+| **barrel shifter** | ▶ **next** | 5 mux layers (1,2,4,8,16). LSL/LSR/ASR/ROR. Emits `shifter_carry` → the ALU's C flag on logic ops |
 | operand2 mux (I-bit) | ☐ todo | register vs immediate |
-| CPSR (flag register) | ☐ todo | latch N/Z/C/V |
-| condition check | ☐ todo | the ARM condition field |
-| PC / fetch | ⏳ have V1 `PC_fetch` | adapt into the datapath |
+| CPSR (flag register) | ☐ todo | 4-bit register latching N/Z/C/V |
+| condition check | ☐ todo | `cond[4] × NZCV → execute?` |
+| decoder extension | ☐ todo | add MUL / LDR / STR / B entries |
 | integration → first instruction | ☐ todo | the "it's alive" moment |
+
+Both `reg16x32` and `pc_fetch` were carried over from the V1 build and re-verified in place — the register file and instruction fetch are done, not rebuilt.
 
 ### ☐ Memory & control flow — 0%
 LDR/STR, RAM, branch (B/BL), LDM/STM.
@@ -126,7 +132,9 @@ opcode                  decode ROM image (Logisim v3.0 hex)
 multiplier ─┬─► CPU MUL/MLA                              ✅ done
             └─► NPU MAC → PE → systolic array → YOLO     (reuses mul_32b)
 
-register file ─► shifter/CPSR/cond/PC ─► integrate ─► FIRST INSTRUCTION   ◄ next (M1)
+register file ✅ ─► fetch ✅ ─► barrel shifter ◄ next ─► CPSR/cond/op2 ─► integrate
+                                                              ↓
+                                                    FIRST INSTRUCTION (M1)
         ↓
   single-cycle CPU ─► +memory/branch ─► runs compiled C
         ↓

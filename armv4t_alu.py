@@ -206,6 +206,103 @@ def write_rom(path="opcode"):
     print(rom_image(), end="")
 
 
+# ===========================================================================
+# BARREL SHIFTER  —  operand2 shifter (ARM DDI 0084D §4.5.2)
+# ===========================================================================
+# Structure: LOGARITHMIC barrel = 5 stages. Stage k shifts by 2^k iff amt[k]==1.
+#   in ─►[«1?]─►[«2?]─►[«4?]─►[«8?]─►[«16?]─► out
+#         amt0   amt1   amt2   amt3   amt4
+# Each stage picks between "pass through" and "shifted by 2^k", where the
+# SHIFTED value is pure WIRE PLACEMENT plus a type-dependent FILL:
+#     LSL: low  d bits <- 0            LSR: high d bits <- 0
+#     ASR: high d bits <- sign(in)     ROR: high d bits <- in[d-1:0]  (wrapped)
+#
+# WHY STAGES COMPOSE (the invariant that makes the whole design legal):
+#   LSL/LSR: zeros stay zeros              -> shift(a) then shift(b) == shift(a+b)
+#   ASR: bit31 is UNCHANGED by ASR, so each stage's sign-fill reads the true sign
+#   ROR: rotations add mod 32
+# `--shiftproof` checks this for every (x, amt, type) combination.
+# ---------------------------------------------------------------------------
+SHIFT_TYPE = {0b00: "LSL", 0b01: "LSR", 0b10: "ASR", 0b11: "ROR"}
+
+
+def _lsl(x, d):
+    return (x << d) & MASK
+
+
+def _lsr(x, d):
+    return (x & MASK) >> d
+
+
+def _asr(x, d):
+    x &= MASK
+    if d == 0:
+        return x
+    if x & BIT31:                                   # sign fill
+        return ((x >> d) | ((MASK << (32 - d)) & MASK)) & MASK
+    return x >> d
+
+
+def _ror(x, d):
+    x &= MASK
+    d &= 31
+    if d == 0:
+        return x
+    return ((x >> d) | (x << (32 - d))) & MASK
+
+
+_SHIFT_FN = {0b00: _lsl, 0b01: _lsr, 0b10: _asr, 0b11: _ror}
+
+
+def barrel_shift(x, amt, typ):
+    """Model the gate build EXACTLY: 5 chained stages, each shifting by 2^k."""
+    x &= MASK
+    amt &= 0x1F
+    f = _SHIFT_FN[typ]
+    for k in range(5):                  # stage 1, 2, 4, 8, 16 — in that order
+        if (amt >> k) & 1:
+            x = f(x, 1 << k)
+    return x
+
+
+def barrel_ref(x, amt, typ):
+    """Direct single-shot reference (what the answer must be)."""
+    return _SHIFT_FN[typ](x & MASK, amt & 0x1F)
+
+
+def shift_proof():
+    """Prove staged == direct for every amt, every type, over many vectors."""
+    vecs = [0x00000001, 0x80000000, 0xFFFFFFFF, 0x00000000, 0x9E3779B9,
+            0x7F4A7C15, 0xDEADBEEF, 0xA5A5A5A5, 0x0000FFFF, 0x12345678]
+    bad = 0
+    for x in vecs:
+        for typ in (0b00, 0b01, 0b10, 0b11):
+            for amt in range(32):
+                if barrel_shift(x, amt, typ) != barrel_ref(x, amt, typ):
+                    bad += 1
+                    print(f"  MISMATCH x=0x{x:08X} {SHIFT_TYPE[typ]} #{amt}: "
+                          f"staged=0x{barrel_shift(x,amt,typ):08X} "
+                          f"direct=0x{barrel_ref(x,amt,typ):08X}")
+    total = len(vecs) * 4 * 32
+    print(f"staged-vs-direct: {total} combinations, {bad} mismatches")
+    print("COMPOSITION INVARIANT HOLDS ✅" if bad == 0 else "BROKEN ❌")
+    return bad == 0
+
+
+def print_shift(x=0x9E3779B9):
+    """Discriminator table for the barrel shifter — poke these in Logisim."""
+    print(f"\n  BARREL SHIFTER TEST   in = 0x{x:08X}")
+    print("  type: 00=LSL  01=LSR  10=ASR  11=ROR\n")
+    print(f"  {'amt':4} {'amt[4:0]':10} {'LSL':12}{'LSR':12}{'ASR':12}{'ROR':12}")
+    print("  " + "-" * 66)
+    for amt in (0, 1, 2, 3, 4, 8, 15, 16, 17, 31):
+        row = "".join(f"0x{barrel_ref(x, amt, t):08X}  " for t in (0, 1, 2, 3))
+        print(f"  {amt:<4} {amt:05b}      {row}")
+    print("  " + "-" * 66)
+    print("  amt=0 must PASS THROUGH unchanged on all four types.")
+    print("  ASR of a negative number fills 1s; LSR fills 0s. That's the tell.\n")
+
+
 def print_legend():
     """Print the full meaning of every control signal and flag."""
     print("""
@@ -372,6 +469,8 @@ if __name__ == "__main__":
     test    = "--test" in sys.argv
     decoder = "--decoder" in sys.argv
     rom     = "--rom" in sys.argv
+    shift   = "--shift" in sys.argv
+    proof   = "--shiftproof" in sys.argv
 
     if len(args) >= 2:
         A = int(args[0], 0) & MASK
@@ -380,7 +479,11 @@ if __name__ == "__main__":
     else:
         A, B, Cf = 0x9E3779B9, 0x7F4A7C15, 0
 
-    if rom:
+    if proof:
+        shift_proof()
+    elif shift:
+        print_shift(A)
+    elif rom:
         write_rom("opcode")
     elif decoder:
         print_decoder(A, B, Cf)

@@ -1,0 +1,9 @@
+# not part of the CPU source — keep the repo to my own work only
+.claude/
+CLAUDE.md
+README.md
+blockdiag.py
+*.svg
+*.png
+*.pyc
+__pycache__/

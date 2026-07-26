@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="340" viewBox="0 0 1080 340">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,3 L0,6 Z" fill="#333"/></marker></defs>
+<rect width="1080" height="340" fill="white"/>
+<text x="540.0" y="34.0" font-family="monospace" font-size="17" text-anchor="middle" font-weight="bold" fill="#222">csa reduction chain  —  30 tiles: 32 vectors → 2 → ks_32b</text>
+<rect x="130" y="192.0" width="72" height="56" rx="8" fill="#f4f6f8" stroke="#333" stroke-width="2"/><text x="166.0" y="217.0" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold" fill="#222">csa</text><text x="166.0" y="234.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#555">#1</text>
+<rect x="270" y="192.0" width="72" height="56" rx="8" fill="#f4f6f8" stroke="#333" stroke-width="2"/><text x="306.0" y="217.0" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold" fill="#222">csa</text><text x="306.0" y="234.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#555">#2</text>
+<rect x="410" y="192.0" width="72" height="56" rx="8" fill="#f4f6f8" stroke="#333" stroke-width="2"/><text x="446.0" y="217.0" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold" fill="#222">csa</text><text x="446.0" y="234.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#555">#3</text>
+<rect x="650" y="192.0" width="72" height="56" rx="8" fill="#f4f6f8" stroke="#333" stroke-width="2"/><text x="686.0" y="217.0" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold" fill="#222">csa</text><text x="686.0" y="234.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#555">#30</text>
+<rect x="810" y="192.0" width="94" height="56" rx="8" fill="#eef2f5" stroke="#333" stroke-width="2"/>
+<text x="857.0" y="225.0" font-family="monospace" font-size="14" text-anchor="middle" font-weight="bold" fill="#222">ks_32b</text>
+<line x1="58.0" y1="204.0" x2="130.0" y2="204.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="54.0" y="199.0" font-family="monospace" font-size="12" text-anchor="end" font-weight="bold" fill="#222">P0</text>
+<line x1="88.0" y1="210.0" x2="100.0" y2="198.0" stroke="#333" stroke-width="1.4"/><text x="94.0" y="193.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="58.0" y1="220.0" x2="130.0" y2="220.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="54.0" y="215.0" font-family="monospace" font-size="12" text-anchor="end" font-weight="bold" fill="#222">P1</text>
+<line x1="88.0" y1="226.0" x2="100.0" y2="214.0" stroke="#333" stroke-width="1.4"/><text x="94.0" y="209.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="58.0" y1="236.0" x2="130.0" y2="236.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="54.0" y="231.0" font-family="monospace" font-size="12" text-anchor="end" font-weight="bold" fill="#222">P2</text>
+<line x1="88.0" y1="242.0" x2="100.0" y2="230.0" stroke="#333" stroke-width="1.4"/><text x="94.0" y="225.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="202.0" y1="208.0" x2="270.0" y2="208.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="230.0" y1="214.0" x2="242.0" y2="202.0" stroke="#333" stroke-width="1.4"/><text x="236.0" y="197.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<text x="236.0" y="187.0" font-family="monospace" font-size="10" text-anchor="middle" font-weight="normal" fill="#888">sum</text>
+<line x1="202.0" y1="232.0" x2="270.0" y2="232.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="230.0" y1="238.0" x2="242.0" y2="226.0" stroke="#333" stroke-width="1.4"/><text x="236.0" y="221.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<text x="236.0" y="211.0" font-family="monospace" font-size="10" text-anchor="middle" font-weight="normal" fill="#888">carry</text>
+<line x1="342.0" y1="208.0" x2="410.0" y2="208.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="370.0" y1="214.0" x2="382.0" y2="202.0" stroke="#333" stroke-width="1.4"/><text x="376.0" y="197.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="342.0" y1="232.0" x2="410.0" y2="232.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="370.0" y1="238.0" x2="382.0" y2="226.0" stroke="#333" stroke-width="1.4"/><text x="376.0" y="221.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="306.0" y1="158.0" x2="306.0" y2="192.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="306.0" y="152.0" font-family="monospace" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">P3</text>
+<line x1="446.0" y1="158.0" x2="446.0" y2="192.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="446.0" y="152.0" font-family="monospace" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">P4</text>
+<line x1="686.0" y1="158.0" x2="686.0" y2="192.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="686.0" y="152.0" font-family="monospace" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">P31</text>
+<circle cx="534" cy="220" r="2.6" fill="#888"/>
+<circle cx="552" cy="220" r="2.6" fill="#888"/>
+<circle cx="570" cy="220" r="2.6" fill="#888"/>
+<line x1="604.0" y1="208.0" x2="650.0" y2="208.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="621.0" y1="214.0" x2="633.0" y2="202.0" stroke="#333" stroke-width="1.4"/><text x="627.0" y="197.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="604.0" y1="232.0" x2="650.0" y2="232.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="621.0" y1="238.0" x2="633.0" y2="226.0" stroke="#333" stroke-width="1.4"/><text x="627.0" y="221.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<line x1="722.0" y1="208.0" x2="810.0" y2="208.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="760.0" y1="214.0" x2="772.0" y2="202.0" stroke="#333" stroke-width="1.4"/><text x="766.0" y="197.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<text x="766.0" y="187.0" font-family="monospace" font-size="10" text-anchor="middle" font-weight="normal" fill="#888">sum</text>
+<line x1="722.0" y1="232.0" x2="810.0" y2="232.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="760.0" y1="238.0" x2="772.0" y2="226.0" stroke="#333" stroke-width="1.4"/><text x="766.0" y="221.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<text x="766.0" y="211.0" font-family="monospace" font-size="10" text-anchor="middle" font-weight="normal" fill="#888">carry</text>
+<line x1="904.0" y1="220.0" x2="982.0" y2="220.0" stroke="#333" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="937.0" y1="226.0" x2="949.0" y2="214.0" stroke="#333" stroke-width="1.4"/><text x="943.0" y="209.0" font-family="monospace" font-size="11" text-anchor="middle" font-weight="normal" fill="#c0392b">32</text>
+<text x="986.0" y="224.0" font-family="monospace" font-size="13" text-anchor="start" font-weight="bold" fill="#222">product</text>
+<text x="130.0" y="298.0" font-family="monospace" font-size="12" text-anchor="start" font-weight="normal" fill="#444">tile #1 = csa(P0,P1,P2);  tile #k (k≥2) = csa(prev_sum, prev_carry, P_{k+1}).   30 tiles total.</text>
+<text x="130.0" y="318.0" font-family="monospace" font-size="12" text-anchor="start" font-weight="normal" fill="#444">each tile removes one vector: 32 − 2 = 30 tiles.  final (sum,carry) → ks_32b = the ONE real add.</text>
+</svg>

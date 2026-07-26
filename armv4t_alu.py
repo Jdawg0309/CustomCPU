@@ -289,6 +289,66 @@ def shift_proof():
     return bad == 0
 
 
+def shift_stages(x=0x9E3779B9):
+    """Per-STAGE bring-up table for the gate build, with collision detection.
+
+    Each of the 5 stages is verified ALONE (en=1, all others en=0), so the probe
+    isolates one stage at a time — the same one-block-one-invariant discipline
+    that sealed the multiplier.
+
+    It also flags TYPE COLLISIONS: inputs where two shift types produce the SAME
+    output, so the probe would pass even with those two mux inputs swapped.
+    Stage 1 ALWAYS collides (see shift_stage_proof) — hence the two-vector probe.
+    """
+    names = {0: "LSL", 1: "LSR", 2: "ASR", 3: "ROR"}
+    print(f"\n  BARREL SHIFTER — PER-STAGE PROBE   in = 0x{x:08X}"
+          f"   (bit31={x >> 31}, bit0={x & 1})")
+    print("  Enable ONE stage at a time. typ: 00=LSL 01=LSR 10=ASR 11=ROR\n")
+    print(f"  {'stage':7}{'en=amt[k]':11}{'LSL':12}{'LSR':12}{'ASR':12}{'ROR':12}collisions")
+    print("  " + "-" * 82)
+    for k in range(5):
+        d = 1 << k
+        vals = {t: barrel_ref(x, d, t) for t in range(4)}
+        clash = [f"{names[a]}=={names[b]}"
+                 for a in range(4) for b in range(a + 1, 4) if vals[a] == vals[b]]
+        row = "".join(f"0x{vals[t]:08X}  " for t in range(4))
+        print(f"  «{d:<6}amt[{k}]=1    {row}{','.join(clash) if clash else '-'}")
+    print("  " + "-" * 82)
+    print(f"  ALL FIVE stages on (amt=31): "
+          + "  ".join(f"{names[t]}=0x{barrel_ref(x, 31, t):08X}" for t in range(4)))
+    print(f"  amt=0 (all stages off): must PASS THROUGH 0x{x:08X} on all four types.\n")
+
+
+def shift_stage_proof():
+    """PROVE that no single vector can separate all 4 types at stage 1.
+
+    ROR«1 fills bit31 with in[0].  ASR«1 fills bit31 with in[31].  LSR«1 fills 0.
+      in[31]=1 and in[0]=1  ->  ROR == ASR   (both fill a 1)
+      in[0]=0               ->  ROR == LSR   (both fill a 0)
+    There is no escape: stage 1 ALWAYS has a colliding pair.  So the stage-1 probe
+    needs TWO vectors that differ ONLY in bit0.  Together they pin all four types.
+    """
+    both = [x for x in range(1 << 20)
+            if len({barrel_ref(x, 1, t) for t in range(4)}) == 4]
+    print("\n  STAGE-1 SEPARABILITY PROOF")
+    print(f"  brute force over {1 << 20} vectors: "
+          f"{len(both)} separate all four types at «1")
+    print("  -> ZERO. No single input can expose an ASR/ROR mux swap at stage 1.")
+    a, b = 0x9E3779B9, 0x9E3779B8          # differ ONLY in bit0
+    names = {0: "LSL", 1: "LSR", 2: "ASR", 3: "ROR"}
+    print("\n  THE TWO-VECTOR PROBE (differ only in bit0):")
+    for x in (a, b):
+        vals = {t: barrel_ref(x, 1, t) for t in range(4)}
+        clash = [f"{names[i]}=={names[j]}"
+                 for i in range(4) for j in range(i + 1, 4) if vals[i] == vals[j]]
+        print(f"    in=0x{x:08X} (bit0={x & 1}) «1  "
+              + "  ".join(f"{names[t]}=0x{vals[t]:08X}" for t in range(4))
+              + f"   blind to: {','.join(clash)}")
+    print("  Vector A is blind to an ASR/ROR swap. Vector B EXPOSES it.")
+    print("  Run BOTH. Neither alone seals stage 1. ✅\n")
+    return len(both) == 0
+
+
 def print_shift(x=0x9E3779B9):
     """Discriminator table for the barrel shifter — poke these in Logisim."""
     print(f"\n  BARREL SHIFTER TEST   in = 0x{x:08X}")
@@ -471,6 +531,8 @@ if __name__ == "__main__":
     rom     = "--rom" in sys.argv
     shift   = "--shift" in sys.argv
     proof   = "--shiftproof" in sys.argv
+    stages  = "--shiftstages" in sys.argv
+    sep     = "--shiftsep" in sys.argv
 
     if len(args) >= 2:
         A = int(args[0], 0) & MASK
@@ -481,6 +543,10 @@ if __name__ == "__main__":
 
     if proof:
         shift_proof()
+    elif sep:
+        shift_stage_proof()
+    elif stages:
+        shift_stages(A)
     elif shift:
         print_shift(A)
     elif rom:

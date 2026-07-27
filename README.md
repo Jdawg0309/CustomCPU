@@ -1,509 +1,178 @@
-# Custom 32-bit Logisim CPU
+# CustomCPU
 
-This repository contains a custom 32-bit CPU built in Logisim-style digital logic. The CPU includes a program counter, ROM instruction memory, 16-register file, ALU, RAM, load/store datapath, branch control using the ALU zero flag, and a small custom instruction set architecture.
+**A gate-level ARMv4T CPU (and INT8 NPU), built from scratch in Logisim — every block understood down to the gate.**
 
-![CPU datapath](./image.png)
+The rule of the project: *if I can't explain a block, I don't get to use it.* No behavioral shortcuts in the datapath — built-ins are allowed only where the underlying gates are understood, and `a*b`-style behavior is used only as a test oracle, never as hardware.
 
-## Current Status
+The ARMv4T CPU is the learning artifact. The long-term target is an open-ISA machine with a hand-built INT8 systolic NPU, benchmarked gate-for-gate against commercial silicon (Hailo-8L).
 
-The CPU currently supports:
+---
 
-```text
-NOP
-ADD
-ADDI
-SUB
-AND
-OR
-XOR
-LOAD
-STORE
-BRZ
+## Progress
+
+```
+OVERALL (working single-cycle ARMv4T CPU)    █████████░░░░░░░░░░░░░  40%
+
+  Compute core (ALU + multiplier + decode)   ██████████████████████  100%
+  Datapath (regfile, fetch, shifter, CPSR)   ██████░░░░░░░░░░░░░░░░  25%
+  Memory & control flow (LDR/STR, branch)    ░░░░░░░░░░░░░░░░░░░░░░  0%
+  Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
+  NPU (gate-level systolic array)            ████████░░░░░░░░░░░░░░  35%
 ```
 
-Confirmed features:
+Counting reusable components already built, the **M1 milestone is ~60% complete**.
 
-```text
-32-bit instructions
-16 general-purpose registers
-32-bit ALU
-16 x 32-bit RAM
-ROM-based program execution
-word-addressed memory
-conditional branching through saved ALU zero flag
-custom machine-code instruction format
+**Next block:** the **barrel shifter** — the only genuinely-new datapath block left.
+**Next milestone (M1, "it's alive"):** shifter + operand2 mux + CPSR + condition check → integrate → first instruction executes.
+
+---
+
+## What's done, block by block
+
+### ✅ Compute core — 100%
+| Block | Status | Notes |
+|-------|--------|-------|
+| `ks_32b` | ✅ sealed | 32-bit Kogge-Stone adder/subtractor (parallel-prefix carry) |
+| `ALU_logic_engine` | ✅ sealed | AND · EOR · ORR · MOV · BIC · MVN → out_mux slot 00 |
+| `ALU_arithmetic_engine` | ✅ sealed | ADD · SUB · RSB · ADC · SBC · RSC (invert layers + Cin mux) → slot 01 |
+| `mul_32b` | ✅ sealed | gate-level 32×32 → low-32 multiplier → slot 10 |
+| `ALU` | ✅ sealed | 16 data-processing ops + MUL, N/Z/C/V flags, verified vs oracle |
+| decode ROM (`opcode`) | ✅ sealed | opcode → 10-bit control word |
+
+### ⏳ Datapath — 25%
+| Block | Status | Notes |
+|-------|--------|-------|
+| `reg16x32` — register file (16×32) | ✅ **in V2, verified** | 2-read / 1-write. 16 regs + write decoder + 2 read muxes + 16 write-enable ANDs. Where `write_enable` finally acts. |
+| `pc_fetch` — PC + fetch | ✅ **in V2, verified** | PC register + 2 adders + branch mux |
+| **barrel shifter** | ▶ **next** | 5 mux layers (1,2,4,8,16). LSL/LSR/ASR/ROR. Emits `shifter_carry` → the ALU's C flag on logic ops |
+| operand2 mux (I-bit) | ☐ todo | register vs immediate |
+| CPSR (flag register) | ☐ todo | 4-bit register latching N/Z/C/V |
+| condition check | ☐ todo | `cond[4] × NZCV → execute?` |
+| decoder extension | ☐ todo | add MUL / LDR / STR / B entries |
+| integration → first instruction | ☐ todo | the "it's alive" moment |
+
+Both `reg16x32` and `pc_fetch` were carried over from the V1 build and re-verified in place — the register file and instruction fetch are done, not rebuilt.
+
+### ☐ Memory & control flow — 0%
+LDR/STR, RAM, branch (B/BL), LDM/STM.
+
+### ☐ Pipeline — 0%
+5-stage, added *after* single-cycle works.
+
+### ✅ NPU — 4×4 gate-level systolic array works (35%)
+
+A 4×4 weight-stationary systolic array with **no black boxes anywhere**.
+
+```
+matmul4x4  →  systolic_4x4 (16 PEs)  →  PE_cell
+                                          ├── mul_32b   (carry-save, hand-built)
+                                          ├── ks_32b    (Kogge-Stone accumulator)
+                                          └── 3 registers (W, activation, psum)
 ```
 
-This is not a RISC-V, ARM, or x86 CPU. It uses a custom ISA designed and tested directly against the datapath.
+Logisim's built-in `Multiplier` and `Adder` have both been ripped out of `PE_cell` and replaced with the gate-level blocks from the CPU. **The multiplier is the shared primitive** — the CPU's `MUL` and the NPU's MAC are the same circuit.
 
-## CPU Datapath Overview
+| Block | Status |
+|-------|--------|
+| `PE_cell` (weight-stationary MAC) | ✅ fully gate-level — `w=5, a=7, psum_in=3 → 0x26` |
+| `systolic_4x4` (16 PEs) | ✅ works |
+| `matmul4x4` (+ skew registers) | ✅ 16 real weight inputs; identity test passes |
+| INT8 (`mul_8b`) | ☐ 8× lighter → 8× more PEs per LUT |
+| Wallace tree (vs CSA chain) | ☐ raises clock (6-deep → ~3-deep) |
+| pipelined PE · scale · CPU dispatch | ☐ |
 
-The CPU has the following major blocks:
+**Cost of transparency:** `mul_32b` ≈ 7,300 gates × 16 PEs ≈ **117,000 gates**. Logisim crawls — which is exactly the argument for INT8 (`mul_8b` ≈ 950 gates). Array size is a *parameter*, not a design: get the PE right, then tile it N×N to whatever the silicon allows.
 
-```text
-PC_fetch        - program counter and instruction fetch logic
-ROM 16 x 32     - instruction memory
-reg16x32        - 16-register file, 32 bits per register
-ALU_32bit       - arithmetic and logic unit
-RAM 16 x 32     - data memory
-writeback mux   - selects ALU result or RAM output for register writeback
-zero flag regs  - stores ALU flags for branch decisions
+---
+
+## Architecture — the compute core
+
+```
+        A(32)   B(32)
+          │       │
+   ┌──────┴───────┴─────────────────────────┐
+   │  logic_unit ──────────► out_mux 00      │
+   │  arithmetic_engine ───► out_mux 01      │   engine_sel(2) picks one
+   │    (ks_32b + invert + Cin mux)          │
+   │  mul_32b ─────────────► out_mux 10      │
+   │  (reserved: FPU) ─────► out_mux 11      │
+   └───────────────┬─────────────────────────┘
+                   ▼
+              result(32) ─► N Z C V
 ```
 
-The high-level datapath is:
+All three engines read the same operands and compute in parallel every cycle; the 4:1 `out_mux` selects one. Slot 11 is reserved headroom for a future FPU.
 
-```text
-ROM instruction
-      ↓
-instruction split into opcode / registers / control / immediate
-      ↓
-register file reads RA and RB
-      ↓
-ALU computes arithmetic, logic, or memory address
-      ↓
-result either writes back to register file or addresses RAM
-      ↓
-RAM output can write back through the writeback mux
+### The multiplier — carry-save, fully gate-level
+
+`mul_32b` computes `Rm × Rs → low 32 bits` (ARM `MUL`, §4.7) the way a real CPU does — a carry-save reduction tree, **not** shift-and-add:
+
+```
+partial_products ──► CSA reduction (30 × 3:2 compressors) ──► ks_32b ──► product
+  32 AND rows            32 vectors → 2 vectors               one real add
 ```
 
-## Instruction Format
+- **partial_products** — 32 rows, `row_i = (Rm AND broadcast(Rs[i])) << i`. Broadcast is a sign-extended single bit; the shift is pure wire placement.
+- **csa_3to_2** — 3:2 compressor: `sum = X⊕Y⊕Z`, `carry = maj(X,Y,Z) << 1`, inter-bit carry **unchained** → constant delay, no ripple. That is the carry-save trick.
+- **csa_reduction_chain** — 30 tiles collapse 32 vectors to 2 (`32 − 2 = 30`; each 3:2 tile removes one vector).
+- **ks_32b** — the single carry-propagate add resolving the final `(sum, carry)` pair.
 
-Every instruction is 32 bits.
+Verified: `0xFFFFFFFF² = 0x1`, `0xDEADBEEF² = 0x216DA321`, `255² = 0xFE01`, `13×11 = 0x8F`, `0x9E3779B9 × 0x7F4A7C15 = 0xCFFC982D`.
 
-```text
-[ opcode ][ WA ][ RA ][ RB ][ ctrl ][ imm12 ]
-   4 bits  4b   4b   4b    4b     12 bits
+---
+
+## Verification — *trust the circuit, verify the human*
+
+Every sealed block gets a **discriminator test**: a single input that uniquely exposes the bug (e.g. all-zeros + Cin=1 → `0x1` for the adder; `0xFFFFFFFF² → 0x1` for the multiplier).
+
+`armv4t_alu.py` is the **golden software oracle** — the ALU's 16-op table, flag logic, and decode ROM modeled in Python. The gate-level ALU must match it bit-for-bit.
+
+```bash
+python3 armv4t_alu.py --test        # 10 golden edge cases (all pass)
+python3 armv4t_alu.py --decoder     # opcode → ROM word → controls → result + flags
+python3 armv4t_alu.py --legend      # full control-signal + flag reference
+python3 armv4t_alu.py 0xAA 0xBB 1   # any A, B, Cflag
 ```
 
-Bit layout:
+---
 
-|    Bits | Field    | Meaning                                           |
-| ------: | -------- | ------------------------------------------------- |
-| `31:28` | `opcode` | main operation/control opcode                     |
-| `27:24` | `WA`     | destination register / write address              |
-| `23:20` | `RA`     | source A / base register                          |
-| `19:16` | `RB`     | source B / store-data register / immediate marker |
-| `15:12` | `ctrl`   | control nibble                                    |
-|  `11:0` | `imm12`  | immediate / address offset / branch field         |
+## Repository
 
-Example:
-
-```text
-963f2800
+```
+armv4t.circ             Logisim Evolution project — the V2 build (sealed compute core + multiplier)
+ALU_modular_design.circ V1 build — datapath primitives (reg16x32, PC_fetch, ...) + V1 systolic NPU
+armv4t_alu.py           golden software oracle for the ALU
+opcode                  decode ROM image (Logisim v3.0 hex)
 ```
 
-Decodes as:
+---
 
-```text
-9    6    3    f    2       800
-op   WA   RA   RB   ctrl    imm12
+## Roadmap
+
+```
+multiplier ─┬─► CPU MUL/MLA                              ✅ done
+            └─► NPU MAC → PE → systolic array → YOLO     (reuses mul_32b)
+
+register file ✅ ─► fetch ✅ ─► barrel shifter ◄ next ─► CPSR/cond/op2 ─► integrate
+                                                              ↓
+                                                    FIRST INSTRUCTION (M1)
+        ↓
+  single-cycle CPU ─► +memory/branch ─► runs compiled C
+        ↓
+  5-stage pipeline ─► NPU (INT8) ─► benchmark vs Hailo-8L
 ```
 
-Meaning:
+---
 
-```text
-opcode = 9
-WA     = 6
-RA     = 3
-RB     = f
-ctrl   = 2
-imm12  = 800
-```
+## A lesson worth keeping
 
-For this CPU, that instruction means:
+Logisim's multi-input XOR gate computes **"exactly one input high" (1-of-n), not odd parity**, for 3+ inputs — so a 3-input XOR gives `4 ⊕ 4 ⊕ 4 = 0`. Build parity from **chained 2-input XORs**. Every 2-input test passes, so this hides beautifully until a carry-save sum quietly drops bits.
 
-```text
-R6 = RAM[(R3 + 0x800) >> 2]
-```
+---
 
-## Control Nibble
+## Hardware & references
 
-The fifth hex digit is the control nibble.
-
-```text
-bits 15:12 = ctrl
-```
-
-| ctrl hex | bits `15:12` | Meaning                                                  |
-| -------: | ------------ | -------------------------------------------------------- |
-|      `0` | `0000`       | normal ALU / ADDI mode                                   |
-|      `1` | `0001`       | RAM write enable / STORE mode                            |
-|      `2` | `0010`       | RAM output enable + MemToReg / LOAD mode                 |
-|      `4` | `0100`       | branch checks saved ALU zero flag                        |
-|      `8` | `1000`       | branch XOR/invert-side control, reserved/experimental    |
-|      `c` | `1100`       | possible inverted branch behavior, reserved/experimental |
-
-The confirmed control nibbles are:
-
-```text
-0 = normal ALU/ADDI
-1 = STORE
-2 = LOAD
-4 = BRZ
-```
-
-## Memory Addressing
-
-RAM is `16 x 32`, so each RAM slot stores one 32-bit word.
-
-The CPU computes a byte-style address:
-
-```text
-address = R[RA] + imm12
-```
-
-But RAM uses word addressing:
-
-```text
-RAM slot = ALU_result[5:2]
-```
-
-So addresses advance by 4 bytes per RAM word.
-
-| Address | RAM slot |
-| ------: | -------: |
-| `0x800` |      `0` |
-| `0x804` |      `1` |
-| `0x808` |      `2` |
-| `0x80c` |      `3` |
-| `0x810` |      `4` |
-
-This means:
-
-```text
-STORE r1, 0x800(r3)  -> RAM[0]
-STORE r1, 0x804(r3)  -> RAM[1]
-STORE r1, 0x808(r3)  -> RAM[2]
-STORE r1, 0x80c(r3)  -> RAM[3]
-```
-
-## Opcode Table
-
-| Opcode / Pattern           | Operation | Meaning                              |
-| -------------------------- | --------- | ------------------------------------ |
-| `0`                        | NOP       | no visible state change              |
-| `1`                        | AND       | `R[WA] = R[RA] & R[RB]`              |
-| `5`                        | OR        | `R[WA] = R[RA] \| R[RB]`             |
-| `9`, `RB != f`, `ctrl = 0` | ADD       | `R[WA] = R[RA] + R[RB]`              |
-| `9`, `RB = f`, `ctrl = 0`  | ADDI      | `R[WA] = R[RA] + imm12`              |
-| `9`, `RB = f`, `ctrl = 2`  | LOAD      | `R[WA] = RAM[(R[RA] + imm12) >> 2]`  |
-| `b`                        | SUB       | `R[WA] = R[RA] - R[RB]`              |
-| `d`                        | XOR       | `R[WA] = R[RA] ^ R[RB]`              |
-| `8`, `ctrl = 1`            | STORE     | `RAM[(R[RA] + imm12) >> 2] = R[RB]`  |
-| `8`, `ctrl = 4`            | BRZ       | branch if saved ALU zero flag is `1` |
-
-Unused or unconfirmed opcodes:
-
-```text
-2, 3, 4, 6, 7, a, c, e, f
-```
-
-## Confirmed Instruction Examples
-
-| Instruction | opcode |  WA |  RA |  RB | ctrl | imm12 | Meaning                       |
-| ----------- | -----: | --: | --: | --: | ---: | ----: | ----------------------------- |
-| `00000000`  |    `0` | `0` | `0` | `0` |  `0` | `000` | NOP                           |
-| `d0000000`  |    `d` | `0` | `0` | `0` |  `0` | `000` | `R0 = R0 ^ R0`                |
-| `d1110000`  |    `d` | `1` | `1` | `1` |  `0` | `000` | `R1 = R1 ^ R1`                |
-| `d3330000`  |    `d` | `3` | `3` | `3` |  `0` | `000` | `R3 = R3 ^ R3`                |
-| `d6660000`  |    `d` | `6` | `6` | `6` |  `0` | `000` | `R6 = R6 ^ R6`                |
-| `900f0005`  |    `9` | `0` | `0` | `f` |  `0` | `005` | `R0 = R0 + 5`                 |
-| `911f0003`  |    `9` | `1` | `1` | `f` |  `0` | `003` | `R1 = R1 + 3`                 |
-| `911f002a`  |    `9` | `1` | `1` | `f` |  `0` | `02a` | `R1 = R1 + 0x2a`              |
-| `14010000`  |    `1` | `4` | `0` | `1` |  `0` | `000` | `R4 = R0 & R1`                |
-| `56010000`  |    `5` | `6` | `0` | `1` |  `0` | `000` | `R6 = R0 \| R1`               |
-| `d5010000`  |    `d` | `5` | `0` | `1` |  `0` | `000` | `R5 = R0 ^ R1`                |
-| `92010000`  |    `9` | `2` | `0` | `1` |  `0` | `000` | `R2 = R0 + R1`                |
-| `b3010000`  |    `b` | `3` | `0` | `1` |  `0` | `000` | `R3 = R0 - R1`                |
-| `80311800`  |    `8` | `0` | `3` | `1` |  `1` | `800` | `RAM[(R3 + 0x800) >> 2] = R1` |
-| `963f2800`  |    `9` | `6` | `3` | `f` |  `2` | `800` | `R6 = RAM[(R3 + 0x800) >> 2]` |
-| `80004ffc`  |    `8` | `0` | `0` | `0` |  `4` | `ffc` | BRZ using saved zero flag     |
-
-## Control Logic
-
-The ALU-B mux chooses either `RD_B` or `imm12`.
-
-Confirmed equation:
-
-```text
-ALUSrcImm = (RB == f) OR bit12 OR bit13
-```
-
-So:
-
-| Instruction type | ALU input B |
-| ---------------- | ----------- |
-| register ALU     | `RD_B`      |
-| ADDI             | `imm12`     |
-| STORE            | `imm12`     |
-| LOAD             | `imm12`     |
-
-Important STORE split:
-
-```text
-RD_A = R[RA]  -> ALU input A
-imm12         -> ALU input B
-ALU result    -> RAM address
-
-RD_B = R[RB]  -> RAM data input
-```
-
-Important LOAD path:
-
-```text
-RD_A + imm12  -> ALU result
-ALU[5:2]      -> RAM address
-RAM output    -> writeback mux
-writeback mux -> register file WD
-```
-
-## Pseudoinstructions
-
-The hardware does not currently have a true `LI` instruction. It is better implemented as an assembler pseudoinstruction.
-
-### CLEAR
-
-```asm
-CLEAR rd
-```
-
-Expands to:
-
-```asm
-XOR rd, rd, rd
-```
-
-Example:
-
-```asm
-CLEAR r1
-```
-
-Machine code:
-
-```text
-d1110000
-```
-
-### LI
-
-```asm
-LI rd, imm12
-```
-
-Expands to:
-
-```asm
-XOR  rd, rd, rd
-ADDI rd, rd, imm12
-```
-
-Example:
-
-```asm
-LI r1, 0x02a
-```
-
-Machine code:
-
-```text
-d1110000
-911f002a
-```
-
-### BEQ
-
-There is no native BEQ instruction yet. It can be simulated with `SUB + BRZ`.
-
-```asm
-BEQ ra, rb, label
-```
-
-Expands to:
-
-```asm
-SUB temp, ra, rb
-BRZ label
-```
-
-Example:
-
-```asm
-SUB r5, r0, r1
-BRZ target
-```
-
-## Test ROMs
-
-### Store + Load Test
-
-```text
-d0000000 d1110000 d3330000 d6660000 911f002a 80311800 963f2800 00000000
-00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-```
-
-Expected:
-
-```text
-R0 = 00000000
-R1 = 0000002a
-R3 = 00000000
-R6 = 0000002a
-RAM[0] = 0000002a
-```
-
-### Sequential Store Test
-
-```text
-d1110000 d2220000 d3330000 d4440000 d5550000 911f0011 922f0022 944f0033
-955f0044 80311800 80321804 80341808 8035180c 00000000 00000000 00000000
-```
-
-Expected:
-
-```text
-RAM[0] = 00000011
-RAM[1] = 00000022
-RAM[2] = 00000033
-RAM[3] = 00000044
-```
-
-### Full Core Regression Test
-
-```text
-d0000000 d1110000 d8880000 d9990000 900f0005 911f0003 92010000 b4010000
-15010000 d6010000 57010000 80821800 998f2800 00000000 00000000 00000000
-```
-
-Expected final registers:
-
-| Register |   Expected |
-| -------- | ---------: |
-| `R0`     | `00000005` |
-| `R1`     | `00000003` |
-| `R2`     | `00000008` |
-| `R4`     | `00000002` |
-| `R5`     | `00000001` |
-| `R6`     | `00000006` |
-| `R7`     | `00000007` |
-| `R8`     | `00000000` |
-| `R9`     | `00000008` |
-
-Expected RAM:
-
-```text
-RAM[0] = 00000008
-```
-
-### Branch Not Taken Test
-
-```text
-d0000000 d1110000 d5550000 d6660000 900f0001 911f0002 b5010000 80004ffc
-966f00cc 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-```
-
-Expected:
-
-```text
-R6 = 000000cc
-```
-
-### Branch Taken Test
-
-```text
-d0000000 d5550000 d6660000 900f0001 b5000000 80004ffc 966f00cc 00000000
-00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-```
-
-Expected:
-
-```text
-R6 = 00000000
-```
-
-## Assembly Syntax Draft
-
-A simple assembler can use this syntax:
-
-```asm
-ADD   rd, ra, rb
-ADDI  rd, ra, imm12
-SUB   rd, ra, rb
-AND   rd, ra, rb
-OR    rd, ra, rb
-XOR   rd, ra, rb
-
-LOAD  rd, offset(ra)
-STORE rb, offset(ra)
-
-BRZ   label
-NOP
-```
-
-Suggested pseudoinstructions:
-
-```asm
-CLEAR rd
-LI    rd, imm12
-BEQ   ra, rb, label
-JMP   label
-```
-
-## Limitations
-
-Current limitations:
-
-```text
-No hardware LI instruction
-No hardware BEQ instruction
-No stack pointer convention yet
-No call/return convention yet
-No interrupts
-No memory-mapped I/O yet
-No assembler yet
-No existing operating system support
-```
-
-The CPU can support a small custom monitor or toy operating system, but it cannot run Linux, xv6, FreeRTOS, RISC-V binaries, ARM binaries, or x86 binaries.
-
-## Next Steps
-
-Planned next steps:
-
-```text
-1. Write an assembler for this ISA
-2. Add labels for BRZ
-3. Define calling convention
-4. Define stack pointer register
-5. Add memory-mapped I/O
-6. Write a tiny boot monitor
-7. Add example assembly programs
-```
-
-Potential future instructions:
-
-```text
-JMP
-BNZ
-SLT
-SHL
-SHR
-CALL
-RET
-HALT
-```
-
-## Project Goal
-
-The goal of this project is to build a CPU from the datapath up: instruction encoding, register file, ALU, memory system, branching, assembly language, and eventually a tiny software stack.
-
-This CPU is intentionally minimal, but it now has the core ingredients of a real programmable machine:
-
-```text
-arithmetic
-logic
-memory load/store
-conditional branching
-word-addressed RAM
-repeatable machine-code tests
-```
+- **Design:** Logisim Evolution · **Synthesis:** Quartus Prime Lite
+- **Boards:** DE10-Lite (MAX 10) now; Arty A7 for the NPU scale-up
+- **Spec / oracle:** ARM DDI 0084D (ARM7TDMI-S)
+- **NPU benchmark target:** Hailo-8L + Raspberry Pi 5

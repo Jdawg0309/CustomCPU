@@ -60,6 +60,31 @@ open ISA = the machine I keep.
 Can't clone the whole SoC (4 ISAs + codecs + ISP), but CAN clone its *brain*:
 one core + INT8 NPU + DRAM + PCIe. The C906 is fully open (Apache 2.0,
 github.com/XUANTIE-RV/openc906) — datasheet + RTL + testbench = spec + oracle.
+Important boundary: the public OpenC906 RTL is open, but the complete SG2002 SoC,
+its NPU, multimedia system, and physical implementation are not. Do not assume the
+public RTL is bit-for-bit identical to SOPHGO's hardened C906 integration.
+
+**Two parallel project tracks (do not merge their ISA-specific state):**
+
+1. **ARM learning line:** finish ARMv4T single-cycle + C, pipeline it, then build
+   independently designed ARMv5/v6/v7-A-inspired generations toward understanding
+   the Raspberry Pi 2's Cortex-A7 class. A literal Cortex-A7 implementation is
+   proprietary; ARM compatibility/distribution also carries ARM licensing issues.
+2. **Open machine line:** fork only after the C-capable baseline is verified, replace
+   ARM decode/CPSR with RV32I, then grow RV32M -> pipeline -> caches/DDR -> RV64 or
+   OpenC906 integration -> NPU/GPU -> PCIe. This is the distributable forever-machine.
+
+Shared library between tracks: adders, multipliers, shifters, RAM interfaces, DMA,
+NPU/GPU blocks, test oracles, and FPGA/ASIC measurement. Do not carry ARM CPSR,
+conditional execution, ARM decode, or ARM PC rules into the RISC-V core.
+
+**Public-precedent audit:** individual pieces exist, but no publicly indexed exact
+match was found for canonical ARMv4T + hand-built Logisim datapath + C toolchain +
+shared gate-level INT8 systolic NPU + FPGA/ASIC measurements. Closest references:
+OpenC906 (open production-class RISC-V), ZAP (Verilog ARMv4T core), Logisim ARM
+textbook processors, and “Crabs All the Way Down” (ARM-ish gates running Rust).
+Novelty is the transparent integration and apples-to-apples methodology, not the
+individual adder, CPU, or systolic-array ideas. Never claim “first ever.”
 
 ---
 
@@ -85,9 +110,9 @@ MULTIPLIER .................. ~95%  ✅ WORKS (32×32→low32, verified)
                                      verified standalone AND through ALU:
                                      DEADBEEF²=0x216DA321, FFFFFFFF²=1, 255²=0xFE01,
                                      13×11=0x8F, 9E3779B9×7F4A7C15=0xCFFC982D (N=1 Z=0)
-  mul_32b (final ks_32b add) ....... todo
+  mul_32b final ks_32b add ......... ✅ VERIFIED in ALU/PE result paths
 
-DATAPATH .................... ~70% ✅ SINGLE-CYCLE CPU IS ALIVE (M1 DONE)
+DATAPATH / CONTROL FLOW ..... ~99% ✅ OPERAND2 + CPSR + B + BL + BX
   register file (16×32) ............ ✅ imported from V1 (reg16x32, 2R/1W) + verified in V2
   PC / fetch ....................... ✅ imported from V1 (PC_fetch) + verified in V2
   instr_rom (16×32) ................ ✅ built & wired (addr = PC[5:2], word-addressed)
@@ -96,11 +121,25 @@ DATAPATH .................... ~70% ✅ SINGLE-CYCLE CPU IS ALIVE (M1 DONE)
                                      → reg16x32 → ALU → writeback.  Wired per BUILD_CPU.md.
                                      Ran `boot_rom` (16 instrs) clean end-to-end.
   write_enable suppress path ....... ✅ VERIFIED (CMP leaves Rd untouched — see below)
-  barrel shifter ................... NEXT (must-build — only genuinely new block)
-  operand2 mux (I-bit) ............. todo (small)
-  CPSR (flag register) ............. todo (built-in 4-bit Register for N/Z/C/V)
-  condition check .................. todo (small: cond[4] × NZCV → execute?)
-  decoder extension ................ todo (add MUL/LDR/STR/B entries)
+  barrel shifter ................... ✅ BUILT & STANDALONE-VERIFIED (bs_stage_1/2/4/8/16 + barrel_32b)
+  operand2 register path ........... ✅ VERIFIED (immediate-shift LSL/LSR/ASR/ROR)
+  operand2 immediate path .......... ✅ VERIFIED (zext imm8, rotate*2, I-bit muxes)
+                                     MOV #FF -> R3=FF; MOV #80000000 -> R4=80000000;
+                                     ADD R5,R3,#80000000 -> R5=800000FF
+  CPSR flag register ............... ✅ VERIFIED for arithmetic NZCV + S-bit gating
+                                     regression: 0 -> 6 -> 6 -> 9 -> 8 -> A
+  shifter carry into CPSR.C ........ todo for flag-setting logical instructions
+  condition check .................. ✅ VERIFIED (cond[4] × NZCV → condition_pass)
+                                     MI/EQ committed; PL/NE suppressed writes
+                                     reg_WE = ALU.write_enable AND condition_pass
+                                     CPSR.enable = S AND condition_pass
+  decoder extension ................ todo (top-level MUL selection, LDR/STR)
+  ARM B branch ..................... ✅ VERIFIED (forward skip, backward BNE loop, self-loop)
+  ARM BL call ...................... ✅ VERIFIED (PC+4 -> R14, function call + BX LR return)
+  ARM-state BX ..................... ✅ VERIFIED (`BX R2`, `BX LR`, absolute target)
+  compiled C leaf test ............. ✅ TOOLCHAIN + TEST ADDED (`c_tests/add.c`)
+                                     GCC targets ARM7TDMI/ARM state and emits
+                                     `ADD R0,R0,R1; BX LR`; see C_LEAF_CPU_TEST.md
 
   ### boot_rom — THE BRING-UP PROGRAM (self-bootstrapping, needs NO poked registers)
   The old `instr_rom` required poking R1=5, R2=3 by hand. `boot_rom` does not:
@@ -141,8 +180,8 @@ DATAPATH .................... ~70% ✅ SINGLE-CYCLE CPU IS ALIVE (M1 DONE)
   straight through. Ctrl+R mid-run wipes the constants it built. Tick 16 wraps the
   4-bit ROM address back to 0 and re-runs MVN on top of your finished state; stop at 16.
 
-MEMORY / CONTROL FLOW ....... 0%   ☐
-  LDR/STR, RAM, branch (B/BL), LDM/STM
+MEMORY ...................... 0%   ☐
+  LDR/STR, data RAM, load writeback mux, stack. B/BL/BX are done; memory is next.
 
 PIPELINE .................... 0%   ☐  (the clock lever, AFTER single-cycle works)
 NPU ......................... ~35% ✅ 4×4 GATE-LEVEL NPU WORKS (32-bit) — M2 core done
@@ -373,7 +412,7 @@ PE_cell (Multiplier+Adder+Register) = a MAC = MLA (same primitive).
 
 ---
 
-## 6. DATAPATH — register file + fetch IMPORTED; barrel shifter is NEXT
+## 6. DATAPATH — register file + fetch imported; barrel shifter built
 
 ### register file (16×32) — ✅ IMPORTED FROM V1, verified in V2
 Copied `reg16x32` out of `ALU_modular_design.circ` (V1) into `armv4t.circ`. Came over
@@ -400,23 +439,79 @@ tables (V1: Plexers=2, Arithmetic=3, Memory=4 · V2: Memory=2, Base=3, Plexers=4
 Arithmetic=5). A file-level XML merge mis-maps every component. Copy INSIDE Logisim
 (Ctrl+A / Ctrl+C in source circuit → Project→Add Circuit → Ctrl+V) — Logisim remaps libs.
 
-### ▶ NEXT BLOCK — barrel shifter (the only genuinely-new datapath block)
+### barrel_32b — ✅ BUILT, standalone-verified
 ```
-in(32), shift_amount(5), shift_type(2) → out(32), shifter_carry(1)
-  shift_type: 00=LSL  01=LSR  10=ASR  11=ROR
+input_32b(32), amnt(5), typ(2) → outp(32)
+  typ: 00=LSL  01=LSR  10=ASR  11=ROR
 ```
-- **Structure: logarithmic barrel = 5 mux layers** (shift by 1,2,4,8,16), layer k
-  controlled by bit k of shift_amount. Each layer = a row of 32 **2:1 muxes**:
-  "pass through" vs "shifted by 2^k". The shifted input is **wire placement**, exactly
-  like the multiplier's per-row shifts. Depth log₂(32)=5, same reason CSA beat ripple.
+- **Structure:** 5 sealed fixed-shift subcircuits chained in order:
+  `bs_stage_1 → bs_stage_2 → bs_stage_4 → bs_stage_8 → bs_stage_16`.
+  `amnt[0]..amnt[4]` drive each stage's enable; `typ` fans out to all stages.
+  The data path is CHAINED, not parallel.
+- **Stage interface:** `input_32(32), enable(1), typ_2(2) → out_1(32)`.
+  Each stage uses four constant-amount Shifters feeding a 4:1 type mux, then a 2:1
+  bypass mux (`enable=0` passes input unchanged; `enable=1` selects shifted).
 - **Fill** into vacated bits encodes the type: 0 for LSL/LSR, sign bit for ASR,
   wrapped bits for ROR.
-- `shifter_carry` is the source of the ALU's **C flag on logic ops** (the "C from
-  shifter" the oracle marks as '-'/unmodeled).
-- No theory traps here — it's muxes and routing, not carry math.
+- **Standalone verification passed in Logisim:** with `input_32b=0x9E3779B9`,
+  `amnt=0x1F`, `typ=10` produced `0xFFFFFFFF`; `amnt=0` bypasses unchanged; `amnt=1`,
+  `0x11`, and `0x1F` matched the Python oracle.
+- **Stage-1 discriminator:** `0x9E3779B9` alone is blind to ASR/ROR swap. The second
+  probe `0x9E3779B8` exposes it: `ROR #1 → 0x4F1BBCDC`, while `ASR #1 → 0xCF1BBCDC`.
+- `shifter_carry` is still NOT built. It cannot be tapped from the last stage; it is a
+  separate parallel carry block from original input + total amount.
 
-Then: operand2 mux (I-bit) → CPSR (built-in 4-bit Register) → condition check →
-decoder extension.  (Integration → FIRST INSTRUCTION is ✅ DONE — see §2, M1.)
+### Operand2 — ✅ REGISTER + IMMEDIATE PATHS VERIFIED
+The top-level CPU shares one `barrel_32b` between both ARM Operand2 forms.
+
+```
+I=0: reg16x32.RD_B + instr[11:7] + instr[6:5] -> barrel_32b -> ALU.B
+I=1: zext(instr[7:0]) + {instr[11:8],0} + type=ROR -> barrel_32b -> ALU.B
+```
+
+Three I-bit muxes select barrel input(32), amount(5), and type(2). Verification ROM:
+`MOV R3,#FF; MOV R4,#80000000; ADD R5,R3,#80000000`. Final values:
+`R3=000000FF`, `R4=80000000`, `R5=800000FF`. Diagnostic signature: if the final
+immediate-amount wires are missing, R4 becomes `00000002` and R5 becomes
+`00000101`; that proves imm8 selection works but rotation amount is stuck at zero.
+
+### CPSR flag storage — ✅ VERIFIED
+
+The 4-bit register stores `CPSR[3:0]=NZCV`. Its final enable is
+`S AND condition_pass AND not_control_flow`. Arithmetic regression ROM:
+`MVN; ADDS; MVN; ADDS; SUBS; SUBS` produced the required CPSR sequence
+`0 -> 6 -> 6 -> 9 -> 8 -> A`. The repeated `6` proves S=0 preserves flags.
+See `CPSR_CPU_TEST.md` and `cpsr_rom`.
+
+### Condition execution — ✅ VERIFIED
+
+`condition_checker` implements all ARM condition selections from stored
+`CPSR.NZCV`. The CPU regression proved `MI` and `EQ` commit while false `PL` and
+`NE` instructions leave their destination registers unchanged. Both register
+writeback and CPSR enable are gated by `condition_pass`.
+
+See `BUILD_CONDITION.md`, `CONDITION_CPU_TEST.md`, and `condition_rom`.
+
+### ARM B branch — ✅ VERIFIED
+
+`instr[27:25]=101`, `L=0`, and `condition_pass` drive `pc_fetch.BRANCH`.
+`pc_fetch.IMM = sign_extend(instr[23:0] << 2) + 8`. The unconditional regression
+jumped `pc_out 1 -> 3`, skipped `MOV R0,#2`, produced R1=5, then self-looped.
+The conditional regression counted R0 from 2 to 0 with `BNE`, fell through with
+CPSR=6, wrote R1=55, and self-looped.
+
+See `BUILD_BRANCH.md`, `BRANCH_CPU_TEST.md`, `branch_rom`, and `branch_cond_rom`.
+
+### ARM-state BX — ✅ VERIFIED
+
+Exact `instr[27:4]=12FFF1` detection, condition gating, even-target gating,
+`RD_B & FFFFFFFC` alignment, and the absolute-target path through `pc_fetch` are
+integrated. Both `BX R2` and `BX LR` jumped `pc_out 1 -> 4`, skipped two MOVs,
+wrote R3=33, and entered the expected self-loop.
+
+See `BUILD_BX.md`, `BX_CPU_TEST.md`, `bx_rom`, and `bx_lr_rom`.
+
+Next: BL/link writeback, memory, then shifter-carry cleanup.
 
 ---
 
@@ -439,7 +534,25 @@ register file ─► shifter/CPSR/cond/PC ─► integrate ─► FIRST INSTRUCT
 - **M1:** ✅ **DONE (2026-07-14)** — datapath integrated, first instruction executed.
   `boot_rom` runs 16 instructions clean; `ADD R3,R5,R4 → R3 = 0x00000008`.
   Both discriminators passed (arith `0 − 0xFFFFFFFF = 1`; CMP write-suppress).
-- **M2:** gate-level MAC → systolic array → YOLO. Gated by the multiplier.
+- **M2 core:** ✅ gate-level MAC and 4×4 systolic array work. Next NPU work is
+  replacing each 32-bit PE multiplier with sealed `mul_8`, then pipelining/tiling.
+
+**Minimum path to C from the current checkpoint:**
+
+```text
+BL + R14 link write
+-> LDR/STR address/control
+-> data RAM + ALU/load writeback mux
+-> initialize R13 stack
+-> startup assembly + linker script
+-> compile freestanding ARMv4T C
+```
+
+After BX, a manually invoked leaf C function such as `ADD R0,R0,R1; BX LR` is
+already nearly testable by seeding R0/R1/R14. A self-contained C program with
+calls, locals, and a stack still needs BL and memory. Estimate from the observed
+pace: leaf C ~1 focused session; stack-based C ~3-6 sessions; useful freestanding
+C ~5-8 sessions. Memory is the remaining integration-heavy block.
 
 ---
 
@@ -461,10 +574,21 @@ register file ─► shifter/CPSR/cond/PC ─► integrate ─► FIRST INSTRUCT
   separate FPU (reserved out_mux slot 3). INT8 inference IS fixed-point → the NPU is
   the right regime.
 - **The machine does OPS, not FLOPS** (no FPU). NPU throughput = MACs × clock × 2.
-  16×16 @ 150 MHz ≈ 77 GOPS ≈ YOLOv8n ~9 FPS. Hailo-8L = 13 TOPS; the gap IS the thesis.
+  A 4×4 array has 16 MAC/cycle (3.2 GMAC/s theoretical at 200 MHz); 16×16 has
+  51.2 GMAC/s theoretical at 200 MHz. Real utilization may be 20-60% because of
+  tiling and memory. Fifteen-FPS detection is model/resolution dependent: a 4×4 is
+  too small for ordinary YOLO; a pipelined 16×16 or 32×16 INT8 array plus local
+  DDR/BRAM/DMA is the plausible regime. Never state FPS from peak GOPS alone.
 - **Pipeline AFTER single-cycle works.** Can't pipeline a datapath that doesn't exist;
   pipelining early = debugging correctness AND hazards on unproven logic. Order:
   datapath → single-cycle correct → verify → slice into 5-stage + forwarding.
+- **200 MHz FPGA target:** 5 ns/stage. Likely stages are IF/ID/EX/MEM/WB with
+  ~350-450 new pipeline-register bits, ~450-700 logical signal bits, and roughly
+  1,000-2,500 additional Logisim wire segments. Current file has ~3,500 wire
+  segments total. Pipelining alone is insufficient: multiplier must use DSPs or
+  multiple stages, BRAM is synchronous, and forwarding/stall/flush logic is required.
+  Modern midrange FPGA RTL may reach 150-250 MHz; direct structural Logisim export
+  is likely much lower. Exact Fmax/LUTs come only from Quartus/Vivado timing reports.
 - **Clock is substrate-bound:** FPGA soft-core ceiling ~200-300 MHz. Real GBA
   ARM7TDMI = 16.78 MHz, so even a 3-stage pipe (~60-80 MHz on DE10-Lite) beats it.
   1 GHz needs ASIC. Gate-level design ports CLEANLY to ASIC (it's already a netlist);
@@ -500,9 +624,61 @@ register file ─► shifter/CPSR/cond/PC ─► integrate ─► FIRST INSTRUCT
 transfers; RISC-V decode is SIMPLER than ARM. Reference/oracle = openc906 RTL +
 datasheet + Milk-V Duo silicon. This is the true "forever-machine" per the north star.
 
+**OpenC906 reuse boundary:** treat OpenC906 as a complete RV64 CPU IP block, not a
+place to splice ARM control. Directly reusable around it: INT8 PE/systolic array,
+mul_8, INT32 accumulation, DMA/scratchpads, arithmetic primitives, and verification
+methodology. Rough estimates: ARM CPU circuitry 10-20% directly reusable; NPU
+70-90%; verification 60-80%; architectural knowledge 80%+.
+
 ---
 
-## 10. TOOLS & HARDWARE
+## 10. MEMORY WALL + PCIe ARCHITECTURE
+
+PCIe is the host interface, not the PE memory interface:
+
+```text
+host -> PCIe endpoint -> command queue/DMA -> local DDR
+                                      -> double-buffered BRAM tiles -> NPU/GPU
+```
+
+The CPU submits descriptors (input/weight/output addresses, dimensions,
+quantization, opcode, START). PCIe moves jobs and large buffers; DDR holds the
+working set; DMA moves aligned bursts; BRAM feeds compute each cycle. Never send
+individual MAC operands or intermediate feature maps across PCIe when local reuse
+is possible. Required techniques: tiling, double buffering, burst transfers, INT8
+packing, operator fusion, and explicit measurement of arithmetic intensity, PE
+utilization, effective bandwidth, and compute/transfer overlap.
+
+One sufficiently large FPGA with shared DDR is the preferred first implementation.
+Three FPGAs add clock-domain crossings, packet links, separate memories, boot
+coordination, and bandwidth bottlenecks. Multi-FPGA is a later chiplet/interconnect
+project, not the shortest path to 15 FPS.
+
+---
+
+## 11. CANONICAL ARMv4T GAP (AFTER FIRST C)
+
+First C is not full ARMv4T. Remaining canonical work includes:
+
+```text
+ARM: BL; MUL/MLA selection; long multiplies; register-specified shifts; RRX and
+shift-by-zero rules; MRS/MSR; complete LDR/STR byte/halfword/signed/address modes;
+LDM/STM; SWP/SWPB; SWI; undefined/coprocessor trapping.
+
+State: full CPSR (NZCV,I,F,T,mode), SPSRs, privileged modes, banked registers,
+Reset/Undefined/SWI/Abort/IRQ/FIQ entry and return, and precise R15 semantics.
+
+Thumb: 16-bit fetch/decode, Thumb ALU/load/store/branch/BL/PUSH/POP, PC rules,
+and BX-driven ARM/Thumb state switching.
+```
+
+Caches and MMU are not required merely for ARMv4T architectural correctness.
+Broad canonical ARMv4T remains much larger than the first-C milestone; Thumb,
+modes/exceptions, and compliance testing are the long tail.
+
+---
+
+## 12. TOOLS & HARDWARE
 
 - **Logisim Evolution** — primary gate-level design environment.
 - **Quartus Prime Lite** — FPGA synthesis (schematic entry / structural VHDL).
@@ -514,7 +690,13 @@ datasheet + Milk-V Duo silicon. This is the true "forever-machine" per the north
 - **openc906** — XuanTie C906 open RISC-V core (Apache 2.0) — Tier B spec + oracle.
 - **Hailo-8L + Raspberry Pi 5** — benchmark target (Prof. Gertner's lab).
 
-## 11. PROJECT FILES (Logisim)
+**Pre-synthesis FPGA resource bounds (not measurements):** current ARM CPU roughly
+2.5-5.5K LUTs and 600-900 FFs; current 4×4 array with sixteen structural 32×32
+multipliers may cost ~25-55K LUTs; converting it to INT8 may reduce the 4×4 array
+to ~3-8K LUTs and CPU+INT8 NPU to ~6-14K. Structural multipliers may not infer DSPs.
+Only a device-specific Quartus/Vivado synthesis report gives real LUT/FF/DSP/Fmax.
+
+## 13. PROJECT FILES (Logisim)
 - `CPU_round2.circ` / `customCPU.circ` / `CPU_noram.circ` — V1 (has ALU_32bit,
   reg4x32file, reg16x32, PC_fetch, decoder2x4, mux_4_to_1, reg32bit; customCPU also
   has systolic: PE_cell = Multiplier+Adder+3 Registers, Systollic_2x2, systolic_4x4,
@@ -525,7 +707,7 @@ datasheet + Milk-V Duo silicon. This is the true "forever-machine" per the north
   ticks, auto-wire on matching port names). `python3 blockdiag.py` → pp_slice.svg,
   pp_array.svg, csa_slice.svg, csa_tree.svg, bs_stage.svg, barrel_chain.svg,
   **cpu_datapath.svg**. New block = a 3-line call; open SVG in browser.
-- **`BUILD_SHIFTER.md`** — the offline field guide for the BARREL SHIFTER (next block).
+- **`BUILD_SHIFTER.md`** — the offline field guide for the BARREL SHIFTER (built).
   3 stages, two ideas (log network + fill-encodes-type), the composition invariant
   (**ASR composes because ASR never changes bit31** — the sign is a fixed point),
   a 6-step debug order, and **§5: THE STAGE-1 DEGENERACY** (below). READ §5 FIRST.
@@ -544,6 +726,25 @@ datasheet + Milk-V Duo silicon. This is the true "forever-machine" per the north
   Six stages, a verify probe per stage, an 8-step debug order, and the full
   "what to avoid" list (splitter bits, Sign-vs-Zero extender, 3-in XOR parity,
   dropped carry, tunnel shorts, V1/V2 library-ID mismatch). READ THIS FIRST.
+- **`BUILD_OPERAND2.md`** — the offline field guide for the completed Operand2
+  register and immediate paths.
+- **`BUILD_CONDITION.md`** — the completed condition-execution field guide:
+  canonical condition decoding, enable gating, CPU test words, clock table, and
+  diagnostic signatures.
+- **`BUILD_BRANCH.md`** — the completed canonical ARM `B` field guide:
+  signed `imm24<<2`, the `PC+8` correction, conditional branch gating, and two
+  per-clock regressions.
+- **`BUILD_BX.md`** — the completed ARM-state BX field guide: exact pattern detection,
+  register target alignment, absolute-target extension of `pc_fetch`, write
+  suppression, and `BX LR` regression.
+- **`BX_CPU_TEST.md` / `bx_rom` / `bx_lr_rom`** — verified absolute `BX R2` and
+  function-return `BX LR` regressions.
+- **`BRANCH_CPU_TEST.md` / `branch_rom` / `branch_cond_rom`** — verified forward
+  skip, stable self-loop, and terminating conditional backward loop.
+- **`CONDITION_CPU_TEST.md` / `condition_rom`** — verified condition regression:
+  MI/EQ pass, PL/NE fail, final R2=22, R3=0, R5=55, R6=0, CPSR=4.
+- **`OPERAND2_CPU_TEST.md` / `operand2_rom`** — verified immediate Operand2 CPU
+  regression: R3=FF, R4=80000000, R5=800000FF.
 - **`asm.py`** — tiny ARMv4T data-processing assembler + oracle simulator.
   `--demo` prints the bring-up program, its machine words, the decode-ROM address
   and word each drives, and what each destination register becomes. `--rom FILE`
@@ -554,17 +755,20 @@ datasheet + Milk-V Duo silicon. This is the true "forever-machine" per the north
   `SUB R2,R0,R1` makes a ONE, then ADD builds every constant it needs. 16
   instructions, ends R3=8. Carries both discriminators (see §2). Load via
   right-click `instr_rom` → Load Image → `boot_rom`.
-- MULTIPLIER circuits (in armv4t.circ, all SEALED): `pp_row`, `partial_products`,
-  `csa_3to_2`, `csa_reduction_chain` (30 tiles), + ks_32b finisher → wired to ALU slot 10.
-- **armv4t.circ (V2) now contains 16 circuits:** `main`, `koggle_stone_1b`,
+- MULTIPLIER circuits (in armv4t.circ, all SEALED): `pp_row_32`, `partial_products`,
+  `csa_3to_2`, `mul_32` (30 CSA tiles), + ks_32b finisher → wired to ALU slot 10.
+- **armv4t.circ (V2) now contains 30 circuits / ~3,500 wire segments:** `main`, `koggle_stone_1b`,
   `koggle_stone_2b`, `pg_cell`, `ks_4b`, `ks_32b`, `ALU_airthmetic_engine`, `ALU`,
-  `a_invert`, `ALU_logic_engine`, `pp_row`, `partial_products`, `csa_3to_2`,
-  `csa_reduction_chain`, **`reg16x32`** (imported), **`pc_fetch`** (imported).
+  `a_invert`, `ALU_logic_engine`, `pp_row_32`, `partial_products`, `csa_3to_2`,
+  `mul_32`, **`reg16x32`** (imported), **`pc_fetch`** (imported),
+  `PE_cell`, `systolic_4x4`, `matmul4x4`, `pp_row_16`, `csa_16`, `pp_8`,
+  `mul_8`, **`bs_stage_1`**, **`bs_stage_2`**, **`bs_stage_4`**, **`bs_stage_8`**,
+  **`bs_stage_16`**, **`barrel_32b`**, **`condition_checker`**.
 - `ALU_modular_design.circ` (V1) — source of the imports. Still holds the V1 systolic
   NPU (`PE_cell` = built-in Multiplier + Adder + 3 Registers, `Systollic_2x2`,
   `systolic_4x4`, `matmul4x4`, `Systolic_2x1`) and a full single-cycle datapath
   blueprint (`main`/`main_v2` = ROM → PC_fetch → reg16x32 → ALU_32bit → RAM).
-  **Reuse plan:** drop V2's `mul_32b` into `PE_cell` to make the NPU fully gate-level.
+  The current V2 `PE_cell` is already gate-level (`mul_32` + `ks_32b` + registers).
 - Custom instructions: use ARMv4T undefined-instruction space (§4.17) → decoder adds
   a case → new control line → routes to custom unit → result through open out_mux slot.
   This is how NPU dispatch (MMIO) will work.
@@ -575,29 +779,46 @@ datasheet + Milk-V Duo silicon. This is the true "forever-machine" per the north
 COMPUTE CORE DONE. **M1 DONE — THE SINGLE-CYCLE CPU EXECUTES INSTRUCTIONS.**
 pc_fetch → instr_rom → decode_rom → reg16x32 → ALU → writeback, all wired,
 `boot_rom` runs 16 instructions clean, R3 = 0x00000008, both discriminators passed.
+The authoritative list of tested instruction/decode images is `VERIFIED_ROMS.md`.
+Before memory integration, run the complete generated pack in
+`regression_roms/README.md`; regenerate it with `python3 build_regression_roms.py`.
+
+**CURRENT START POINT 2026-08-02: BUILD `LDR/STR` + DATA RAM.**
+Condition execution and `B`/`BL`/ARM-state `BX` are complete. Preserve the commit
+invariant: branch, memory, and link writes are gated by `condition_pass`.
 
   ~~1. WIRE THE SINGLE-CYCLE CPU~~ ✅ **DONE 2026-07-14.** (Guide: `BUILD_CPU.md`.)
 
-  1. **BARREL SHIFTER** ← START HERE.  **FULL FIELD GUIDE: `BUILD_SHIFTER.md`.**
-     The only genuinely-new datapath block left, and the last "must-build" before
-     the CPU stops being a toy. It feeds operand2, and its `shifter_carry` is the
-     C flag on logic ops. 5 mux stages (1,2,4,8,16); shift = wire placement; fill
-     encodes LSL/LSR/ASR/ROR. Composition PROVED (`--shiftproof`: 1280 cases, 0
-     mismatches). See §6, `barrel_chain.svg`, `bs_stage.svg`.
-     **READ `BUILD_SHIFTER.md` §5 BEFORE WIRING** — stage 1 has NO single-vector
-     discriminator (ASR/ROR fill collide); you need TWO vectors. Details in §11.
-     BONUS: ARM immediates are `ROR(imm8, 2×rot4)` → **the shifter computes the
-     immediate path too.** operand2 mux gets it nearly free.
-  2. operand2 mux (I-bit) → CPSR (built-in 4-bit Register) → condition check
-  3. decoder extension (LDR / STR / B entries; MUL already at ROM addr 0x10)
-  4. memory + branch (pc_fetch already has BRANCH and IMM wired in)
+  ~~1. BARREL SHIFTER~~ ✅ **DONE 2026-07-26.**
+     `bs_stage_1/2/4/8/16` and `barrel_32b` are built in `armv4t.circ`, XML-valid,
+     and standalone-verified against the Python oracle. `shifter_carry` remains a
+     separate future block.
+  ~~2. OPERAND2 REGISTER PATH~~ ✅ **DONE 2026-07-27.**
+  ~~3. OPERAND2 IMMEDIATE PATH~~ ✅ **DONE 2026-07-27.**
+     Shared barrel input/amount/type muxes selected by I=instr[25].
+  ~~4. CPSR FLAG REGISTER + S-BIT GATING~~ ✅ **DONE 2026-07-27.**
+     Arithmetic NZCV sequence verified: 0 -> 6 -> 6 -> 9 -> 8 -> A.
+     Shifter carry remains required for logical instructions that set C.
+  ~~5. CONDITION CHECK~~ ✅ **DONE 2026-07-28.**
+     `instr[31:28] + CPSR.NZCV -> condition_pass`; failed conditions suppress
+     register writes and CPSR updates. Regression ends R2=22, R3=0, R5=55, R6=0.
+  6. ~~B BRANCH~~ ✅ **DONE 2026-07-28.**
+     Forward skip, backward conditional loop, fall-through, and self-loop passed.
+  7. ~~BX CONTROL FLOW~~ ✅ **DONE 2026-08-02.**
+     `BX R2` and `BX LR` absolute redirects passed with write suppression.
+  8. ~~BL LINK WRITEBACK~~ ✅ **DONE 2026-08-02.**
+     `BL -> function -> BX LR -> caller` passed; PC+4 correctly writes R14.
+  9. **LDR / STR decoder extension + data RAM** ← START HERE
+  10. Stack/ABI cleanup and shifter-carry correctness
 
 The gate-theory fights (CSA tree, Logisim XOR-parity trap) are behind us, and the
 integration fight is now behind us too. What's left is 2 small comb blocks + memory.
 
 **HONEST COMPLETION (reuse allowed):** compute core 100% · **M1 100% ✅** ·
-toward full single-cycle CPU (runs C) ~70%. Must-BUILD (can't reuse): barrel shifter,
-condition check, decoder extension, memory/branch. Everything else exists & is wired.
+toward a practical C-capable single-cycle CPU ~80%. Compiler-generated leaf C and
+function-call control flow run. Must-build: decoder extension, data memory/load
+writeback, and stack/ABI support. Shifter carry remains a
+correctness cleanup.
 
 FUTURE (parked, not now):
 - out_mux slot 11 = FPU (float). Fixed-point/INT8 covers the NPU regime, so FPU waits

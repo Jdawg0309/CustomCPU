@@ -1,6 +1,6 @@
-# Pre-Memory CPU Regression
+# CPU Regression
 
-Run this entire pack before adding LDR/STR or data RAM.
+Run this entire pack after changing the CPU datapath or control logic.
 
 ## Setup
 
@@ -26,6 +26,7 @@ Run this entire pack before adding LDR/STR or data RAM.
 | `09_bx_lr_rom` | 4 | R0=0 R1=0 R14=10 R3=33 pc_out=5 |
 | `10_bl_rom` | 6 | R0=6 R1=33 R14=8 pc_out=3 |
 | `11_compiled_c_rom` | 6 | R0=8 R1=3 R14=14 pc_out=5 |
+| `12_memory_rom` | 12 | R2=AA R4=55 R5=33 CPSR=2 RAM[07]=55 RAM[09]=AA pc_out=B |
 
 The first two ROMs fill all 16 addresses and therefore have no self-loop. Stop
 after tick 16 or the ROM address wraps to zero. The other control-flow tests end
@@ -45,6 +46,7 @@ in stable self-loops.
 09  BX LR
 10  BL link write to R14 and BX LR return
 11  GCC ARMv4T leaf C execution
+12  conditional positive/negative word LDR/STR and RAM writeback
 ```
 
 Regenerate the pack with:

@@ -180,8 +180,11 @@ DATAPATH / CONTROL FLOW ..... ~99% ✅ OPERAND2 + CPSR + B + BL + BX
   straight through. Ctrl+R mid-run wipes the constants it built. Tick 16 wraps the
   4-bit ROM address back to 0 and re-runs MVN on top of your finished state; stop at 16.
 
-MEMORY ...................... 0%   ☐
-  LDR/STR, data RAM, load writeback mux, stack. B/BL/BX are done; memory is next.
+MEMORY ...................... ~60% ✅ BASIC WORD LDR/STR
+  1 KiB word RAM, +/- imm12 address generation, conditional STR writes, and
+  conditional LDR writeback are verified. `memory_regression_rom` passes:
+  R2=AA, R4=55, R5=33, RAM[07]=55, RAM[09]=AA. Stack addressing/writeback,
+  byte/halfword transfers, and broader addressing modes remain.
 
 PIPELINE .................... 0%   ☐  (the clock lever, AFTER single-cycle works)
 NPU ......................... ~35% ✅ 4×4 GATE-LEVEL NPU WORKS (32-bit) — M2 core done
@@ -783,8 +786,9 @@ The authoritative list of tested instruction/decode images is `VERIFIED_ROMS.md`
 Before memory integration, run the complete generated pack in
 `regression_roms/README.md`; regenerate it with `python3 build_regression_roms.py`.
 
-**CURRENT START POINT 2026-08-02: BUILD `LDR/STR` + DATA RAM.**
-Condition execution and `B`/`BL`/ARM-state `BX` are complete. Preserve the commit
+**CURRENT START POINT 2026-08-04: BUILD STACK ADDRESSING + R13 WRITEBACK.**
+Condition execution, `B`/`BL`/ARM-state `BX`, and basic conditional +/- immediate
+word `LDR/STR` with 1 KiB RAM are complete. Preserve the commit
 invariant: branch, memory, and link writes are gated by `condition_pass`.
 
   ~~1. WIRE THE SINGLE-CYCLE CPU~~ ✅ **DONE 2026-07-14.** (Guide: `BUILD_CPU.md`.)
@@ -808,16 +812,18 @@ invariant: branch, memory, and link writes are gated by `condition_pass`.
      `BX R2` and `BX LR` absolute redirects passed with write suppression.
   8. ~~BL LINK WRITEBACK~~ ✅ **DONE 2026-08-02.**
      `BL -> function -> BX LR -> caller` passed; PC+4 correctly writes R14.
-  9. **LDR / STR decoder extension + data RAM** ← START HERE
-  10. Stack/ABI cleanup and shifter-carry correctness
+  9. ~~LDR / STR decoder extension + data RAM~~ ✅ **DONE 2026-08-04.**
+     Positive/negative word offsets and failed-condition suppression pass.
+  10. **Stack addressing/R13 writeback + ABI cleanup** ← START HERE
+  11. Shifter-carry correctness
 
 The gate-theory fights (CSA tree, Logisim XOR-parity trap) are behind us, and the
 integration fight is now behind us too. What's left is 2 small comb blocks + memory.
 
 **HONEST COMPLETION (reuse allowed):** compute core 100% · **M1 100% ✅** ·
-toward a practical C-capable single-cycle CPU ~80%. Compiler-generated leaf C and
-function-call control flow run. Must-build: decoder extension, data memory/load
-writeback, and stack/ABI support. Shifter carry remains a
+toward a practical C-capable single-cycle CPU ~90%. Compiler-generated leaf C,
+function-call control flow, and basic data memory run. Must-build: stack-compatible
+addressing/base writeback and ABI startup support. Shifter carry remains a
 correctness cleanup.
 
 FUTURE (parked, not now):

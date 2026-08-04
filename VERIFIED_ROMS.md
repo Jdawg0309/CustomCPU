@@ -18,6 +18,7 @@ load into the top-level `instr_rom`. Reset before each test and use manual ticks
 | `bx_lr_rom` | BX LR | R14=10, R3=33, pc_out=5 |
 | `bl_rom` | BL call and BX LR return | R0=6, R1=33, R14=8, pc_out=3 |
 | `c_tests/add_rom` | GCC-generated C leaf function | R0=8, R1=3, R14=14, pc_out=5 |
+| `12_memory_rom` | Conditional +/- offset word LDR/STR | R2=AA, R4=55, R5=33, RAM[07]=55, RAM[09]=AA |
 
 `instr_rom` and `boot_rom` contain 16 instructions with no terminating loop.
 Stop after tick 16; another tick wraps the four-bit ROM address.
@@ -70,4 +71,8 @@ e3a00005 eb000001 e3a01033 eafffffe e2800001 e12fff1e
 
 c_tests/add_rom:
 e3a00005 e3a01003 e3a0e014 e0800001 e12fff1e eafffffe
+
+12_memory_rom:
+e3a000aa e3a01020 e5810004 e5912004 e3a03055 e5013004 e5114004 e3500000
+e3a05033 05810008 05915008 eafffffe
 ```

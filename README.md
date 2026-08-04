@@ -16,7 +16,7 @@ OVERALL (practical C-capable target)         ███████████�
   Compute core (ALU + multiplier + decode)   ██████████████████████  100%
   Datapath (regfile, fetch, shifter, CPSR)   ██████████████████████  100%
   Control flow (conditions, B, BL, BX)       ██████████████████████  100%
-  Memory (LDR/STR, data RAM, stack)          ░░░░░░░░░░░░░░░░░░░░░░  0%
+  Memory (LDR/STR, data RAM, stack)          █████████████░░░░░░░░░  60%
   Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
   NPU (gate-level systolic array)            ████████░░░░░░░░░░░░░░  35%
 ```
@@ -25,8 +25,8 @@ OVERALL (practical C-capable target)         ███████████�
 ARMv4T C also runs using the standard R0/R1 argument, R0 result, and LR return
 convention.
 
-**Next block:** canonical immediate-offset `LDR`/`STR`, followed by data RAM,
-load writeback, and an R13 stack. That is the remaining path to practical C.
+**Next block:** stack-compatible addressing and R13 writeback. Canonical
+positive/negative immediate word `LDR`/`STR`, data RAM, and load writeback work.
 
 ---
 
@@ -57,9 +57,10 @@ load writeback, and an R13 stack. That is the remaining path to practical C.
 
 Both `reg16x32` and `pc_fetch` were carried over from the V1 build and re-verified in place — the register file and instruction fetch are done, not rebuilt.
 
-### ☐ Memory — next
-Immediate-offset LDR/STR, data RAM, load writeback mux, R13 stack, then broader
-addressing modes. B, conditional B, BL, BX, and BX LR are already verified.
+### ⏳ Memory — basic word transfers verified
+Positive/negative immediate word LDR/STR, 1 KiB data RAM, conditional store
+suppression, and conditional load writeback are verified. R13 stack addressing,
+base writeback, and byte/halfword transfers remain.
 
 ### ☐ Pipeline — 0%
 5-stage, added *after* single-cycle works.
@@ -137,11 +138,11 @@ python3 armv4t_alu.py --test        # 10 golden edge cases (all pass)
 python3 armv4t_alu.py --decoder     # opcode → ROM word → controls → result + flags
 python3 armv4t_alu.py --legend      # full control-signal + flag reference
 python3 armv4t_alu.py 0xAA 0xBB 1   # any A, B, Cflag
-python3 build_regression_roms.py     # regenerate 11 pre-memory CPU ROMs
+python3 build_regression_roms.py     # regenerate 12 CPU regression ROMs
 ```
 
 The complete CPU regression procedure and expected signatures are in
-[`regression_roms/README.md`](regression_roms/README.md). All 11 tests pass.
+[`regression_roms/README.md`](regression_roms/README.md). All 12 tests pass.
 
 ---
 
@@ -152,7 +153,7 @@ armv4t.circ             Logisim Evolution project — the V2 build (sealed compu
 ALU_modular_design.circ V1 build — datapath primitives (reg16x32, PC_fetch, ...) + V1 systolic NPU
 armv4t_alu.py           golden software oracle for the ALU
 opcode                  decode ROM image (Logisim v3.0 hex)
-regression_roms/        11 verified pre-memory instruction images
+regression_roms/        12 verified CPU instruction images, including RAM
 c_tests/                GCC ARM7TDMI/ARM-state leaf-C build and ROM generator
 ```
 

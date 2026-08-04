@@ -11,19 +11,22 @@ The ARMv4T CPU is the learning artifact. The long-term target is an open-ISA mac
 ## Progress
 
 ```
-OVERALL (working single-cycle ARMv4T CPU)    █████████░░░░░░░░░░░░░  40%
+OVERALL (practical C-capable target)         █████████████████░░░░░  80%
 
   Compute core (ALU + multiplier + decode)   ██████████████████████  100%
-  Datapath (regfile, fetch, shifter, CPSR)   ██████░░░░░░░░░░░░░░░░  25%
-  Memory & control flow (LDR/STR, branch)    ░░░░░░░░░░░░░░░░░░░░░░  0%
+  Datapath (regfile, fetch, shifter, CPSR)   ██████████████████████  100%
+  Control flow (conditions, B, BL, BX)       ██████████████████████  100%
+  Memory (LDR/STR, data RAM, stack)          ░░░░░░░░░░░░░░░░░░░░░░  0%
   Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
   NPU (gate-level systolic array)            ████████░░░░░░░░░░░░░░  35%
 ```
 
-Counting reusable components already built, the **M1 milestone is ~60% complete**.
+**M1 is complete:** the CPU executes instructions end to end. GCC-generated
+ARMv4T C also runs using the standard R0/R1 argument, R0 result, and LR return
+convention.
 
-**Next block:** the **barrel shifter** — the only genuinely-new datapath block left.
-**Next milestone (M1, "it's alive"):** shifter + operand2 mux + CPSR + condition check → integrate → first instruction executes.
+**Next block:** canonical immediate-offset `LDR`/`STR`, followed by data RAM,
+load writeback, and an R13 stack. That is the remaining path to practical C.
 
 ---
 
@@ -39,22 +42,24 @@ Counting reusable components already built, the **M1 milestone is ~60% complete*
 | `ALU` | ✅ sealed | 16 data-processing ops + MUL, N/Z/C/V flags, verified vs oracle |
 | decode ROM (`opcode`) | ✅ sealed | opcode → 10-bit control word |
 
-### ⏳ Datapath — 25%
+### ✅ Datapath and control flow — verified
 | Block | Status | Notes |
 |-------|--------|-------|
 | `reg16x32` — register file (16×32) | ✅ **in V2, verified** | 2-read / 1-write. 16 regs + write decoder + 2 read muxes + 16 write-enable ANDs. Where `write_enable` finally acts. |
 | `pc_fetch` — PC + fetch | ✅ **in V2, verified** | PC register + 2 adders + branch mux |
-| **barrel shifter** | ▶ **next** | 5 mux layers (1,2,4,8,16). LSL/LSR/ASR/ROR. Emits `shifter_carry` → the ALU's C flag on logic ops |
-| operand2 mux (I-bit) | ☐ todo | register vs immediate |
-| CPSR (flag register) | ☐ todo | 4-bit register latching N/Z/C/V |
-| condition check | ☐ todo | `cond[4] × NZCV → execute?` |
-| decoder extension | ☐ todo | add MUL / LDR / STR / B entries |
-| integration → first instruction | ☐ todo | the "it's alive" moment |
+| barrel shifter | ✅ verified | LSL/LSR/ASR/ROR through five 1/2/4/8/16 stages |
+| Operand2 mux (I-bit) | ✅ verified | register shifts and rotated immediates |
+| CPSR (flag register) | ✅ verified | arithmetic N/Z/C/V with S-bit gating |
+| condition check | ✅ verified | all condition classes; failed conditions suppress commits |
+| decoder extension | ☐ todo | add top-level MUL selection and LDR/STR controls |
+| B / BL / BX | ✅ verified | relative branch, link write to R14, and register return |
+| integration → first instruction | ✅ **M1 complete** | full fetch/decode/execute/writeback path works |
 
 Both `reg16x32` and `pc_fetch` were carried over from the V1 build and re-verified in place — the register file and instruction fetch are done, not rebuilt.
 
-### ☐ Memory & control flow — 0%
-LDR/STR, RAM, branch (B/BL), LDM/STM.
+### ☐ Memory — next
+Immediate-offset LDR/STR, data RAM, load writeback mux, R13 stack, then broader
+addressing modes. B, conditional B, BL, BX, and BX LR are already verified.
 
 ### ☐ Pipeline — 0%
 5-stage, added *after* single-cycle works.
@@ -132,7 +137,11 @@ python3 armv4t_alu.py --test        # 10 golden edge cases (all pass)
 python3 armv4t_alu.py --decoder     # opcode → ROM word → controls → result + flags
 python3 armv4t_alu.py --legend      # full control-signal + flag reference
 python3 armv4t_alu.py 0xAA 0xBB 1   # any A, B, Cflag
+python3 build_regression_roms.py     # regenerate 11 pre-memory CPU ROMs
 ```
+
+The complete CPU regression procedure and expected signatures are in
+[`regression_roms/README.md`](regression_roms/README.md). All 11 tests pass.
 
 ---
 
@@ -143,6 +152,8 @@ armv4t.circ             Logisim Evolution project — the V2 build (sealed compu
 ALU_modular_design.circ V1 build — datapath primitives (reg16x32, PC_fetch, ...) + V1 systolic NPU
 armv4t_alu.py           golden software oracle for the ALU
 opcode                  decode ROM image (Logisim v3.0 hex)
+regression_roms/        11 verified pre-memory instruction images
+c_tests/                GCC ARM7TDMI/ARM-state leaf-C build and ROM generator
 ```
 
 ---
@@ -153,11 +164,11 @@ opcode                  decode ROM image (Logisim v3.0 hex)
 multiplier ─┬─► CPU MUL/MLA                              ✅ done
             └─► NPU MAC → PE → systolic array → YOLO     (reuses mul_32b)
 
-register file ✅ ─► fetch ✅ ─► barrel shifter ◄ next ─► CPSR/cond/op2 ─► integrate
+register file ✅ ─► fetch ✅ ─► shifter ✅ ─► CPSR/conditions ✅
                                                               ↓
-                                                    FIRST INSTRUCTION (M1)
+                                              B/BL/BX + compiled leaf C ✅
         ↓
-  single-cycle CPU ─► +memory/branch ─► runs compiled C
+  LDR/STR + RAM + stack ─► practical compiled C
         ↓
   5-stage pipeline ─► NPU (INT8) ─► benchmark vs Hailo-8L
 ```

@@ -10,8 +10,12 @@ The ARMv4T CPU is the learning artifact. The long-term target is an open-ISA mac
 
 ## Progress
 
+The authoritative current capability report is [`PROJECT_STATUS.md`](PROJECT_STATUS.md),
+and future work is tracked in [`ROADMAP.md`](ROADMAP.md). The chart below is a
+high-level summary rather than a compatibility claim.
+
 ```
-OVERALL (practical C-capable target)         █████████████████░░░░░  80%
+OVERALL (practical C-capable target)         ███████████████████░░░  85%
 
   Compute core (ALU + multiplier + decode)   ██████████████████████  100%
   Datapath (regfile, fetch, shifter, CPSR)   ██████████████████████  100%
@@ -141,8 +145,9 @@ python3 armv4t_alu.py 0xAA 0xBB 1   # any A, B, Cflag
 python3 build_regression_roms.py     # regenerate 12 CPU regression ROMs
 ```
 
-The complete CPU regression procedure and expected signatures are in
-[`regression_roms/README.md`](regression_roms/README.md). All 12 tests pass.
+The canonical CPU regression procedure, math programs, C references, and exact
+expected signatures are in [`cpu/README.md`](cpu/README.md). All 12 CPU
+regressions have passed manually.
 
 ---
 
@@ -153,8 +158,12 @@ armv4t.circ             Logisim Evolution project — the V2 build (sealed compu
 ALU_modular_design.circ V1 build — datapath primitives (reg16x32, PC_fetch, ...) + V1 systolic NPU
 armv4t_alu.py           golden software oracle for the ALU
 opcode                  decode ROM image (Logisim v3.0 hex)
-regression_roms/        12 verified CPU instruction images, including RAM
+cpu/                    flat release bundle: ROMs, assembly, C, tests, manifest
 c_tests/                GCC ARM7TDMI/ARM-state leaf-C build and ROM generator
+PROJECT_STATUS.md       authoritative current capability and limitations
+PROJECT_LOG.md          dated completed milestones
+ROADMAP.md              ordered future milestones and acceptance criteria
+RELEASE_CHECKLIST.md    official-build verification procedure
 ```
 
 ---

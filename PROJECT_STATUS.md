@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-08-05
+Last updated: 2026-08-13
 
 ## Current CPU
 
@@ -21,6 +21,9 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
   with F0 through F46 while preserving RAM from 0x2F onward
 - verified STR pre-index and post-index base writeback, including R13 stack
   decrement/increment and a no-writeback discriminator
+- verified post-index LDR with simultaneous destination-register and R13 base
+  writeback through the rebuilt dual-write register file
+- asynchronous data-RAM reads for correct single-cycle LDR timing
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.
@@ -30,10 +33,10 @@ All twelve canonical regression images and the math pack are cataloged in
 The CPU is capable of general finite-state computation and can execute useful
 hand-assembled algorithms. It is not yet a practical compiled-C target.
 
-The immediate blocker is completing load-side stack addressing:
+Load-side stack addressing and simultaneous `Rd`/`Rn` writeback are complete.
+The remaining practical-C work is:
 
-- register-offset LDR/STR needed by common compiler output
-- simultaneous LDR destination and base-register writeback for pop patterns
+- register-offset LDR/STR needed by some compiler output
 - sufficiently large instruction memory for startup and nontrivial programs
 - reset/startup code, linker script, and a stable memory map
 - an end-to-end test built by `arm-none-eabi-gcc`, not manually translated
@@ -45,10 +48,9 @@ accesses, multiply integration, and architectural edge cases remain.
 
 ## Immediate Next Step
 
-Implement and test load-side base writeback. The current single-write-port
-register file cannot write loaded `Rd` and updated `Rn` on the same edge. The
-acceptance test must then execute a compiled function that creates a stack frame,
-accesses a local variable, restores R13, and returns through LR.
+Expand instruction memory and add the startup/linker build needed for a compiled
+function that creates a stack frame, accesses a local variable, restores R13,
+and returns through LR.
 
 ## Known Limits
 
@@ -59,4 +61,6 @@ accesses a local variable, restores R13, and returns through LR.
 - multiply detection exists in prior decode work but is not a completed,
   top-level verified instruction path
 - no MMIO input, UART, PS/2, timer, or external bus
+- data RAM currently uses asynchronous reads for the single-cycle datapath;
+  FPGA block RAM will require a load wait state or pipelined memory stage
 - no FPGA timing result; Logisim simulation frequency is not Fmax

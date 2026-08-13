@@ -41,7 +41,8 @@ instruction ROM.
 
 ## Current Focus
 
-Read `PROJECT_STATUS.md` before making a recommendation. Store-side stack
-writeback is verified. The next hardware work is load-side base writeback and
-the simultaneous `Rd`/`Rn` write problem, followed by a larger instruction ROM,
-reset/startup, linker support, and an actual compiled C integration test.
+Read `PROJECT_STATUS.md` before making a recommendation. Store-side and
+load-side stack writeback are verified, including simultaneous `Rd`/`Rn` writes.
+The next work is a larger instruction ROM, reset/startup, linker support, and an
+actual compiled C integration test. Data RAM uses asynchronous reads for this
+single-cycle milestone; FPGA work must later add a synchronous load wait state.

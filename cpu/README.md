@@ -56,6 +56,8 @@ test is `regression_12_memory.rom`.
 | `helper_memory_regression.rom` | Original complete memory test | same signature as `regression_12_memory.rom` |
 | `helper_stack_address_mux.rom` | Test pre-index and post-index address selection before base writeback is connected | pre-index address=FC; post-index address=100; RAM[3F]=AA; RAM[40]=AA |
 | `helper_stack_store_writeback.rom` | Verify pre-index, post-index, and suppressed store base writeback | R5=FC R13=104 RAM[3F]=AA RAM[40]=55 RAM[42]=33 |
+| `helper_stack_load_writeback.rom` | Verify simultaneous post-index LDR destination and stack-base writeback | R0=0 R1=AA R2=100 R13=100 RAM[3F]=AA |
+| `diagnostic_sync_ram_workaround.rom` | Prove synchronous-read latency with a sacrificial LDR before the real load | R1=AA R2=100 R12=0 R13=100 RAM[3F]=AA |
 
 For `helper_stack_address_mux.rom`, stop after verifying the first four
 instructions. This test assumes stack base writeback is not connected yet, so
@@ -72,6 +74,14 @@ STR R0,[SP,#4]    -> RAM[42]=33, SP remains 104
 
 This complete signature was manually verified on the Logisim CPU on
 2026-08-06.
+
+`diagnostic_sync_ram_workaround.rom` is a timing discriminator, not the normal
+execution model. With synchronous RAM reads, its first `LDR R12,[SP]` primes
+`RAM.out` and the following `LDR R1,[SP],#4` succeeds. The ordinary
+`helper_stack_load_writeback.rom` succeeds after enabling asynchronous RAM reads,
+which the current single-cycle datapath requires. Keep RAM writes rising-edge
+triggered. A future FPGA implementation must replace this with a load wait state
+or pipelined synchronous-memory stage.
 
 ## Math ROMs
 

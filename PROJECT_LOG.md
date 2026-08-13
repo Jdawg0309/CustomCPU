@@ -1,5 +1,15 @@
 # Project Log
 
+## 2026-08-13
+
+- Completed load-side stack base writeback with simultaneous `Rd` and `Rn`
+  writes through the rebuilt dual-write register file.
+- Found the LDR timing failure: synchronous `RAM.out` changed only after the
+  register-write edge, so a post-index load wrote stale data.
+- Proved the diagnosis with a sacrificial-load ROM under synchronous-read RAM.
+- Enabled asynchronous RAM reads for the current single-cycle datapath.
+- Verified the final stack signature: R1=AA, R2=100, R13=100, RAM[3F]=AA.
+
 ## 2026-08-06
 
 - Verified store-side stack base writeback.

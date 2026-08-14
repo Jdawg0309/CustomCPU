@@ -29,6 +29,8 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
   terminal detection
 - verified block-transfer register-list capture and per-index selection using
   the GCC test list `0x4010` for R4 and LR
+- connected fetched `instr[15:0]` to the block-transfer controller in `main`
+  and exposed the active `reg_selected` result
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.

@@ -44,6 +44,7 @@ Verified in `armv4t.circ` on 2026-08-14:
 - POP register-index scan from 0 through 15
 - automatic terminal detection and exact PC release
 - 16-bit register-list capture and indexed `reg_selected` output
+- top-level `instr[15:0]` and `reg_selected` integration
 
 The transfer-address register, RAM integration, POP register writeback, and
 final SP writeback remain to be wired.

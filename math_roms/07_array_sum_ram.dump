@@ -1,0 +1,24 @@
+
+/tmp/tmpk4pbc6_z/07_array_sum_ram.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00003 	mov	r0, #3
+   4:	e3a01020 	mov	r1, #32
+   8:	e5810000 	str	r0, [r1]
+   c:	e3a00005 	mov	r0, #5
+  10:	e5810004 	str	r0, [r1, #4]
+  14:	e3a00007 	mov	r0, #7
+  18:	e5810008 	str	r0, [r1, #8]
+  1c:	e3a02000 	mov	r2, #0
+  20:	e5913000 	ldr	r3, [r1]
+  24:	e0822003 	add	r2, r2, r3
+  28:	e5913004 	ldr	r3, [r1, #4]
+  2c:	e0822003 	add	r2, r2, r3
+  30:	e5913008 	ldr	r3, [r1, #8]
+  34:	e0822003 	add	r2, r2, r3
+
+00000038 <stop>:
+  38:	eafffffe 	b	38 <stop>

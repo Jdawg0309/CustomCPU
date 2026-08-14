@@ -1,0 +1,29 @@
+
+/tmp/tmpk4pbc6_z/08_derivative_x2.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00005 	mov	r0, #5
+   4:	e2801001 	add	r1, r0, #1
+   8:	e3a02000 	mov	r2, #0
+   c:	e1a03001 	mov	r3, r1
+
+00000010 <plus_square>:
+  10:	e0822001 	add	r2, r2, r1
+  14:	e2533001 	subs	r3, r3, #1
+  18:	1afffffc 	bne	10 <plus_square>
+  1c:	e2401001 	sub	r1, r0, #1
+  20:	e3a04000 	mov	r4, #0
+  24:	e1a03001 	mov	r3, r1
+
+00000028 <minus_square>:
+  28:	e0844001 	add	r4, r4, r1
+  2c:	e2533001 	subs	r3, r3, #1
+  30:	1afffffc 	bne	28 <minus_square>
+  34:	e0425004 	sub	r5, r2, r4
+  38:	e1a050a5 	lsr	r5, r5, #1
+
+0000003c <stop>:
+  3c:	eafffffe 	b	3c <stop>

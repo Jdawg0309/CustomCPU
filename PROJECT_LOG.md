@@ -1,5 +1,23 @@
 # Project Log
 
+## 2026-08-14
+
+- Expanded instruction fetch from 16 to 256 words using `PC[9:2]`.
+- Added the first complete freestanding build: ARM startup, linker script,
+  GCC-compiled stack-backed loop, ROM generation, and exact-image checks.
+- Built a 22-word practical-C acceptance image with an ABI argument, stack
+  local, conditional loop, C pointer store, function return, and stable halt.
+- Ran it headlessly on the real Logisim circuit to `BX LR`; verified
+  RAM[40]=18 and RAM[FF]=1.
+- Added canonical ARM-state PUSH/POP form detection for `STMDB SP!` and
+  `LDMIA SP!`.
+- Added `pc_fetch.hold` and integrated a multi-cycle block-transfer controller.
+- Verified controller start, active, done, PC hold/release, PUSH countdown
+  `F..0`, POP count-up `0..F`, and automatic terminal detection in `main`.
+- Preserved the gate-level circuit as the reference implementation; the planned
+  next-generation RTL will retain its adder, ALU, shifter, decode, control, and
+  memory behavior before manual pipelining.
+
 ## 2026-08-13
 
 - Completed load-side stack base writeback with simultaneous `Rd` and `Rn`

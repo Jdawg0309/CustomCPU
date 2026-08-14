@@ -1,0 +1,16 @@
+
+/tmp/tmpk4pbc6_z/09_taylor_e_q8_8.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00c01 	mov	r0, #256	; 0x100
+   4:	e2800c01 	add	r0, r0, #256	; 0x100
+   8:	e2800080 	add	r0, r0, #128	; 0x80
+   c:	e280002b 	add	r0, r0, #43	; 0x2b
+  10:	e280000b 	add	r0, r0, #11
+  14:	e2800002 	add	r0, r0, #2
+
+00000018 <stop>:
+  18:	eafffffe 	b	18 <stop>

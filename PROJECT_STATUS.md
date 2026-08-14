@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-08-13
+Last updated: 2026-08-14
 
 ## Current CPU
 
@@ -15,7 +15,7 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
 - 1 KiB data RAM through the current memory datapath
 - one compiled leaf C function that performs register-only addition and returns
 - ten hand-assembled math programs, including RAM, loops, and conditional code
-- a 16-word Fibonacci integration program covering compute, shifts, flags,
+- a Fibonacci integration program covering compute, shifts, flags,
   conditional looping, STR/LDR, RAM readback, and a self-checking signature
 - a verified 47-iteration loop that fills RAM word addresses 0x00 through 0x2E
   with F0 through F46 while preserving RAM from 0x2F onward
@@ -24,33 +24,40 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
 - verified post-index LDR with simultaneous destination-register and R13 base
   writeback through the rebuilt dual-write register file
 - asynchronous data-RAM reads for correct single-cycle LDR timing
+- integrated block-transfer detection and a verified multi-cycle controller
+  with PC hold/release, PUSH `F..0` scanning, POP `0..F` scanning, and automatic
+  terminal detection
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.
 
 ## Practical-C Status
 
-The CPU is capable of general finite-state computation and can execute useful
-hand-assembled algorithms. It is not yet a practical compiled-C target.
+The first practical freestanding-C acceptance image passed the actual Logisim
+CPU on 2026-08-14. It includes a reset entry point, a fixed memory map, stack
+initialization, a GCC-compiled conditional loop with a stack-backed local,
+`BL`/`BX LR`, and a compiler-generated RAM result store.
 
-Load-side stack addressing and simultaneous `Rd`/`Rn` writeback are complete.
-The remaining practical-C work is:
+Completed practical-C infrastructure:
 
-- register-offset LDR/STR needed by some compiler output
-- sufficiently large instruction memory for startup and nontrivial programs
-- reset/startup code, linker script, and a stable memory map
-- an end-to-end test built by `arm-none-eabi-gcc`, not manually translated
+- 256-word instruction ROM addressed by `PC[9:2]`
+- 1 KiB RAM at byte addresses `0x000` through `0x3FF`
+- descending stack initialized one byte beyond RAM at `0x400`
+- ARM linker script and startup assembly
+- reproducible `arm-none-eabi-gcc` build and exact machine-image verification
+- automated headless Logisim execution to `BX LR`
+- documented 35-clock manual acceptance signature in `PRACTICAL_C_CPU_TEST.md`
 
-Estimated completion toward the first practical freestanding C milestone is
-about 85-90 percent by feature count. Compatibility with a complete ARM7TDMI is
-substantially lower because exceptions, privileged modes, Thumb, byte/halfword
-accesses, multiply integration, and architectural edge cases remain.
+The verified signature is `RAM[40]=00000018` and `RAM[FF]=00000001`.
+Register-offset LDR/STR is not required by this image and remains a later
+compiler-coverage improvement.
 
 ## Immediate Next Step
 
-Expand instruction memory and add the startup/linker build needed for a compiled
-function that creates a stack frame, accesses a local variable, restores R13,
-and returns through LR.
+Finish the GCC-required PUSH/POP datapath: capture the register list, select each
+listed register, generate transfer addresses, connect RAM loads/stores, and
+write the final address back to SP. Then replace asynchronous LDR behavior with
+a synchronous memory wait state and freeze the gate-level practical-C release.
 
 ## Known Limits
 

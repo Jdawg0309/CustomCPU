@@ -1,0 +1,19 @@
+
+/tmp/tmpk4pbc6_z/06_popcount.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a000b5 	mov	r0, #181	; 0xb5
+   4:	e3a01000 	mov	r1, #0
+
+00000008 <loop>:
+   8:	e2102001 	ands	r2, r0, #1
+   c:	12811001 	addne	r1, r1, #1
+  10:	e1a000a0 	lsr	r0, r0, #1
+  14:	e3500000 	cmp	r0, #0
+  18:	1afffffa 	bne	8 <loop>
+
+0000001c <stop>:
+  1c:	eafffffe 	b	1c <stop>

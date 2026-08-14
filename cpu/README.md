@@ -12,9 +12,10 @@ expected result is directly inside `cpu/`.
 4. Reset the simulation and tick the clock manually.
 5. Compare registers, CPSR, PC, and RAM with the tables below.
 
-The 16-word instruction ROM wraps to address zero. Regression tests 01 and 02
-must be stopped after tick 16. Control-flow, memory, and math programs end in a
-stable branch-to-self loop.
+The instruction ROM is 256 words and is addressed by `PC[9:2]`. Regression
+tests 01 and 02 still contain exactly 16 sequential instructions and should be
+stopped after tick 16. Control-flow, memory, and math programs end in a stable
+branch-to-self loop.
 
 ## Decoder ROM
 
@@ -58,6 +59,7 @@ test is `regression_12_memory.rom`.
 | `helper_stack_store_writeback.rom` | Verify pre-index, post-index, and suppressed store base writeback | R5=FC R13=104 RAM[3F]=AA RAM[40]=55 RAM[42]=33 |
 | `helper_stack_load_writeback.rom` | Verify simultaneous post-index LDR destination and stack-base writeback | R0=0 R1=AA R2=100 R13=100 RAM[3F]=AA |
 | `diagnostic_sync_ram_workaround.rom` | Prove synchronous-read latency with a sacrificial LDR before the real load | R1=AA R2=100 R12=0 R13=100 RAM[3F]=AA |
+| `helper_block_transfer_detect.rom` | Decode canonical `STMDB`/`LDMIA` used as GCC `PUSH`/`POP` | words 0/1: class=4; P/U/W/L fields match `BUILD_BLOCK_TRANSFER.md` |
 
 For `helper_stack_address_mux.rom`, stop after verifying the first four
 instructions. This test assumes stack base writeback is not connected yet, so
@@ -200,11 +202,11 @@ verified on the workstation with:
 make -C cpu verify-host
 ```
 
-These C files are legitimate future ARM target inputs, but most are not yet
-directly executable on this CPU when compiled normally. A compiler may emit
-stack frames, register-offset transfers, calls, and a program larger than 16
-words. The practical-C milestone in `../ROADMAP.md` closes those gaps. Until
-then, use the matching hand-assembled ROM for on-CPU verification.
+These C files are legitimate ARM target inputs, but compiler output must remain
+inside the implemented ARM-state subset. The first linked startup plus GCC test
+is `../c_tests/practical_rom`; its exact acceptance procedure is documented in
+`../PRACTICAL_C_CPU_TEST.md`. The matching hand-assembled ROMs remain the
+canonical algorithm regressions.
 
 ## Rebuild and Verify
 
@@ -216,8 +218,8 @@ make -C cpu clean verify
 make -C cpu manifest
 ```
 
-`build.py` rebuilds all ten math images and rejects programs larger than the
-current 16-word instruction ROM. `--check` verifies generated images without
+`build.py` rebuilds all thirteen math images and rejects programs larger than
+the 256-word instruction ROM. `--check` verifies generated images without
 changing them. `MANIFEST.sha256` fingerprints the release bundle.
 
 ## Keyboard Input Milestone

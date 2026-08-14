@@ -14,6 +14,7 @@ HERE = Path(__file__).resolve().parent
 PLAIN_HEADER = "v3.0 hex words plain"
 ADDRESSED_HEADER = "v3.0 hex words addressed"
 WORD_RE = re.compile(r"^[0-9a-fA-F]{8}$")
+MAX_ROM_WORDS = 256
 
 
 def rom_words(path: Path) -> list[str]:
@@ -52,8 +53,11 @@ def build_math_roms(check_only: bool) -> None:
     for source in sorted(HERE.glob("[0-9][0-9]_*.S")):
         output = HERE / f"math_{source.stem}.rom"
         words = assemble(source)
-        if len(words) > 16:
-            raise ValueError(f"{source.name}: {len(words)} words exceed the 16-word ROM")
+        if len(words) > MAX_ROM_WORDS:
+            raise ValueError(
+                f"{source.name}: {len(words)} words exceed the "
+                f"{MAX_ROM_WORDS}-word ROM"
+            )
         if check_only:
             if not output.exists() or rom_words(output) != words:
                 raise ValueError(f"{output.name}: stale; run python3 build.py")
@@ -72,8 +76,11 @@ def validate_bundle() -> None:
                 raise ValueError("decode_opcode.rom: expected an addressed Logisim image")
             continue
         words = rom_words(rom)
-        if len(words) > 16:
-            raise ValueError(f"{rom.name}: {len(words)} words exceed the 16-word ROM")
+        if len(words) > MAX_ROM_WORDS:
+            raise ValueError(
+                f"{rom.name}: {len(words)} words exceed the "
+                f"{MAX_ROM_WORDS}-word ROM"
+            )
     print(f"validated {len(roms)} ROM files")
 
 

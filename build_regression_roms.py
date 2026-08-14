@@ -2,6 +2,9 @@
 from pathlib import Path
 
 
+MAX_ROM_WORDS = 256
+
+
 ROMS = {
     "01_compute_rom": [
         0xE1E01000, 0xE0402001, 0xE0823002, 0xE0834002,
@@ -59,8 +62,8 @@ def main():
     output_dir.mkdir(exist_ok=True)
 
     for name, words in ROMS.items():
-        if len(words) > 16:
-            raise ValueError(f"{name} exceeds the 16-word instruction ROM")
+        if len(words) > MAX_ROM_WORDS:
+            raise ValueError(f"{name} exceeds the {MAX_ROM_WORDS}-word instruction ROM")
         image = "v3.0 hex words plain\n" + " ".join(f"{word:08x}" for word in words) + "\n"
         (output_dir / name).write_text(image, encoding="ascii")
 

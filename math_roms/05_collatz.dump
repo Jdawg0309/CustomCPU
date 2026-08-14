@@ -1,0 +1,22 @@
+
+/tmp/tmpk4pbc6_z/05_collatz.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a0000d 	mov	r0, #13
+   4:	e3a01000 	mov	r1, #0
+
+00000008 <loop>:
+   8:	e3500001 	cmp	r0, #1
+   c:	0a000005 	beq	28 <stop>
+  10:	e3100001 	tst	r0, #1
+  14:	01a000a0 	lsreq	r0, r0, #1
+  18:	10800080 	addne	r0, r0, r0, lsl #1
+  1c:	12800001 	addne	r0, r0, #1
+  20:	e2811001 	add	r1, r1, #1
+  24:	eafffff7 	b	8 <loop>
+
+00000028 <stop>:
+  28:	eafffffe 	b	28 <stop>

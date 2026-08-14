@@ -1,0 +1,19 @@
+
+/tmp/tmpk4pbc6_z/10_relu_perceptron.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00004 	mov	r0, #4
+   4:	e3a01003 	mov	r1, #3
+   8:	e3a02005 	mov	r2, #5
+   c:	e0803080 	add	r3, r0, r0, lsl #1
+  10:	e0833081 	add	r3, r3, r1, lsl #1
+  14:	e0433002 	sub	r3, r3, r2
+  18:	e243300a 	sub	r3, r3, #10
+  1c:	e3530000 	cmp	r3, #0
+  20:	b3a03000 	movlt	r3, #0
+
+00000024 <stop>:
+  24:	eafffffe 	b	24 <stop>

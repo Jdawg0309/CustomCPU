@@ -6,3 +6,6 @@ blockdiag.py
 *.pyc
 __pycache__/
 /cpu/verify_host
+/c_tests/*.elf
+/c_tests/practical.o
+/c_tests/startup.o

@@ -4,6 +4,8 @@
 
 ```text
 make -C cpu clean verify
+make -C c_tests clean verify
+make -C c_tests verify-logisim
 python3 build_regression_roms.py
 git status --short
 ```
@@ -24,11 +26,12 @@ the release candidate `armv4t.circ` and record any changed signatures.
 ## Version Procedure
 
 1. Confirm every generated ROM is current with `make -C cpu verify`.
-2. Confirm the circuit passes all documented manual signatures.
-3. Update `PROJECT_STATUS.md` and append the tested milestone to
+2. Run the GCC practical-C image on the circuit with `verify-logisim`.
+3. Confirm the circuit passes all documented manual regression signatures.
+4. Update `PROJECT_STATUS.md` and append the tested milestone to
    `PROJECT_LOG.md`.
-4. Generate `cpu/MANIFEST.sha256` with `make -C cpu manifest`.
-5. Commit the exact release contents and tag the commit.
+5. Generate `cpu/MANIFEST.sha256` with `make -C cpu manifest`.
+6. Commit the exact release contents and tag the commit.
 
 Do not claim complete ARMv4T or ARM7TDMI compatibility until Thumb, exceptions,
 privileged behavior, and the remaining memory forms have dedicated tests.

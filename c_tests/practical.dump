@@ -1,0 +1,31 @@
+
+practical.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a0db01 	mov	sp, #1024	; 0x400
+   4:	e3a00004 	mov	r0, #4
+   8:	eb000000 	bl	10 <main>
+   c:	eafffffe 	b	c <_start+0xc>
+
+00000010 <main>:
+  10:	e3a03001 	mov	r3, #1
+  14:	e24dd008 	sub	sp, sp, #8
+  18:	e58d3004 	str	r3, [sp, #4]
+  1c:	e250c000 	subs	ip, r0, #0
+  20:	e59d1004 	ldr	r1, [sp, #4]
+  24:	0a000009 	beq	50 <main+0x40>
+  28:	e3a00000 	mov	r0, #0
+  2c:	e0811003 	add	r1, r1, r3
+  30:	e15c0003 	cmp	ip, r3
+  34:	e0800001 	add	r0, r0, r1
+  38:	e2833001 	add	r3, r3, #1
+  3c:	1afffffa 	bne	2c <main+0x1c>
+  40:	e3a03000 	mov	r3, #0
+  44:	e5830100 	str	r0, [r3, #256]	; 0x100
+  48:	e28dd008 	add	sp, sp, #8
+  4c:	e12fff1e 	bx	lr
+  50:	e1a0000c 	mov	r0, ip
+  54:	eafffff9 	b	40 <main+0x30>

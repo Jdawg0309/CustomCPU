@@ -2,16 +2,16 @@
 
 ## Milestone 1: Practical Freestanding C
 
-1. Complete LDR/STR P/U/W addressing and Rn writeback.
-2. Validate R13 stack allocation, local-variable access, and restoration.
-3. Expand instruction ROM beyond the current 16-word test limit.
-4. Define reset vector, memory map, stack top, and program entry.
-5. Add an ARM linker script and startup assembly.
-6. Run a GCC-built C program with loops, local variables, calls, and RAM.
+1. [x] Complete LDR/STR P/U/W addressing and Rn writeback.
+2. [x] Validate R13 stack allocation, local-variable access, and restoration.
+3. [x] Expand instruction ROM to 256 words.
+4. [x] Define reset vector, memory map, stack top, and program entry.
+5. [x] Add an ARM linker script and startup assembly.
+6. [x] Run the prepared GCC-built C acceptance image on the Logisim CPU.
 
 Acceptance: a reproducible build loads a compiler-generated ROM, runs without
-manual instruction translation, stores a known result in RAM, and halts in a
-documented loop.
+manual instruction translation, stores `0x18` in `RAM[40]`, and halts in the
+documented loop. Achieved by the automated Logisim circuit test on 2026-08-14.
 
 ## Milestone 2: Stable ARM-State Core
 

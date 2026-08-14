@@ -1,0 +1,25 @@
+
+/tmp/tmpk4pbc6_z/03_factorial.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00005 	mov	r0, #5
+   4:	e3a01001 	mov	r1, #1
+
+00000008 <outer>:
+   8:	e1a02001 	mov	r2, r1
+   c:	e1a03000 	mov	r3, r0
+  10:	e3a01000 	mov	r1, #0
+
+00000014 <inner>:
+  14:	e0811002 	add	r1, r1, r2
+  18:	e2533001 	subs	r3, r3, #1
+  1c:	1afffffc 	bne	14 <inner>
+  20:	e2500001 	subs	r0, r0, #1
+  24:	e3500001 	cmp	r0, #1
+  28:	cafffff6 	bgt	8 <outer>
+
+0000002c <stop>:
+  2c:	eafffffe 	b	2c <stop>

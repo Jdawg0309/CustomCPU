@@ -20,7 +20,7 @@ OVERALL (practical C-capable target)         ███████████�
   Compute core (ALU + multiplier + decode)   ██████████████████████  100%
   Datapath (regfile, fetch, shifter, CPSR)   ██████████████████████  100%
   Control flow (conditions, B, BL, BX)       ██████████████████████  100%
-  Memory (LDR/STR, data RAM, stack)          █████████████░░░░░░░░░  60%
+  Memory (LDR/STR, data RAM, stack)          ████████████████████░░░  90%
   Pipeline (5-stage)                         ░░░░░░░░░░░░░░░░░░░░░░  0%
   NPU (gate-level systolic array)            ████████░░░░░░░░░░░░░░  35%
 ```
@@ -29,8 +29,8 @@ OVERALL (practical C-capable target)         ███████████�
 ARMv4T C also runs using the standard R0/R1 argument, R0 result, and LR return
 convention.
 
-**Next block:** stack-compatible addressing and R13 writeback. Canonical
-positive/negative immediate word `LDR`/`STR`, data RAM, and load writeback work.
+**Practical C milestone complete:** the linked 22-word startup plus GCC C image
+ran on the Logisim CPU and produced `RAM[40]=0x18` and `RAM[FF]=1`.
 
 ---
 
@@ -63,8 +63,8 @@ Both `reg16x32` and `pc_fetch` were carried over from the V1 build and re-verifi
 
 ### ⏳ Memory — basic word transfers verified
 Positive/negative immediate word LDR/STR, 1 KiB data RAM, conditional store
-suppression, and conditional load writeback are verified. R13 stack addressing,
-base writeback, and byte/halfword transfers remain.
+suppression, R13 stack addressing, and load/store base writeback are verified.
+Byte/halfword and register-offset transfers remain.
 
 ### ☐ Pipeline — 0%
 5-stage, added *after* single-cycle works.

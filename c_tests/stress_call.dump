@@ -1,0 +1,38 @@
+
+stress_call.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a0db01 	mov	sp, #1024	; 0x400
+   4:	e3a00004 	mov	r0, #4
+   8:	eb000000 	bl	10 <main>
+   c:	eafffffe 	b	c <_start+0xc>
+
+00000010 <main>:
+  10:	e2501000 	subs	r1, r0, #0
+  14:	0a00000d 	beq	50 <main+0x40>
+  18:	e3a03000 	mov	r3, #0
+  1c:	e1a02003 	mov	r2, r3
+  20:	e92d4010 	push	{r4, lr}
+  24:	e1a00003 	mov	r0, r3
+  28:	eb00000c 	bl	60 <transform>
+  2c:	e2833001 	add	r3, r3, #1
+  30:	e1510003 	cmp	r1, r3
+  34:	e0822000 	add	r2, r2, r0
+  38:	1afffff9 	bne	24 <main+0x14>
+  3c:	e3a03000 	mov	r3, #0
+  40:	e1a00002 	mov	r0, r2
+  44:	e583210c 	str	r2, [r3, #268]	; 0x10c
+  48:	e8bd4010 	pop	{r4, lr}
+  4c:	e12fff1e 	bx	lr
+  50:	e3a03000 	mov	r3, #0
+  54:	e1a00001 	mov	r0, r1
+  58:	e583110c 	str	r1, [r3, #268]	; 0x10c
+  5c:	e12fff1e 	bx	lr
+
+00000060 <transform>:
+  60:	e1a00080 	lsl	r0, r0, #1
+  64:	e2800003 	add	r0, r0, #3
+  68:	e12fff1e 	bx	lr

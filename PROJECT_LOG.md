@@ -14,6 +14,8 @@
 - Added `pc_fetch.hold` and integrated a multi-cycle block-transfer controller.
 - Verified controller start, active, done, PC hold/release, PUSH countdown
   `F..0`, POP count-up `0..F`, and automatic terminal detection in `main`.
+- Added and verified 16-bit block-transfer register-list capture and indexed
+  selection; `0x4010` selects only R14 and R4 during either scan direction.
 - Preserved the gate-level circuit as the reference implementation; the planned
   next-generation RTL will retain its adder, ALU, shifter, decode, control, and
   memory behavior before manual pipelining.

@@ -43,9 +43,10 @@ Verified in `armv4t.circ` on 2026-08-14:
 - PUSH register-index scan from 15 through 0
 - POP register-index scan from 0 through 15
 - automatic terminal detection and exact PC release
+- 16-bit register-list capture and indexed `reg_selected` output
 
-The register-list selector, transfer-address register, RAM integration, POP
-register writeback, and final SP writeback remain to be wired.
+The transfer-address register, RAM integration, POP register writeback, and
+final SP writeback remain to be wired.
 
 ## Named Signals
 

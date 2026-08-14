@@ -27,6 +27,8 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
 - integrated block-transfer detection and a verified multi-cycle controller
   with PC hold/release, PUSH `F..0` scanning, POP `0..F` scanning, and automatic
   terminal detection
+- verified block-transfer register-list capture and per-index selection using
+  the GCC test list `0x4010` for R4 and LR
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.

@@ -193,12 +193,33 @@ chains, 1 `RAMB18E1_VPR` (Yosys inferred a real BRAM for the RAM), 292
 `MUXF6`. This is a plausible non-degenerate CPU netlist, unlike the earlier 9
 cells.
 
-A full `make all` (clean synth → pack → place → route) was launched in the
-background to get the real routed number against this fixed netlist; check
-`hdl/logisim_full_cpu/build/arty_100/report_timing.setup.rpt` and
-`route.log` for the result before reporting a figure. If it's not done,
-resume with the same `docker run ... make all` command (Makefile is already
-correct — no manual SDC patching needed this time).
+A full `make all` (clean synth → pack → place → route) completed against this
+fixed netlist. **Result: routed Fmax = 42.9314 MHz, critical path = 23.293 ns**
+(`hdl/logisim_full_cpu/build/arty_100/route.log:1925`). This is the first
+real, routed number for the *whole exported CPU* — not to be confused with
+the earlier 126.604 MHz figure, which was for a hand-written clean-room
+mirror of just `block_transfer_control`, not the actual circuit.
+
+Detail: `symbiflow_synth`'s own auto-SDC-writer (`OUT_SDC="${TOP}.sdc"` inside
+`synth.f4pga.sh`) picked a real surviving net this time
+(`cpu.block_transfer_control_1._18_`) since the clock-tree fix means the
+design isn't provably constant anymore — `Netlist Clocks: 1` in pack.log
+confirms it's timing a real clock domain now. No manual SDC patching was
+needed. Resources: 620 FF, 1259 LUT, 292 MUXF6, 14 CARRY4, 1 RAMB18E1;
+device utilization ~5-8% of the xc7a100t slices, so logic depth (not area) is
+the constraint. The worst path chains ~10 LUT+MUXF6 stages (~2.2 ns each)
+between two flip-flops with zero pipeline registers between them — matches
+the fully-combinational single-cycle datapath (decode → barrel shift → ALU →
+condition → writeback, all in one edge). Post-techmap signal names in the
+critical path are ABC-mangled (`$auto$ff.cc:262:slice$4595` etc.) so it isn't
+cleanly attributable to one named CPU signal without deeper digging (e.g.
+`report_timing` against `full_cpu.json` before ABC remapping, or cross-
+referencing against `full_cpu.v`'s hierarchy).
+
+If re-deriving this number later: `rm -rf build && docker run --rm -v
+/home/junaet/Documents/CustomCPU:/wrk -w /wrk/hdl/logisim_full_cpu hdlc/
+conda:f4pga--xc7--a100t bash -lc 'make all'`, then read
+`build/arty_100/route.log` (search "Final critical path delay").
 
 Also noted this session: the user made a real edit to `armv4t.circ` directly
 in Logisim (removing the debug internal Clock/OR-gate and repositioning the

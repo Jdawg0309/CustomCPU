@@ -1,0 +1,8 @@
+set_property PACKAGE_PIN E3 [get_ports {clk}]
+set_property IOSTANDARD LVCMOS33 [get_ports {clk}]
+set_property PACKAGE_PIN H5  [get_ports {signature[0]}]
+set_property PACKAGE_PIN J5  [get_ports {signature[1]}]
+set_property PACKAGE_PIN T9  [get_ports {signature[2]}]
+set_property PACKAGE_PIN T10 [get_ports {signature[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {signature[*]}]
+create_clock -period 2.000 [get_ports {clk}]

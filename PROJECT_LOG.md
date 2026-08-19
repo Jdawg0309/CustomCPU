@@ -1,5 +1,31 @@
 # Project Log
 
+## 2026-08-19
+
+- Wired `main`'s RAM/register-file datapath for block-transfer stores: a RAM
+  address override mux (`sel=active`, `in1=transfer_address`), an OR gate
+  feeding `store_enable` into the RAM write-enable path, and a 4-bit mux
+  selecting `reg_idx` onto `reg16x32_1.RB` so the scanned register's value
+  reaches `RD_B`. `block_transfer_control.base_value` reads `RD_A` directly.
+- Found and fixed two bugs in `block_transfer_control`'s address stepping:
+  the `base_or_step` mux select was wired to raw `start` instead of the
+  one-cycle `accept_start` pulse, and `base_or_step.in0` fed `stepped_addr`
+  directly with no hold path, so the address advanced every scan cycle
+  instead of only on `reg_selected`. Fixed by rewiring select to
+  `accept_start` and inserting a hold mux (`sel=reg_selected`) between
+  `stepped_addr` and `base_or_step.in0`.
+- Built a 10-ROM PUSH discriminator suite (two/high/scattered/consecutive
+  register sets, callee-saved+LR, a full 14-register push, zero-value and
+  all-ones values, and a two-push SP-continuity case), each program fit to
+  the 16-word instruction ROM limit.
+- 9/10 passed on the real circuit, including the 14-register case (ascending
+  register number to ascending address, lowest register at final SP). The
+  10th (`sp_continuity`, two sequential `push` instructions) failed as
+  expected: SP writeback to the register file is not yet wired, so the
+  second push re-read the stale pre-push SP instead of the address left by
+  the first push. Single-instruction PUSH is verified correct; SP writeback
+  is the next required step before POP or multi-push sequences can work.
+
 ## 2026-08-14
 
 - Expanded instruction fetch from 16 to 256 words using `PC[9:2]`.

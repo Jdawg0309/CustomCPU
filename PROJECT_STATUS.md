@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-08-14
+Last updated: 2026-08-19
 
 ## Current CPU
 
@@ -31,6 +31,15 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
   the GCC test list `0x4010` for R4 and LR
 - connected fetched `instr[15:0]` to the block-transfer controller in `main`
   and exposed the active `reg_selected` result
+- wired and verified the block-transfer RAM/register-file store datapath:
+  address override mux, write-enable OR gate, and `reg_idx`-selected `RD_B`
+  source, with two address-stepping bugs found and fixed in
+  `block_transfer_control`
+- verified single-instruction PUSH against a 10-ROM discriminator suite (9/10
+  passed), covering low/high/scattered/consecutive register sets, a full
+  14-register push, zero and all-ones values, and callee-saved+LR sets; the
+  one failure (two sequential `push` instructions) is expected because SP
+  writeback to the register file is not yet wired
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.
@@ -58,10 +67,12 @@ compiler-coverage improvement.
 
 ## Immediate Next Step
 
-Finish the GCC-required PUSH/POP datapath: capture the register list, select each
-listed register, generate transfer addresses, connect RAM loads/stores, and
-write the final address back to SP. Then replace asynchronous LDR behavior with
-a synchronous memory wait state and freeze the gate-level practical-C release.
+PUSH (store side) is wired and verified for single instructions. Remaining
+block-transfer work: write the final address back to SP (secondary write
+port, needed before POP or multi-push sequences work), then wire POP's
+primary write port (WA/WD/WE) so scanned registers load back from RAM. Then
+replace asynchronous LDR behavior with a synchronous memory wait state and
+freeze the gate-level practical-C release.
 
 ## Known Limits
 

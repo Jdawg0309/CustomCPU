@@ -1,5 +1,48 @@
 # Project Log
 
+## 2026-08-20
+
+- Wired SP writeback through the register file's secondary port
+  (`WA2`/`WD2`/`WE2`): an OR gate feeding `WE2` from the existing base
+  writeback path OR `done`, and a 32-bit mux feeding `WD2` with
+  `final_address`. The mux select had to be `done`, not `active`: both are
+  registered, and `active` falls on the same tick `done` rises, so an
+  `active`-selected mux presented the stale pre-transfer base at write time.
+- Root-caused a whole-simulation oscillation that had been blamed on the
+  block-transfer datapath. It is **not** a block-transfer bug. Minimal repro
+  is three ROM words with no memory access and no block transfer:
+  `e3a0107f e0810001 e12fff1e` (`mov r1,#0x7F; add r0,r1,r1; bx lr`).
+  It reproduces identically on commit `ef985e6`, so it predates all
+  block-transfer work.
+- Localized it by forcing signals to constants in a scratch copy. Pinning
+  `ks_32b`'s operands changed nothing; pinning `mul_32`'s operands removed
+  the oscillation in every failing case; pinning `partial_products`' 32
+  outputs also removed it. Minimizing the live partial-product set gives
+  `p2,p3,p4,p5,p6`, all five required. The defect is a combinational cycle
+  in `mul_32`'s CSA reduction tree — a `csa_3to_2` output reaching an input
+  at or above its own level — among the cells fed by those partial products.
+- `mul_32` is ungated and recomputes on every instruction regardless of
+  opcode, so the cycle fired on ordinary `ADD` and `STR` as well as on
+  block transfers. Block transfer only made it constant: with `hold_pc`
+  asserted, `RB` is driven by `reg_idx` and the ALU sees sixteen new operand
+  pairs per push, so almost every push hit an exciting combination.
+- Non-oscillating arithmetic was checked separately and is correct: 24 sums
+  compared against expected values, zero wrong. The adder is not at fault.
+- Disconnected `mul_32` in `armv4t.circ` at both ends — operands cut at the
+  `A`/`B` pins in `ALU`, and the multiplier result cut out of the out-mux
+  `in2` input. No ROM in `cpu/` exercises multiply, so this costs no current
+  coverage.
+- With the multiplier out, the 10-ROM PUSH discriminator suite passes 10/10
+  on a scratch copy of the circuit, including `sp_continuity`, which had been
+  the one expected failure. PUSH plus SP writeback is now verified end to end.
+- POP is confirmed incomplete. A single-register POP restores the register and
+  SP correctly, but a multi-register POP is broken: SP over-advances by `4n`
+  (`0x208` and `0x20C` instead of `0x200` for two- and three-register pops),
+  the first register receives the transfer address instead of the loaded data,
+  and later registers are never written. The single-register case passing is a
+  trap — it is the one case where the terminal condition fires before the
+  broken stepping accumulates.
+
 ## 2026-08-19
 
 - Wired `main`'s RAM/register-file datapath for block-transfer stores: a RAM

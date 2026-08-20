@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-08-19
+Last updated: 2026-08-20
 
 ## Current CPU
 
@@ -35,11 +35,15 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
   address override mux, write-enable OR gate, and `reg_idx`-selected `RD_B`
   source, with two address-stepping bugs found and fixed in
   `block_transfer_control`
-- verified single-instruction PUSH against a 10-ROM discriminator suite (9/10
-  passed), covering low/high/scattered/consecutive register sets, a full
-  14-register push, zero and all-ones values, and callee-saved+LR sets; the
-  one failure (two sequential `push` instructions) is expected because SP
-  writeback to the register file is not yet wired
+- wired SP writeback through the register file's secondary write port
+  (`WA2`/`WD2`/`WE2`), with the `WD2` mux selected by `done` rather than
+  `active` so the mux does not present the stale pre-transfer base
+- verified PUSH against a 10-ROM discriminator suite (10/10 passed), covering
+  low/high/scattered/consecutive register sets, a full 14-register push, zero
+  and all-ones values, callee-saved+LR sets, and two sequential `push`
+  instructions exercising SP continuity; the 10/10 run was made on a scratch
+  copy in the same multiplier-disconnected configuration `armv4t.circ` now
+  has, and has not yet been re-run against `armv4t.circ` itself
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.
@@ -67,12 +71,18 @@ compiler-coverage improvement.
 
 ## Immediate Next Step
 
-PUSH (store side) is wired and verified for single instructions. Remaining
-block-transfer work: write the final address back to SP (secondary write
-port, needed before POP or multi-push sequences work), then wire POP's
-primary write port (WA/WD/WE) so scanned registers load back from RAM. Then
-replace asynchronous LDR behavior with a synchronous memory wait state and
-freeze the gate-level practical-C release.
+PUSH and SP writeback are wired and verified (10/10). The next task is POP's
+primary write port (`WA`/`WD`/`WE`), the remaining unwired integration point in
+`BUILD_BLOCK_TRANSFER.md`, so scanned registers load back from RAM.
+
+POP is currently correct for a single register only. Multi-register POP is
+broken: SP over-advances by `4n`, the first register receives the transfer
+address instead of the loaded word, and later registers are never written. The
+single-register case passes only because the terminal condition fires before the
+broken stepping accumulates, so it must not be used as evidence that POP works.
+
+After POP: replace asynchronous LDR behavior with a synchronous memory wait
+state and freeze the gate-level practical-C release.
 
 ## Known Limits
 
@@ -82,6 +92,16 @@ freeze the gate-level practical-C release.
 - no byte or halfword load/store path
 - multiply detection exists in prior decode work but is not a completed,
   top-level verified instruction path
+- `mul_32` is disconnected in `armv4t.circ`: operands cut at the `A`/`B` pins
+  in `ALU`, and the multiplier result cut out of the out-mux `in2` input. MUL
+  therefore does not execute at all. Cause: a combinational cycle in `mul_32`'s
+  CSA reduction tree, among the `csa_3to_2` cells fed by partial products
+  `p2`-`p6`, which oscillated the entire simulation on ordinary `ADD`/`STR` and
+  on block transfers because `mul_32` is ungated and recomputes on every
+  instruction. Minimal repro on the connected circuit is three ROM words:
+  `e3a0107f e0810001 e12fff1e`. Restoring MUL requires reconnecting both ends
+  and fixing the CSA cycle; gating the operands with `engine_sel` is a valid
+  alternative that confines the fault without repairing it.
 - no MMIO input, UART, PS/2, timer, or external bus
 - data RAM currently uses asynchronous reads for the single-cycle datapath;
   FPGA block RAM will require a load wait state or pipelined memory stage

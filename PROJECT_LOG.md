@@ -1,5 +1,57 @@
 # Project Log
 
+## 2026-08-20 (block transfer complete)
+
+- POP now works end to end in `armv4t.circ`. Three wiring changes, each
+  verified independently before the next:
+  1. `main`: register write-enable mux select widened to `hold_pc OR done`,
+     so the normal single-cycle datapath cannot commit during a block
+     transfer. Without it a `pop {r1,r2}` silently destroyed `r0`, because
+     the block instruction is *also* decoded as a data-processing op whose
+     `Rd` is `instr[15:12]` of the register list. `E8BD____` lands on opcode
+     `0101` (ADC, writes); `E92D____` lands on `1001` (TEQ-class, no write),
+     which is the only reason PUSH was ever safe.
+  2. `block_transfer_control`: the address hold-mux select became
+     `reg_selected AND (index_advancing OR terminal)` instead of bare
+     `reg_selected`. Previously the address advanced twice per selected
+     register, so POP over-ran by `4n` and every register loaded one slot
+     too far.
+  3. `main`: load-data mux select became `is_LDR OR load_enable`, routing RAM
+     data to the register file during POP. No new 32-bit datapath was needed;
+     that mux already selects RAM-data vs ALU-result and already feeds
+     `reg16x32_1.WD`.
+- Two wiring traps worth recording, both hit and fixed:
+  - Driving *both* the index mux select and the address hold-mux select from
+    the same index-advance signal makes the address step once per scan index
+    (16) instead of once per selected register.
+  - `store_enable` (controller port 8) and `load_enable` (port 9) are adjacent
+    and unlabelled on the instance. Wiring port 8 into the load-data OR is
+    silent: `store_enable` is only asserted during PUSH, so POP sees a
+    constant false and nothing appears to change.
+- Dropping the `OR terminal` term breaks PUSH rather than POP: at the last
+  selected register the scan terminates instead of advancing, so the final
+  address step is suppressed and the base writes back one slot short.
+- Verification on `armv4t.circ` itself:
+  - PUSH discriminator suite 10/10
+  - POP discriminator suite 7/7, five cases popping into *different*
+    registers than were pushed, so a passing result cannot come from leftover
+    register state
+  - stack stress suite 8/8: LIFO nesting, interleaved ordinary LDR/STR,
+    three-deep sequential push/pop, preservation of registers outside the
+    list, LR save/restore, zero and all-ones values, stack at the top of RAM,
+    high-register-only lists. Each test also asserts that no RAM word outside
+    its declared write-set was touched.
+  - `BUILD_BLOCK_TRANSFER.md` acceptance signature passes
+  - SP measured directly after the push and after the pop, six list widths,
+    all correct
+- A test-methodology fix: the earlier POP step counter inferred the post-push
+  SP as `0x100 - 4n`. When PUSH is also broken the two errors cancel and SP
+  lands back on `0x100`, so POP looked perfect while both halves were wrong.
+  The replacement measures the post-push SP instead of assuming it.
+- Known remaining gaps: `pop {pc}` (the return form GCC emits) is untested,
+  and no compiled-C program can run at all until the 16-word instruction ROM
+  is enlarged.
+
 ## 2026-08-20 (FPGA timing)
 
 - Replaced the ALU's hand-built Kogge-Stone adder with a rebuilt

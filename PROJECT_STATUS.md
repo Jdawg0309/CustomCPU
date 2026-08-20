@@ -23,7 +23,8 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
   decrement/increment and a no-writeback discriminator
 - verified post-index LDR with simultaneous destination-register and R13 base
   writeback through the rebuilt dual-write register file
-- asynchronous data-RAM reads for correct single-cycle LDR timing
+- falling-edge synchronous data RAM, whose read completes mid-cycle ahead of
+  the rising-edge register write, giving correct single-cycle LDR timing
 - integrated block-transfer detection and a verified multi-cycle controller
   with PC hold/release, PUSH `F..0` scanning, POP `0..F` scanning, and automatic
   terminal detection
@@ -38,6 +39,15 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
 - wired SP writeback through the register file's secondary write port
   (`WA2`/`WD2`/`WE2`), with the `WD2` mux selected by `done` rather than
   `active` so the mux does not present the stale pre-transfer base
+- a complete, verified block-transfer stack: PUSH and POP both working in
+  `armv4t.circ`, covering the register write-enable suppression, single-step
+  address advance, and the RAM-to-register load path
+- verified POP against a 7-ROM discriminator suite (7/7), five cases popping
+  into different registers than were pushed, plus an 8-case stress suite
+  (LIFO nesting, interleaved LDR/STR, three-deep sequential push/pop,
+  preservation of registers outside the list, LR save/restore, boundary
+  values, stack at the top of RAM, high-register lists), each also asserting
+  no RAM word outside its declared write-set was touched
 - verified PUSH against a 10-ROM discriminator suite (10/10 passed), covering
   low/high/scattered/consecutive register sets, a full 14-register push, zero
   and all-ones values, callee-saved+LR sets, and two sequential `push`
@@ -85,7 +95,9 @@ initialization, a GCC-compiled conditional loop with a stack-backed local,
 
 Completed practical-C infrastructure:
 
-- 256-word instruction ROM addressed by `PC[9:2]`
+- an instruction ROM addressed by the low PC word bits; note this was 256
+  words on 2026-08-14 but the circuit today has only 16, which is the
+  current blocker (see Immediate Next Step)
 - 1 KiB RAM at byte addresses `0x000` through `0x3FF`
 - descending stack initialized one byte beyond RAM at `0x400`
 - ARM linker script and startup assembly
@@ -99,31 +111,22 @@ compiler-coverage improvement.
 
 ## Immediate Next Step
 
-Port the three verified POP changes from `debug_armv4t.circ` into `armv4t.circ`.
-POP is **not** working in `armv4t.circ`; it is working and verified only in the
-debug copy (7/7 POP discriminator suite plus the `BUILD_BLOCK_TRANSFER.md`
-acceptance signature). The three changes are:
+Enlarge the instruction ROM. It is currently `addrWidth=4`, i.e. **16 words**,
+which is now the binding constraint on everything: `c_tests/stress_call_rom` is
+31 words and the practical-C acceptance image is 22, so no compiled program can
+run at all, and several canonical ROMs in `cpu/` no longer fit either. The
+earlier 256-word fetch path described under Practical-C Status is not what the
+circuit currently implements.
 
-1. `block_transfer_control`: delete the wire `(720,2220)-(1070,2220)` and drive
-   the address hold-mux select `(1090,2200)` with
-   `reg_selected AND (index_advancing OR terminal)`, where `index_advancing` is
-   the AND output at `(1980,1390)` and `terminal` is the AND output at
-   `(2070,1650)`. Without the `OR terminal` term the final step of every
-   transfer is suppressed and PUSH regresses.
-2. `main`: delete the wire `(3130,1900)-(3130,3580)` and drive the load-select
-   mux `(3150,1880)` with `is_LDR OR load_enable`. No new 32-bit datapath is
-   needed; the RAM-data path into the register file already exists.
-3. `main`: widen the register write-enable mux select to `hold_pc OR done`, so
-   the normal datapath cannot commit during a block transfer. Without this a
-   `pop {r1,r2}` silently destroys `r0`, because the block instruction is also
-   decoded as a data-processing op whose `Rd` is `instr[15:12]` of the
-   register list.
+After that, two stack gaps that need a larger ROM to exercise:
+
+- `pop {pc}`, the function-return form GCC actually emits, is untested.
+- Register lists longer than five cannot be round-tripped in 16 words; the
+  14-register case is PUSH-only.
 
 Also delete the orphaned splitter at `(2650,4090)` in `main`: it drives nothing
-and it blocks HDL export entirely.
+and it blocks HDL export entirely, so every future timing run needs it gone.
 
-After POP: replace asynchronous LDR behavior with a synchronous memory wait
-state and freeze the gate-level practical-C release.
 
 ## Known Limits
 

@@ -41,12 +41,40 @@ CPU built in Logisim Evolution. The following behavior has been tested manually:
 - verified PUSH against a 10-ROM discriminator suite (10/10 passed), covering
   low/high/scattered/consecutive register sets, a full 14-register push, zero
   and all-ones values, callee-saved+LR sets, and two sequential `push`
-  instructions exercising SP continuity; the 10/10 run was made on a scratch
-  copy in the same multiplier-disconnected configuration `armv4t.circ` now
-  has, and has not yet been re-run against `armv4t.circ` itself
+  instructions exercising SP continuity; re-run directly against
+  `armv4t.circ` on 2026-08-20 with the same 10/10 result
+
+- an ALU arithmetic engine rebuilt on Logisim's built-in `Adder`, replacing the
+  hand-built Kogge-Stone prefix adder, which raised routed ALU Fmax from
+  63.37 MHz to 98.12 MHz and whole-CPU Fmax from 45.34 MHz to 58.31 MHz while
+  reducing ALU LUT count by 45%
 
 All twelve canonical regression images and the math pack are cataloged in
 `cpu/README.md`.
+
+## Measured FPGA Timing
+
+Routed on `xc7a100tcsg324-1` with F4PGA (Yosys + VPR) in Docker, not Vivado and
+not the XCKU5P target part. VPR is pessimistic on routing, so treat the ratios
+as reliable and the absolute frequencies as indicative only.
+
+| block | Fmax | critical path |
+|---|---|---|
+| ALU | 98.12 MHz | 10.19 ns |
+| whole CPU | 58.31 MHz | 17.15 ns |
+
+The CPU is single-cycle and fully combinational between register boundaries, so
+the critical path is essentially one whole instruction: decode, shift, ALU,
+condition, writeback. The ALU alone is 59% of it. Pipelining, not logic tuning,
+is the only route to the 150-200 MHz goal; even a zero-cost surround would cap
+the current ALU at 98 MHz.
+
+Two caveats on every number above. The measured design has `mul_32` removed, so
+a restored multiplier will add to the critical path. And Logisim's HDL exporter
+emits a rising-edge RAM with input registers, a tick pipeline and an output
+register regardless of the circuit's RAM configuration, so the synthesised
+netlist is a valid timing model of the datapath but is not functionally the
+simulated CPU.
 
 ## Practical-C Status
 
@@ -71,15 +99,28 @@ compiler-coverage improvement.
 
 ## Immediate Next Step
 
-PUSH and SP writeback are wired and verified (10/10). The next task is POP's
-primary write port (`WA`/`WD`/`WE`), the remaining unwired integration point in
-`BUILD_BLOCK_TRANSFER.md`, so scanned registers load back from RAM.
+Port the three verified POP changes from `debug_armv4t.circ` into `armv4t.circ`.
+POP is **not** working in `armv4t.circ`; it is working and verified only in the
+debug copy (7/7 POP discriminator suite plus the `BUILD_BLOCK_TRANSFER.md`
+acceptance signature). The three changes are:
 
-POP is currently correct for a single register only. Multi-register POP is
-broken: SP over-advances by `4n`, the first register receives the transfer
-address instead of the loaded word, and later registers are never written. The
-single-register case passes only because the terminal condition fires before the
-broken stepping accumulates, so it must not be used as evidence that POP works.
+1. `block_transfer_control`: delete the wire `(720,2220)-(1070,2220)` and drive
+   the address hold-mux select `(1090,2200)` with
+   `reg_selected AND (index_advancing OR terminal)`, where `index_advancing` is
+   the AND output at `(1980,1390)` and `terminal` is the AND output at
+   `(2070,1650)`. Without the `OR terminal` term the final step of every
+   transfer is suppressed and PUSH regresses.
+2. `main`: delete the wire `(3130,1900)-(3130,3580)` and drive the load-select
+   mux `(3150,1880)` with `is_LDR OR load_enable`. No new 32-bit datapath is
+   needed; the RAM-data path into the register file already exists.
+3. `main`: widen the register write-enable mux select to `hold_pc OR done`, so
+   the normal datapath cannot commit during a block transfer. Without this a
+   `pop {r1,r2}` silently destroys `r0`, because the block instruction is also
+   decoded as a data-processing op whose `Rd` is `instr[15:12]` of the
+   register list.
+
+Also delete the orphaned splitter at `(2650,4090)` in `main`: it drives nothing
+and it blocks HDL export entirely.
 
 After POP: replace asynchronous LDR behavior with a synchronous memory wait
 state and freeze the gate-level practical-C release.

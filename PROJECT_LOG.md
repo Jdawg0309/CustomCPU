@@ -1,5 +1,50 @@
 # Project Log
 
+## 2026-08-20 (FPGA timing)
+
+- Replaced the ALU's hand-built Kogge-Stone adder with a rebuilt
+  `ALU_arithmetic_engine` using Logisim's built-in `Adder`. Measured effect on
+  routed Artix-7 timing:
+
+  | | Fmax | critical path | LUTs | CARRY4 |
+  |---|---|---|---|---|
+  | ALU before | 63.37 MHz | 15.78 ns | 321 | 0 |
+  | ALU after  | 98.12 MHz | 10.19 ns | 176 | 9 |
+  | CPU before | 45.34 MHz | 22.06 ns | 1559 | 26 |
+  | CPU after  | 58.31 MHz | 17.15 ns | 1605 | 34 |
+
+  +55% on the ALU and +29% on the whole CPU, while *shrinking* the ALU by 45%.
+  Cause: a hand-built parallel-prefix adder cannot use the FPGA's dedicated
+  carry chain, so it maps entirely to LUTs and MUXF6. `CARRY4` going 0 -> 9 in
+  the ALU is the whole effect. Correct on an ASIC, wrong on an FPGA.
+- Isolated component A/B measurements, identical harness and flow:
+  - 32-bit adder: `ks_32b` 86.64 MHz / 128 LUT / 0 CARRY4 versus plain `+`
+    151.71 MHz / 45 LUT / 9 CARRY4. Built-in wins 1.75x on a third of the area.
+  - 32-bit shifter: `barrel_32b` 101.9 MHz / 290 LUT versus built-in operators
+    104.9 MHz / 582 LUT. Effectively a tie on speed at half the area, so the
+    hand-built barrel shifter is kept. The rule is not "built-ins are faster",
+    it is "built-ins win when they map to dedicated silicon" (CARRY4, DSP48).
+- Re-established the FPGA timing flow, which had been lost with the deleted
+  `.tools/` directory. It is F4PGA (Yosys + VPR) in Docker, not Vivado.
+  Blockers found and fixed:
+  - `main` contains an orphaned splitter at `(2650,4090)` whose bus end drives
+    nothing; Logisim's HDL exporter rejects the entire design for it. Confirmed
+    pre-existing against a pristine checkout. Still present in `armv4t.circ`.
+  - Stock Logisim 3.8 cannot export HDL headless: it aborts on an incomplete
+    board IO map, and the design has ~640 bits of top-level IO so a complete
+    map is impossible. Patched 3.8.0 source so an incomplete map is tolerated
+    only when `generateHdlOnly` is set; real board downloads still refuse.
+  - Logisim's `--test-fpga` arg parser ignores `HDLONLY` if a tick frequency
+    was parsed first, contrary to its own docstring. Order must be
+    `<circ> main <board> HDLONLY <freq>`.
+- All timing numbers are F4PGA/VPR on `xc7a100tcsg324-1`, which is pessimistic
+  on routing. Ratios are reliable; absolute MHz figures are not, and none of
+  this is the XCKU5P target part.
+- The synthesised design is not functionally identical to the simulation:
+  Logisim's exporter emits a rising-edge RAM with input registers, a tick
+  pipeline and an output register regardless of the circuit's RAM settings.
+  These are datapath timing numbers, not a validated CPU.
+
 ## 2026-08-20
 
 - Wired SP writeback through the register file's secondary port

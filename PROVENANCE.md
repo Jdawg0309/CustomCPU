@@ -133,6 +133,23 @@ amounts above 4 for the first time. All six passed — the shifter is correct an
 the finding was spurious. The check is retained as a source of leads, clearly
 labelled, rather than removed or dressed up as fact.
 
+## AI contributions
+
+A complete, generated audit of AI-assisted file writing is in
+[`AI_CONTRIBUTIONS.md`](AI_CONTRIBUTIONS.md), produced by scanning every Claude
+Code session transcript on the author's machine:
+
+```bash
+python3 tools/ai_audit.py
+```
+
+Summary: AI wrote tooling, test programs and documentation. The author designed
+and wired the CPU. Across 24 revisions and 1,261 components of `armv4t.circ`,
+AI wrote two things — the `final_address` output pin in `block_transfer_control`
+and the wire attaching it to a pre-existing net. That wire created no new signal
+path between logic elements; every connection between logic in this design was
+made by hand.
+
 ## On hand-wiring and tooling
 
 All circuit design and wiring was performed by the author, by hand, in Logisim

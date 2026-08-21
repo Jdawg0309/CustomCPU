@@ -10,6 +10,4 @@ __pycache__/
 /c_tests/practical.o
 /c_tests/startup.o
 
-# scratch copy for diagnosis; regenerated from armv4t.circ, never authoritative
-/debug_armv4t.circ
 /armv4t_ANNOTATED.circ

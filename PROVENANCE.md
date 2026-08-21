@@ -111,6 +111,61 @@ copy; the archaeology of how they broke is not.
   than POP; why PUSH was immune to the register clobber that affected POP. The
   answers are specific and are recorded in `PROJECT_LOG.md`.
 
+## What the automated checks find
+
+`tools/vestigial.py` scans the circuit for structure left behind by earlier
+attempts. Full output in `docs/vestigial_report.txt`; the reliable findings:
+
+**Circuits defined but never instantiated** — `ALU_arithmetic_engine_1`,
+`a_invert`, `kogge_stone_2b`, `ks_4b`, `matmul4x4`, `mul_8`, `reg16x32`.
+
+**Splitters whose bus end drives nothing** — seven, including the one in `main`
+at `(2650,4090)` that blocks HDL export entirely.
+
+**A superseded circuit left beside its replacement** — `reg16x32` next to
+`reg16x32_1` (the dual-write rebuild), and `ALU_arithmetic_engine` next to
+`ALU_arithmetic_engine_1`.
+
+The tool separates reliable checks from a geometry-based heuristic that is known
+to produce false positives, and says so in its own output. That distinction
+matters: it flagged `bs_stage_16` as unwired, which prompted a test of shift
+amounts above 4 for the first time. All six passed — the shifter is correct and
+the finding was spurious. The check is retained as a source of leads, clearly
+labelled, rather than removed or dressed up as fact.
+
+## On the separation of hand-wiring and tooling
+
+A claim worth stating precisely, because the imprecise version is falsifiable in
+one command.
+
+**Accurate:** no automated process has ever written to `armv4t.circ`. Every test
+harness in this repository operates on a temporary copy and asserts that
+`armv4t.circ` is byte-identical afterwards. All wiring changes were made by hand
+in Logisim Evolution.
+
+**Not accurate, and not claimed:** that circuit commits are cleanly separated
+from tooling commits. They are not. Several commits touch `armv4t.circ`
+alongside scripts, ROMs and documentation — `ff09434` includes
+`tools/circuit_model.py`, `593a2cb` includes `tools/circuit_graph.py`, and
+`e2ca2fd` touches sixty files. Five of the twenty-four circuit commits carry
+`Co-Authored-By` trailers, reflecting AI assistance with the *documentation and
+tooling* in those commits, not with the wiring.
+
+Going forward, circuit edits are committed separately from tooling, which makes
+the distinction visible in the log rather than merely asserted here.
+
+## Verification of authorship by signature
+
+Commits from 2026-08-20 onward are signed with the author's SSH key
+(`gpg.format = ssh`). Verify with:
+
+```bash
+git log --show-signature -5
+```
+
+Commits before that date are unsigned; the signing was adopted partway through
+and is not retroactive.
+
 ## Tooling disclosure
 
 The circuit is hand-designed and hand-wired. AI assistance (Claude) was used for

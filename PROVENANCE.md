@@ -133,26 +133,26 @@ amounts above 4 for the first time. All six passed — the shifter is correct an
 the finding was spurious. The check is retained as a source of leads, clearly
 labelled, rather than removed or dressed up as fact.
 
-## On the separation of hand-wiring and tooling
+## On hand-wiring and tooling
 
-A claim worth stating precisely, because the imprecise version is falsifiable in
-one command.
+All circuit design and wiring was performed by the author, by hand, in Logisim
+Evolution. Every architectural decision, subcircuit boundary, and gate placement
+in `armv4t.circ` is the author's.
 
-**Accurate:** no automated process has ever written to `armv4t.circ`. Every test
-harness in this repository operates on a temporary copy and asserts that
-`armv4t.circ` is byte-identical afterwards. All wiring changes were made by hand
-in Logisim Evolution.
+AI assistance was used for verification tooling, test-harness construction, and
+debugging analysis. The harnesses in this repository operate on temporary copies
+and assert that `armv4t.circ` is byte-identical after every run.
 
-**Not accurate, and not claimed:** that circuit commits are cleanly separated
-from tooling commits. They are not. Several commits touch `armv4t.circ`
-alongside scripts, ROMs and documentation — `ff09434` includes
-`tools/circuit_model.py`, `593a2cb` includes `tools/circuit_graph.py`, and
-`e2ca2fd` touches sixty files. Five of the twenty-four circuit commits carry
-`Co-Authored-By` trailers, reflecting AI assistance with the *documentation and
-tooling* in those commits, not with the wiring.
+One point of precision, since the imprecise version is checkable in a single
+command: circuit commits are **not** cleanly separated from tooling commits.
+Several touch `armv4t.circ` alongside scripts, ROMs and documentation —
+`ff09434` includes `tools/circuit_model.py`, `593a2cb` includes
+`tools/circuit_graph.py`, and `e2ca2fd` touches sixty files. Five of the
+twenty-four circuit commits carry `Co-Authored-By` trailers, reflecting AI
+assistance with the documentation and tooling in those commits.
 
-Going forward, circuit edits are committed separately from tooling, which makes
-the distinction visible in the log rather than merely asserted here.
+Going forward, circuit edits are committed separately from tooling, so the
+distinction is visible in the log rather than merely stated here.
 
 ## Verification of authorship by signature
 

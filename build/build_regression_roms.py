@@ -58,7 +58,7 @@ ROMS = {
 
 
 def main():
-    output_dir = Path(__file__).parent / "regression_roms"
+    output_dir = Path(__file__).parent / "roms"
     output_dir.mkdir(exist_ok=True)
 
     for name, words in ROMS.items():

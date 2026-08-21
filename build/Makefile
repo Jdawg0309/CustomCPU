@@ -1,7 +1,7 @@
 CC ?= cc
 CFLAGS ?= -std=c11 -O2 -Wall -Wextra -Werror
 
-C_SOURCES := $(sort $(wildcard math_*.c))
+C_SOURCES := $(sort $(wildcard ../src/math_*.c))
 
 .PHONY: all roms verify verify-host manifest clean
 
@@ -17,9 +17,9 @@ verify-host: verify_host
 	./verify_host
 
 manifest: verify
-	sha256sum *.rom *.S *.c build.py Makefile README.md > MANIFEST.sha256
+	sha256sum ../roms/*.rom ../src/*.S ../src/*.c build.py Makefile > MANIFEST.sha256
 
-verify_host: verify_host.c $(C_SOURCES)
+verify_host: ../src/verify_host.c $(C_SOURCES)
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:

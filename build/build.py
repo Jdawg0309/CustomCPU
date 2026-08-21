@@ -11,6 +11,8 @@ from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
+ROMS = HERE.parent / "roms"
+SRC = HERE.parent / "src"
 PLAIN_HEADER = "v3.0 hex words plain"
 ADDRESSED_HEADER = "v3.0 hex words addressed"
 WORD_RE = re.compile(r"^[0-9a-fA-F]{8}$")
@@ -50,8 +52,8 @@ def write_rom(path: Path, words: list[str]) -> None:
 
 
 def build_math_roms(check_only: bool) -> None:
-    for source in sorted(HERE.glob("[0-9][0-9]_*.S")):
-        output = HERE / f"math_{source.stem}.rom"
+    for source in sorted(SRC.glob("[0-9][0-9]_*.S")):
+        output = ROMS / f"math_{source.stem}.rom"
         words = assemble(source)
         if len(words) > MAX_ROM_WORDS:
             raise ValueError(
@@ -67,7 +69,7 @@ def build_math_roms(check_only: bool) -> None:
 
 
 def validate_bundle() -> None:
-    roms = sorted(HERE.glob("*.rom"))
+    roms = sorted(ROMS.glob("*.rom"))
     if not roms:
         raise ValueError("no ROM files found")
     for rom in roms:

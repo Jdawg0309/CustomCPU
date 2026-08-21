@@ -1,5 +1,8 @@
 # CustomCPU Flat ROM Bundle
 
+Author: Junaet Mahbub. All ROM programs in this directory were written by the
+author, in assembly or C, and are built reproducibly by `build/build.py`.
+
 This directory is the canonical loadable test bundle for `../armv4t.circ`. It is
 intentionally flat: every ROM, assembly source, C reference, build tool, and
 expected result is directly inside `cpu/`.

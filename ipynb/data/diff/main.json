@@ -1,0 +1,309 @@
+{
+  "circuit": "main",
+  "only_a_connections": [
+    [
+      "Comparator@7840,8250.eq",
+      "AND Gate@8080,8040.in1"
+    ],
+    [
+      "Comparator@7840,8320.eq",
+      "AND Gate@8470,8040.in1"
+    ],
+    [
+      "Comparator@8260,8280.eq",
+      "AND Gate@8080,8040.in2"
+    ],
+    [
+      "Comparator@8260,8280.eq",
+      "AND Gate@8470,8040.in2"
+    ],
+    [
+      "RAM@9620,10690.data_out",
+      "Multiplexer@7670,9060.in1"
+    ],
+    [
+      "block_transfer_control@5790,8110.done",
+      "OR Gate@8090,9390.in0"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "ALU@9190,8660.A"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "Adder@8450,10820.a"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "Multiplexer@8550,10810.in0"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "Pin@8770,9080[RD_A].p"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "Probe@8380,10730.p"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "block_transfer_control@5790,8110.base_value"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_B",
+      "AND Gate@6090,10270[bx_arm_target].in0"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_B",
+      "Multiplexer@8820,9130.in0"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_B",
+      "Pin@8620,9140.p"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_B",
+      "RAM@9620,10690.data_in"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_B",
+      "Splitter@5660,10210.combined"
+    ]
+  ],
+  "only_a_nodes": [],
+  "only_b_connections": [
+    [
+      "AND Gate@7820,9600.out",
+      "OR Gate@8090,9390.in0"
+    ],
+    [
+      "Adder@9220,11950.out",
+      "Multiplexer@9480,11950.in1"
+    ],
+    [
+      "Adder@9220,11950.out",
+      "Multiplexer@9480,12190.in1"
+    ],
+    [
+      "Bit Extender@8900,11780.out",
+      "Shifter@9060,11820.in"
+    ],
+    [
+      "Comparator@9220,12130.eq",
+      "Multiplexer@9480,11950.sel"
+    ],
+    [
+      "Comparator@9220,12250.eq",
+      "Multiplexer@9480,12190.sel"
+    ],
+    [
+      "Constant@8030,8120.p",
+      "AND Gate@8080,8040.in2"
+    ],
+    [
+      "Constant@8420,8120.p",
+      "AND Gate@8470,8040.in2"
+    ],
+    [
+      "Constant@8900,11850.p",
+      "Shifter@9060,11820.dist"
+    ],
+    [
+      "Constant@8900,11950.p",
+      "Adder@9220,11950.b"
+    ],
+    [
+      "Constant@8900,12020.p",
+      "Adder@9220,11950.cin"
+    ],
+    [
+      "Constant@8900,12130.p",
+      "Comparator@9220,12130.b"
+    ],
+    [
+      "Constant@8900,12130.p",
+      "Comparator@9220,12250.b"
+    ],
+    [
+      "Multiplexer@6200,12600.out",
+      "Multiplexer@7670,9060.in1"
+    ],
+    [
+      "Multiplexer@8070,8830.out",
+      "Comparator@9220,12250.a"
+    ],
+    [
+      "Multiplexer@8660,10820.out",
+      "Splitter@5000,12600.combined"
+    ],
+    [
+      "Multiplexer@9480,11950.out",
+      "ALU@9190,8660.A"
+    ],
+    [
+      "Multiplexer@9480,11950.out",
+      "Adder@8450,10820.a"
+    ],
+    [
+      "Multiplexer@9480,11950.out",
+      "Multiplexer@8550,10810.in0"
+    ],
+    [
+      "Multiplexer@9480,11950.out",
+      "Pin@8770,9080[RD_A].p"
+    ],
+    [
+      "Multiplexer@9480,11950.out",
+      "Probe@8380,10730.p"
+    ],
+    [
+      "Multiplexer@9480,11950.out",
+      "block_transfer_control@5790,8110.base_value"
+    ],
+    [
+      "Multiplexer@9480,12190.out",
+      "AND Gate@6090,10270[bx_arm_target].in0"
+    ],
+    [
+      "Multiplexer@9480,12190.out",
+      "Multiplexer@8820,9130.in0"
+    ],
+    [
+      "Multiplexer@9480,12190.out",
+      "Pin@8620,9140.p"
+    ],
+    [
+      "Multiplexer@9480,12190.out",
+      "RAM@9620,10690.data_in"
+    ],
+    [
+      "Multiplexer@9480,12190.out",
+      "Splitter@5660,10210.combined"
+    ],
+    [
+      "NOT Gate@5300,12470.out",
+      "Multiplexer@6200,12600.sel"
+    ],
+    [
+      "NOT Gate@8000,8420.out",
+      "AND Gate@8080,8040.in1"
+    ],
+    [
+      "RAM@9620,10690.data_out",
+      "Multiplexer@6200,12600.in0"
+    ],
+    [
+      "ROM@5400,12600.data_out",
+      "Multiplexer@6200,12600.in1"
+    ],
+    [
+      "Shifter@9060,11820.out",
+      "Adder@9220,11950.a"
+    ],
+    [
+      "Splitter@5000,12600.bit1",
+      "ROM@5400,12600.addr"
+    ],
+    [
+      "Splitter@5000,12600.bit2",
+      "NOT Gate@5300,12470.in"
+    ],
+    [
+      "Splitter@6600,8680.bit3",
+      "Comparator@9220,12130.a"
+    ],
+    [
+      "Splitter@6990,10790.bit20",
+      "AND Gate@8470,8040.in1"
+    ],
+    [
+      "Splitter@6990,10790.bit20",
+      "NOT Gate@8000,8420.in"
+    ],
+    [
+      "Splitter@6990,10790.bit21",
+      "AND Gate@7820,9600.in1"
+    ],
+    [
+      "Splitter@6990,10790.bit23",
+      "block_transfer_control@5790,8110.U"
+    ],
+    [
+      "Splitter@6990,10790.bit24",
+      "block_transfer_control@5790,8110.P"
+    ],
+    [
+      "block_transfer_control@5790,8110.done",
+      "AND Gate@7820,9600.in0"
+    ],
+    [
+      "pc_fetch@5780,8630.pc_out",
+      "Bit Extender@8900,11780.in"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_A",
+      "Multiplexer@9480,11950.in0"
+    ],
+    [
+      "reg16x32_1@8530,8960.RD_B",
+      "Multiplexer@9480,12190.in0"
+    ]
+  ],
+  "only_b_nodes": [
+    "AND Gate@7820,9600.in0",
+    "AND Gate@7820,9600.in1",
+    "AND Gate@7820,9600.out",
+    "Adder@9220,11950.a",
+    "Adder@9220,11950.b",
+    "Adder@9220,11950.cin",
+    "Adder@9220,11950.cout",
+    "Adder@9220,11950.out",
+    "Bit Extender@8900,11780.in",
+    "Bit Extender@8900,11780.out",
+    "Comparator@9220,12130.a",
+    "Comparator@9220,12130.b",
+    "Comparator@9220,12130.eq",
+    "Comparator@9220,12130.gt",
+    "Comparator@9220,12130.lt",
+    "Comparator@9220,12250.a",
+    "Comparator@9220,12250.b",
+    "Comparator@9220,12250.eq",
+    "Comparator@9220,12250.gt",
+    "Comparator@9220,12250.lt",
+    "Constant@8030,8120.p",
+    "Constant@8420,8120.p",
+    "Constant@8900,11850.p",
+    "Constant@8900,11950.p",
+    "Constant@8900,12020.p",
+    "Constant@8900,12130.p",
+    "Multiplexer@6200,12600.in0",
+    "Multiplexer@6200,12600.in1",
+    "Multiplexer@6200,12600.out",
+    "Multiplexer@6200,12600.sel",
+    "Multiplexer@9480,11950.in0",
+    "Multiplexer@9480,11950.in1",
+    "Multiplexer@9480,11950.out",
+    "Multiplexer@9480,11950.sel",
+    "Multiplexer@9480,12190.in0",
+    "Multiplexer@9480,12190.in1",
+    "Multiplexer@9480,12190.out",
+    "Multiplexer@9480,12190.sel",
+    "NOT Gate@5300,12470.in",
+    "NOT Gate@5300,12470.out",
+    "NOT Gate@8000,8420.in",
+    "NOT Gate@8000,8420.out",
+    "ROM@5400,12600.addr",
+    "ROM@5400,12600.data_out",
+    "Shifter@9060,11820.dist",
+    "Shifter@9060,11820.in",
+    "Shifter@9060,11820.out",
+    "Splitter@5000,12600.bit0",
+    "Splitter@5000,12600.bit1",
+    "Splitter@5000,12600.bit2",
+    "Splitter@5000,12600.bit3",
+    "Splitter@5000,12600.combined",
+    "block_transfer_control@5790,8110.P",
+    "block_transfer_control@5790,8110.U"
+  ],
+  "summary": "main: +54 nodes / -0 nodes, +44 connections / -17 connections"
+}

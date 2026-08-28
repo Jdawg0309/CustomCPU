@@ -1,0 +1,8 @@
+{
+  "circuit": "matmul4x4",
+  "only_a_connections": [],
+  "only_a_nodes": [],
+  "only_b_connections": [],
+  "only_b_nodes": [],
+  "summary": "matmul4x4: +0 nodes / -0 nodes, +0 connections / -0 connections"
+}

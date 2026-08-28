@@ -1,0 +1,1871 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "kogge_stone_2b",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    380,
+    180,
+    1070,
+    500
+  ],
+  "circuit": "kogge_stone_2b",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "Cout",
+        "output": "true"
+      },
+      "facing": "west",
+      "id": "Pin@1020,390[Cout]",
+      "is_subcircuit": false,
+      "label": "Cout",
+      "library": "0",
+      "location": [
+        1020,
+        390
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "in",
+          "id": "Pin@1020,390[Cout].p",
+          "name": "p",
+          "pin": [
+            1020,
+            390
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "A0"
+      },
+      "facing": "east",
+      "id": "Pin@440,180[A0]",
+      "is_subcircuit": false,
+      "label": "A0",
+      "library": "0",
+      "location": [
+        440,
+        180
+      ],
+      "ports": [
+        {
+          "anchor": [
+            440,
+            180
+          ],
+          "direction": "out",
+          "id": "Pin@440,180[A0].p",
+          "name": "p",
+          "pin": [
+            440,
+            180
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "B0"
+      },
+      "facing": "east",
+      "id": "Pin@440,200[B0]",
+      "is_subcircuit": false,
+      "label": "B0",
+      "library": "0",
+      "location": [
+        440,
+        200
+      ],
+      "ports": [
+        {
+          "anchor": [
+            440,
+            200
+          ],
+          "direction": "out",
+          "id": "Pin@440,200[B0].p",
+          "name": "p",
+          "pin": [
+            440,
+            200
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "CIN"
+      },
+      "facing": "east",
+      "id": "Pin@440,220[CIN]",
+      "is_subcircuit": false,
+      "label": "CIN",
+      "library": "0",
+      "location": [
+        440,
+        220
+      ],
+      "ports": [
+        {
+          "anchor": [
+            440,
+            220
+          ],
+          "direction": "out",
+          "id": "Pin@440,220[CIN].p",
+          "name": "p",
+          "pin": [
+            440,
+            220
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "A1"
+      },
+      "facing": "east",
+      "id": "Pin@440,390[A1]",
+      "is_subcircuit": false,
+      "label": "A1",
+      "library": "0",
+      "location": [
+        440,
+        390
+      ],
+      "ports": [
+        {
+          "anchor": [
+            440,
+            390
+          ],
+          "direction": "out",
+          "id": "Pin@440,390[A1].p",
+          "name": "p",
+          "pin": [
+            440,
+            390
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "B1"
+      },
+      "facing": "east",
+      "id": "Pin@440,410[B1]",
+      "is_subcircuit": false,
+      "label": "B1",
+      "library": "0",
+      "location": [
+        440,
+        410
+      ],
+      "ports": [
+        {
+          "anchor": [
+            440,
+            410
+          ],
+          "direction": "out",
+          "id": "Pin@440,410[B1].p",
+          "name": "p",
+          "pin": [
+            440,
+            410
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "SUM0",
+        "output": "true"
+      },
+      "facing": "west",
+      "id": "Pin@690,220[SUM0]",
+      "is_subcircuit": false,
+      "label": "SUM0",
+      "library": "0",
+      "location": [
+        690,
+        220
+      ],
+      "ports": [
+        {
+          "anchor": [
+            690,
+            220
+          ],
+          "direction": "in",
+          "id": "Pin@690,220[SUM0].p",
+          "name": "p",
+          "pin": [
+            690,
+            220
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "SUM1",
+        "output": "true"
+      },
+      "facing": "west",
+      "id": "Pin@690,430[SUM1]",
+      "is_subcircuit": false,
+      "label": "SUM1",
+      "library": "0",
+      "location": [
+        690,
+        430
+      ],
+      "ports": [
+        {
+          "anchor": [
+            690,
+            430
+          ],
+          "direction": "in",
+          "id": "Pin@690,430[SUM1].p",
+          "name": "p",
+          "pin": [
+            690,
+            430
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "label": "pg1"
+      },
+      "facing": "east",
+      "id": "pg_cell@1020,180[pg1]",
+      "is_subcircuit": true,
+      "label": "pg1",
+      "library": null,
+      "location": [
+        1020,
+        180
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1020,
+            180
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,180[pg1].G",
+          "name": "G",
+          "pin": [
+            800,
+            180
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            180
+          ],
+          "direction": "out",
+          "id": "pg_cell@1020,180[pg1].G_out",
+          "name": "G_out",
+          "pin": [
+            1020,
+            180
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            180
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,180[pg1].G_prev",
+          "name": "G_prev",
+          "pin": [
+            800,
+            220
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            180
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,180[pg1].P",
+          "name": "P",
+          "pin": [
+            800,
+            200
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            180
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,180[pg1].P_Prev",
+          "name": "P_Prev",
+          "pin": [
+            800,
+            240
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            180
+          ],
+          "direction": "out",
+          "id": "pg_cell@1020,180[pg1].P_out",
+          "name": "P_out",
+          "pin": [
+            1020,
+            200
+          ],
+          "width": null
+        }
+      ],
+      "type": "pg_cell"
+    },
+    {
+      "attributes": {
+        "label": "pg2"
+      },
+      "facing": "east",
+      "id": "pg_cell@1020,390[pg2]",
+      "is_subcircuit": true,
+      "label": "pg2",
+      "library": null,
+      "location": [
+        1020,
+        390
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,390[pg2].G",
+          "name": "G",
+          "pin": [
+            800,
+            390
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "out",
+          "id": "pg_cell@1020,390[pg2].G_out",
+          "name": "G_out",
+          "pin": [
+            1020,
+            390
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,390[pg2].G_prev",
+          "name": "G_prev",
+          "pin": [
+            800,
+            430
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,390[pg2].P",
+          "name": "P",
+          "pin": [
+            800,
+            410
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "in",
+          "id": "pg_cell@1020,390[pg2].P_Prev",
+          "name": "P_Prev",
+          "pin": [
+            800,
+            450
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1020,
+            390
+          ],
+          "direction": "out",
+          "id": "pg_cell@1020,390[pg2].P_out",
+          "name": "P_out",
+          "pin": [
+            1020,
+            410
+          ],
+          "width": null
+        }
+      ],
+      "type": "pg_cell"
+    },
+    {
+      "attributes": {
+        "label": "bit0"
+      },
+      "facing": "east",
+      "id": "kogge_stone_1b@690,180[bit0]",
+      "is_subcircuit": true,
+      "label": "bit0",
+      "library": null,
+      "location": [
+        690,
+        180
+      ],
+      "ports": [
+        {
+          "anchor": [
+            690,
+            180
+          ],
+          "direction": "in",
+          "id": "kogge_stone_1b@690,180[bit0].A",
+          "name": "A",
+          "pin": [
+            470,
+            180
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            180
+          ],
+          "direction": "in",
+          "id": "kogge_stone_1b@690,180[bit0].B",
+          "name": "B",
+          "pin": [
+            470,
+            200
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            180
+          ],
+          "direction": "in",
+          "id": "kogge_stone_1b@690,180[bit0].C_in",
+          "name": "C_in",
+          "pin": [
+            470,
+            220
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            180
+          ],
+          "direction": "out",
+          "id": "kogge_stone_1b@690,180[bit0].g",
+          "name": "g",
+          "pin": [
+            690,
+            180
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            180
+          ],
+          "direction": "out",
+          "id": "kogge_stone_1b@690,180[bit0].p",
+          "name": "p",
+          "pin": [
+            690,
+            200
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            180
+          ],
+          "direction": "out",
+          "id": "kogge_stone_1b@690,180[bit0].sum",
+          "name": "sum",
+          "pin": [
+            690,
+            220
+          ],
+          "width": null
+        }
+      ],
+      "type": "kogge_stone_1b"
+    },
+    {
+      "attributes": {
+        "label": "bit1"
+      },
+      "facing": "east",
+      "id": "kogge_stone_1b@690,390[bit1]",
+      "is_subcircuit": true,
+      "label": "bit1",
+      "library": null,
+      "location": [
+        690,
+        390
+      ],
+      "ports": [
+        {
+          "anchor": [
+            690,
+            390
+          ],
+          "direction": "in",
+          "id": "kogge_stone_1b@690,390[bit1].A",
+          "name": "A",
+          "pin": [
+            470,
+            390
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            390
+          ],
+          "direction": "in",
+          "id": "kogge_stone_1b@690,390[bit1].B",
+          "name": "B",
+          "pin": [
+            470,
+            410
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            390
+          ],
+          "direction": "in",
+          "id": "kogge_stone_1b@690,390[bit1].C_in",
+          "name": "C_in",
+          "pin": [
+            470,
+            430
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            390
+          ],
+          "direction": "out",
+          "id": "kogge_stone_1b@690,390[bit1].g",
+          "name": "g",
+          "pin": [
+            690,
+            390
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            390
+          ],
+          "direction": "out",
+          "id": "kogge_stone_1b@690,390[bit1].p",
+          "name": "p",
+          "pin": [
+            690,
+            410
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            690,
+            390
+          ],
+          "direction": "out",
+          "id": "kogge_stone_1b@690,390[bit1].sum",
+          "name": "sum",
+          "pin": [
+            690,
+            430
+          ],
+          "width": null
+        }
+      ],
+      "type": "kogge_stone_1b"
+    }
+  ],
+  "coverage": {
+    "endpoints": 34,
+    "matched": 34,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "kogge_stone_2b",
+    "edges": [
+      {
+        "dst": "kogge_stone_1b@690,180[bit0].A",
+        "net": 1,
+        "src": "Pin@440,180[A0].p"
+      },
+      {
+        "dst": "kogge_stone_1b@690,180[bit0].B",
+        "net": 2,
+        "src": "Pin@440,200[B0].p"
+      },
+      {
+        "dst": "kogge_stone_1b@690,180[bit0].C_in",
+        "net": 3,
+        "src": "Pin@440,220[CIN].p"
+      },
+      {
+        "dst": "pg_cell@1020,180[pg1].G_prev",
+        "net": 3,
+        "src": "Pin@440,220[CIN].p"
+      },
+      {
+        "dst": "kogge_stone_1b@690,390[bit1].A",
+        "net": 4,
+        "src": "Pin@440,390[A1].p"
+      },
+      {
+        "dst": "kogge_stone_1b@690,390[bit1].B",
+        "net": 5,
+        "src": "Pin@440,410[B1].p"
+      },
+      {
+        "dst": "pg_cell@1020,180[pg1].G",
+        "net": 6,
+        "src": "kogge_stone_1b@690,180[bit0].g"
+      },
+      {
+        "dst": "pg_cell@1020,180[pg1].P",
+        "net": 7,
+        "src": "kogge_stone_1b@690,180[bit0].p"
+      },
+      {
+        "dst": "Pin@690,220[SUM0].p",
+        "net": 11,
+        "src": "kogge_stone_1b@690,180[bit0].sum"
+      },
+      {
+        "dst": "pg_cell@1020,390[pg2].G",
+        "net": 8,
+        "src": "kogge_stone_1b@690,390[bit1].g"
+      },
+      {
+        "dst": "pg_cell@1020,390[pg2].P",
+        "net": 9,
+        "src": "kogge_stone_1b@690,390[bit1].p"
+      },
+      {
+        "dst": "Pin@690,430[SUM1].p",
+        "net": 12,
+        "src": "kogge_stone_1b@690,390[bit1].sum"
+      },
+      {
+        "dst": "kogge_stone_1b@690,390[bit1].C_in",
+        "net": 0,
+        "src": "pg_cell@1020,180[pg1].G_out"
+      },
+      {
+        "dst": "pg_cell@1020,390[pg2].G_prev",
+        "net": 0,
+        "src": "pg_cell@1020,180[pg1].G_out"
+      },
+      {
+        "dst": "Pin@1020,390[Cout].p",
+        "net": 10,
+        "src": "pg_cell@1020,390[pg2].G_out"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "pg_cell@1020,180[pg1].G_out"
+        ],
+        "index": 0,
+        "labels": [
+          "bit1",
+          "pg1",
+          "pg2"
+        ],
+        "name": "net:bit1/pg1",
+        "ports": [
+          "kogge_stone_1b@690,390[bit1].C_in",
+          "pg_cell@1020,180[pg1].G_out",
+          "pg_cell@1020,390[pg2].G_prev"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@440,180[A0].p"
+        ],
+        "index": 1,
+        "labels": [
+          "A0",
+          "bit0"
+        ],
+        "name": "net:A0/bit0",
+        "ports": [
+          "Pin@440,180[A0].p",
+          "kogge_stone_1b@690,180[bit0].A"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@440,200[B0].p"
+        ],
+        "index": 2,
+        "labels": [
+          "B0",
+          "bit0"
+        ],
+        "name": "net:B0/bit0",
+        "ports": [
+          "Pin@440,200[B0].p",
+          "kogge_stone_1b@690,180[bit0].B"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@440,220[CIN].p"
+        ],
+        "index": 3,
+        "labels": [
+          "CIN",
+          "bit0",
+          "pg1"
+        ],
+        "name": "net:CIN/bit0",
+        "ports": [
+          "Pin@440,220[CIN].p",
+          "kogge_stone_1b@690,180[bit0].C_in",
+          "pg_cell@1020,180[pg1].G_prev"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@440,390[A1].p"
+        ],
+        "index": 4,
+        "labels": [
+          "A1",
+          "bit1"
+        ],
+        "name": "net:A1/bit1",
+        "ports": [
+          "Pin@440,390[A1].p",
+          "kogge_stone_1b@690,390[bit1].A"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@440,410[B1].p"
+        ],
+        "index": 5,
+        "labels": [
+          "B1",
+          "bit1"
+        ],
+        "name": "net:B1/bit1",
+        "ports": [
+          "Pin@440,410[B1].p",
+          "kogge_stone_1b@690,390[bit1].B"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "kogge_stone_1b@690,180[bit0].g"
+        ],
+        "index": 6,
+        "labels": [
+          "bit0",
+          "pg1"
+        ],
+        "name": "net:bit0/pg1",
+        "ports": [
+          "kogge_stone_1b@690,180[bit0].g",
+          "pg_cell@1020,180[pg1].G"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "kogge_stone_1b@690,180[bit0].p"
+        ],
+        "index": 7,
+        "labels": [
+          "bit0",
+          "pg1"
+        ],
+        "name": "net:bit0/pg1",
+        "ports": [
+          "kogge_stone_1b@690,180[bit0].p",
+          "pg_cell@1020,180[pg1].P"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "kogge_stone_1b@690,390[bit1].g"
+        ],
+        "index": 8,
+        "labels": [
+          "bit1",
+          "pg2"
+        ],
+        "name": "net:bit1/pg2",
+        "ports": [
+          "kogge_stone_1b@690,390[bit1].g",
+          "pg_cell@1020,390[pg2].G"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "kogge_stone_1b@690,390[bit1].p"
+        ],
+        "index": 9,
+        "labels": [
+          "bit1",
+          "pg2"
+        ],
+        "name": "net:bit1/pg2",
+        "ports": [
+          "kogge_stone_1b@690,390[bit1].p",
+          "pg_cell@1020,390[pg2].P"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pg_cell@1020,390[pg2].G_out"
+        ],
+        "index": 10,
+        "labels": [
+          "Cout",
+          "pg2"
+        ],
+        "name": "net:Cout/pg2",
+        "ports": [
+          "Pin@1020,390[Cout].p",
+          "pg_cell@1020,390[pg2].G_out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "kogge_stone_1b@690,180[bit0].sum"
+        ],
+        "index": 11,
+        "labels": [
+          "SUM0",
+          "bit0"
+        ],
+        "name": "net:SUM0/bit0",
+        "ports": [
+          "Pin@690,220[SUM0].p",
+          "kogge_stone_1b@690,180[bit0].sum"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "kogge_stone_1b@690,390[bit1].sum"
+        ],
+        "index": 12,
+        "labels": [
+          "SUM1",
+          "bit1"
+        ],
+        "name": "net:SUM1/bit1",
+        "ports": [
+          "Pin@690,430[SUM1].p",
+          "kogge_stone_1b@690,390[bit1].sum"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pg_cell@1020,180[pg1].P_out"
+        ],
+        "index": 13,
+        "labels": [
+          "pg1"
+        ],
+        "name": "net:pg1",
+        "ports": [
+          "pg_cell@1020,180[pg1].P_out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 14,
+        "labels": [
+          "pg1"
+        ],
+        "name": "net:pg1",
+        "ports": [
+          "pg_cell@1020,180[pg1].P_Prev"
+        ],
+        "status": "undriven"
+      },
+      {
+        "drivers": [
+          "pg_cell@1020,390[pg2].P_out"
+        ],
+        "index": 15,
+        "labels": [
+          "pg2"
+        ],
+        "name": "net:pg2",
+        "ports": [
+          "pg_cell@1020,390[pg2].P_out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 16,
+        "labels": [
+          "pg2"
+        ],
+        "name": "net:pg2",
+        "ports": [
+          "pg_cell@1020,390[pg2].P_Prev"
+        ],
+        "status": "undriven"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "Pin@1020,390[Cout]",
+        "direction": "in",
+        "id": "Pin@1020,390[Cout].p",
+        "kind": "Pin",
+        "label": "Cout",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          1020,
+          390
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@440,180[A0]",
+        "direction": "out",
+        "id": "Pin@440,180[A0].p",
+        "kind": "Pin",
+        "label": "A0",
+        "loc": [
+          440,
+          180
+        ],
+        "pin": [
+          440,
+          180
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@440,200[B0]",
+        "direction": "out",
+        "id": "Pin@440,200[B0].p",
+        "kind": "Pin",
+        "label": "B0",
+        "loc": [
+          440,
+          200
+        ],
+        "pin": [
+          440,
+          200
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@440,220[CIN]",
+        "direction": "out",
+        "id": "Pin@440,220[CIN].p",
+        "kind": "Pin",
+        "label": "CIN",
+        "loc": [
+          440,
+          220
+        ],
+        "pin": [
+          440,
+          220
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@440,390[A1]",
+        "direction": "out",
+        "id": "Pin@440,390[A1].p",
+        "kind": "Pin",
+        "label": "A1",
+        "loc": [
+          440,
+          390
+        ],
+        "pin": [
+          440,
+          390
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@440,410[B1]",
+        "direction": "out",
+        "id": "Pin@440,410[B1].p",
+        "kind": "Pin",
+        "label": "B1",
+        "loc": [
+          440,
+          410
+        ],
+        "pin": [
+          440,
+          410
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@690,220[SUM0]",
+        "direction": "in",
+        "id": "Pin@690,220[SUM0].p",
+        "kind": "Pin",
+        "label": "SUM0",
+        "loc": [
+          690,
+          220
+        ],
+        "pin": [
+          690,
+          220
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@690,430[SUM1]",
+        "direction": "in",
+        "id": "Pin@690,430[SUM1].p",
+        "kind": "Pin",
+        "label": "SUM1",
+        "loc": [
+          690,
+          430
+        ],
+        "pin": [
+          690,
+          430
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "kogge_stone_1b@690,180[bit0]",
+        "direction": "in",
+        "id": "kogge_stone_1b@690,180[bit0].A",
+        "kind": "kogge_stone_1b",
+        "label": "bit0",
+        "loc": [
+          690,
+          180
+        ],
+        "pin": [
+          470,
+          180
+        ],
+        "port": "A"
+      },
+      {
+        "comp": "kogge_stone_1b@690,180[bit0]",
+        "direction": "in",
+        "id": "kogge_stone_1b@690,180[bit0].B",
+        "kind": "kogge_stone_1b",
+        "label": "bit0",
+        "loc": [
+          690,
+          180
+        ],
+        "pin": [
+          470,
+          200
+        ],
+        "port": "B"
+      },
+      {
+        "comp": "kogge_stone_1b@690,180[bit0]",
+        "direction": "in",
+        "id": "kogge_stone_1b@690,180[bit0].C_in",
+        "kind": "kogge_stone_1b",
+        "label": "bit0",
+        "loc": [
+          690,
+          180
+        ],
+        "pin": [
+          470,
+          220
+        ],
+        "port": "C_in"
+      },
+      {
+        "comp": "kogge_stone_1b@690,180[bit0]",
+        "direction": "out",
+        "id": "kogge_stone_1b@690,180[bit0].g",
+        "kind": "kogge_stone_1b",
+        "label": "bit0",
+        "loc": [
+          690,
+          180
+        ],
+        "pin": [
+          690,
+          180
+        ],
+        "port": "g"
+      },
+      {
+        "comp": "kogge_stone_1b@690,180[bit0]",
+        "direction": "out",
+        "id": "kogge_stone_1b@690,180[bit0].p",
+        "kind": "kogge_stone_1b",
+        "label": "bit0",
+        "loc": [
+          690,
+          180
+        ],
+        "pin": [
+          690,
+          200
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "kogge_stone_1b@690,180[bit0]",
+        "direction": "out",
+        "id": "kogge_stone_1b@690,180[bit0].sum",
+        "kind": "kogge_stone_1b",
+        "label": "bit0",
+        "loc": [
+          690,
+          180
+        ],
+        "pin": [
+          690,
+          220
+        ],
+        "port": "sum"
+      },
+      {
+        "comp": "kogge_stone_1b@690,390[bit1]",
+        "direction": "in",
+        "id": "kogge_stone_1b@690,390[bit1].A",
+        "kind": "kogge_stone_1b",
+        "label": "bit1",
+        "loc": [
+          690,
+          390
+        ],
+        "pin": [
+          470,
+          390
+        ],
+        "port": "A"
+      },
+      {
+        "comp": "kogge_stone_1b@690,390[bit1]",
+        "direction": "in",
+        "id": "kogge_stone_1b@690,390[bit1].B",
+        "kind": "kogge_stone_1b",
+        "label": "bit1",
+        "loc": [
+          690,
+          390
+        ],
+        "pin": [
+          470,
+          410
+        ],
+        "port": "B"
+      },
+      {
+        "comp": "kogge_stone_1b@690,390[bit1]",
+        "direction": "in",
+        "id": "kogge_stone_1b@690,390[bit1].C_in",
+        "kind": "kogge_stone_1b",
+        "label": "bit1",
+        "loc": [
+          690,
+          390
+        ],
+        "pin": [
+          470,
+          430
+        ],
+        "port": "C_in"
+      },
+      {
+        "comp": "kogge_stone_1b@690,390[bit1]",
+        "direction": "out",
+        "id": "kogge_stone_1b@690,390[bit1].g",
+        "kind": "kogge_stone_1b",
+        "label": "bit1",
+        "loc": [
+          690,
+          390
+        ],
+        "pin": [
+          690,
+          390
+        ],
+        "port": "g"
+      },
+      {
+        "comp": "kogge_stone_1b@690,390[bit1]",
+        "direction": "out",
+        "id": "kogge_stone_1b@690,390[bit1].p",
+        "kind": "kogge_stone_1b",
+        "label": "bit1",
+        "loc": [
+          690,
+          390
+        ],
+        "pin": [
+          690,
+          410
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "kogge_stone_1b@690,390[bit1]",
+        "direction": "out",
+        "id": "kogge_stone_1b@690,390[bit1].sum",
+        "kind": "kogge_stone_1b",
+        "label": "bit1",
+        "loc": [
+          690,
+          390
+        ],
+        "pin": [
+          690,
+          430
+        ],
+        "port": "sum"
+      },
+      {
+        "comp": "pg_cell@1020,180[pg1]",
+        "direction": "in",
+        "id": "pg_cell@1020,180[pg1].G",
+        "kind": "pg_cell",
+        "label": "pg1",
+        "loc": [
+          1020,
+          180
+        ],
+        "pin": [
+          800,
+          180
+        ],
+        "port": "G"
+      },
+      {
+        "comp": "pg_cell@1020,180[pg1]",
+        "direction": "out",
+        "id": "pg_cell@1020,180[pg1].G_out",
+        "kind": "pg_cell",
+        "label": "pg1",
+        "loc": [
+          1020,
+          180
+        ],
+        "pin": [
+          1020,
+          180
+        ],
+        "port": "G_out"
+      },
+      {
+        "comp": "pg_cell@1020,180[pg1]",
+        "direction": "in",
+        "id": "pg_cell@1020,180[pg1].G_prev",
+        "kind": "pg_cell",
+        "label": "pg1",
+        "loc": [
+          1020,
+          180
+        ],
+        "pin": [
+          800,
+          220
+        ],
+        "port": "G_prev"
+      },
+      {
+        "comp": "pg_cell@1020,180[pg1]",
+        "direction": "in",
+        "id": "pg_cell@1020,180[pg1].P",
+        "kind": "pg_cell",
+        "label": "pg1",
+        "loc": [
+          1020,
+          180
+        ],
+        "pin": [
+          800,
+          200
+        ],
+        "port": "P"
+      },
+      {
+        "comp": "pg_cell@1020,180[pg1]",
+        "direction": "in",
+        "id": "pg_cell@1020,180[pg1].P_Prev",
+        "kind": "pg_cell",
+        "label": "pg1",
+        "loc": [
+          1020,
+          180
+        ],
+        "pin": [
+          800,
+          240
+        ],
+        "port": "P_Prev"
+      },
+      {
+        "comp": "pg_cell@1020,180[pg1]",
+        "direction": "out",
+        "id": "pg_cell@1020,180[pg1].P_out",
+        "kind": "pg_cell",
+        "label": "pg1",
+        "loc": [
+          1020,
+          180
+        ],
+        "pin": [
+          1020,
+          200
+        ],
+        "port": "P_out"
+      },
+      {
+        "comp": "pg_cell@1020,390[pg2]",
+        "direction": "in",
+        "id": "pg_cell@1020,390[pg2].G",
+        "kind": "pg_cell",
+        "label": "pg2",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          800,
+          390
+        ],
+        "port": "G"
+      },
+      {
+        "comp": "pg_cell@1020,390[pg2]",
+        "direction": "out",
+        "id": "pg_cell@1020,390[pg2].G_out",
+        "kind": "pg_cell",
+        "label": "pg2",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          1020,
+          390
+        ],
+        "port": "G_out"
+      },
+      {
+        "comp": "pg_cell@1020,390[pg2]",
+        "direction": "in",
+        "id": "pg_cell@1020,390[pg2].G_prev",
+        "kind": "pg_cell",
+        "label": "pg2",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          800,
+          430
+        ],
+        "port": "G_prev"
+      },
+      {
+        "comp": "pg_cell@1020,390[pg2]",
+        "direction": "in",
+        "id": "pg_cell@1020,390[pg2].P",
+        "kind": "pg_cell",
+        "label": "pg2",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          800,
+          410
+        ],
+        "port": "P"
+      },
+      {
+        "comp": "pg_cell@1020,390[pg2]",
+        "direction": "in",
+        "id": "pg_cell@1020,390[pg2].P_Prev",
+        "kind": "pg_cell",
+        "label": "pg2",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          800,
+          450
+        ],
+        "port": "P_Prev"
+      },
+      {
+        "comp": "pg_cell@1020,390[pg2]",
+        "direction": "out",
+        "id": "pg_cell@1020,390[pg2].P_out",
+        "kind": "pg_cell",
+        "label": "pg2",
+        "loc": [
+          1020,
+          390
+        ],
+        "pin": [
+          1020,
+          410
+        ],
+        "port": "P_out"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@440,180[A0]",
+      "Pin@440,200[B0]",
+      "Pin@440,220[CIN]",
+      "Pin@440,390[A1]",
+      "Pin@440,410[B1]"
+    ],
+    "outputs": [
+      "Pin@690,220[SUM0]",
+      "Pin@1020,390[Cout]",
+      "Pin@690,430[SUM1]"
+    ]
+  },
+  "inventory": {
+    "Pin": 8,
+    "kogge_stone_1b": 2,
+    "pg_cell": 2
+  },
+  "source": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        1020,
+        180
+      ],
+      "index": 0,
+      "to": [
+        1070,
+        180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1070,
+        180
+      ],
+      "index": 1,
+      "to": [
+        1070,
+        330
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        380,
+        330
+      ],
+      "index": 2,
+      "to": [
+        1070,
+        330
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        380,
+        330
+      ],
+      "index": 3,
+      "to": [
+        380,
+        430
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        380,
+        430
+      ],
+      "index": 4,
+      "to": [
+        450,
+        430
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        440,
+        180
+      ],
+      "index": 5,
+      "to": [
+        470,
+        180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        440,
+        200
+      ],
+      "index": 6,
+      "to": [
+        470,
+        200
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        440,
+        220
+      ],
+      "index": 7,
+      "to": [
+        450,
+        220
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        440,
+        390
+      ],
+      "index": 8,
+      "to": [
+        470,
+        390
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        440,
+        410
+      ],
+      "index": 9,
+      "to": [
+        470,
+        410
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        220
+      ],
+      "index": 10,
+      "to": [
+        450,
+        290
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        220
+      ],
+      "index": 11,
+      "to": [
+        470,
+        220
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        290
+      ],
+      "index": 12,
+      "to": [
+        750,
+        290
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        430
+      ],
+      "index": 13,
+      "to": [
+        450,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        430
+      ],
+      "index": 14,
+      "to": [
+        470,
+        430
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        500
+      ],
+      "index": 15,
+      "to": [
+        750,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        690,
+        180
+      ],
+      "index": 16,
+      "to": [
+        800,
+        180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        690,
+        200
+      ],
+      "index": 17,
+      "to": [
+        800,
+        200
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        690,
+        390
+      ],
+      "index": 18,
+      "to": [
+        800,
+        390
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        690,
+        410
+      ],
+      "index": 19,
+      "to": [
+        800,
+        410
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        220
+      ],
+      "index": 20,
+      "to": [
+        750,
+        290
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        220
+      ],
+      "index": 21,
+      "to": [
+        800,
+        220
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        430
+      ],
+      "index": 22,
+      "to": [
+        750,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        430
+      ],
+      "index": 23,
+      "to": [
+        800,
+        430
+      ]
+    }
+  ]
+}

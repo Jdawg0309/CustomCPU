@@ -1,0 +1,1734 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "bs_stage_8",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    280,
+    340,
+    960,
+    610
+  ],
+  "circuit": "bs_stage_8",
+  "components": [
+    {
+      "attributes": {
+        "value": "0x8",
+        "width": "5"
+      },
+      "facing": "east",
+      "id": "Constant@280,400",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        280,
+        400
+      ],
+      "ports": [
+        {
+          "anchor": [
+            280,
+            400
+          ],
+          "direction": "out",
+          "id": "Constant@280,400.p",
+          "name": "p",
+          "pin": [
+            280,
+            400
+          ],
+          "width": 5
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "initial": "0x9e3779b8",
+        "label": "input_32",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@290,380[input_32]",
+      "is_subcircuit": false,
+      "label": "input_32",
+      "library": "0",
+      "location": [
+        290,
+        380
+      ],
+      "ports": [
+        {
+          "anchor": [
+            290,
+            380
+          ],
+          "direction": "out",
+          "id": "Pin@290,380[input_32].p",
+          "name": "p",
+          "pin": [
+            290,
+            380
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "typ_2",
+        "width": "2"
+      },
+      "facing": "east",
+      "id": "Pin@540,610[typ_2]",
+      "is_subcircuit": false,
+      "label": "typ_2",
+      "library": "0",
+      "location": [
+        540,
+        610
+      ],
+      "ports": [
+        {
+          "anchor": [
+            540,
+            610
+          ],
+          "direction": "out",
+          "id": "Pin@540,610[typ_2].p",
+          "name": "p",
+          "pin": [
+            540,
+            610
+          ],
+          "width": 2
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "enable"
+      },
+      "facing": "east",
+      "id": "Pin@890,520[enable]",
+      "is_subcircuit": false,
+      "label": "enable",
+      "library": "0",
+      "location": [
+        890,
+        520
+      ],
+      "ports": [
+        {
+          "anchor": [
+            890,
+            520
+          ],
+          "direction": "out",
+          "id": "Pin@890,520[enable].p",
+          "name": "p",
+          "pin": [
+            890,
+            520
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "out_1",
+        "output": "true",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "west",
+      "id": "Pin@960,470[out_1]",
+      "is_subcircuit": false,
+      "label": "out_1",
+      "library": "0",
+      "location": [
+        960,
+        470
+      ],
+      "ports": [
+        {
+          "anchor": [
+            960,
+            470
+          ],
+          "direction": "in",
+          "id": "Pin@960,470[out_1].p",
+          "name": "p",
+          "pin": [
+            960,
+            470
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "select": "2",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Multiplexer@560,480",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "4",
+      "location": [
+        560,
+        480
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            480
+          ],
+          "direction": "in",
+          "id": "Multiplexer@560,480.in0",
+          "name": "in0",
+          "pin": [
+            520,
+            460
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            560,
+            480
+          ],
+          "direction": "in",
+          "id": "Multiplexer@560,480.in1",
+          "name": "in1",
+          "pin": [
+            520,
+            470
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            560,
+            480
+          ],
+          "direction": "in",
+          "id": "Multiplexer@560,480.in2",
+          "name": "in2",
+          "pin": [
+            520,
+            480
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            560,
+            480
+          ],
+          "direction": "in",
+          "id": "Multiplexer@560,480.in3",
+          "name": "in3",
+          "pin": [
+            520,
+            490
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            560,
+            480
+          ],
+          "direction": "out",
+          "id": "Multiplexer@560,480.out",
+          "name": "out",
+          "pin": [
+            560,
+            480
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            560,
+            480
+          ],
+          "direction": "in",
+          "id": "Multiplexer@560,480.sel",
+          "name": "sel",
+          "pin": [
+            540,
+            500
+          ],
+          "width": 2
+        }
+      ],
+      "type": "Multiplexer"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Multiplexer@920,470",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "4",
+      "location": [
+        920,
+        470
+      ],
+      "ports": [
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "in",
+          "id": "Multiplexer@920,470.in0",
+          "name": "in0",
+          "pin": [
+            890,
+            460
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "in",
+          "id": "Multiplexer@920,470.in1",
+          "name": "in1",
+          "pin": [
+            890,
+            480
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "out",
+          "id": "Multiplexer@920,470.out",
+          "name": "out",
+          "pin": [
+            920,
+            470
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "in",
+          "id": "Multiplexer@920,470.sel",
+          "name": "sel",
+          "pin": [
+            900,
+            490
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Multiplexer"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Shifter@410,390",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        410,
+        390
+      ],
+      "ports": [
+        {
+          "anchor": [
+            410,
+            390
+          ],
+          "direction": "in",
+          "id": "Shifter@410,390.dist",
+          "name": "dist",
+          "pin": [
+            370,
+            400
+          ],
+          "width": 5
+        },
+        {
+          "anchor": [
+            410,
+            390
+          ],
+          "direction": "in",
+          "id": "Shifter@410,390.in",
+          "name": "in",
+          "pin": [
+            370,
+            380
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            410,
+            390
+          ],
+          "direction": "out",
+          "id": "Shifter@410,390.out",
+          "name": "out",
+          "pin": [
+            410,
+            390
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "shift": "lr",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Shifter@410,460",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        410,
+        460
+      ],
+      "ports": [
+        {
+          "anchor": [
+            410,
+            460
+          ],
+          "direction": "in",
+          "id": "Shifter@410,460.dist",
+          "name": "dist",
+          "pin": [
+            370,
+            470
+          ],
+          "width": 5
+        },
+        {
+          "anchor": [
+            410,
+            460
+          ],
+          "direction": "in",
+          "id": "Shifter@410,460.in",
+          "name": "in",
+          "pin": [
+            370,
+            450
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            410,
+            460
+          ],
+          "direction": "out",
+          "id": "Shifter@410,460.out",
+          "name": "out",
+          "pin": [
+            410,
+            460
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "shift": "ar",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Shifter@410,530",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        410,
+        530
+      ],
+      "ports": [
+        {
+          "anchor": [
+            410,
+            530
+          ],
+          "direction": "in",
+          "id": "Shifter@410,530.dist",
+          "name": "dist",
+          "pin": [
+            370,
+            540
+          ],
+          "width": 5
+        },
+        {
+          "anchor": [
+            410,
+            530
+          ],
+          "direction": "in",
+          "id": "Shifter@410,530.in",
+          "name": "in",
+          "pin": [
+            370,
+            520
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            410,
+            530
+          ],
+          "direction": "out",
+          "id": "Shifter@410,530.out",
+          "name": "out",
+          "pin": [
+            410,
+            530
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "shift": "rr",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Shifter@410,600",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        410,
+        600
+      ],
+      "ports": [
+        {
+          "anchor": [
+            410,
+            600
+          ],
+          "direction": "in",
+          "id": "Shifter@410,600.dist",
+          "name": "dist",
+          "pin": [
+            370,
+            610
+          ],
+          "width": 5
+        },
+        {
+          "anchor": [
+            410,
+            600
+          ],
+          "direction": "in",
+          "id": "Shifter@410,600.in",
+          "name": "in",
+          "pin": [
+            370,
+            590
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            410,
+            600
+          ],
+          "direction": "out",
+          "id": "Shifter@410,600.out",
+          "name": "out",
+          "pin": [
+            410,
+            600
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Shifter"
+    }
+  ],
+  "coverage": {
+    "endpoints": 46,
+    "matched": 46,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "bs_stage_8",
+    "edges": [
+      {
+        "dst": "Shifter@410,390.dist",
+        "net": 0,
+        "src": "Constant@280,400.p"
+      },
+      {
+        "dst": "Shifter@410,460.dist",
+        "net": 0,
+        "src": "Constant@280,400.p"
+      },
+      {
+        "dst": "Shifter@410,530.dist",
+        "net": 0,
+        "src": "Constant@280,400.p"
+      },
+      {
+        "dst": "Shifter@410,600.dist",
+        "net": 0,
+        "src": "Constant@280,400.p"
+      },
+      {
+        "dst": "Multiplexer@920,470.in1",
+        "net": 7,
+        "src": "Multiplexer@560,480.out"
+      },
+      {
+        "dst": "Pin@960,470[out_1].p",
+        "net": 9,
+        "src": "Multiplexer@920,470.out"
+      },
+      {
+        "dst": "Multiplexer@920,470.in0",
+        "net": 1,
+        "src": "Pin@290,380[input_32].p"
+      },
+      {
+        "dst": "Shifter@410,390.in",
+        "net": 1,
+        "src": "Pin@290,380[input_32].p"
+      },
+      {
+        "dst": "Shifter@410,460.in",
+        "net": 1,
+        "src": "Pin@290,380[input_32].p"
+      },
+      {
+        "dst": "Shifter@410,530.in",
+        "net": 1,
+        "src": "Pin@290,380[input_32].p"
+      },
+      {
+        "dst": "Shifter@410,600.in",
+        "net": 1,
+        "src": "Pin@290,380[input_32].p"
+      },
+      {
+        "dst": "Multiplexer@560,480.sel",
+        "net": 6,
+        "src": "Pin@540,610[typ_2].p"
+      },
+      {
+        "dst": "Multiplexer@920,470.sel",
+        "net": 8,
+        "src": "Pin@890,520[enable].p"
+      },
+      {
+        "dst": "Multiplexer@560,480.in0",
+        "net": 2,
+        "src": "Shifter@410,390.out"
+      },
+      {
+        "dst": "Multiplexer@560,480.in1",
+        "net": 3,
+        "src": "Shifter@410,460.out"
+      },
+      {
+        "dst": "Multiplexer@560,480.in2",
+        "net": 4,
+        "src": "Shifter@410,530.out"
+      },
+      {
+        "dst": "Multiplexer@560,480.in3",
+        "net": 5,
+        "src": "Shifter@410,600.out"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Constant@280,400.p"
+        ],
+        "index": 0,
+        "labels": [],
+        "name": "net#0",
+        "ports": [
+          "Constant@280,400.p",
+          "Shifter@410,390.dist",
+          "Shifter@410,460.dist",
+          "Shifter@410,530.dist",
+          "Shifter@410,600.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@290,380[input_32].p"
+        ],
+        "index": 1,
+        "labels": [
+          "input_32"
+        ],
+        "name": "net:input_32",
+        "ports": [
+          "Multiplexer@920,470.in0",
+          "Pin@290,380[input_32].p",
+          "Shifter@410,390.in",
+          "Shifter@410,460.in",
+          "Shifter@410,530.in",
+          "Shifter@410,600.in"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@410,390.out"
+        ],
+        "index": 2,
+        "labels": [],
+        "name": "net#2",
+        "ports": [
+          "Multiplexer@560,480.in0",
+          "Shifter@410,390.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@410,460.out"
+        ],
+        "index": 3,
+        "labels": [],
+        "name": "net#3",
+        "ports": [
+          "Multiplexer@560,480.in1",
+          "Shifter@410,460.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@410,530.out"
+        ],
+        "index": 4,
+        "labels": [],
+        "name": "net#4",
+        "ports": [
+          "Multiplexer@560,480.in2",
+          "Shifter@410,530.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@410,600.out"
+        ],
+        "index": 5,
+        "labels": [],
+        "name": "net#5",
+        "ports": [
+          "Multiplexer@560,480.in3",
+          "Shifter@410,600.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@540,610[typ_2].p"
+        ],
+        "index": 6,
+        "labels": [
+          "typ_2"
+        ],
+        "name": "net:typ_2",
+        "ports": [
+          "Multiplexer@560,480.sel",
+          "Pin@540,610[typ_2].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Multiplexer@560,480.out"
+        ],
+        "index": 7,
+        "labels": [],
+        "name": "net#7",
+        "ports": [
+          "Multiplexer@560,480.out",
+          "Multiplexer@920,470.in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@890,520[enable].p"
+        ],
+        "index": 8,
+        "labels": [
+          "enable"
+        ],
+        "name": "net:enable",
+        "ports": [
+          "Multiplexer@920,470.sel",
+          "Pin@890,520[enable].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Multiplexer@920,470.out"
+        ],
+        "index": 9,
+        "labels": [
+          "out_1"
+        ],
+        "name": "net:out_1",
+        "ports": [
+          "Multiplexer@920,470.out",
+          "Pin@960,470[out_1].p"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "Constant@280,400",
+        "direction": "out",
+        "id": "Constant@280,400.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          280,
+          400
+        ],
+        "pin": [
+          280,
+          400
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Multiplexer@560,480",
+        "direction": "in",
+        "id": "Multiplexer@560,480.in0",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          560,
+          480
+        ],
+        "pin": [
+          520,
+          460
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "Multiplexer@560,480",
+        "direction": "in",
+        "id": "Multiplexer@560,480.in1",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          560,
+          480
+        ],
+        "pin": [
+          520,
+          470
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "Multiplexer@560,480",
+        "direction": "in",
+        "id": "Multiplexer@560,480.in2",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          560,
+          480
+        ],
+        "pin": [
+          520,
+          480
+        ],
+        "port": "in2"
+      },
+      {
+        "comp": "Multiplexer@560,480",
+        "direction": "in",
+        "id": "Multiplexer@560,480.in3",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          560,
+          480
+        ],
+        "pin": [
+          520,
+          490
+        ],
+        "port": "in3"
+      },
+      {
+        "comp": "Multiplexer@560,480",
+        "direction": "out",
+        "id": "Multiplexer@560,480.out",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          560,
+          480
+        ],
+        "pin": [
+          560,
+          480
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Multiplexer@560,480",
+        "direction": "in",
+        "id": "Multiplexer@560,480.sel",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          560,
+          480
+        ],
+        "pin": [
+          540,
+          500
+        ],
+        "port": "sel"
+      },
+      {
+        "comp": "Multiplexer@920,470",
+        "direction": "in",
+        "id": "Multiplexer@920,470.in0",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          890,
+          460
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "Multiplexer@920,470",
+        "direction": "in",
+        "id": "Multiplexer@920,470.in1",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          890,
+          480
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "Multiplexer@920,470",
+        "direction": "out",
+        "id": "Multiplexer@920,470.out",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          920,
+          470
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Multiplexer@920,470",
+        "direction": "in",
+        "id": "Multiplexer@920,470.sel",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          900,
+          490
+        ],
+        "port": "sel"
+      },
+      {
+        "comp": "Pin@290,380[input_32]",
+        "direction": "out",
+        "id": "Pin@290,380[input_32].p",
+        "kind": "Pin",
+        "label": "input_32",
+        "loc": [
+          290,
+          380
+        ],
+        "pin": [
+          290,
+          380
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@540,610[typ_2]",
+        "direction": "out",
+        "id": "Pin@540,610[typ_2].p",
+        "kind": "Pin",
+        "label": "typ_2",
+        "loc": [
+          540,
+          610
+        ],
+        "pin": [
+          540,
+          610
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@890,520[enable]",
+        "direction": "out",
+        "id": "Pin@890,520[enable].p",
+        "kind": "Pin",
+        "label": "enable",
+        "loc": [
+          890,
+          520
+        ],
+        "pin": [
+          890,
+          520
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@960,470[out_1]",
+        "direction": "in",
+        "id": "Pin@960,470[out_1].p",
+        "kind": "Pin",
+        "label": "out_1",
+        "loc": [
+          960,
+          470
+        ],
+        "pin": [
+          960,
+          470
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Shifter@410,390",
+        "direction": "in",
+        "id": "Shifter@410,390.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          390
+        ],
+        "pin": [
+          370,
+          400
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@410,390",
+        "direction": "in",
+        "id": "Shifter@410,390.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          390
+        ],
+        "pin": [
+          370,
+          380
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@410,390",
+        "direction": "out",
+        "id": "Shifter@410,390.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          390
+        ],
+        "pin": [
+          410,
+          390
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@410,460",
+        "direction": "in",
+        "id": "Shifter@410,460.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          460
+        ],
+        "pin": [
+          370,
+          470
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@410,460",
+        "direction": "in",
+        "id": "Shifter@410,460.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          460
+        ],
+        "pin": [
+          370,
+          450
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@410,460",
+        "direction": "out",
+        "id": "Shifter@410,460.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          460
+        ],
+        "pin": [
+          410,
+          460
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@410,530",
+        "direction": "in",
+        "id": "Shifter@410,530.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          530
+        ],
+        "pin": [
+          370,
+          540
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@410,530",
+        "direction": "in",
+        "id": "Shifter@410,530.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          530
+        ],
+        "pin": [
+          370,
+          520
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@410,530",
+        "direction": "out",
+        "id": "Shifter@410,530.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          530
+        ],
+        "pin": [
+          410,
+          530
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@410,600",
+        "direction": "in",
+        "id": "Shifter@410,600.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          600
+        ],
+        "pin": [
+          370,
+          610
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@410,600",
+        "direction": "in",
+        "id": "Shifter@410,600.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          600
+        ],
+        "pin": [
+          370,
+          590
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@410,600",
+        "direction": "out",
+        "id": "Shifter@410,600.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          410,
+          600
+        ],
+        "pin": [
+          410,
+          600
+        ],
+        "port": "out"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@290,380[input_32]",
+      "Pin@890,520[enable]",
+      "Pin@540,610[typ_2]"
+    ],
+    "outputs": [
+      "Pin@960,470[out_1]"
+    ]
+  },
+  "inventory": {
+    "Constant": 1,
+    "Multiplexer": 2,
+    "Pin": 4,
+    "Shifter": 4
+  },
+  "source": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        280,
+        400
+      ],
+      "index": 0,
+      "to": [
+        350,
+        400
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        340
+      ],
+      "index": 1,
+      "to": [
+        290,
+        380
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        340
+      ],
+      "index": 2,
+      "to": [
+        770,
+        340
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        380
+      ],
+      "index": 3,
+      "to": [
+        290,
+        450
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        380
+      ],
+      "index": 4,
+      "to": [
+        370,
+        380
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        450
+      ],
+      "index": 5,
+      "to": [
+        290,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        450
+      ],
+      "index": 6,
+      "to": [
+        370,
+        450
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        520
+      ],
+      "index": 7,
+      "to": [
+        290,
+        590
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        520
+      ],
+      "index": 8,
+      "to": [
+        370,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        590
+      ],
+      "index": 9,
+      "to": [
+        370,
+        590
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        400
+      ],
+      "index": 10,
+      "to": [
+        350,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        400
+      ],
+      "index": 11,
+      "to": [
+        370,
+        400
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        470
+      ],
+      "index": 12,
+      "to": [
+        350,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        470
+      ],
+      "index": 13,
+      "to": [
+        370,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        540
+      ],
+      "index": 14,
+      "to": [
+        350,
+        610
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        540
+      ],
+      "index": 15,
+      "to": [
+        370,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        350,
+        610
+      ],
+      "index": 16,
+      "to": [
+        370,
+        610
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        410,
+        390
+      ],
+      "index": 17,
+      "to": [
+        470,
+        390
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        410,
+        460
+      ],
+      "index": 18,
+      "to": [
+        460,
+        460
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        410,
+        530
+      ],
+      "index": 19,
+      "to": [
+        460,
+        530
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        410,
+        600
+      ],
+      "index": 20,
+      "to": [
+        470,
+        600
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        460,
+        460
+      ],
+      "index": 21,
+      "to": [
+        460,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        460,
+        470
+      ],
+      "index": 22,
+      "to": [
+        520,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        460,
+        480
+      ],
+      "index": 23,
+      "to": [
+        460,
+        530
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        460,
+        480
+      ],
+      "index": 24,
+      "to": [
+        520,
+        480
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        390
+      ],
+      "index": 25,
+      "to": [
+        470,
+        460
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        460
+      ],
+      "index": 26,
+      "to": [
+        520,
+        460
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        490
+      ],
+      "index": 27,
+      "to": [
+        470,
+        600
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        490
+      ],
+      "index": 28,
+      "to": [
+        520,
+        490
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        540,
+        500
+      ],
+      "index": 29,
+      "to": [
+        540,
+        610
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        560,
+        480
+      ],
+      "index": 30,
+      "to": [
+        890,
+        480
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        770,
+        340
+      ],
+      "index": 31,
+      "to": [
+        770,
+        460
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        770,
+        460
+      ],
+      "index": 32,
+      "to": [
+        890,
+        460
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        890,
+        520
+      ],
+      "index": 33,
+      "to": [
+        900,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        900,
+        490
+      ],
+      "index": 34,
+      "to": [
+        900,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        920,
+        470
+      ],
+      "index": 35,
+      "to": [
+        960,
+        470
+      ]
+    }
+  ]
+}

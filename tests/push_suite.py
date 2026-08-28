@@ -13,7 +13,14 @@ import subprocess, sys, re, tempfile, os
 AS = "arm-none-eabi-as"
 OC = "arm-none-eabi-objcopy"
 JAR = "/snap/logisim-evolution/current/logisim-evolution/logisim-evolution.jar"
-CIRC = "/home/junaet/Documents/CustomCPU/debug_armv4t.circ"
+# Overridable so a candidate build can be tested without editing this file.
+# It silently tested the wrong circuit when passed a path it ignored.
+CIRC = sys.argv[1] if len(sys.argv) > 1 else "/home/junaet/Documents/CustomCPU/debug_armv4t.circ"
+
+# ROM occupies 0x0000-0x0FFF, so RAM starts immediately above it. The two used
+# to overlap at zero, which made an address decode impossible -- see the
+# memory-map note in main. Programs must place data at or above this.
+RAM_BASE = 0x1000
 
 def mov_imm(reg, val):
     """Emit MOV (or MVN for all-ones) -- every value used in this suite is
@@ -51,24 +58,43 @@ def assemble(asm_text, workdir):
             for i in range(0, len(data), 4)]
 
 def run_rom(words, workdir):
+    """Patch every 32-bit-data ROM in `main` with the same program image.
+
+    A design that gives LDR a second read port into program memory (for
+    literal pools) has TWO such ROMs -- the instruction fetch ROM and a
+    byte-for-byte duplicate addressed by the load path. Both must hold the
+    identical image or a literal-pool load reads stale data. Patching every
+    match here (not just the first) keeps this working whether the circuit
+    has one ROM or two, with no separate code path for either case.
+    """
     src = open(CIRC).read()
-    mstart = src.index('<circuit name="main"')
-    mend = src.index("\n  </circuit>", mstart)
-    body = src[mstart:mend]
-    m = re.search(r'<comp lib="2"[^>]*name="ROM">.*?</comp>', body, re.S)
-    while m and 'val="32"' not in m.group(0):
-        m = re.search(r'<comp lib="2"[^>]*name="ROM">.*?</comp>', body[m.end():], re.S)
-    rom = m.group(0)
-    aw = int(re.search(r'addrWidth" val="(\d+)"', rom).group(1))
-    assert len(words) <= (1 << aw), (
-        f"ROM only holds {1 << aw} words (addrWidth={aw}); "
-        f"this test needs {len(words)} -- shrink the test, don't expand the ROM."
-    )
-    new = re.sub(r'(addrWidth" val=")\d+(")', r"\g<1>%d\g<2>" % aw, rom)
-    new = re.sub(r'<a name="contents">.*?</a>',
-                 '<a name="contents">addr/data: %d 32\n%s\n</a>' % (aw, " ".join(words)),
-                 new, flags=re.S)
-    body2 = body.replace(rom, new, 1)
+    # Search the WHOLE file, not just main.  Once the design is split into
+    # pipeline stages the instruction ROM lives inside stage_IF, and a
+    # main-only search finds nothing and asserts.
+    mstart, mend = 0, len(src)
+    body = src
+    roms = []
+    pos = 0
+    while True:
+        m = re.search(r'<comp lib="2"[^>]*name="ROM">.*?</comp>', body[pos:], re.S)
+        if not m:
+            break
+        if 'val="32"' in m.group(0):
+            roms.append(m.group(0))
+        pos += m.end()
+    assert roms, "no 32-bit-data ROM found anywhere in the file"
+    body2 = body
+    for rom in roms:
+        aw = int(re.search(r'addrWidth" val="(\d+)"', rom).group(1))
+        assert len(words) <= (1 << aw), (
+            f"ROM only holds {1 << aw} words (addrWidth={aw}); "
+            f"this test needs {len(words)} -- shrink the test, don't expand the ROM."
+        )
+        new = re.sub(r'(addrWidth" val=")\d+(")', r"\g<1>%d\g<2>" % aw, rom)
+        new = re.sub(r'<a name="contents">.*?</a>',
+                     '<a name="contents">addr/data: %d 32\n%s\n</a>' % (aw, " ".join(words)),
+                     new, flags=re.S)
+        body2 = body2.replace(rom, new, 1)
     src2 = src[:mstart] + body2 + src[mend:]
     src2 = src2.replace('label" val="is_BX"', 'label" val="halt"')
     circ = os.path.join(workdir, "t.circ")
@@ -93,7 +119,8 @@ def run_rom(words, workdir):
 
 def expected_ram(sp_init, pushes):
     """ARM STMDB SP!,{list}: ascending reg# -> ascending address, lowest reg
-    lands at the final SP. Word address = byte_address // 4."""
+    lands at the final SP. The RAM dump is indexed from RAM's own base, so a
+    byte address converts as (addr - RAM_BASE) // 4, not addr // 4."""
     sp = sp_init
     expect = {}
     for regvals in pushes:
@@ -101,20 +128,20 @@ def expected_ram(sp_init, pushes):
         sp -= 4 * len(regs)
         for k, r in enumerate(regs):
             byte_addr = sp + 4 * k
-            expect[byte_addr // 4] = "%08x" % regvals[r]
+            expect[(byte_addr - RAM_BASE) // 4] = "%08x" % regvals[r]
     return expect, sp
 
 TESTS = [
-    ("two_low",        0x400, [{0: 0xAA, 1: 0xBB}]),
-    ("two_high",       0x400, [{10: 0x10, 11: 0x11}]),
-    ("three_scattered",0x400, [{0: 0x01, 5: 0x05, 9: 0x09}]),
-    ("four_consecutive",0x400,[{4: 0x44, 5: 0x55, 6: 0x66, 7: 0x77}]),
-    ("callee_saved_lr",0x400, [{4:0x04,5:0x05,6:0x06,7:0x07,8:0x08,9:0x09,10:0x0A,11:0x0B,14:0x0E}]),
-    ("fourteen_regs",  0x400, [{i: i for i in range(13)} | {14: 0x0E}]),
-    ("zero_then_ones",  0x400, [{0: 0x00, 1: 0xFFFFFFFF}]),
-    ("all_ones_pair",  0x400, [{2: 0xFFFFFFFF, 3: 0xFFFFFFFF}]),
-    ("middle_regs",    0x400, [{6: 0x60, 7: 0x70, 8: 0x80}]),
-    ("sp_continuity",  0x400, [{0: 0x01, 1: 0x02}, {2: 0x03, 3: 0x04}]),
+    ("two_low",        0x1400, [{0: 0xAA, 1: 0xBB}]),
+    ("two_high",       0x1400, [{10: 0x10, 11: 0x11}]),
+    ("three_scattered",0x1400, [{0: 0x01, 5: 0x05, 9: 0x09}]),
+    ("four_consecutive",0x1400,[{4: 0x44, 5: 0x55, 6: 0x66, 7: 0x77}]),
+    ("callee_saved_lr",0x1400, [{4:0x04,5:0x05,6:0x06,7:0x07,8:0x08,9:0x09,10:0x0A,11:0x0B,14:0x0E}]),
+    ("fourteen_regs",  0x1400, [{i: i for i in range(13)} | {14: 0x0E}]),
+    ("zero_then_ones",  0x1400, [{0: 0x00, 1: 0xFFFFFFFF}]),
+    ("all_ones_pair",  0x1400, [{2: 0xFFFFFFFF, 3: 0xFFFFFFFF}]),
+    ("middle_regs",    0x1400, [{6: 0x60, 7: 0x70, 8: 0x80}]),
+    ("sp_continuity",  0x1400, [{0: 0x01, 1: 0x02}, {2: 0x03, 3: 0x04}]),
 ]
 
 def main():

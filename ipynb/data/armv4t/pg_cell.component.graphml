@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">pg_cell</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Pin@170,180[G]">
+  <data key="d3">Pin</data>
+  <data key="d4">G</data>
+  <data key="d5">170</data>
+  <data key="d6">180</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@170,200[P]">
+  <data key="d3">Pin</data>
+  <data key="d4">P</data>
+  <data key="d5">170</data>
+  <data key="d6">200</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@170,240[G_prev]">
+  <data key="d3">Pin</data>
+  <data key="d4">G_prev</data>
+  <data key="d5">170</data>
+  <data key="d6">240</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@170,310[P_Prev]">
+  <data key="d3">Pin</data>
+  <data key="d4">P_Prev</data>
+  <data key="d5">170</data>
+  <data key="d6">310</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@380,290[P_out]">
+  <data key="d3">Pin</data>
+  <data key="d4">P_out</data>
+  <data key="d5">380</data>
+  <data key="d6">290</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@470,200[G_out]">
+  <data key="d3">Pin</data>
+  <data key="d4">G_out</data>
+  <data key="d5">470</data>
+  <data key="d6">200</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@320,220[PandG_prev]">
+  <data key="d3">AND Gate</data>
+  <data key="d4">PandG_prev</data>
+  <data key="d5">320</data>
+  <data key="d6">220</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@320,290[P_and_P_prev]">
+  <data key="d3">AND Gate</data>
+  <data key="d4">P_and_P_prev</data>
+  <data key="d5">320</data>
+  <data key="d6">290</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@430,200[G_or_PandG_prev]">
+  <data key="d3">OR Gate</data>
+  <data key="d4">G_or_PandG_prev</data>
+  <data key="d5">430</data>
+  <data key="d6">200</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<edge source="Pin@170,180[G]" target="OR Gate@430,200[G_or_PandG_prev]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@170,180[G].p</data>
+  <data key="d12">OR Gate@430,200[G_or_PandG_prev].in0</data>
+  <data key="d13">0</data>
+  <data key="d14">net:G/G_or_PandG_prev</data>
+</edge>
+<edge source="Pin@170,200[P]" target="AND Gate@320,220[PandG_prev]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@170,200[P].p</data>
+  <data key="d12">AND Gate@320,220[PandG_prev].in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:P/P_and_P_prev</data>
+</edge>
+<edge source="Pin@170,200[P]" target="AND Gate@320,290[P_and_P_prev]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@170,200[P].p</data>
+  <data key="d12">AND Gate@320,290[P_and_P_prev].in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:P/P_and_P_prev</data>
+</edge>
+<edge source="Pin@170,240[G_prev]" target="AND Gate@320,220[PandG_prev]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@170,240[G_prev].p</data>
+  <data key="d12">AND Gate@320,220[PandG_prev].in1</data>
+  <data key="d13">2</data>
+  <data key="d14">net:G_prev/PandG_prev</data>
+</edge>
+<edge source="Pin@170,310[P_Prev]" target="AND Gate@320,290[P_and_P_prev]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@170,310[P_Prev].p</data>
+  <data key="d12">AND Gate@320,290[P_and_P_prev].in1</data>
+  <data key="d13">3</data>
+  <data key="d14">net:P_Prev/P_and_P_prev</data>
+</edge>
+<edge source="AND Gate@320,220[PandG_prev]" target="OR Gate@430,200[G_or_PandG_prev]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">AND Gate@320,220[PandG_prev].out</data>
+  <data key="d12">OR Gate@430,200[G_or_PandG_prev].in1</data>
+  <data key="d13">4</data>
+  <data key="d14">net:G_or_PandG_prev/PandG_prev</data>
+</edge>
+<edge source="AND Gate@320,290[P_and_P_prev]" target="Pin@380,290[P_out]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@320,290[P_and_P_prev].out</data>
+  <data key="d12">Pin@380,290[P_out].p</data>
+  <data key="d13">5</data>
+  <data key="d14">net:P_and_P_prev/P_out</data>
+</edge>
+<edge source="OR Gate@430,200[G_or_PandG_prev]" target="Pin@470,200[G_out]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">OR Gate@430,200[G_or_PandG_prev].out</data>
+  <data key="d12">Pin@470,200[G_out].p</data>
+  <data key="d13">6</data>
+  <data key="d14">net:G_or_PandG_prev/G_out</data>
+</edge>
+</graph></graphml>

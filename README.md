@@ -6,11 +6,20 @@ with the ROM images and sources that exercise it.
 **Author:** Junaet Mahbub
 
 ```
-armv4t.circ    the CPU
-roms/          all ROM images, flat  — see roms/README.md for the catalog
-src/           assembly and C sources for those ROMs
-build/         ROM build and verification scripts
+armv4t.circ       the CPU (hand-wired master)
+debug_armv4t.circ work-in-progress copy: adds PC-as-operand reads and working
+                  literal pools (`ldr rD,=const`); default target of tests/
+roms/             all ROM images, flat  — see roms/README.md for the catalog
+src/              assembly and C sources for those ROMs
+build/            ROM build and verification scripts
+tests/            headless Logisim regression suites (push, pop, PC-write, ISA)
+logisim/          Python backend for parsing/linting/rendering .circ files
+fpga/fmax/        Verilog export + Vivado script for an Fmax measurement
+backups/          timestamped circuit snapshots
 ```
+
+Memory map: ROM occupies `0x0000-0x0FFF` (1024 words, addressed by `PC[11:2]`)
+and RAM begins at `0x1000`.
 
 ## Building and verifying
 

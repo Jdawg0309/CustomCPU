@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">ALU_arithmetic_engine</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="Pin@1040,2990[Cflag].p">
+  <data key="d3">Pin@1040,2990[Cflag]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">Cflag</data>
+  <data key="d8">1040</data>
+  <data key="d9">2990</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1200,2990.in2">
+  <data key="d3">Multiplexer@1200,2990</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1160</data>
+  <data key="d9">2990</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@1060,2810[a_inversion].p">
+  <data key="d3">Pin@1060,2810[a_inversion]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">a_inversion</data>
+  <data key="d8">1060</data>
+  <data key="d9">2810</data>
+  <data key="d10">1</data>
+</node>
+<node id="Bit Extender@1280,2810.in">
+  <data key="d3">Bit Extender@1280,2810</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1240</data>
+  <data key="d9">2810</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@1060,2940[b_inversion].p">
+  <data key="d3">Pin@1060,2940[b_inversion]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">b_inversion</data>
+  <data key="d8">1060</data>
+  <data key="d9">2940</data>
+  <data key="d10">1</data>
+</node>
+<node id="Bit Extender@1270,2940.in">
+  <data key="d3">Bit Extender@1270,2940</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1230</data>
+  <data key="d9">2940</data>
+  <data key="d10">0</data>
+</node>
+<node id="Constant@1150,2970.p">
+  <data key="d3">Constant@1150,2970</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1150</data>
+  <data key="d9">2970</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1200,2990.in0">
+  <data key="d3">Multiplexer@1200,2990</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1160</data>
+  <data key="d9">2970</data>
+  <data key="d10">0</data>
+</node>
+<node id="Constant@1150,2980.p">
+  <data key="d3">Constant@1150,2980</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1150</data>
+  <data key="d9">2980</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1200,2990.in1">
+  <data key="d3">Multiplexer@1200,2990</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1160</data>
+  <data key="d9">2980</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@1150,3000[unused].p">
+  <data key="d3">Pin@1150,3000[unused]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">unused</data>
+  <data key="d8">1150</data>
+  <data key="d9">3000</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1200,2990.in3">
+  <data key="d3">Multiplexer@1200,2990</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in3</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1160</data>
+  <data key="d9">3000</data>
+  <data key="d10">0</data>
+</node>
+<node id="Multiplexer@1200,2990.out">
+  <data key="d3">Multiplexer@1200,2990</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">2990</data>
+  <data key="d10">0</data>
+</node>
+<node id="Adder@1660,2890.cin">
+  <data key="d3">Adder@1660,2890</data>
+  <data key="d4">Adder</data>
+  <data key="d5">cin</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1640</data>
+  <data key="d9">2870</data>
+  <data key="d10">1</data>
+</node>
+<node id="Pin@1230,2850[A].p">
+  <data key="d3">Pin@1230,2850[A]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">A</data>
+  <data key="d8">1230</data>
+  <data key="d9">2850</data>
+  <data key="d10">32</data>
+</node>
+<node id="XOR Gate@1390,2830.in1">
+  <data key="d3">XOR Gate@1390,2830</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1330</data>
+  <data key="d9">2850</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@1230,2900[B].p">
+  <data key="d3">Pin@1230,2900[B]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">B</data>
+  <data key="d8">1230</data>
+  <data key="d9">2900</data>
+  <data key="d10">32</data>
+</node>
+<node id="XOR Gate@1390,2920.in0">
+  <data key="d3">XOR Gate@1390,2920</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1330</data>
+  <data key="d9">2900</data>
+  <data key="d10">32</data>
+</node>
+<node id="Bit Extender@1270,2940.out">
+  <data key="d3">Bit Extender@1270,2940</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1270</data>
+  <data key="d9">2940</data>
+  <data key="d10">0</data>
+</node>
+<node id="XOR Gate@1390,2920.in1">
+  <data key="d3">XOR Gate@1390,2920</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1330</data>
+  <data key="d9">2940</data>
+  <data key="d10">32</data>
+</node>
+<node id="Bit Extender@1280,2810.out">
+  <data key="d3">Bit Extender@1280,2810</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1280</data>
+  <data key="d9">2810</data>
+  <data key="d10">0</data>
+</node>
+<node id="XOR Gate@1390,2830.in0">
+  <data key="d3">XOR Gate@1390,2830</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1330</data>
+  <data key="d9">2810</data>
+  <data key="d10">32</data>
+</node>
+<node id="XOR Gate@1390,2830.out">
+  <data key="d3">XOR Gate@1390,2830</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1390</data>
+  <data key="d9">2830</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@1660,2890.a">
+  <data key="d3">Adder@1660,2890</data>
+  <data key="d4">Adder</data>
+  <data key="d5">a</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1620</data>
+  <data key="d9">2880</data>
+  <data key="d10">32</data>
+</node>
+<node id="XOR Gate@1390,2920.out">
+  <data key="d3">XOR Gate@1390,2920</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1390</data>
+  <data key="d9">2920</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@1660,2890.b">
+  <data key="d3">Adder@1660,2890</data>
+  <data key="d4">Adder</data>
+  <data key="d5">b</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1620</data>
+  <data key="d9">2900</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@1640,2930[Cout].p">
+  <data key="d3">Pin@1640,2930[Cout]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">Cout</data>
+  <data key="d8">1640</data>
+  <data key="d9">2930</data>
+  <data key="d10">1</data>
+</node>
+<node id="Adder@1660,2890.cout">
+  <data key="d3">Adder@1660,2890</data>
+  <data key="d4">Adder</data>
+  <data key="d5">cout</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1640</data>
+  <data key="d9">2910</data>
+  <data key="d10">1</data>
+</node>
+<node id="Pin@1670,2890[Result].p">
+  <data key="d3">Pin@1670,2890[Result]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">Result</data>
+  <data key="d8">1670</data>
+  <data key="d9">2890</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@1660,2890.out">
+  <data key="d3">Adder@1660,2890</data>
+  <data key="d4">Adder</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1660</data>
+  <data key="d9">2890</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@1180,3010[Cin_sel].p">
+  <data key="d3">Pin@1180,3010[Cin_sel]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">Cin_sel</data>
+  <data key="d8">1180</data>
+  <data key="d9">3010</data>
+  <data key="d10">2</data>
+</node>
+<node id="Multiplexer@1200,2990.sel">
+  <data key="d3">Multiplexer@1200,2990</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">sel</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1180</data>
+  <data key="d9">3010</data>
+  <data key="d10">2</data>
+</node>
+<edge source="Pin@1040,2990[Cflag].p" target="Multiplexer@1200,2990.in2" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:Cflag</data>
+</edge>
+<edge source="Pin@1060,2810[a_inversion].p" target="Bit Extender@1280,2810.in" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net:a_inversion</data>
+</edge>
+<edge source="Pin@1060,2940[b_inversion].p" target="Bit Extender@1270,2940.in" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:b_inversion</data>
+</edge>
+<edge source="Constant@1150,2970.p" target="Multiplexer@1200,2990.in0" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net#3</data>
+</edge>
+<edge source="Constant@1150,2980.p" target="Multiplexer@1200,2990.in1" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net#4</data>
+</edge>
+<edge source="Pin@1150,3000[unused].p" target="Multiplexer@1200,2990.in3" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net:unused</data>
+</edge>
+<edge source="Multiplexer@1200,2990.out" target="Adder@1660,2890.cin" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net#6</data>
+</edge>
+<edge source="Pin@1230,2850[A].p" target="XOR Gate@1390,2830.in1" id="0">
+  <data key="d11">7</data>
+  <data key="d12">net:A</data>
+</edge>
+<edge source="Pin@1230,2900[B].p" target="XOR Gate@1390,2920.in0" id="0">
+  <data key="d11">8</data>
+  <data key="d12">net:B</data>
+</edge>
+<edge source="Bit Extender@1270,2940.out" target="XOR Gate@1390,2920.in1" id="0">
+  <data key="d11">9</data>
+  <data key="d12">net#9</data>
+</edge>
+<edge source="Bit Extender@1280,2810.out" target="XOR Gate@1390,2830.in0" id="0">
+  <data key="d11">10</data>
+  <data key="d12">net#10</data>
+</edge>
+<edge source="XOR Gate@1390,2830.out" target="Adder@1660,2890.a" id="0">
+  <data key="d11">11</data>
+  <data key="d12">net#11</data>
+</edge>
+<edge source="XOR Gate@1390,2920.out" target="Adder@1660,2890.b" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net#12</data>
+</edge>
+<edge source="Adder@1660,2890.cout" target="Pin@1640,2930[Cout].p" id="0">
+  <data key="d11">13</data>
+  <data key="d12">net:Cout</data>
+</edge>
+<edge source="Adder@1660,2890.out" target="Pin@1670,2890[Result].p" id="0">
+  <data key="d11">14</data>
+  <data key="d12">net:Result</data>
+</edge>
+<edge source="Pin@1180,3010[Cin_sel].p" target="Multiplexer@1200,2990.sel" id="0">
+  <data key="d11">15</data>
+  <data key="d12">net:Cin_sel</data>
+</edge>
+</graph></graphml>

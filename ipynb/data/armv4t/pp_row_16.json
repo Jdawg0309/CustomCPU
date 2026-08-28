@@ -1,0 +1,517 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "pp_row_16",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    130,
+    360,
+    310,
+    400
+  ],
+  "circuit": "pp_row_16",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "Rs_bit"
+      },
+      "facing": "east",
+      "id": "Pin@130,400[Rs_bit]",
+      "is_subcircuit": false,
+      "label": "Rs_bit",
+      "library": "0",
+      "location": [
+        130,
+        400
+      ],
+      "ports": [
+        {
+          "anchor": [
+            130,
+            400
+          ],
+          "direction": "out",
+          "id": "Pin@130,400[Rs_bit].p",
+          "name": "p",
+          "pin": [
+            130,
+            400
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "initial": "0xdeadbeef",
+        "label": "Rm",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Pin@180,360[Rm]",
+      "is_subcircuit": false,
+      "label": "Rm",
+      "library": "0",
+      "location": [
+        180,
+        360
+      ],
+      "ports": [
+        {
+          "anchor": [
+            180,
+            360
+          ],
+          "direction": "out",
+          "id": "Pin@180,360[Rm].p",
+          "name": "p",
+          "pin": [
+            180,
+            360
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "in_width": "1"
+      },
+      "facing": "east",
+      "id": "Bit Extender@180,400",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        180,
+        400
+      ],
+      "ports": [
+        {
+          "anchor": [
+            180,
+            400
+          ],
+          "direction": "in",
+          "id": "Bit Extender@180,400.in",
+          "name": "in",
+          "pin": [
+            140,
+            400
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            180,
+            400
+          ],
+          "direction": "out",
+          "id": "Bit Extender@180,400.out",
+          "name": "out",
+          "pin": [
+            180,
+            400
+          ],
+          "width": null
+        }
+      ],
+      "type": "Bit Extender"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "result",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@310,380[result]",
+      "is_subcircuit": false,
+      "label": "result",
+      "library": "0",
+      "location": [
+        310,
+        380
+      ],
+      "ports": [
+        {
+          "anchor": [
+            310,
+            380
+          ],
+          "direction": "in",
+          "id": "Pin@310,380[result].p",
+          "name": "p",
+          "pin": [
+            310,
+            380
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "AND Gate@270,380",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        270,
+        380
+      ],
+      "ports": [
+        {
+          "anchor": [
+            270,
+            380
+          ],
+          "direction": "in",
+          "id": "AND Gate@270,380.in0",
+          "name": "in0",
+          "pin": [
+            220,
+            360
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            270,
+            380
+          ],
+          "direction": "in",
+          "id": "AND Gate@270,380.in1",
+          "name": "in1",
+          "pin": [
+            220,
+            400
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            270,
+            380
+          ],
+          "direction": "out",
+          "id": "AND Gate@270,380.out",
+          "name": "out",
+          "pin": [
+            270,
+            380
+          ],
+          "width": 16
+        }
+      ],
+      "type": "AND Gate"
+    }
+  ],
+  "coverage": {
+    "endpoints": 8,
+    "matched": 8,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "pp_row_16",
+    "edges": [
+      {
+        "dst": "Pin@310,380[result].p",
+        "net": 3,
+        "src": "AND Gate@270,380.out"
+      },
+      {
+        "dst": "AND Gate@270,380.in1",
+        "net": 2,
+        "src": "Bit Extender@180,400.out"
+      },
+      {
+        "dst": "Bit Extender@180,400.in",
+        "net": 0,
+        "src": "Pin@130,400[Rs_bit].p"
+      },
+      {
+        "dst": "AND Gate@270,380.in0",
+        "net": 1,
+        "src": "Pin@180,360[Rm].p"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Pin@130,400[Rs_bit].p"
+        ],
+        "index": 0,
+        "labels": [
+          "Rs_bit"
+        ],
+        "name": "net:Rs_bit",
+        "ports": [
+          "Bit Extender@180,400.in",
+          "Pin@130,400[Rs_bit].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@180,360[Rm].p"
+        ],
+        "index": 1,
+        "labels": [
+          "Rm"
+        ],
+        "name": "net:Rm",
+        "ports": [
+          "AND Gate@270,380.in0",
+          "Pin@180,360[Rm].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Bit Extender@180,400.out"
+        ],
+        "index": 2,
+        "labels": [],
+        "name": "net#2",
+        "ports": [
+          "AND Gate@270,380.in1",
+          "Bit Extender@180,400.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@270,380.out"
+        ],
+        "index": 3,
+        "labels": [
+          "result"
+        ],
+        "name": "net:result",
+        "ports": [
+          "AND Gate@270,380.out",
+          "Pin@310,380[result].p"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "AND Gate@270,380",
+        "direction": "in",
+        "id": "AND Gate@270,380.in0",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          270,
+          380
+        ],
+        "pin": [
+          220,
+          360
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@270,380",
+        "direction": "in",
+        "id": "AND Gate@270,380.in1",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          270,
+          380
+        ],
+        "pin": [
+          220,
+          400
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@270,380",
+        "direction": "out",
+        "id": "AND Gate@270,380.out",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          270,
+          380
+        ],
+        "pin": [
+          270,
+          380
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Bit Extender@180,400",
+        "direction": "in",
+        "id": "Bit Extender@180,400.in",
+        "kind": "Bit Extender",
+        "label": "",
+        "loc": [
+          180,
+          400
+        ],
+        "pin": [
+          140,
+          400
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Bit Extender@180,400",
+        "direction": "out",
+        "id": "Bit Extender@180,400.out",
+        "kind": "Bit Extender",
+        "label": "",
+        "loc": [
+          180,
+          400
+        ],
+        "pin": [
+          180,
+          400
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Pin@130,400[Rs_bit]",
+        "direction": "out",
+        "id": "Pin@130,400[Rs_bit].p",
+        "kind": "Pin",
+        "label": "Rs_bit",
+        "loc": [
+          130,
+          400
+        ],
+        "pin": [
+          130,
+          400
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@180,360[Rm]",
+        "direction": "out",
+        "id": "Pin@180,360[Rm].p",
+        "kind": "Pin",
+        "label": "Rm",
+        "loc": [
+          180,
+          360
+        ],
+        "pin": [
+          180,
+          360
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@310,380[result]",
+        "direction": "in",
+        "id": "Pin@310,380[result].p",
+        "kind": "Pin",
+        "label": "result",
+        "loc": [
+          310,
+          380
+        ],
+        "pin": [
+          310,
+          380
+        ],
+        "port": "p"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@180,360[Rm]",
+      "Pin@130,400[Rs_bit]"
+    ],
+    "outputs": [
+      "Pin@310,380[result]"
+    ]
+  },
+  "inventory": {
+    "AND Gate": 1,
+    "Bit Extender": 1,
+    "Pin": 3
+  },
+  "source": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        130,
+        400
+      ],
+      "index": 0,
+      "to": [
+        140,
+        400
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        180,
+        360
+      ],
+      "index": 1,
+      "to": [
+        220,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        180,
+        400
+      ],
+      "index": 2,
+      "to": [
+        220,
+        400
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        270,
+        380
+      ],
+      "index": 3,
+      "to": [
+        310,
+        380
+      ]
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">a_invert</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="Pin@220,390[a_inversion].p">
+  <data key="d3">Pin@220,390[a_inversion]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">a_inversion</data>
+  <data key="d8">220</data>
+  <data key="d9">390</data>
+  <data key="d10">1</data>
+</node>
+<node id="Bit Extender@360,390.in">
+  <data key="d3">Bit Extender@360,390</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">320</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.Cin">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">Cin</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">570</data>
+  <data key="d9">410</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@340,340[A].p">
+  <data key="d3">Pin@340,340[A]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">A</data>
+  <data key="d8">340</data>
+  <data key="d9">340</data>
+  <data key="d10">32</data>
+</node>
+<node id="XOR Gate@450,370.in0">
+  <data key="d3">XOR Gate@450,370</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">390</data>
+  <data key="d9">350</data>
+  <data key="d10">32</data>
+</node>
+<node id="Bit Extender@360,390.out">
+  <data key="d3">Bit Extender@360,390</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">360</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="XOR Gate@450,370.in1">
+  <data key="d3">XOR Gate@450,370</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">390</data>
+  <data key="d9">390</data>
+  <data key="d10">32</data>
+</node>
+<node id="XOR Gate@450,370.out">
+  <data key="d3">XOR Gate@450,370</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">450</data>
+  <data key="d9">370</data>
+  <data key="d10">32</data>
+</node>
+<node id="ks_32b@790,370.A">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">A</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">570</data>
+  <data key="d9">370</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@550,390[B].p">
+  <data key="d3">Pin@550,390[B]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">B</data>
+  <data key="d8">550</data>
+  <data key="d9">390</data>
+  <data key="d10">32</data>
+</node>
+<node id="ks_32b@790,370.B">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">B</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">570</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM31">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM31</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">370</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM30">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM30</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM29">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM29</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">410</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM28">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM28</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">430</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM27">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM27</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">450</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM26">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM26</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">470</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM25">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM25</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">490</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM24">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM24</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">510</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM23">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM23</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">530</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM22">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM22</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">550</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM21">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM21</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">570</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM20">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM20</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">590</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM19">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM19</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">610</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM18">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM18</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">630</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM17">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM17</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">650</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM16">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM16</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">670</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM15">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM15</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">690</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM14">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM14</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">710</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM13">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM13</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">730</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM12">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM12</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">750</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM11">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM11</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">770</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM10">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM10</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">790</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM9">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM9</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">810</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM8">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM8</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">830</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM7">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM7</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">850</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM6">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM6</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">870</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM5">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM5</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">890</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM4">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM4</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">910</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM3">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM3</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">930</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.SUM2">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">SUM2</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">950</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.sum1">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">sum1</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">970</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.sum0">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">sum0</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">990</data>
+  <data key="d10">0</data>
+</node>
+<node id="ks_32b@790,370.Cout">
+  <data key="d3">ks_32b@790,370</data>
+  <data key="d4">ks_32b</data>
+  <data key="d5">Cout</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">790</data>
+  <data key="d9">1010</data>
+  <data key="d10">0</data>
+</node>
+<edge source="Pin@220,390[a_inversion].p" target="Bit Extender@360,390.in" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:a_inversion</data>
+</edge>
+<edge source="Pin@220,390[a_inversion].p" target="ks_32b@790,370.Cin" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:a_inversion</data>
+</edge>
+<edge source="Pin@340,340[A].p" target="XOR Gate@450,370.in0" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net:A</data>
+</edge>
+<edge source="Bit Extender@360,390.out" target="XOR Gate@450,370.in1" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net#2</data>
+</edge>
+<edge source="XOR Gate@450,370.out" target="ks_32b@790,370.A" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net#3</data>
+</edge>
+<edge source="Pin@550,390[B].p" target="ks_32b@790,370.B" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:B</data>
+</edge>
+</graph></graphml>

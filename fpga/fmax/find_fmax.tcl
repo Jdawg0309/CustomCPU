@@ -15,10 +15,11 @@
 # ---------------------------------------------------------------------------
 
 set part      [expr {$argc > 0 ? [lindex $argv 0] : "xc7k480t-ffg901-2"}]
-set target_ns 4.0
+set target_ns [expr {$argc > 1 ? [lindex $argv 1] : 4.0}]
 set top       cpu_timing_top
 set here      [file dirname [file normalize [info script]]]
-set outdir    $here/vivado_out
+set period_tag [string map {. p} $target_ns]
+set outdir    [expr {$argc > 1 ? "$here/vivado_out_${period_tag}ns" : "$here/vivado_out"}]
 
 file mkdir $outdir
 puts "\n=== target part: $part   probe clock: ${target_ns} ns ===\n"
@@ -43,6 +44,7 @@ route_design
 report_utilization -file $outdir/utilization.rpt
 report_timing_summary -delay_type max -max_paths 10 -file $outdir/timing_summary.rpt
 report_timing -delay_type max -max_paths 20 -sort_by slack -file $outdir/timing_paths.rpt
+report_timing_summary -delay_type min -max_paths 10 -file $outdir/hold_summary.rpt
 
 set wns [get_property SLACK [get_timing_paths -delay_type max -max_paths 1]]
 set achieved [expr {$target_ns - $wns}]

@@ -1,0 +1,173 @@
+{
+  "a": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+  "b": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+  "circuits": [
+    {
+      "changed": false,
+      "name": "ALU",
+      "summary": "ALU: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "ALU_arithmetic_engine",
+      "summary": "ALU_arithmetic_engine: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "ALU_arithmetic_engine_1",
+      "summary": "ALU_arithmetic_engine_1: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "ALU_logic_engine",
+      "summary": "ALU_logic_engine: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "PE_cell",
+      "summary": "PE_cell: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "a_invert",
+      "summary": "a_invert: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "barrel_32b",
+      "summary": "barrel_32b: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": true,
+      "name": "block_transfer_control",
+      "summary": "block_transfer_control: +4 nodes / -0 nodes, +8 connections / -7 connections"
+    },
+    {
+      "changed": false,
+      "name": "bs_stage_1",
+      "summary": "bs_stage_1: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "bs_stage_16",
+      "summary": "bs_stage_16: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "bs_stage_2",
+      "summary": "bs_stage_2: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "bs_stage_4",
+      "summary": "bs_stage_4: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "bs_stage_8",
+      "summary": "bs_stage_8: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "condition_checker",
+      "summary": "condition_checker: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "csa_16",
+      "summary": "csa_16: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "csa_3to_2",
+      "summary": "csa_3to_2: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "kogge_stone_1b",
+      "summary": "kogge_stone_1b: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "kogge_stone_2b",
+      "summary": "kogge_stone_2b: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "ks_32b",
+      "summary": "ks_32b: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "ks_4b",
+      "summary": "ks_4b: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": true,
+      "name": "main",
+      "summary": "main: +54 nodes / -0 nodes, +44 connections / -17 connections"
+    },
+    {
+      "changed": false,
+      "name": "matmul4x4",
+      "summary": "matmul4x4: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "mul_32",
+      "summary": "mul_32: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "mul_8",
+      "summary": "mul_8: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "partial_products",
+      "summary": "partial_products: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "pc_fetch",
+      "summary": "pc_fetch: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "pg_cell",
+      "summary": "pg_cell: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "pp_8",
+      "summary": "pp_8: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "pp_row_16",
+      "summary": "pp_row_16: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "pp_row_32",
+      "summary": "pp_row_32: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "reg16x32",
+      "summary": "reg16x32: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "reg16x32_1",
+      "summary": "reg16x32_1: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    },
+    {
+      "changed": false,
+      "name": "systolic_4x4",
+      "summary": "systolic_4x4: +0 nodes / -0 nodes, +0 connections / -0 connections"
+    }
+  ],
+  "only_a_circuits": [],
+  "only_b_circuits": []
+}

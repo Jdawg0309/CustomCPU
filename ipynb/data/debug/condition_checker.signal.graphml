@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">condition_checker</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="Pin@1220,700[cond].p">
+  <data key="d3">Pin@1220,700[cond]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">cond</data>
+  <data key="d8">1220</data>
+  <data key="d9">700</data>
+  <data key="d10">4</data>
+</node>
+<node id="Multiplexer@1240,570.sel">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">sel</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1220</data>
+  <data key="d9">650</data>
+  <data key="d10">4</data>
+</node>
+<node id="Pin@1330,570.p">
+  <data key="d3">Pin@1330,570</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1330</data>
+  <data key="d9">570</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.out">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1240</data>
+  <data key="d9">570</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@450,470[N].p">
+  <data key="d3">Pin@450,470[N]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">N</data>
+  <data key="d8">450</data>
+  <data key="d9">470</data>
+  <data key="d10">1</data>
+</node>
+<node id="NOT Gate@720,470.in">
+  <data key="d3">NOT Gate@720,470</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">690</data>
+  <data key="d9">470</data>
+  <data key="d10">1</data>
+</node>
+<node id="XOR Gate@740,810.in0">
+  <data key="d3">XOR Gate@740,810</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">680</data>
+  <data key="d9">790</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in4">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in4</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">530</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@450,560[Z].p">
+  <data key="d3">Pin@450,560[Z]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">Z</data>
+  <data key="d8">450</data>
+  <data key="d9">560</data>
+  <data key="d10">1</data>
+</node>
+<node id="NOT Gate@720,560.in">
+  <data key="d3">NOT Gate@720,560</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">690</data>
+  <data key="d9">560</data>
+  <data key="d10">1</data>
+</node>
+<node id="OR Gate@730,970.in1">
+  <data key="d3">OR Gate@730,970</data>
+  <data key="d4">OR Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">680</data>
+  <data key="d9">990</data>
+  <data key="d10">1</data>
+</node>
+<node id="OR Gate@830,1160.in0">
+  <data key="d3">OR Gate@830,1160</data>
+  <data key="d4">OR Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">780</data>
+  <data key="d9">1140</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in0">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">490</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@450,650[C].p">
+  <data key="d3">Pin@450,650[C]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">C</data>
+  <data key="d8">450</data>
+  <data key="d9">650</data>
+  <data key="d10">1</data>
+</node>
+<node id="NOT Gate@720,650.in">
+  <data key="d3">NOT Gate@720,650</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">690</data>
+  <data key="d9">650</data>
+  <data key="d10">1</data>
+</node>
+<node id="AND Gate@730,890.in0">
+  <data key="d3">AND Gate@730,890</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">680</data>
+  <data key="d9">870</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in2">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">510</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@450,750[V].p">
+  <data key="d3">Pin@450,750[V]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">V</data>
+  <data key="d8">450</data>
+  <data key="d9">750</data>
+  <data key="d10">1</data>
+</node>
+<node id="NOT Gate@720,750.in">
+  <data key="d3">NOT Gate@720,750</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">690</data>
+  <data key="d9">750</data>
+  <data key="d10">1</data>
+</node>
+<node id="XOR Gate@740,810.in1">
+  <data key="d3">XOR Gate@740,810</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">680</data>
+  <data key="d9">830</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in6">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in6</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">550</data>
+  <data key="d10">0</data>
+</node>
+<node id="NOT Gate@720,560.out">
+  <data key="d3">NOT Gate@720,560</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">720</data>
+  <data key="d9">560</data>
+  <data key="d10">1</data>
+</node>
+<node id="AND Gate@730,890.in1">
+  <data key="d3">AND Gate@730,890</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">680</data>
+  <data key="d9">910</data>
+  <data key="d10">1</data>
+</node>
+<node id="AND Gate@830,1050.in0">
+  <data key="d3">AND Gate@830,1050</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">780</data>
+  <data key="d9">1030</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in1">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">500</data>
+  <data key="d10">0</data>
+</node>
+<node id="NOT Gate@720,650.out">
+  <data key="d3">NOT Gate@720,650</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">720</data>
+  <data key="d9">650</data>
+  <data key="d10">1</data>
+</node>
+<node id="OR Gate@730,970.in0">
+  <data key="d3">OR Gate@730,970</data>
+  <data key="d4">OR Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">680</data>
+  <data key="d9">950</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in3">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in3</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">520</data>
+  <data key="d10">0</data>
+</node>
+<node id="NOT Gate@720,470.out">
+  <data key="d3">NOT Gate@720,470</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">720</data>
+  <data key="d9">470</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in5">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in5</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">540</data>
+  <data key="d10">0</data>
+</node>
+<node id="NOT Gate@720,750.out">
+  <data key="d3">NOT Gate@720,750</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">720</data>
+  <data key="d9">750</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in7">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in7</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">560</data>
+  <data key="d10">0</data>
+</node>
+<node id="AND Gate@730,890.out">
+  <data key="d3">AND Gate@730,890</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">890</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in8">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in8</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">570</data>
+  <data key="d10">0</data>
+</node>
+<node id="OR Gate@730,970.out">
+  <data key="d3">OR Gate@730,970</data>
+  <data key="d4">OR Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">970</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in9">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in9</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">580</data>
+  <data key="d10">0</data>
+</node>
+<node id="XOR Gate@740,810.out">
+  <data key="d3">XOR Gate@740,810</data>
+  <data key="d4">XOR Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">740</data>
+  <data key="d9">810</data>
+  <data key="d10">1</data>
+</node>
+<node id="OR Gate@830,1160.in1">
+  <data key="d3">OR Gate@830,1160</data>
+  <data key="d4">OR Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">780</data>
+  <data key="d9">1180</data>
+  <data key="d10">1</data>
+</node>
+<node id="NOT Gate@930,810.in">
+  <data key="d3">NOT Gate@930,810</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">900</data>
+  <data key="d9">810</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in11">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in11</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">600</data>
+  <data key="d10">0</data>
+</node>
+<node id="AND Gate@830,1050.in1">
+  <data key="d3">AND Gate@830,1050</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">780</data>
+  <data key="d9">1070</data>
+  <data key="d10">1</data>
+</node>
+<node id="NOT Gate@930,810.out">
+  <data key="d3">NOT Gate@930,810</data>
+  <data key="d4">NOT Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">930</data>
+  <data key="d9">810</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in10">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in10</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">590</data>
+  <data key="d10">0</data>
+</node>
+<node id="AND Gate@830,1050.out">
+  <data key="d3">AND Gate@830,1050</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">830</data>
+  <data key="d9">1050</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in12">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in12</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">610</data>
+  <data key="d10">0</data>
+</node>
+<node id="OR Gate@830,1160.out">
+  <data key="d3">OR Gate@830,1160</data>
+  <data key="d4">OR Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">830</data>
+  <data key="d9">1160</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in13">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in13</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">620</data>
+  <data key="d10">0</data>
+</node>
+<node id="Constant@1200,630.p">
+  <data key="d3">Constant@1200,630</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">630</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in14">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in14</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">630</data>
+  <data key="d10">0</data>
+</node>
+<node id="Constant@1200,640.p">
+  <data key="d3">Constant@1200,640</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">640</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1240,570.in15">
+  <data key="d3">Multiplexer@1240,570</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in15</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1200</data>
+  <data key="d9">640</data>
+  <data key="d10">0</data>
+</node>
+<edge source="Pin@1220,700[cond].p" target="Multiplexer@1240,570.sel" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:cond</data>
+</edge>
+<edge source="Multiplexer@1240,570.out" target="Pin@1330,570.p" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net#1</data>
+</edge>
+<edge source="Pin@450,470[N].p" target="NOT Gate@720,470.in" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:N</data>
+</edge>
+<edge source="Pin@450,470[N].p" target="XOR Gate@740,810.in0" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:N</data>
+</edge>
+<edge source="Pin@450,470[N].p" target="Multiplexer@1240,570.in4" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:N</data>
+</edge>
+<edge source="Pin@450,560[Z].p" target="NOT Gate@720,560.in" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:Z</data>
+</edge>
+<edge source="Pin@450,560[Z].p" target="OR Gate@730,970.in1" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:Z</data>
+</edge>
+<edge source="Pin@450,560[Z].p" target="OR Gate@830,1160.in0" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:Z</data>
+</edge>
+<edge source="Pin@450,560[Z].p" target="Multiplexer@1240,570.in0" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:Z</data>
+</edge>
+<edge source="Pin@450,650[C].p" target="NOT Gate@720,650.in" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:C</data>
+</edge>
+<edge source="Pin@450,650[C].p" target="AND Gate@730,890.in0" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:C</data>
+</edge>
+<edge source="Pin@450,650[C].p" target="Multiplexer@1240,570.in2" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:C</data>
+</edge>
+<edge source="Pin@450,750[V].p" target="NOT Gate@720,750.in" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net:V</data>
+</edge>
+<edge source="Pin@450,750[V].p" target="XOR Gate@740,810.in1" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net:V</data>
+</edge>
+<edge source="Pin@450,750[V].p" target="Multiplexer@1240,570.in6" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net:V</data>
+</edge>
+<edge source="NOT Gate@720,560.out" target="AND Gate@730,890.in1" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net#6</data>
+</edge>
+<edge source="NOT Gate@720,560.out" target="AND Gate@830,1050.in0" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net#6</data>
+</edge>
+<edge source="NOT Gate@720,560.out" target="Multiplexer@1240,570.in1" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net#6</data>
+</edge>
+<edge source="NOT Gate@720,650.out" target="OR Gate@730,970.in0" id="0">
+  <data key="d11">7</data>
+  <data key="d12">net#7</data>
+</edge>
+<edge source="NOT Gate@720,650.out" target="Multiplexer@1240,570.in3" id="0">
+  <data key="d11">7</data>
+  <data key="d12">net#7</data>
+</edge>
+<edge source="NOT Gate@720,470.out" target="Multiplexer@1240,570.in5" id="0">
+  <data key="d11">8</data>
+  <data key="d12">net#8</data>
+</edge>
+<edge source="NOT Gate@720,750.out" target="Multiplexer@1240,570.in7" id="0">
+  <data key="d11">9</data>
+  <data key="d12">net#9</data>
+</edge>
+<edge source="AND Gate@730,890.out" target="Multiplexer@1240,570.in8" id="0">
+  <data key="d11">10</data>
+  <data key="d12">net#10</data>
+</edge>
+<edge source="OR Gate@730,970.out" target="Multiplexer@1240,570.in9" id="0">
+  <data key="d11">11</data>
+  <data key="d12">net#11</data>
+</edge>
+<edge source="XOR Gate@740,810.out" target="OR Gate@830,1160.in1" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net#12</data>
+</edge>
+<edge source="XOR Gate@740,810.out" target="NOT Gate@930,810.in" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net#12</data>
+</edge>
+<edge source="XOR Gate@740,810.out" target="Multiplexer@1240,570.in11" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net#12</data>
+</edge>
+<edge source="NOT Gate@930,810.out" target="AND Gate@830,1050.in1" id="0">
+  <data key="d11">13</data>
+  <data key="d12">net#13</data>
+</edge>
+<edge source="NOT Gate@930,810.out" target="Multiplexer@1240,570.in10" id="0">
+  <data key="d11">13</data>
+  <data key="d12">net#13</data>
+</edge>
+<edge source="AND Gate@830,1050.out" target="Multiplexer@1240,570.in12" id="0">
+  <data key="d11">14</data>
+  <data key="d12">net#14</data>
+</edge>
+<edge source="OR Gate@830,1160.out" target="Multiplexer@1240,570.in13" id="0">
+  <data key="d11">15</data>
+  <data key="d12">net#15</data>
+</edge>
+<edge source="Constant@1200,630.p" target="Multiplexer@1240,570.in14" id="0">
+  <data key="d11">16</data>
+  <data key="d12">net#16</data>
+</edge>
+<edge source="Constant@1200,640.p" target="Multiplexer@1240,570.in15" id="0">
+  <data key="d11">17</data>
+  <data key="d12">net#17</data>
+</edge>
+</graph></graphml>

@@ -146,6 +146,17 @@ class Design:
         return "<Design %s: %d circuits>" % (self.path, len(self.circuits))
 
 
+def _aval(a) -> str:
+    """An attribute's value, whether it is `val="..."` or element text.
+
+    ROM and RAM images are written as the element's TEXT, with no val
+    attribute, so reading only `val` silently yields None for every memory
+    image in the design.
+    """
+    v = a.get("val")
+    return v if v is not None else (a.text or "")
+
+
 def load(path: str) -> Design:
     with open(path, encoding="utf-8") as fh:
         text = fh.read()
@@ -158,7 +169,7 @@ def load(path: str) -> Design:
             if e.tag == "comp":
                 c.components.append(Component(
                     name=e.get("name"), lib=e.get("lib"), loc=_pt(e.get("loc")),
-                    attrs={a.get("name"): a.get("val") for a in e.findall("a")}))
+                    attrs={a.get("name"): _aval(a) for a in e.findall("a")}))
             elif e.tag == "wire":
                 c.wires.append(Wire(_pt(e.get("from")), _pt(e.get("to"))))
         circuits[c.name] = c

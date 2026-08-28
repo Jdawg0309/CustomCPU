@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">ALU_arithmetic_engine_1</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Pin@1040,2990[Cflag]">
+  <data key="d3">Pin</data>
+  <data key="d4">Cflag</data>
+  <data key="d5">1040</data>
+  <data key="d6">2990</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1060,2810[a_inversion]">
+  <data key="d3">Pin</data>
+  <data key="d4">a_inversion</data>
+  <data key="d5">1060</data>
+  <data key="d6">2810</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1060,2940[b_inversion]">
+  <data key="d3">Pin</data>
+  <data key="d4">b_inversion</data>
+  <data key="d5">1060</data>
+  <data key="d6">2940</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1150,2970">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1150</data>
+  <data key="d6">2970</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1150,2980">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1150</data>
+  <data key="d6">2980</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1150,3000[unused]">
+  <data key="d3">Pin</data>
+  <data key="d4">unused</data>
+  <data key="d5">1150</data>
+  <data key="d6">3000</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1180,3010[Cin_sel]">
+  <data key="d3">Pin</data>
+  <data key="d4">Cin_sel</data>
+  <data key="d5">1180</data>
+  <data key="d6">3010</data>
+  <data key="d7">north</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1230,2850[A]">
+  <data key="d3">Pin</data>
+  <data key="d4">A</data>
+  <data key="d5">1230</data>
+  <data key="d6">2850</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1230,2900[B]">
+  <data key="d3">Pin</data>
+  <data key="d4">B</data>
+  <data key="d5">1230</data>
+  <data key="d6">2900</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Bit Extender@1270,2940">
+  <data key="d3">Bit Extender</data>
+  <data key="d4"></data>
+  <data key="d5">1270</data>
+  <data key="d6">2940</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Bit Extender@1280,2810">
+  <data key="d3">Bit Extender</data>
+  <data key="d4"></data>
+  <data key="d5">1280</data>
+  <data key="d6">2810</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1840,3520[Cout]">
+  <data key="d3">Pin</data>
+  <data key="d4">Cout</data>
+  <data key="d5">1840</data>
+  <data key="d6">3520</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@2000,2870[Result]">
+  <data key="d3">Pin</data>
+  <data key="d4">Result</data>
+  <data key="d5">2000</data>
+  <data key="d6">2870</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Splitter@2000,2870">
+  <data key="d3">Splitter</data>
+  <data key="d4"></data>
+  <data key="d5">2000</data>
+  <data key="d6">2870</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="XOR Gate@1390,2830">
+  <data key="d3">XOR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1390</data>
+  <data key="d6">2830</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="XOR Gate@1390,2920">
+  <data key="d3">XOR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1390</data>
+  <data key="d6">2920</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1200,2990">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1200</data>
+  <data key="d6">2990</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="ks_32b@1840,2880">
+  <data key="d3">ks_32b</data>
+  <data key="d4"></data>
+  <data key="d5">1840</data>
+  <data key="d6">2880</data>
+  <data key="d7">east</data>
+  <data key="d8">True</data>
+</node>
+<edge source="Pin@1040,2990[Cflag]" target="Multiplexer@1200,2990" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in2</data>
+  <data key="d11">Pin@1040,2990[Cflag].p</data>
+  <data key="d12">Multiplexer@1200,2990.in2</data>
+  <data key="d13">0</data>
+  <data key="d14">net:Cflag</data>
+</edge>
+<edge source="Pin@1060,2810[a_inversion]" target="Bit Extender@1280,2810" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@1060,2810[a_inversion].p</data>
+  <data key="d12">Bit Extender@1280,2810.in</data>
+  <data key="d13">1</data>
+  <data key="d14">net:a_inversion</data>
+</edge>
+<edge source="Pin@1060,2940[b_inversion]" target="Bit Extender@1270,2940" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@1060,2940[b_inversion].p</data>
+  <data key="d12">Bit Extender@1270,2940.in</data>
+  <data key="d13">2</data>
+  <data key="d14">net:b_inversion</data>
+</edge>
+<edge source="Constant@1150,2970" target="Multiplexer@1200,2990" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Constant@1150,2970.p</data>
+  <data key="d12">Multiplexer@1200,2990.in0</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Constant@1150,2980" target="Multiplexer@1200,2990" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Constant@1150,2980.p</data>
+  <data key="d12">Multiplexer@1200,2990.in1</data>
+  <data key="d13">4</data>
+  <data key="d14">net#4</data>
+</edge>
+<edge source="Pin@1150,3000[unused]" target="Multiplexer@1200,2990" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in3</data>
+  <data key="d11">Pin@1150,3000[unused].p</data>
+  <data key="d12">Multiplexer@1200,2990.in3</data>
+  <data key="d13">5</data>
+  <data key="d14">net:unused</data>
+</edge>
+<edge source="Pin@1180,3010[Cin_sel]" target="Multiplexer@1200,2990" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@1180,3010[Cin_sel].p</data>
+  <data key="d12">Multiplexer@1200,2990.sel</data>
+  <data key="d13">45</data>
+  <data key="d14">net:Cin_sel</data>
+</edge>
+<edge source="Pin@1230,2850[A]" target="XOR Gate@1390,2830" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@1230,2850[A].p</data>
+  <data key="d12">XOR Gate@1390,2830.in1</data>
+  <data key="d13">7</data>
+  <data key="d14">net:A</data>
+</edge>
+<edge source="Pin@1230,2900[B]" target="XOR Gate@1390,2920" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@1230,2900[B].p</data>
+  <data key="d12">XOR Gate@1390,2920.in0</data>
+  <data key="d13">8</data>
+  <data key="d14">net:B</data>
+</edge>
+<edge source="Bit Extender@1270,2940" target="XOR Gate@1390,2920" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Bit Extender@1270,2940.out</data>
+  <data key="d12">XOR Gate@1390,2920.in1</data>
+  <data key="d13">9</data>
+  <data key="d14">net#9</data>
+</edge>
+<edge source="Bit Extender@1280,2810" target="XOR Gate@1390,2830" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Bit Extender@1280,2810.out</data>
+  <data key="d12">XOR Gate@1390,2830.in0</data>
+  <data key="d13">10</data>
+  <data key="d14">net#10</data>
+</edge>
+<edge source="Splitter@2000,2870" target="Pin@2000,2870[Result]" id="0">
+  <data key="d9">combined</data>
+  <data key="d10">p</data>
+  <data key="d11">Splitter@2000,2870.combined</data>
+  <data key="d12">Pin@2000,2870[Result].p</data>
+  <data key="d13">47</data>
+  <data key="d14">net:Result</data>
+</edge>
+<edge source="XOR Gate@1390,2830" target="ks_32b@1840,2880" id="0">
+  <data key="d9">out</data>
+  <data key="d10">A</data>
+  <data key="d11">XOR Gate@1390,2830.out</data>
+  <data key="d12">ks_32b@1840,2880.A</data>
+  <data key="d13">11</data>
+  <data key="d14">net#11</data>
+</edge>
+<edge source="XOR Gate@1390,2920" target="ks_32b@1840,2880" id="0">
+  <data key="d9">out</data>
+  <data key="d10">B</data>
+  <data key="d11">XOR Gate@1390,2920.out</data>
+  <data key="d12">ks_32b@1840,2880.B</data>
+  <data key="d13">12</data>
+  <data key="d14">net#12</data>
+</edge>
+<edge source="Multiplexer@1200,2990" target="ks_32b@1840,2880" id="0">
+  <data key="d9">out</data>
+  <data key="d10">Cin</data>
+  <data key="d11">Multiplexer@1200,2990.out</data>
+  <data key="d12">ks_32b@1840,2880.Cin</data>
+  <data key="d13">6</data>
+  <data key="d14">net#6</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="0">
+  <data key="d9">SUM31</data>
+  <data key="d10">bit31</data>
+  <data key="d11">ks_32b@1840,2880.SUM31</data>
+  <data key="d12">Splitter@2000,2870.bit31</data>
+  <data key="d13">13</data>
+  <data key="d14">net#13</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="1">
+  <data key="d9">SUM30</data>
+  <data key="d10">bit30</data>
+  <data key="d11">ks_32b@1840,2880.SUM30</data>
+  <data key="d12">Splitter@2000,2870.bit30</data>
+  <data key="d13">14</data>
+  <data key="d14">net#14</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="2">
+  <data key="d9">SUM29</data>
+  <data key="d10">bit29</data>
+  <data key="d11">ks_32b@1840,2880.SUM29</data>
+  <data key="d12">Splitter@2000,2870.bit29</data>
+  <data key="d13">15</data>
+  <data key="d14">net#15</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="3">
+  <data key="d9">SUM28</data>
+  <data key="d10">bit28</data>
+  <data key="d11">ks_32b@1840,2880.SUM28</data>
+  <data key="d12">Splitter@2000,2870.bit28</data>
+  <data key="d13">16</data>
+  <data key="d14">net#16</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="4">
+  <data key="d9">SUM27</data>
+  <data key="d10">bit27</data>
+  <data key="d11">ks_32b@1840,2880.SUM27</data>
+  <data key="d12">Splitter@2000,2870.bit27</data>
+  <data key="d13">17</data>
+  <data key="d14">net#17</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="5">
+  <data key="d9">SUM26</data>
+  <data key="d10">bit26</data>
+  <data key="d11">ks_32b@1840,2880.SUM26</data>
+  <data key="d12">Splitter@2000,2870.bit26</data>
+  <data key="d13">18</data>
+  <data key="d14">net#18</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="6">
+  <data key="d9">SUM25</data>
+  <data key="d10">bit25</data>
+  <data key="d11">ks_32b@1840,2880.SUM25</data>
+  <data key="d12">Splitter@2000,2870.bit25</data>
+  <data key="d13">19</data>
+  <data key="d14">net#19</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="7">
+  <data key="d9">SUM24</data>
+  <data key="d10">bit24</data>
+  <data key="d11">ks_32b@1840,2880.SUM24</data>
+  <data key="d12">Splitter@2000,2870.bit24</data>
+  <data key="d13">20</data>
+  <data key="d14">net#20</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="8">
+  <data key="d9">SUM23</data>
+  <data key="d10">bit23</data>
+  <data key="d11">ks_32b@1840,2880.SUM23</data>
+  <data key="d12">Splitter@2000,2870.bit23</data>
+  <data key="d13">21</data>
+  <data key="d14">net#21</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="9">
+  <data key="d9">SUM22</data>
+  <data key="d10">bit22</data>
+  <data key="d11">ks_32b@1840,2880.SUM22</data>
+  <data key="d12">Splitter@2000,2870.bit22</data>
+  <data key="d13">22</data>
+  <data key="d14">net#22</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="10">
+  <data key="d9">SUM21</data>
+  <data key="d10">bit21</data>
+  <data key="d11">ks_32b@1840,2880.SUM21</data>
+  <data key="d12">Splitter@2000,2870.bit21</data>
+  <data key="d13">23</data>
+  <data key="d14">net#23</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="11">
+  <data key="d9">SUM20</data>
+  <data key="d10">bit20</data>
+  <data key="d11">ks_32b@1840,2880.SUM20</data>
+  <data key="d12">Splitter@2000,2870.bit20</data>
+  <data key="d13">24</data>
+  <data key="d14">net#24</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="12">
+  <data key="d9">SUM19</data>
+  <data key="d10">bit19</data>
+  <data key="d11">ks_32b@1840,2880.SUM19</data>
+  <data key="d12">Splitter@2000,2870.bit19</data>
+  <data key="d13">25</data>
+  <data key="d14">net#25</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="13">
+  <data key="d9">SUM18</data>
+  <data key="d10">bit18</data>
+  <data key="d11">ks_32b@1840,2880.SUM18</data>
+  <data key="d12">Splitter@2000,2870.bit18</data>
+  <data key="d13">26</data>
+  <data key="d14">net#26</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="14">
+  <data key="d9">SUM17</data>
+  <data key="d10">bit17</data>
+  <data key="d11">ks_32b@1840,2880.SUM17</data>
+  <data key="d12">Splitter@2000,2870.bit17</data>
+  <data key="d13">27</data>
+  <data key="d14">net#27</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="15">
+  <data key="d9">SUM16</data>
+  <data key="d10">bit16</data>
+  <data key="d11">ks_32b@1840,2880.SUM16</data>
+  <data key="d12">Splitter@2000,2870.bit16</data>
+  <data key="d13">28</data>
+  <data key="d14">net#28</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="16">
+  <data key="d9">SUM15</data>
+  <data key="d10">bit15</data>
+  <data key="d11">ks_32b@1840,2880.SUM15</data>
+  <data key="d12">Splitter@2000,2870.bit15</data>
+  <data key="d13">29</data>
+  <data key="d14">net#29</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="17">
+  <data key="d9">SUM14</data>
+  <data key="d10">bit14</data>
+  <data key="d11">ks_32b@1840,2880.SUM14</data>
+  <data key="d12">Splitter@2000,2870.bit14</data>
+  <data key="d13">30</data>
+  <data key="d14">net#30</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="18">
+  <data key="d9">SUM13</data>
+  <data key="d10">bit13</data>
+  <data key="d11">ks_32b@1840,2880.SUM13</data>
+  <data key="d12">Splitter@2000,2870.bit13</data>
+  <data key="d13">31</data>
+  <data key="d14">net#31</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="19">
+  <data key="d9">SUM12</data>
+  <data key="d10">bit12</data>
+  <data key="d11">ks_32b@1840,2880.SUM12</data>
+  <data key="d12">Splitter@2000,2870.bit12</data>
+  <data key="d13">32</data>
+  <data key="d14">net#32</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="20">
+  <data key="d9">SUM11</data>
+  <data key="d10">bit11</data>
+  <data key="d11">ks_32b@1840,2880.SUM11</data>
+  <data key="d12">Splitter@2000,2870.bit11</data>
+  <data key="d13">33</data>
+  <data key="d14">net#33</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="21">
+  <data key="d9">SUM10</data>
+  <data key="d10">bit10</data>
+  <data key="d11">ks_32b@1840,2880.SUM10</data>
+  <data key="d12">Splitter@2000,2870.bit10</data>
+  <data key="d13">34</data>
+  <data key="d14">net#34</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="22">
+  <data key="d9">SUM9</data>
+  <data key="d10">bit9</data>
+  <data key="d11">ks_32b@1840,2880.SUM9</data>
+  <data key="d12">Splitter@2000,2870.bit9</data>
+  <data key="d13">35</data>
+  <data key="d14">net#35</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="23">
+  <data key="d9">SUM8</data>
+  <data key="d10">bit8</data>
+  <data key="d11">ks_32b@1840,2880.SUM8</data>
+  <data key="d12">Splitter@2000,2870.bit8</data>
+  <data key="d13">36</data>
+  <data key="d14">net#36</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="24">
+  <data key="d9">SUM7</data>
+  <data key="d10">bit7</data>
+  <data key="d11">ks_32b@1840,2880.SUM7</data>
+  <data key="d12">Splitter@2000,2870.bit7</data>
+  <data key="d13">37</data>
+  <data key="d14">net#37</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="25">
+  <data key="d9">SUM6</data>
+  <data key="d10">bit6</data>
+  <data key="d11">ks_32b@1840,2880.SUM6</data>
+  <data key="d12">Splitter@2000,2870.bit6</data>
+  <data key="d13">38</data>
+  <data key="d14">net#38</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="26">
+  <data key="d9">SUM5</data>
+  <data key="d10">bit5</data>
+  <data key="d11">ks_32b@1840,2880.SUM5</data>
+  <data key="d12">Splitter@2000,2870.bit5</data>
+  <data key="d13">39</data>
+  <data key="d14">net#39</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="27">
+  <data key="d9">SUM4</data>
+  <data key="d10">bit4</data>
+  <data key="d11">ks_32b@1840,2880.SUM4</data>
+  <data key="d12">Splitter@2000,2870.bit4</data>
+  <data key="d13">40</data>
+  <data key="d14">net#40</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="28">
+  <data key="d9">SUM3</data>
+  <data key="d10">bit3</data>
+  <data key="d11">ks_32b@1840,2880.SUM3</data>
+  <data key="d12">Splitter@2000,2870.bit3</data>
+  <data key="d13">41</data>
+  <data key="d14">net#41</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="29">
+  <data key="d9">SUM2</data>
+  <data key="d10">bit2</data>
+  <data key="d11">ks_32b@1840,2880.SUM2</data>
+  <data key="d12">Splitter@2000,2870.bit2</data>
+  <data key="d13">42</data>
+  <data key="d14">net#42</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="30">
+  <data key="d9">sum1</data>
+  <data key="d10">bit1</data>
+  <data key="d11">ks_32b@1840,2880.sum1</data>
+  <data key="d12">Splitter@2000,2870.bit1</data>
+  <data key="d13">43</data>
+  <data key="d14">net#43</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Splitter@2000,2870" id="31">
+  <data key="d9">sum0</data>
+  <data key="d10">bit0</data>
+  <data key="d11">ks_32b@1840,2880.sum0</data>
+  <data key="d12">Splitter@2000,2870.bit0</data>
+  <data key="d13">44</data>
+  <data key="d14">net#44</data>
+</edge>
+<edge source="ks_32b@1840,2880" target="Pin@1840,3520[Cout]" id="0">
+  <data key="d9">Cout</data>
+  <data key="d10">p</data>
+  <data key="d11">ks_32b@1840,2880.Cout</data>
+  <data key="d12">Pin@1840,3520[Cout].p</data>
+  <data key="d13">46</data>
+  <data key="d14">net:Cout</data>
+</edge>
+</graph></graphml>

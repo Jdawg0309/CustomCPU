@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="members" attr.type="string"/>
+<key id="d0" for="graph" attr.name="mapping" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">{"AND Gate@320,220[PandG_prev].in0": 2, "AND Gate@320,220[PandG_prev].in1": 5, "AND Gate@320,220[PandG_prev].out": 10, "AND Gate@320,290[P_and_P_prev].in0": 3, "AND Gate@320,290[P_and_P_prev].in1": 7, "AND Gate@320,290[P_and_P_prev].out": 12, "OR Gate@430,200[G_or_PandG_prev].in0": 0, "OR Gate@430,200[G_or_PandG_prev].in1": 9, "OR Gate@430,200[G_or_PandG_prev].out": 14, "Pin@170,180[G].p": 1, "Pin@170,200[P].p": 4, "Pin@170,240[G_prev].p": 6, "Pin@170,310[P_Prev].p": 8, "Pin@380,290[P_out].p": 11, "Pin@470,200[G_out].p": 13}</data>
+<node id="0">
+  <data key="d1">OR Gate@430,200[G_or_PandG_prev].in0</data>
+</node>
+<node id="1">
+  <data key="d1">Pin@170,180[G].p</data>
+</node>
+<node id="2">
+  <data key="d1">AND Gate@320,220[PandG_prev].in0</data>
+</node>
+<node id="3">
+  <data key="d1">AND Gate@320,290[P_and_P_prev].in0</data>
+</node>
+<node id="4">
+  <data key="d1">Pin@170,200[P].p</data>
+</node>
+<node id="5">
+  <data key="d1">AND Gate@320,220[PandG_prev].in1</data>
+</node>
+<node id="6">
+  <data key="d1">Pin@170,240[G_prev].p</data>
+</node>
+<node id="7">
+  <data key="d1">AND Gate@320,290[P_and_P_prev].in1</data>
+</node>
+<node id="8">
+  <data key="d1">Pin@170,310[P_Prev].p</data>
+</node>
+<node id="9">
+  <data key="d1">OR Gate@430,200[G_or_PandG_prev].in1</data>
+</node>
+<node id="10">
+  <data key="d1">AND Gate@320,220[PandG_prev].out</data>
+</node>
+<node id="11">
+  <data key="d1">Pin@380,290[P_out].p</data>
+</node>
+<node id="12">
+  <data key="d1">AND Gate@320,290[P_and_P_prev].out</data>
+</node>
+<node id="13">
+  <data key="d1">Pin@470,200[G_out].p</data>
+</node>
+<node id="14">
+  <data key="d1">OR Gate@430,200[G_or_PandG_prev].out</data>
+</node>
+<edge source="1" target="0"/>
+<edge source="4" target="2"/>
+<edge source="4" target="3"/>
+<edge source="6" target="5"/>
+<edge source="8" target="7"/>
+<edge source="10" target="9"/>
+<edge source="12" target="11"/>
+<edge source="14" target="13"/>
+</graph></graphml>

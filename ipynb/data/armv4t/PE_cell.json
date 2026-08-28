@@ -1,0 +1,4416 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "PE_cell",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    110,
+    240,
+    920,
+    540
+  ],
+  "circuit": "PE_cell",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "CLK"
+      },
+      "facing": "east",
+      "id": "Pin@110,320[CLK]",
+      "is_subcircuit": false,
+      "label": "CLK",
+      "library": "0",
+      "location": [
+        110,
+        320
+      ],
+      "ports": [
+        {
+          "anchor": [
+            110,
+            320
+          ],
+          "direction": "out",
+          "id": "Pin@110,320[CLK].p",
+          "name": "p",
+          "pin": [
+            110,
+            320
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "w_load"
+      },
+      "facing": "east",
+      "id": "Pin@170,300[w_load]",
+      "is_subcircuit": false,
+      "label": "w_load",
+      "library": "0",
+      "location": [
+        170,
+        300
+      ],
+      "ports": [
+        {
+          "anchor": [
+            170,
+            300
+          ],
+          "direction": "out",
+          "id": "Pin@170,300[w_load].p",
+          "name": "p",
+          "pin": [
+            170,
+            300
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "w_in",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@220,280[w_in]",
+      "is_subcircuit": false,
+      "label": "w_in",
+      "library": "0",
+      "location": [
+        220,
+        280
+      ],
+      "ports": [
+        {
+          "anchor": [
+            220,
+            280
+          ],
+          "direction": "out",
+          "id": "Pin@220,280[w_in].p",
+          "name": "p",
+          "pin": [
+            220,
+            280
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "a_in",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@240,520[a_in]",
+      "is_subcircuit": false,
+      "label": "a_in",
+      "library": "0",
+      "location": [
+        240,
+        520
+      ],
+      "ports": [
+        {
+          "anchor": [
+            240,
+            520
+          ],
+          "direction": "out",
+          "id": "Pin@240,520[a_in].p",
+          "name": "p",
+          "pin": [
+            240,
+            520
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "a_out",
+        "output": "true",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "west",
+      "id": "Pin@580,280[a_out]",
+      "is_subcircuit": false,
+      "label": "a_out",
+      "library": "0",
+      "location": [
+        580,
+        280
+      ],
+      "ports": [
+        {
+          "anchor": [
+            580,
+            280
+          ],
+          "direction": "in",
+          "id": "Pin@580,280[a_out].p",
+          "name": "p",
+          "pin": [
+            580,
+            280
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "psum_in",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@680,480[psum_in]",
+      "is_subcircuit": false,
+      "label": "psum_in",
+      "library": "0",
+      "location": [
+        680,
+        480
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            480
+          ],
+          "direction": "out",
+          "id": "Pin@680,480[psum_in].p",
+          "name": "p",
+          "pin": [
+            680,
+            480
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "psum_out",
+        "output": "true",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "west",
+      "id": "Pin@840,270[psum_out]",
+      "is_subcircuit": false,
+      "label": "psum_out",
+      "library": "0",
+      "location": [
+        840,
+        270
+      ],
+      "ports": [
+        {
+          "anchor": [
+            840,
+            270
+          ],
+          "direction": "in",
+          "id": "Pin@840,270[psum_out].p",
+          "name": "p",
+          "pin": [
+            840,
+            270
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "bit0": "31",
+        "bit1": "30",
+        "bit10": "21",
+        "bit11": "20",
+        "bit12": "19",
+        "bit13": "18",
+        "bit14": "17",
+        "bit15": "16",
+        "bit16": "15",
+        "bit17": "14",
+        "bit18": "13",
+        "bit19": "12",
+        "bit2": "29",
+        "bit20": "11",
+        "bit21": "10",
+        "bit22": "9",
+        "bit23": "8",
+        "bit24": "7",
+        "bit25": "6",
+        "bit26": "5",
+        "bit27": "4",
+        "bit28": "3",
+        "bit29": "2",
+        "bit3": "28",
+        "bit30": "1",
+        "bit31": "0",
+        "bit4": "27",
+        "bit5": "26",
+        "bit6": "25",
+        "bit7": "24",
+        "bit8": "23",
+        "bit9": "22",
+        "facing": "west",
+        "fanout": "32",
+        "incoming": "32",
+        "spacing": "2"
+      },
+      "facing": "west",
+      "id": "Splitter@920,470",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        920,
+        470
+      ],
+      "ports": [
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit0",
+          "name": "bit0",
+          "pin": [
+            940,
+            -160
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit1",
+          "name": "bit1",
+          "pin": [
+            940,
+            -140
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit10",
+          "name": "bit10",
+          "pin": [
+            940,
+            40
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit11",
+          "name": "bit11",
+          "pin": [
+            940,
+            60
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit12",
+          "name": "bit12",
+          "pin": [
+            940,
+            80
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit13",
+          "name": "bit13",
+          "pin": [
+            940,
+            100
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit14",
+          "name": "bit14",
+          "pin": [
+            940,
+            120
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit15",
+          "name": "bit15",
+          "pin": [
+            940,
+            140
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit16",
+          "name": "bit16",
+          "pin": [
+            940,
+            160
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit17",
+          "name": "bit17",
+          "pin": [
+            940,
+            180
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit18",
+          "name": "bit18",
+          "pin": [
+            940,
+            200
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit19",
+          "name": "bit19",
+          "pin": [
+            940,
+            220
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit2",
+          "name": "bit2",
+          "pin": [
+            940,
+            -120
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit20",
+          "name": "bit20",
+          "pin": [
+            940,
+            240
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit21",
+          "name": "bit21",
+          "pin": [
+            940,
+            260
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit22",
+          "name": "bit22",
+          "pin": [
+            940,
+            280
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit23",
+          "name": "bit23",
+          "pin": [
+            940,
+            300
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit24",
+          "name": "bit24",
+          "pin": [
+            940,
+            320
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit25",
+          "name": "bit25",
+          "pin": [
+            940,
+            340
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit26",
+          "name": "bit26",
+          "pin": [
+            940,
+            360
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit27",
+          "name": "bit27",
+          "pin": [
+            940,
+            380
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit28",
+          "name": "bit28",
+          "pin": [
+            940,
+            400
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit29",
+          "name": "bit29",
+          "pin": [
+            940,
+            420
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit3",
+          "name": "bit3",
+          "pin": [
+            940,
+            -100
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit30",
+          "name": "bit30",
+          "pin": [
+            940,
+            440
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit31",
+          "name": "bit31",
+          "pin": [
+            940,
+            460
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit4",
+          "name": "bit4",
+          "pin": [
+            940,
+            -80
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit5",
+          "name": "bit5",
+          "pin": [
+            940,
+            -60
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit6",
+          "name": "bit6",
+          "pin": [
+            940,
+            -40
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit7",
+          "name": "bit7",
+          "pin": [
+            940,
+            -20
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit8",
+          "name": "bit8",
+          "pin": [
+            940,
+            0
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.bit9",
+          "name": "bit9",
+          "pin": [
+            940,
+            20
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            920,
+            470
+          ],
+          "direction": "inout",
+          "id": "Splitter@920,470.combined",
+          "name": "combined",
+          "pin": [
+            920,
+            470
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Splitter"
+    },
+    {
+      "attributes": {
+        "appearance": "logisim_evolution",
+        "label": "W_reg",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Register@220,250[W_reg]",
+      "is_subcircuit": false,
+      "label": "W_reg",
+      "library": "2",
+      "location": [
+        220,
+        250
+      ],
+      "ports": [
+        {
+          "anchor": [
+            220,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@220,250[W_reg].D",
+          "name": "D",
+          "pin": [
+            220,
+            280
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            220,
+            250
+          ],
+          "direction": "out",
+          "id": "Register@220,250[W_reg].Q",
+          "name": "Q",
+          "pin": [
+            280,
+            280
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            220,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@220,250[W_reg].clk",
+          "name": "clk",
+          "pin": [
+            220,
+            320
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            220,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@220,250[W_reg].clr",
+          "name": "clr",
+          "pin": [
+            250,
+            340
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            220,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@220,250[W_reg].en",
+          "name": "en",
+          "pin": [
+            220,
+            300
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Register"
+    },
+    {
+      "attributes": {
+        "appearance": "logisim_evolution",
+        "label": "a_reg",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Register@510,250[a_reg]",
+      "is_subcircuit": false,
+      "label": "a_reg",
+      "library": "2",
+      "location": [
+        510,
+        250
+      ],
+      "ports": [
+        {
+          "anchor": [
+            510,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@510,250[a_reg].D",
+          "name": "D",
+          "pin": [
+            510,
+            280
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            510,
+            250
+          ],
+          "direction": "out",
+          "id": "Register@510,250[a_reg].Q",
+          "name": "Q",
+          "pin": [
+            570,
+            280
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            510,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@510,250[a_reg].clk",
+          "name": "clk",
+          "pin": [
+            510,
+            320
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            510,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@510,250[a_reg].clr",
+          "name": "clr",
+          "pin": [
+            540,
+            340
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            510,
+            250
+          ],
+          "direction": "in",
+          "id": "Register@510,250[a_reg].en",
+          "name": "en",
+          "pin": [
+            510,
+            300
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Register"
+    },
+    {
+      "attributes": {
+        "appearance": "logisim_evolution",
+        "label": "psum_reg",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Register@760,240[psum_reg]",
+      "is_subcircuit": false,
+      "label": "psum_reg",
+      "library": "2",
+      "location": [
+        760,
+        240
+      ],
+      "ports": [
+        {
+          "anchor": [
+            760,
+            240
+          ],
+          "direction": "in",
+          "id": "Register@760,240[psum_reg].D",
+          "name": "D",
+          "pin": [
+            760,
+            270
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            760,
+            240
+          ],
+          "direction": "out",
+          "id": "Register@760,240[psum_reg].Q",
+          "name": "Q",
+          "pin": [
+            820,
+            270
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            760,
+            240
+          ],
+          "direction": "in",
+          "id": "Register@760,240[psum_reg].clk",
+          "name": "clk",
+          "pin": [
+            760,
+            310
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            760,
+            240
+          ],
+          "direction": "in",
+          "id": "Register@760,240[psum_reg].clr",
+          "name": "clr",
+          "pin": [
+            790,
+            330
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            760,
+            240
+          ],
+          "direction": "in",
+          "id": "Register@760,240[psum_reg].en",
+          "name": "en",
+          "pin": [
+            760,
+            290
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Register"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "mul_32@600,520",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        600,
+        520
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            520
+          ],
+          "direction": "in",
+          "id": "mul_32@600,520.A",
+          "name": "A",
+          "pin": [
+            380,
+            520
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            600,
+            520
+          ],
+          "direction": "in",
+          "id": "mul_32@600,520.B",
+          "name": "B",
+          "pin": [
+            380,
+            540
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            600,
+            520
+          ],
+          "direction": "out",
+          "id": "mul_32@600,520.carry",
+          "name": "carry",
+          "pin": [
+            600,
+            540
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            600,
+            520
+          ],
+          "direction": "out",
+          "id": "mul_32@600,520.sum",
+          "name": "sum",
+          "pin": [
+            600,
+            520
+          ],
+          "width": null
+        }
+      ],
+      "type": "mul_32"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "ks_32b@900,480",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        900,
+        480
+      ],
+      "ports": [
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "in",
+          "id": "ks_32b@900,480.A",
+          "name": "A",
+          "pin": [
+            680,
+            480
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "in",
+          "id": "ks_32b@900,480.B",
+          "name": "B",
+          "pin": [
+            680,
+            500
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "in",
+          "id": "ks_32b@900,480.Cin",
+          "name": "Cin",
+          "pin": [
+            680,
+            520
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.Cout",
+          "name": "Cout",
+          "pin": [
+            900,
+            1120
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM10",
+          "name": "SUM10",
+          "pin": [
+            900,
+            900
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM11",
+          "name": "SUM11",
+          "pin": [
+            900,
+            880
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM12",
+          "name": "SUM12",
+          "pin": [
+            900,
+            860
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM13",
+          "name": "SUM13",
+          "pin": [
+            900,
+            840
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM14",
+          "name": "SUM14",
+          "pin": [
+            900,
+            820
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM15",
+          "name": "SUM15",
+          "pin": [
+            900,
+            800
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM16",
+          "name": "SUM16",
+          "pin": [
+            900,
+            780
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM17",
+          "name": "SUM17",
+          "pin": [
+            900,
+            760
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM18",
+          "name": "SUM18",
+          "pin": [
+            900,
+            740
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM19",
+          "name": "SUM19",
+          "pin": [
+            900,
+            720
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM2",
+          "name": "SUM2",
+          "pin": [
+            900,
+            1060
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM20",
+          "name": "SUM20",
+          "pin": [
+            900,
+            700
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM21",
+          "name": "SUM21",
+          "pin": [
+            900,
+            680
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM22",
+          "name": "SUM22",
+          "pin": [
+            900,
+            660
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM23",
+          "name": "SUM23",
+          "pin": [
+            900,
+            640
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM24",
+          "name": "SUM24",
+          "pin": [
+            900,
+            620
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM25",
+          "name": "SUM25",
+          "pin": [
+            900,
+            600
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM26",
+          "name": "SUM26",
+          "pin": [
+            900,
+            580
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM27",
+          "name": "SUM27",
+          "pin": [
+            900,
+            560
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM28",
+          "name": "SUM28",
+          "pin": [
+            900,
+            540
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM29",
+          "name": "SUM29",
+          "pin": [
+            900,
+            520
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM3",
+          "name": "SUM3",
+          "pin": [
+            900,
+            1040
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM30",
+          "name": "SUM30",
+          "pin": [
+            900,
+            500
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM31",
+          "name": "SUM31",
+          "pin": [
+            900,
+            480
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM4",
+          "name": "SUM4",
+          "pin": [
+            900,
+            1020
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM5",
+          "name": "SUM5",
+          "pin": [
+            900,
+            1000
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM6",
+          "name": "SUM6",
+          "pin": [
+            900,
+            980
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM7",
+          "name": "SUM7",
+          "pin": [
+            900,
+            960
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM8",
+          "name": "SUM8",
+          "pin": [
+            900,
+            940
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.SUM9",
+          "name": "SUM9",
+          "pin": [
+            900,
+            920
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.sum0",
+          "name": "sum0",
+          "pin": [
+            900,
+            1100
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            900,
+            480
+          ],
+          "direction": "out",
+          "id": "ks_32b@900,480.sum1",
+          "name": "sum1",
+          "pin": [
+            900,
+            1080
+          ],
+          "width": null
+        }
+      ],
+      "type": "ks_32b"
+    }
+  ],
+  "coverage": {
+    "endpoints": 35,
+    "matched": 35,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "PE_cell",
+    "edges": [
+      {
+        "dst": "Register@220,250[W_reg].clk",
+        "net": 0,
+        "src": "Pin@110,320[CLK].p"
+      },
+      {
+        "dst": "Register@510,250[a_reg].clk",
+        "net": 0,
+        "src": "Pin@110,320[CLK].p"
+      },
+      {
+        "dst": "Register@760,240[psum_reg].clk",
+        "net": 0,
+        "src": "Pin@110,320[CLK].p"
+      },
+      {
+        "dst": "Register@220,250[W_reg].en",
+        "net": 1,
+        "src": "Pin@170,300[w_load].p"
+      },
+      {
+        "dst": "Register@220,250[W_reg].D",
+        "net": 8,
+        "src": "Pin@220,280[w_in].p"
+      },
+      {
+        "dst": "Register@510,250[a_reg].D",
+        "net": 2,
+        "src": "Pin@240,520[a_in].p"
+      },
+      {
+        "dst": "mul_32@600,520.A",
+        "net": 2,
+        "src": "Pin@240,520[a_in].p"
+      },
+      {
+        "dst": "ks_32b@900,480.A",
+        "net": 9,
+        "src": "Pin@680,480[psum_in].p"
+      },
+      {
+        "dst": "mul_32@600,520.B",
+        "net": 3,
+        "src": "Register@220,250[W_reg].Q"
+      },
+      {
+        "dst": "Pin@580,280[a_out].p",
+        "net": 4,
+        "src": "Register@510,250[a_reg].Q"
+      },
+      {
+        "dst": "Pin@840,270[psum_out].p",
+        "net": 7,
+        "src": "Register@760,240[psum_reg].Q"
+      },
+      {
+        "dst": "Register@760,240[psum_reg].D",
+        "net": 6,
+        "src": "Splitter@920,470.combined"
+      },
+      {
+        "dst": "Splitter@920,470.bit10",
+        "net": 20,
+        "src": "ks_32b@900,480.SUM10"
+      },
+      {
+        "dst": "Splitter@920,470.bit11",
+        "net": 21,
+        "src": "ks_32b@900,480.SUM11"
+      },
+      {
+        "dst": "Splitter@920,470.bit12",
+        "net": 22,
+        "src": "ks_32b@900,480.SUM12"
+      },
+      {
+        "dst": "Splitter@920,470.bit13",
+        "net": 23,
+        "src": "ks_32b@900,480.SUM13"
+      },
+      {
+        "dst": "Splitter@920,470.bit14",
+        "net": 24,
+        "src": "ks_32b@900,480.SUM14"
+      },
+      {
+        "dst": "Splitter@920,470.bit15",
+        "net": 25,
+        "src": "ks_32b@900,480.SUM15"
+      },
+      {
+        "dst": "Splitter@920,470.bit16",
+        "net": 26,
+        "src": "ks_32b@900,480.SUM16"
+      },
+      {
+        "dst": "Splitter@920,470.bit17",
+        "net": 27,
+        "src": "ks_32b@900,480.SUM17"
+      },
+      {
+        "dst": "Splitter@920,470.bit18",
+        "net": 28,
+        "src": "ks_32b@900,480.SUM18"
+      },
+      {
+        "dst": "Splitter@920,470.bit19",
+        "net": 29,
+        "src": "ks_32b@900,480.SUM19"
+      },
+      {
+        "dst": "Splitter@920,470.bit2",
+        "net": 12,
+        "src": "ks_32b@900,480.SUM2"
+      },
+      {
+        "dst": "Splitter@920,470.bit20",
+        "net": 30,
+        "src": "ks_32b@900,480.SUM20"
+      },
+      {
+        "dst": "Splitter@920,470.bit21",
+        "net": 31,
+        "src": "ks_32b@900,480.SUM21"
+      },
+      {
+        "dst": "Splitter@920,470.bit22",
+        "net": 32,
+        "src": "ks_32b@900,480.SUM22"
+      },
+      {
+        "dst": "Splitter@920,470.bit23",
+        "net": 33,
+        "src": "ks_32b@900,480.SUM23"
+      },
+      {
+        "dst": "Splitter@920,470.bit24",
+        "net": 34,
+        "src": "ks_32b@900,480.SUM24"
+      },
+      {
+        "dst": "Splitter@920,470.bit25",
+        "net": 35,
+        "src": "ks_32b@900,480.SUM25"
+      },
+      {
+        "dst": "Splitter@920,470.bit26",
+        "net": 36,
+        "src": "ks_32b@900,480.SUM26"
+      },
+      {
+        "dst": "Splitter@920,470.bit27",
+        "net": 37,
+        "src": "ks_32b@900,480.SUM27"
+      },
+      {
+        "dst": "Splitter@920,470.bit28",
+        "net": 38,
+        "src": "ks_32b@900,480.SUM28"
+      },
+      {
+        "dst": "Splitter@920,470.bit29",
+        "net": 39,
+        "src": "ks_32b@900,480.SUM29"
+      },
+      {
+        "dst": "Splitter@920,470.bit3",
+        "net": 13,
+        "src": "ks_32b@900,480.SUM3"
+      },
+      {
+        "dst": "Splitter@920,470.bit30",
+        "net": 40,
+        "src": "ks_32b@900,480.SUM30"
+      },
+      {
+        "dst": "Splitter@920,470.bit31",
+        "net": 41,
+        "src": "ks_32b@900,480.SUM31"
+      },
+      {
+        "dst": "Splitter@920,470.bit4",
+        "net": 14,
+        "src": "ks_32b@900,480.SUM4"
+      },
+      {
+        "dst": "Splitter@920,470.bit5",
+        "net": 15,
+        "src": "ks_32b@900,480.SUM5"
+      },
+      {
+        "dst": "Splitter@920,470.bit6",
+        "net": 16,
+        "src": "ks_32b@900,480.SUM6"
+      },
+      {
+        "dst": "Splitter@920,470.bit7",
+        "net": 17,
+        "src": "ks_32b@900,480.SUM7"
+      },
+      {
+        "dst": "Splitter@920,470.bit8",
+        "net": 18,
+        "src": "ks_32b@900,480.SUM8"
+      },
+      {
+        "dst": "Splitter@920,470.bit9",
+        "net": 19,
+        "src": "ks_32b@900,480.SUM9"
+      },
+      {
+        "dst": "Splitter@920,470.bit0",
+        "net": 10,
+        "src": "ks_32b@900,480.sum0"
+      },
+      {
+        "dst": "Splitter@920,470.bit1",
+        "net": 11,
+        "src": "ks_32b@900,480.sum1"
+      },
+      {
+        "dst": "ks_32b@900,480.B",
+        "net": 5,
+        "src": "mul_32@600,520.sum"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Pin@110,320[CLK].p"
+        ],
+        "index": 0,
+        "labels": [
+          "CLK",
+          "W_reg",
+          "a_reg",
+          "psum_reg"
+        ],
+        "name": "net:CLK/W_reg",
+        "ports": [
+          "Pin@110,320[CLK].p",
+          "Register@220,250[W_reg].clk",
+          "Register@510,250[a_reg].clk",
+          "Register@760,240[psum_reg].clk"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@170,300[w_load].p"
+        ],
+        "index": 1,
+        "labels": [
+          "W_reg",
+          "w_load"
+        ],
+        "name": "net:W_reg/w_load",
+        "ports": [
+          "Pin@170,300[w_load].p",
+          "Register@220,250[W_reg].en"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@240,520[a_in].p"
+        ],
+        "index": 2,
+        "labels": [
+          "a_in",
+          "a_reg"
+        ],
+        "name": "net:a_in/a_reg",
+        "ports": [
+          "Pin@240,520[a_in].p",
+          "Register@510,250[a_reg].D",
+          "mul_32@600,520.A"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Register@220,250[W_reg].Q"
+        ],
+        "index": 3,
+        "labels": [
+          "W_reg"
+        ],
+        "name": "net:W_reg",
+        "ports": [
+          "Register@220,250[W_reg].Q",
+          "mul_32@600,520.B"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Register@510,250[a_reg].Q"
+        ],
+        "index": 4,
+        "labels": [
+          "a_out",
+          "a_reg"
+        ],
+        "name": "net:a_out/a_reg",
+        "ports": [
+          "Pin@580,280[a_out].p",
+          "Register@510,250[a_reg].Q"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "mul_32@600,520.sum"
+        ],
+        "index": 5,
+        "labels": [],
+        "name": "net#5",
+        "ports": [
+          "ks_32b@900,480.B",
+          "mul_32@600,520.sum"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 6,
+        "labels": [
+          "psum_reg"
+        ],
+        "name": "net:psum_reg",
+        "ports": [
+          "Register@760,240[psum_reg].D",
+          "Splitter@920,470.combined"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Register@760,240[psum_reg].Q"
+        ],
+        "index": 7,
+        "labels": [
+          "psum_out",
+          "psum_reg"
+        ],
+        "name": "net:psum_out/psum_reg",
+        "ports": [
+          "Pin@840,270[psum_out].p",
+          "Register@760,240[psum_reg].Q"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@220,280[w_in].p"
+        ],
+        "index": 8,
+        "labels": [
+          "W_reg",
+          "w_in"
+        ],
+        "name": "net:W_reg/w_in",
+        "ports": [
+          "Pin@220,280[w_in].p",
+          "Register@220,250[W_reg].D"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@680,480[psum_in].p"
+        ],
+        "index": 9,
+        "labels": [
+          "psum_in"
+        ],
+        "name": "net:psum_in",
+        "ports": [
+          "Pin@680,480[psum_in].p",
+          "ks_32b@900,480.A"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.sum0"
+        ],
+        "index": 10,
+        "labels": [],
+        "name": "net#10",
+        "ports": [
+          "Splitter@920,470.bit0",
+          "ks_32b@900,480.sum0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.sum1"
+        ],
+        "index": 11,
+        "labels": [],
+        "name": "net#11",
+        "ports": [
+          "Splitter@920,470.bit1",
+          "ks_32b@900,480.sum1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM2"
+        ],
+        "index": 12,
+        "labels": [],
+        "name": "net#12",
+        "ports": [
+          "Splitter@920,470.bit2",
+          "ks_32b@900,480.SUM2"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM3"
+        ],
+        "index": 13,
+        "labels": [],
+        "name": "net#13",
+        "ports": [
+          "Splitter@920,470.bit3",
+          "ks_32b@900,480.SUM3"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM4"
+        ],
+        "index": 14,
+        "labels": [],
+        "name": "net#14",
+        "ports": [
+          "Splitter@920,470.bit4",
+          "ks_32b@900,480.SUM4"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM5"
+        ],
+        "index": 15,
+        "labels": [],
+        "name": "net#15",
+        "ports": [
+          "Splitter@920,470.bit5",
+          "ks_32b@900,480.SUM5"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM6"
+        ],
+        "index": 16,
+        "labels": [],
+        "name": "net#16",
+        "ports": [
+          "Splitter@920,470.bit6",
+          "ks_32b@900,480.SUM6"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM7"
+        ],
+        "index": 17,
+        "labels": [],
+        "name": "net#17",
+        "ports": [
+          "Splitter@920,470.bit7",
+          "ks_32b@900,480.SUM7"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM8"
+        ],
+        "index": 18,
+        "labels": [],
+        "name": "net#18",
+        "ports": [
+          "Splitter@920,470.bit8",
+          "ks_32b@900,480.SUM8"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM9"
+        ],
+        "index": 19,
+        "labels": [],
+        "name": "net#19",
+        "ports": [
+          "Splitter@920,470.bit9",
+          "ks_32b@900,480.SUM9"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM10"
+        ],
+        "index": 20,
+        "labels": [],
+        "name": "net#20",
+        "ports": [
+          "Splitter@920,470.bit10",
+          "ks_32b@900,480.SUM10"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM11"
+        ],
+        "index": 21,
+        "labels": [],
+        "name": "net#21",
+        "ports": [
+          "Splitter@920,470.bit11",
+          "ks_32b@900,480.SUM11"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM12"
+        ],
+        "index": 22,
+        "labels": [],
+        "name": "net#22",
+        "ports": [
+          "Splitter@920,470.bit12",
+          "ks_32b@900,480.SUM12"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM13"
+        ],
+        "index": 23,
+        "labels": [],
+        "name": "net#23",
+        "ports": [
+          "Splitter@920,470.bit13",
+          "ks_32b@900,480.SUM13"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM14"
+        ],
+        "index": 24,
+        "labels": [],
+        "name": "net#24",
+        "ports": [
+          "Splitter@920,470.bit14",
+          "ks_32b@900,480.SUM14"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM15"
+        ],
+        "index": 25,
+        "labels": [],
+        "name": "net#25",
+        "ports": [
+          "Splitter@920,470.bit15",
+          "ks_32b@900,480.SUM15"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM16"
+        ],
+        "index": 26,
+        "labels": [],
+        "name": "net#26",
+        "ports": [
+          "Splitter@920,470.bit16",
+          "ks_32b@900,480.SUM16"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM17"
+        ],
+        "index": 27,
+        "labels": [],
+        "name": "net#27",
+        "ports": [
+          "Splitter@920,470.bit17",
+          "ks_32b@900,480.SUM17"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM18"
+        ],
+        "index": 28,
+        "labels": [],
+        "name": "net#28",
+        "ports": [
+          "Splitter@920,470.bit18",
+          "ks_32b@900,480.SUM18"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM19"
+        ],
+        "index": 29,
+        "labels": [],
+        "name": "net#29",
+        "ports": [
+          "Splitter@920,470.bit19",
+          "ks_32b@900,480.SUM19"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM20"
+        ],
+        "index": 30,
+        "labels": [],
+        "name": "net#30",
+        "ports": [
+          "Splitter@920,470.bit20",
+          "ks_32b@900,480.SUM20"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM21"
+        ],
+        "index": 31,
+        "labels": [],
+        "name": "net#31",
+        "ports": [
+          "Splitter@920,470.bit21",
+          "ks_32b@900,480.SUM21"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM22"
+        ],
+        "index": 32,
+        "labels": [],
+        "name": "net#32",
+        "ports": [
+          "Splitter@920,470.bit22",
+          "ks_32b@900,480.SUM22"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM23"
+        ],
+        "index": 33,
+        "labels": [],
+        "name": "net#33",
+        "ports": [
+          "Splitter@920,470.bit23",
+          "ks_32b@900,480.SUM23"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM24"
+        ],
+        "index": 34,
+        "labels": [],
+        "name": "net#34",
+        "ports": [
+          "Splitter@920,470.bit24",
+          "ks_32b@900,480.SUM24"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM25"
+        ],
+        "index": 35,
+        "labels": [],
+        "name": "net#35",
+        "ports": [
+          "Splitter@920,470.bit25",
+          "ks_32b@900,480.SUM25"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM26"
+        ],
+        "index": 36,
+        "labels": [],
+        "name": "net#36",
+        "ports": [
+          "Splitter@920,470.bit26",
+          "ks_32b@900,480.SUM26"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM27"
+        ],
+        "index": 37,
+        "labels": [],
+        "name": "net#37",
+        "ports": [
+          "Splitter@920,470.bit27",
+          "ks_32b@900,480.SUM27"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM28"
+        ],
+        "index": 38,
+        "labels": [],
+        "name": "net#38",
+        "ports": [
+          "Splitter@920,470.bit28",
+          "ks_32b@900,480.SUM28"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM29"
+        ],
+        "index": 39,
+        "labels": [],
+        "name": "net#39",
+        "ports": [
+          "Splitter@920,470.bit29",
+          "ks_32b@900,480.SUM29"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM30"
+        ],
+        "index": 40,
+        "labels": [],
+        "name": "net#40",
+        "ports": [
+          "Splitter@920,470.bit30",
+          "ks_32b@900,480.SUM30"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.SUM31"
+        ],
+        "index": 41,
+        "labels": [],
+        "name": "net#41",
+        "ports": [
+          "Splitter@920,470.bit31",
+          "ks_32b@900,480.SUM31"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 42,
+        "labels": [
+          "W_reg"
+        ],
+        "name": "net:W_reg",
+        "ports": [
+          "Register@220,250[W_reg].clr"
+        ],
+        "status": "undriven"
+      },
+      {
+        "drivers": [],
+        "index": 43,
+        "labels": [
+          "a_reg"
+        ],
+        "name": "net:a_reg",
+        "ports": [
+          "Register@510,250[a_reg].en"
+        ],
+        "status": "undriven"
+      },
+      {
+        "drivers": [],
+        "index": 44,
+        "labels": [
+          "a_reg"
+        ],
+        "name": "net:a_reg",
+        "ports": [
+          "Register@510,250[a_reg].clr"
+        ],
+        "status": "undriven"
+      },
+      {
+        "drivers": [],
+        "index": 45,
+        "labels": [
+          "psum_reg"
+        ],
+        "name": "net:psum_reg",
+        "ports": [
+          "Register@760,240[psum_reg].en"
+        ],
+        "status": "undriven"
+      },
+      {
+        "drivers": [],
+        "index": 46,
+        "labels": [
+          "psum_reg"
+        ],
+        "name": "net:psum_reg",
+        "ports": [
+          "Register@760,240[psum_reg].clr"
+        ],
+        "status": "undriven"
+      },
+      {
+        "drivers": [
+          "mul_32@600,520.carry"
+        ],
+        "index": 47,
+        "labels": [],
+        "name": "net#47",
+        "ports": [
+          "mul_32@600,520.carry"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "ks_32b@900,480.Cout"
+        ],
+        "index": 48,
+        "labels": [],
+        "name": "net#48",
+        "ports": [
+          "ks_32b@900,480.Cout"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 49,
+        "labels": [],
+        "name": "net#49",
+        "ports": [
+          "ks_32b@900,480.Cin"
+        ],
+        "status": "undriven"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "Pin@110,320[CLK]",
+        "direction": "out",
+        "id": "Pin@110,320[CLK].p",
+        "kind": "Pin",
+        "label": "CLK",
+        "loc": [
+          110,
+          320
+        ],
+        "pin": [
+          110,
+          320
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@170,300[w_load]",
+        "direction": "out",
+        "id": "Pin@170,300[w_load].p",
+        "kind": "Pin",
+        "label": "w_load",
+        "loc": [
+          170,
+          300
+        ],
+        "pin": [
+          170,
+          300
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@220,280[w_in]",
+        "direction": "out",
+        "id": "Pin@220,280[w_in].p",
+        "kind": "Pin",
+        "label": "w_in",
+        "loc": [
+          220,
+          280
+        ],
+        "pin": [
+          220,
+          280
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@240,520[a_in]",
+        "direction": "out",
+        "id": "Pin@240,520[a_in].p",
+        "kind": "Pin",
+        "label": "a_in",
+        "loc": [
+          240,
+          520
+        ],
+        "pin": [
+          240,
+          520
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@580,280[a_out]",
+        "direction": "in",
+        "id": "Pin@580,280[a_out].p",
+        "kind": "Pin",
+        "label": "a_out",
+        "loc": [
+          580,
+          280
+        ],
+        "pin": [
+          580,
+          280
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,480[psum_in]",
+        "direction": "out",
+        "id": "Pin@680,480[psum_in].p",
+        "kind": "Pin",
+        "label": "psum_in",
+        "loc": [
+          680,
+          480
+        ],
+        "pin": [
+          680,
+          480
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@840,270[psum_out]",
+        "direction": "in",
+        "id": "Pin@840,270[psum_out].p",
+        "kind": "Pin",
+        "label": "psum_out",
+        "loc": [
+          840,
+          270
+        ],
+        "pin": [
+          840,
+          270
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Register@220,250[W_reg]",
+        "direction": "in",
+        "id": "Register@220,250[W_reg].D",
+        "kind": "Register",
+        "label": "W_reg",
+        "loc": [
+          220,
+          250
+        ],
+        "pin": [
+          220,
+          280
+        ],
+        "port": "D"
+      },
+      {
+        "comp": "Register@220,250[W_reg]",
+        "direction": "out",
+        "id": "Register@220,250[W_reg].Q",
+        "kind": "Register",
+        "label": "W_reg",
+        "loc": [
+          220,
+          250
+        ],
+        "pin": [
+          280,
+          280
+        ],
+        "port": "Q"
+      },
+      {
+        "comp": "Register@220,250[W_reg]",
+        "direction": "in",
+        "id": "Register@220,250[W_reg].clk",
+        "kind": "Register",
+        "label": "W_reg",
+        "loc": [
+          220,
+          250
+        ],
+        "pin": [
+          220,
+          320
+        ],
+        "port": "clk"
+      },
+      {
+        "comp": "Register@220,250[W_reg]",
+        "direction": "in",
+        "id": "Register@220,250[W_reg].clr",
+        "kind": "Register",
+        "label": "W_reg",
+        "loc": [
+          220,
+          250
+        ],
+        "pin": [
+          250,
+          340
+        ],
+        "port": "clr"
+      },
+      {
+        "comp": "Register@220,250[W_reg]",
+        "direction": "in",
+        "id": "Register@220,250[W_reg].en",
+        "kind": "Register",
+        "label": "W_reg",
+        "loc": [
+          220,
+          250
+        ],
+        "pin": [
+          220,
+          300
+        ],
+        "port": "en"
+      },
+      {
+        "comp": "Register@510,250[a_reg]",
+        "direction": "in",
+        "id": "Register@510,250[a_reg].D",
+        "kind": "Register",
+        "label": "a_reg",
+        "loc": [
+          510,
+          250
+        ],
+        "pin": [
+          510,
+          280
+        ],
+        "port": "D"
+      },
+      {
+        "comp": "Register@510,250[a_reg]",
+        "direction": "out",
+        "id": "Register@510,250[a_reg].Q",
+        "kind": "Register",
+        "label": "a_reg",
+        "loc": [
+          510,
+          250
+        ],
+        "pin": [
+          570,
+          280
+        ],
+        "port": "Q"
+      },
+      {
+        "comp": "Register@510,250[a_reg]",
+        "direction": "in",
+        "id": "Register@510,250[a_reg].clk",
+        "kind": "Register",
+        "label": "a_reg",
+        "loc": [
+          510,
+          250
+        ],
+        "pin": [
+          510,
+          320
+        ],
+        "port": "clk"
+      },
+      {
+        "comp": "Register@510,250[a_reg]",
+        "direction": "in",
+        "id": "Register@510,250[a_reg].clr",
+        "kind": "Register",
+        "label": "a_reg",
+        "loc": [
+          510,
+          250
+        ],
+        "pin": [
+          540,
+          340
+        ],
+        "port": "clr"
+      },
+      {
+        "comp": "Register@510,250[a_reg]",
+        "direction": "in",
+        "id": "Register@510,250[a_reg].en",
+        "kind": "Register",
+        "label": "a_reg",
+        "loc": [
+          510,
+          250
+        ],
+        "pin": [
+          510,
+          300
+        ],
+        "port": "en"
+      },
+      {
+        "comp": "Register@760,240[psum_reg]",
+        "direction": "in",
+        "id": "Register@760,240[psum_reg].D",
+        "kind": "Register",
+        "label": "psum_reg",
+        "loc": [
+          760,
+          240
+        ],
+        "pin": [
+          760,
+          270
+        ],
+        "port": "D"
+      },
+      {
+        "comp": "Register@760,240[psum_reg]",
+        "direction": "out",
+        "id": "Register@760,240[psum_reg].Q",
+        "kind": "Register",
+        "label": "psum_reg",
+        "loc": [
+          760,
+          240
+        ],
+        "pin": [
+          820,
+          270
+        ],
+        "port": "Q"
+      },
+      {
+        "comp": "Register@760,240[psum_reg]",
+        "direction": "in",
+        "id": "Register@760,240[psum_reg].clk",
+        "kind": "Register",
+        "label": "psum_reg",
+        "loc": [
+          760,
+          240
+        ],
+        "pin": [
+          760,
+          310
+        ],
+        "port": "clk"
+      },
+      {
+        "comp": "Register@760,240[psum_reg]",
+        "direction": "in",
+        "id": "Register@760,240[psum_reg].clr",
+        "kind": "Register",
+        "label": "psum_reg",
+        "loc": [
+          760,
+          240
+        ],
+        "pin": [
+          790,
+          330
+        ],
+        "port": "clr"
+      },
+      {
+        "comp": "Register@760,240[psum_reg]",
+        "direction": "in",
+        "id": "Register@760,240[psum_reg].en",
+        "kind": "Register",
+        "label": "psum_reg",
+        "loc": [
+          760,
+          240
+        ],
+        "pin": [
+          760,
+          290
+        ],
+        "port": "en"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit0",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -160
+        ],
+        "port": "bit0"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit1",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -140
+        ],
+        "port": "bit1"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit10",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          40
+        ],
+        "port": "bit10"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit11",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          60
+        ],
+        "port": "bit11"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit12",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          80
+        ],
+        "port": "bit12"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit13",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          100
+        ],
+        "port": "bit13"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit14",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          120
+        ],
+        "port": "bit14"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit15",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          140
+        ],
+        "port": "bit15"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit16",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          160
+        ],
+        "port": "bit16"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit17",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          180
+        ],
+        "port": "bit17"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit18",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          200
+        ],
+        "port": "bit18"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit19",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          220
+        ],
+        "port": "bit19"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit2",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -120
+        ],
+        "port": "bit2"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit20",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          240
+        ],
+        "port": "bit20"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit21",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          260
+        ],
+        "port": "bit21"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit22",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          280
+        ],
+        "port": "bit22"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit23",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          300
+        ],
+        "port": "bit23"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit24",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          320
+        ],
+        "port": "bit24"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit25",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          340
+        ],
+        "port": "bit25"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit26",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          360
+        ],
+        "port": "bit26"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit27",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          380
+        ],
+        "port": "bit27"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit28",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          400
+        ],
+        "port": "bit28"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit29",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          420
+        ],
+        "port": "bit29"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit3",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -100
+        ],
+        "port": "bit3"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit30",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          440
+        ],
+        "port": "bit30"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit31",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          460
+        ],
+        "port": "bit31"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit4",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -80
+        ],
+        "port": "bit4"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit5",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -60
+        ],
+        "port": "bit5"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit6",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -40
+        ],
+        "port": "bit6"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit7",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          -20
+        ],
+        "port": "bit7"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit8",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          0
+        ],
+        "port": "bit8"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.bit9",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          940,
+          20
+        ],
+        "port": "bit9"
+      },
+      {
+        "comp": "Splitter@920,470",
+        "direction": "inout",
+        "id": "Splitter@920,470.combined",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          920,
+          470
+        ],
+        "pin": [
+          920,
+          470
+        ],
+        "port": "combined"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "in",
+        "id": "ks_32b@900,480.A",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          680,
+          480
+        ],
+        "port": "A"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "in",
+        "id": "ks_32b@900,480.B",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          680,
+          500
+        ],
+        "port": "B"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "in",
+        "id": "ks_32b@900,480.Cin",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          680,
+          520
+        ],
+        "port": "Cin"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.Cout",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1120
+        ],
+        "port": "Cout"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM10",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          900
+        ],
+        "port": "SUM10"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM11",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          880
+        ],
+        "port": "SUM11"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM12",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          860
+        ],
+        "port": "SUM12"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM13",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          840
+        ],
+        "port": "SUM13"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM14",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          820
+        ],
+        "port": "SUM14"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM15",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          800
+        ],
+        "port": "SUM15"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM16",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          780
+        ],
+        "port": "SUM16"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM17",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          760
+        ],
+        "port": "SUM17"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM18",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          740
+        ],
+        "port": "SUM18"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM19",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          720
+        ],
+        "port": "SUM19"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM2",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1060
+        ],
+        "port": "SUM2"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM20",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          700
+        ],
+        "port": "SUM20"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM21",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          680
+        ],
+        "port": "SUM21"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM22",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          660
+        ],
+        "port": "SUM22"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM23",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          640
+        ],
+        "port": "SUM23"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM24",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          620
+        ],
+        "port": "SUM24"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM25",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          600
+        ],
+        "port": "SUM25"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM26",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          580
+        ],
+        "port": "SUM26"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM27",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          560
+        ],
+        "port": "SUM27"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM28",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          540
+        ],
+        "port": "SUM28"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM29",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          520
+        ],
+        "port": "SUM29"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM3",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1040
+        ],
+        "port": "SUM3"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM30",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          500
+        ],
+        "port": "SUM30"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM31",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          480
+        ],
+        "port": "SUM31"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM4",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1020
+        ],
+        "port": "SUM4"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM5",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1000
+        ],
+        "port": "SUM5"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM6",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          980
+        ],
+        "port": "SUM6"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM7",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          960
+        ],
+        "port": "SUM7"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM8",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          940
+        ],
+        "port": "SUM8"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.SUM9",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          920
+        ],
+        "port": "SUM9"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.sum0",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1100
+        ],
+        "port": "sum0"
+      },
+      {
+        "comp": "ks_32b@900,480",
+        "direction": "out",
+        "id": "ks_32b@900,480.sum1",
+        "kind": "ks_32b",
+        "label": "",
+        "loc": [
+          900,
+          480
+        ],
+        "pin": [
+          900,
+          1080
+        ],
+        "port": "sum1"
+      },
+      {
+        "comp": "mul_32@600,520",
+        "direction": "in",
+        "id": "mul_32@600,520.A",
+        "kind": "mul_32",
+        "label": "",
+        "loc": [
+          600,
+          520
+        ],
+        "pin": [
+          380,
+          520
+        ],
+        "port": "A"
+      },
+      {
+        "comp": "mul_32@600,520",
+        "direction": "in",
+        "id": "mul_32@600,520.B",
+        "kind": "mul_32",
+        "label": "",
+        "loc": [
+          600,
+          520
+        ],
+        "pin": [
+          380,
+          540
+        ],
+        "port": "B"
+      },
+      {
+        "comp": "mul_32@600,520",
+        "direction": "out",
+        "id": "mul_32@600,520.carry",
+        "kind": "mul_32",
+        "label": "",
+        "loc": [
+          600,
+          520
+        ],
+        "pin": [
+          600,
+          540
+        ],
+        "port": "carry"
+      },
+      {
+        "comp": "mul_32@600,520",
+        "direction": "out",
+        "id": "mul_32@600,520.sum",
+        "kind": "mul_32",
+        "label": "",
+        "loc": [
+          600,
+          520
+        ],
+        "pin": [
+          600,
+          520
+        ],
+        "port": "sum"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@220,280[w_in]",
+      "Pin@170,300[w_load]",
+      "Pin@110,320[CLK]",
+      "Pin@680,480[psum_in]",
+      "Pin@240,520[a_in]"
+    ],
+    "outputs": [
+      "Pin@840,270[psum_out]",
+      "Pin@580,280[a_out]"
+    ]
+  },
+  "inventory": {
+    "Pin": 7,
+    "Register": 3,
+    "Splitter": 1,
+    "ks_32b": 1,
+    "mul_32": 1
+  },
+  "source": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        110,
+        320
+      ],
+      "index": 0,
+      "to": [
+        150,
+        320
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        150,
+        320
+      ],
+      "index": 1,
+      "to": [
+        150,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        150,
+        320
+      ],
+      "index": 2,
+      "to": [
+        220,
+        320
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        150,
+        360
+      ],
+      "index": 3,
+      "to": [
+        390,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        170,
+        300
+      ],
+      "index": 4,
+      "to": [
+        220,
+        300
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        240,
+        520
+      ],
+      "index": 5,
+      "to": [
+        250,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        400
+      ],
+      "index": 6,
+      "to": [
+        250,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        400
+      ],
+      "index": 7,
+      "to": [
+        450,
+        400
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        520
+      ],
+      "index": 8,
+      "to": [
+        380,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        280,
+        280
+      ],
+      "index": 9,
+      "to": [
+        340,
+        280
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        340,
+        280
+      ],
+      "index": 10,
+      "to": [
+        340,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        340,
+        540
+      ],
+      "index": 11,
+      "to": [
+        380,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        320
+      ],
+      "index": 12,
+      "to": [
+        390,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        320
+      ],
+      "index": 13,
+      "to": [
+        510,
+        320
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        360
+      ],
+      "index": 14,
+      "to": [
+        760,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        280
+      ],
+      "index": 15,
+      "to": [
+        450,
+        400
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        280
+      ],
+      "index": 16,
+      "to": [
+        510,
+        280
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        570,
+        280
+      ],
+      "index": 17,
+      "to": [
+        580,
+        280
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        520
+      ],
+      "index": 18,
+      "to": [
+        640,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        640,
+        500
+      ],
+      "index": 19,
+      "to": [
+        640,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        640,
+        500
+      ],
+      "index": 20,
+      "to": [
+        680,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        740,
+        270
+      ],
+      "index": 21,
+      "to": [
+        740,
+        420
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        740,
+        270
+      ],
+      "index": 22,
+      "to": [
+        760,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        740,
+        420
+      ],
+      "index": 23,
+      "to": [
+        920,
+        420
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        760,
+        310
+      ],
+      "index": 24,
+      "to": [
+        760,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        820,
+        270
+      ],
+      "index": 25,
+      "to": [
+        840,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        920,
+        420
+      ],
+      "index": 26,
+      "to": [
+        920,
+        470
+      ]
+    }
+  ]
+}

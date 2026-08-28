@@ -84,6 +84,25 @@ class TestGeometry(unittest.TestCase):
             m += cov["matched"]; t += cov["endpoints"]
         self.assertGreater(m / t, 0.98, "port geometry regressed: %d/%d" % (m, t))
 
+    def test_evolution_memory_ports_match_live_circuit(self):
+        """RAM/ROM far-edge outputs are essential drivers, not model gaps."""
+        d = _design()
+        ram = next(c for c in d["main"].components if c.name == "RAM")
+        rports = {p.name: p.at(ram) for p in geo.ports(d, ram)}
+        x, y = ram.loc
+        self.assertEqual(rports["addr"], (x, y + 10))
+        self.assertEqual(rports["we"], (x, y + 50))
+        self.assertEqual(rports["oe"], (x, y + 60))
+        self.assertEqual(rports["clk"], (x, y + 70))
+        self.assertEqual(rports["data_in"], (x, y + 90))
+        self.assertEqual(rports["data_out"], (x + 240, y + 90))
+
+        rom = next(c for c in d["main"].components if c.name == "ROM")
+        oports = {p.name: p.at(rom) for p in geo.ports(d, rom)}
+        x, y = rom.loc
+        self.assertEqual(oports["addr"], (x, y + 10))
+        self.assertEqual(oports["data_out"], (x + 240, y + 60))
+
 
 class TestNetlist(unittest.TestCase):
     def test_crossing_wires_are_not_connected(self):

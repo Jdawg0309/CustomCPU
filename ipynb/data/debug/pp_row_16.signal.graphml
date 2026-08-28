@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">pp_row_16</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="Pin@130,400[Rs_bit].p">
+  <data key="d3">Pin@130,400[Rs_bit]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">Rs_bit</data>
+  <data key="d8">130</data>
+  <data key="d9">400</data>
+  <data key="d10">1</data>
+</node>
+<node id="Bit Extender@180,400.in">
+  <data key="d3">Bit Extender@180,400</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">in</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">140</data>
+  <data key="d9">400</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@180,360[Rm].p">
+  <data key="d3">Pin@180,360[Rm]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">Rm</data>
+  <data key="d8">180</data>
+  <data key="d9">360</data>
+  <data key="d10">16</data>
+</node>
+<node id="AND Gate@270,380.in0">
+  <data key="d3">AND Gate@270,380</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">220</data>
+  <data key="d9">360</data>
+  <data key="d10">16</data>
+</node>
+<node id="Bit Extender@180,400.out">
+  <data key="d3">Bit Extender@180,400</data>
+  <data key="d4">Bit Extender</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">180</data>
+  <data key="d9">400</data>
+  <data key="d10">0</data>
+</node>
+<node id="AND Gate@270,380.in1">
+  <data key="d3">AND Gate@270,380</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">220</data>
+  <data key="d9">400</data>
+  <data key="d10">16</data>
+</node>
+<node id="Pin@310,380[result].p">
+  <data key="d3">Pin@310,380[result]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">result</data>
+  <data key="d8">310</data>
+  <data key="d9">380</data>
+  <data key="d10">16</data>
+</node>
+<node id="AND Gate@270,380.out">
+  <data key="d3">AND Gate@270,380</data>
+  <data key="d4">AND Gate</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">270</data>
+  <data key="d9">380</data>
+  <data key="d10">16</data>
+</node>
+<edge source="Pin@130,400[Rs_bit].p" target="Bit Extender@180,400.in" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:Rs_bit</data>
+</edge>
+<edge source="Pin@180,360[Rm].p" target="AND Gate@270,380.in0" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net:Rm</data>
+</edge>
+<edge source="Bit Extender@180,400.out" target="AND Gate@270,380.in1" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net#2</data>
+</edge>
+<edge source="AND Gate@270,380.out" target="Pin@310,380[result].p" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:result</data>
+</edge>
+</graph></graphml>

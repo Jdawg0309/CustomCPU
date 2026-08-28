@@ -1,0 +1,75 @@
+{
+  "circuit": "block_transfer_control",
+  "only_a_connections": [
+    [
+      "Adder@1700,2230.out",
+      "Multiplexer@1810,2550.in0"
+    ],
+    [
+      "Pin@280,1220[is_pop].p",
+      "AND Gate@1760,1590.in1"
+    ],
+    [
+      "Pin@280,1220[is_pop].p",
+      "Multiplexer@1420,1480.sel"
+    ],
+    [
+      "Pin@280,1220[is_pop].p",
+      "Multiplexer@1500,1160.sel"
+    ],
+    [
+      "Pin@280,1220[is_pop].p",
+      "Multiplexer@1810,2550.sel"
+    ],
+    [
+      "Pin@280,1220[is_pop].p",
+      "Multiplexer@1960,2280.sel"
+    ],
+    [
+      "Pin@280,1220[is_pop].p",
+      "NOT Gate@1680,1780.in"
+    ]
+  ],
+  "only_a_nodes": [],
+  "only_b_connections": [
+    [
+      "Multiplexer@1960,2280.out",
+      "Multiplexer@1810,2550.in0"
+    ],
+    [
+      "NOT Gate@600,2700.out",
+      "Multiplexer@1810,2550.sel"
+    ],
+    [
+      "Pin@280,2600[U].p",
+      "AND Gate@1760,1590.in1"
+    ],
+    [
+      "Pin@280,2600[U].p",
+      "Multiplexer@1420,1480.sel"
+    ],
+    [
+      "Pin@280,2600[U].p",
+      "Multiplexer@1500,1160.sel"
+    ],
+    [
+      "Pin@280,2600[U].p",
+      "Multiplexer@1960,2280.sel"
+    ],
+    [
+      "Pin@280,2600[U].p",
+      "NOT Gate@1680,1780.in"
+    ],
+    [
+      "Pin@280,2700[P].p",
+      "NOT Gate@600,2700.in"
+    ]
+  ],
+  "only_b_nodes": [
+    "NOT Gate@600,2700.in",
+    "NOT Gate@600,2700.out",
+    "Pin@280,2600[U].p",
+    "Pin@280,2700[P].p"
+  ],
+  "summary": "block_transfer_control: +4 nodes / -0 nodes, +8 connections / -7 connections"
+}

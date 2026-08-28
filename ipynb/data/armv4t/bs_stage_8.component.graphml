@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">bs_stage_8</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Constant@280,400">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">280</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@290,380[input_32]">
+  <data key="d3">Pin</data>
+  <data key="d4">input_32</data>
+  <data key="d5">290</data>
+  <data key="d6">380</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@540,610[typ_2]">
+  <data key="d3">Pin</data>
+  <data key="d4">typ_2</data>
+  <data key="d5">540</data>
+  <data key="d6">610</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@890,520[enable]">
+  <data key="d3">Pin</data>
+  <data key="d4">enable</data>
+  <data key="d5">890</data>
+  <data key="d6">520</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@960,470[out_1]">
+  <data key="d3">Pin</data>
+  <data key="d4">out_1</data>
+  <data key="d5">960</data>
+  <data key="d6">470</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@560,480">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">560</data>
+  <data key="d6">480</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@920,470">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">920</data>
+  <data key="d6">470</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Shifter@410,390">
+  <data key="d3">Shifter</data>
+  <data key="d4"></data>
+  <data key="d5">410</data>
+  <data key="d6">390</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Shifter@410,460">
+  <data key="d3">Shifter</data>
+  <data key="d4"></data>
+  <data key="d5">410</data>
+  <data key="d6">460</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Shifter@410,530">
+  <data key="d3">Shifter</data>
+  <data key="d4"></data>
+  <data key="d5">410</data>
+  <data key="d6">530</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Shifter@410,600">
+  <data key="d3">Shifter</data>
+  <data key="d4"></data>
+  <data key="d5">410</data>
+  <data key="d6">600</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<edge source="Constant@280,400" target="Shifter@410,390" id="0">
+  <data key="d9">p</data>
+  <data key="d10">dist</data>
+  <data key="d11">Constant@280,400.p</data>
+  <data key="d12">Shifter@410,390.dist</data>
+  <data key="d13">0</data>
+  <data key="d14">net#0</data>
+</edge>
+<edge source="Constant@280,400" target="Shifter@410,460" id="0">
+  <data key="d9">p</data>
+  <data key="d10">dist</data>
+  <data key="d11">Constant@280,400.p</data>
+  <data key="d12">Shifter@410,460.dist</data>
+  <data key="d13">0</data>
+  <data key="d14">net#0</data>
+</edge>
+<edge source="Constant@280,400" target="Shifter@410,530" id="0">
+  <data key="d9">p</data>
+  <data key="d10">dist</data>
+  <data key="d11">Constant@280,400.p</data>
+  <data key="d12">Shifter@410,530.dist</data>
+  <data key="d13">0</data>
+  <data key="d14">net#0</data>
+</edge>
+<edge source="Constant@280,400" target="Shifter@410,600" id="0">
+  <data key="d9">p</data>
+  <data key="d10">dist</data>
+  <data key="d11">Constant@280,400.p</data>
+  <data key="d12">Shifter@410,600.dist</data>
+  <data key="d13">0</data>
+  <data key="d14">net#0</data>
+</edge>
+<edge source="Pin@290,380[input_32]" target="Multiplexer@920,470" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@290,380[input_32].p</data>
+  <data key="d12">Multiplexer@920,470.in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:input_32</data>
+</edge>
+<edge source="Pin@290,380[input_32]" target="Shifter@410,390" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@290,380[input_32].p</data>
+  <data key="d12">Shifter@410,390.in</data>
+  <data key="d13">1</data>
+  <data key="d14">net:input_32</data>
+</edge>
+<edge source="Pin@290,380[input_32]" target="Shifter@410,460" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@290,380[input_32].p</data>
+  <data key="d12">Shifter@410,460.in</data>
+  <data key="d13">1</data>
+  <data key="d14">net:input_32</data>
+</edge>
+<edge source="Pin@290,380[input_32]" target="Shifter@410,530" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@290,380[input_32].p</data>
+  <data key="d12">Shifter@410,530.in</data>
+  <data key="d13">1</data>
+  <data key="d14">net:input_32</data>
+</edge>
+<edge source="Pin@290,380[input_32]" target="Shifter@410,600" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@290,380[input_32].p</data>
+  <data key="d12">Shifter@410,600.in</data>
+  <data key="d13">1</data>
+  <data key="d14">net:input_32</data>
+</edge>
+<edge source="Pin@540,610[typ_2]" target="Multiplexer@560,480" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@540,610[typ_2].p</data>
+  <data key="d12">Multiplexer@560,480.sel</data>
+  <data key="d13">6</data>
+  <data key="d14">net:typ_2</data>
+</edge>
+<edge source="Pin@890,520[enable]" target="Multiplexer@920,470" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@890,520[enable].p</data>
+  <data key="d12">Multiplexer@920,470.sel</data>
+  <data key="d13">8</data>
+  <data key="d14">net:enable</data>
+</edge>
+<edge source="Multiplexer@560,480" target="Multiplexer@920,470" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Multiplexer@560,480.out</data>
+  <data key="d12">Multiplexer@920,470.in1</data>
+  <data key="d13">7</data>
+  <data key="d14">net#7</data>
+</edge>
+<edge source="Multiplexer@920,470" target="Pin@960,470[out_1]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@920,470.out</data>
+  <data key="d12">Pin@960,470[out_1].p</data>
+  <data key="d13">9</data>
+  <data key="d14">net:out_1</data>
+</edge>
+<edge source="Shifter@410,390" target="Multiplexer@560,480" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Shifter@410,390.out</data>
+  <data key="d12">Multiplexer@560,480.in0</data>
+  <data key="d13">2</data>
+  <data key="d14">net#2</data>
+</edge>
+<edge source="Shifter@410,460" target="Multiplexer@560,480" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Shifter@410,460.out</data>
+  <data key="d12">Multiplexer@560,480.in1</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Shifter@410,530" target="Multiplexer@560,480" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in2</data>
+  <data key="d11">Shifter@410,530.out</data>
+  <data key="d12">Multiplexer@560,480.in2</data>
+  <data key="d13">4</data>
+  <data key="d14">net#4</data>
+</edge>
+<edge source="Shifter@410,600" target="Multiplexer@560,480" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in3</data>
+  <data key="d11">Shifter@410,600.out</data>
+  <data key="d12">Multiplexer@560,480.in3</data>
+  <data key="d13">5</data>
+  <data key="d14">net#5</data>
+</edge>
+</graph></graphml>

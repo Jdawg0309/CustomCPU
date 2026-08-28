@@ -1,0 +1,946 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "pg_cell",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    170,
+    180,
+    470,
+    310
+  ],
+  "circuit": "pg_cell",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "G"
+      },
+      "facing": "east",
+      "id": "Pin@170,180[G]",
+      "is_subcircuit": false,
+      "label": "G",
+      "library": "0",
+      "location": [
+        170,
+        180
+      ],
+      "ports": [
+        {
+          "anchor": [
+            170,
+            180
+          ],
+          "direction": "out",
+          "id": "Pin@170,180[G].p",
+          "name": "p",
+          "pin": [
+            170,
+            180
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "P"
+      },
+      "facing": "east",
+      "id": "Pin@170,200[P]",
+      "is_subcircuit": false,
+      "label": "P",
+      "library": "0",
+      "location": [
+        170,
+        200
+      ],
+      "ports": [
+        {
+          "anchor": [
+            170,
+            200
+          ],
+          "direction": "out",
+          "id": "Pin@170,200[P].p",
+          "name": "p",
+          "pin": [
+            170,
+            200
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "G_prev"
+      },
+      "facing": "east",
+      "id": "Pin@170,240[G_prev]",
+      "is_subcircuit": false,
+      "label": "G_prev",
+      "library": "0",
+      "location": [
+        170,
+        240
+      ],
+      "ports": [
+        {
+          "anchor": [
+            170,
+            240
+          ],
+          "direction": "out",
+          "id": "Pin@170,240[G_prev].p",
+          "name": "p",
+          "pin": [
+            170,
+            240
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "P_Prev"
+      },
+      "facing": "east",
+      "id": "Pin@170,310[P_Prev]",
+      "is_subcircuit": false,
+      "label": "P_Prev",
+      "library": "0",
+      "location": [
+        170,
+        310
+      ],
+      "ports": [
+        {
+          "anchor": [
+            170,
+            310
+          ],
+          "direction": "out",
+          "id": "Pin@170,310[P_Prev].p",
+          "name": "p",
+          "pin": [
+            170,
+            310
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "P_out",
+        "output": "true"
+      },
+      "facing": "west",
+      "id": "Pin@380,290[P_out]",
+      "is_subcircuit": false,
+      "label": "P_out",
+      "library": "0",
+      "location": [
+        380,
+        290
+      ],
+      "ports": [
+        {
+          "anchor": [
+            380,
+            290
+          ],
+          "direction": "in",
+          "id": "Pin@380,290[P_out].p",
+          "name": "p",
+          "pin": [
+            380,
+            290
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "G_out",
+        "output": "true"
+      },
+      "facing": "west",
+      "id": "Pin@470,200[G_out]",
+      "is_subcircuit": false,
+      "label": "G_out",
+      "library": "0",
+      "location": [
+        470,
+        200
+      ],
+      "ports": [
+        {
+          "anchor": [
+            470,
+            200
+          ],
+          "direction": "in",
+          "id": "Pin@470,200[G_out].p",
+          "name": "p",
+          "pin": [
+            470,
+            200
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "label": "PandG_prev"
+      },
+      "facing": "east",
+      "id": "AND Gate@320,220[PandG_prev]",
+      "is_subcircuit": false,
+      "label": "PandG_prev",
+      "library": "1",
+      "location": [
+        320,
+        220
+      ],
+      "ports": [
+        {
+          "anchor": [
+            320,
+            220
+          ],
+          "direction": "in",
+          "id": "AND Gate@320,220[PandG_prev].in0",
+          "name": "in0",
+          "pin": [
+            270,
+            200
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            320,
+            220
+          ],
+          "direction": "in",
+          "id": "AND Gate@320,220[PandG_prev].in1",
+          "name": "in1",
+          "pin": [
+            270,
+            240
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            320,
+            220
+          ],
+          "direction": "out",
+          "id": "AND Gate@320,220[PandG_prev].out",
+          "name": "out",
+          "pin": [
+            320,
+            220
+          ],
+          "width": 1
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {
+        "label": "P_and_P_prev"
+      },
+      "facing": "east",
+      "id": "AND Gate@320,290[P_and_P_prev]",
+      "is_subcircuit": false,
+      "label": "P_and_P_prev",
+      "library": "1",
+      "location": [
+        320,
+        290
+      ],
+      "ports": [
+        {
+          "anchor": [
+            320,
+            290
+          ],
+          "direction": "in",
+          "id": "AND Gate@320,290[P_and_P_prev].in0",
+          "name": "in0",
+          "pin": [
+            270,
+            270
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            320,
+            290
+          ],
+          "direction": "in",
+          "id": "AND Gate@320,290[P_and_P_prev].in1",
+          "name": "in1",
+          "pin": [
+            270,
+            310
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            320,
+            290
+          ],
+          "direction": "out",
+          "id": "AND Gate@320,290[P_and_P_prev].out",
+          "name": "out",
+          "pin": [
+            320,
+            290
+          ],
+          "width": 1
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {
+        "label": "G_or_PandG_prev"
+      },
+      "facing": "east",
+      "id": "OR Gate@430,200[G_or_PandG_prev]",
+      "is_subcircuit": false,
+      "label": "G_or_PandG_prev",
+      "library": "1",
+      "location": [
+        430,
+        200
+      ],
+      "ports": [
+        {
+          "anchor": [
+            430,
+            200
+          ],
+          "direction": "in",
+          "id": "OR Gate@430,200[G_or_PandG_prev].in0",
+          "name": "in0",
+          "pin": [
+            380,
+            180
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            430,
+            200
+          ],
+          "direction": "in",
+          "id": "OR Gate@430,200[G_or_PandG_prev].in1",
+          "name": "in1",
+          "pin": [
+            380,
+            220
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            430,
+            200
+          ],
+          "direction": "out",
+          "id": "OR Gate@430,200[G_or_PandG_prev].out",
+          "name": "out",
+          "pin": [
+            430,
+            200
+          ],
+          "width": 1
+        }
+      ],
+      "type": "OR Gate"
+    }
+  ],
+  "coverage": {
+    "endpoints": 17,
+    "matched": 17,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "pg_cell",
+    "edges": [
+      {
+        "dst": "OR Gate@430,200[G_or_PandG_prev].in1",
+        "net": 4,
+        "src": "AND Gate@320,220[PandG_prev].out"
+      },
+      {
+        "dst": "Pin@380,290[P_out].p",
+        "net": 5,
+        "src": "AND Gate@320,290[P_and_P_prev].out"
+      },
+      {
+        "dst": "Pin@470,200[G_out].p",
+        "net": 6,
+        "src": "OR Gate@430,200[G_or_PandG_prev].out"
+      },
+      {
+        "dst": "OR Gate@430,200[G_or_PandG_prev].in0",
+        "net": 0,
+        "src": "Pin@170,180[G].p"
+      },
+      {
+        "dst": "AND Gate@320,220[PandG_prev].in0",
+        "net": 1,
+        "src": "Pin@170,200[P].p"
+      },
+      {
+        "dst": "AND Gate@320,290[P_and_P_prev].in0",
+        "net": 1,
+        "src": "Pin@170,200[P].p"
+      },
+      {
+        "dst": "AND Gate@320,220[PandG_prev].in1",
+        "net": 2,
+        "src": "Pin@170,240[G_prev].p"
+      },
+      {
+        "dst": "AND Gate@320,290[P_and_P_prev].in1",
+        "net": 3,
+        "src": "Pin@170,310[P_Prev].p"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Pin@170,180[G].p"
+        ],
+        "index": 0,
+        "labels": [
+          "G",
+          "G_or_PandG_prev"
+        ],
+        "name": "net:G/G_or_PandG_prev",
+        "ports": [
+          "OR Gate@430,200[G_or_PandG_prev].in0",
+          "Pin@170,180[G].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@170,200[P].p"
+        ],
+        "index": 1,
+        "labels": [
+          "P",
+          "P_and_P_prev",
+          "PandG_prev"
+        ],
+        "name": "net:P/P_and_P_prev",
+        "ports": [
+          "AND Gate@320,220[PandG_prev].in0",
+          "AND Gate@320,290[P_and_P_prev].in0",
+          "Pin@170,200[P].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@170,240[G_prev].p"
+        ],
+        "index": 2,
+        "labels": [
+          "G_prev",
+          "PandG_prev"
+        ],
+        "name": "net:G_prev/PandG_prev",
+        "ports": [
+          "AND Gate@320,220[PandG_prev].in1",
+          "Pin@170,240[G_prev].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@170,310[P_Prev].p"
+        ],
+        "index": 3,
+        "labels": [
+          "P_Prev",
+          "P_and_P_prev"
+        ],
+        "name": "net:P_Prev/P_and_P_prev",
+        "ports": [
+          "AND Gate@320,290[P_and_P_prev].in1",
+          "Pin@170,310[P_Prev].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@320,220[PandG_prev].out"
+        ],
+        "index": 4,
+        "labels": [
+          "G_or_PandG_prev",
+          "PandG_prev"
+        ],
+        "name": "net:G_or_PandG_prev/PandG_prev",
+        "ports": [
+          "AND Gate@320,220[PandG_prev].out",
+          "OR Gate@430,200[G_or_PandG_prev].in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@320,290[P_and_P_prev].out"
+        ],
+        "index": 5,
+        "labels": [
+          "P_and_P_prev",
+          "P_out"
+        ],
+        "name": "net:P_and_P_prev/P_out",
+        "ports": [
+          "AND Gate@320,290[P_and_P_prev].out",
+          "Pin@380,290[P_out].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "OR Gate@430,200[G_or_PandG_prev].out"
+        ],
+        "index": 6,
+        "labels": [
+          "G_or_PandG_prev",
+          "G_out"
+        ],
+        "name": "net:G_or_PandG_prev/G_out",
+        "ports": [
+          "OR Gate@430,200[G_or_PandG_prev].out",
+          "Pin@470,200[G_out].p"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "AND Gate@320,220[PandG_prev]",
+        "direction": "in",
+        "id": "AND Gate@320,220[PandG_prev].in0",
+        "kind": "AND Gate",
+        "label": "PandG_prev",
+        "loc": [
+          320,
+          220
+        ],
+        "pin": [
+          270,
+          200
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@320,220[PandG_prev]",
+        "direction": "in",
+        "id": "AND Gate@320,220[PandG_prev].in1",
+        "kind": "AND Gate",
+        "label": "PandG_prev",
+        "loc": [
+          320,
+          220
+        ],
+        "pin": [
+          270,
+          240
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@320,220[PandG_prev]",
+        "direction": "out",
+        "id": "AND Gate@320,220[PandG_prev].out",
+        "kind": "AND Gate",
+        "label": "PandG_prev",
+        "loc": [
+          320,
+          220
+        ],
+        "pin": [
+          320,
+          220
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "AND Gate@320,290[P_and_P_prev]",
+        "direction": "in",
+        "id": "AND Gate@320,290[P_and_P_prev].in0",
+        "kind": "AND Gate",
+        "label": "P_and_P_prev",
+        "loc": [
+          320,
+          290
+        ],
+        "pin": [
+          270,
+          270
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@320,290[P_and_P_prev]",
+        "direction": "in",
+        "id": "AND Gate@320,290[P_and_P_prev].in1",
+        "kind": "AND Gate",
+        "label": "P_and_P_prev",
+        "loc": [
+          320,
+          290
+        ],
+        "pin": [
+          270,
+          310
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@320,290[P_and_P_prev]",
+        "direction": "out",
+        "id": "AND Gate@320,290[P_and_P_prev].out",
+        "kind": "AND Gate",
+        "label": "P_and_P_prev",
+        "loc": [
+          320,
+          290
+        ],
+        "pin": [
+          320,
+          290
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "OR Gate@430,200[G_or_PandG_prev]",
+        "direction": "in",
+        "id": "OR Gate@430,200[G_or_PandG_prev].in0",
+        "kind": "OR Gate",
+        "label": "G_or_PandG_prev",
+        "loc": [
+          430,
+          200
+        ],
+        "pin": [
+          380,
+          180
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "OR Gate@430,200[G_or_PandG_prev]",
+        "direction": "in",
+        "id": "OR Gate@430,200[G_or_PandG_prev].in1",
+        "kind": "OR Gate",
+        "label": "G_or_PandG_prev",
+        "loc": [
+          430,
+          200
+        ],
+        "pin": [
+          380,
+          220
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "OR Gate@430,200[G_or_PandG_prev]",
+        "direction": "out",
+        "id": "OR Gate@430,200[G_or_PandG_prev].out",
+        "kind": "OR Gate",
+        "label": "G_or_PandG_prev",
+        "loc": [
+          430,
+          200
+        ],
+        "pin": [
+          430,
+          200
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Pin@170,180[G]",
+        "direction": "out",
+        "id": "Pin@170,180[G].p",
+        "kind": "Pin",
+        "label": "G",
+        "loc": [
+          170,
+          180
+        ],
+        "pin": [
+          170,
+          180
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@170,200[P]",
+        "direction": "out",
+        "id": "Pin@170,200[P].p",
+        "kind": "Pin",
+        "label": "P",
+        "loc": [
+          170,
+          200
+        ],
+        "pin": [
+          170,
+          200
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@170,240[G_prev]",
+        "direction": "out",
+        "id": "Pin@170,240[G_prev].p",
+        "kind": "Pin",
+        "label": "G_prev",
+        "loc": [
+          170,
+          240
+        ],
+        "pin": [
+          170,
+          240
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@170,310[P_Prev]",
+        "direction": "out",
+        "id": "Pin@170,310[P_Prev].p",
+        "kind": "Pin",
+        "label": "P_Prev",
+        "loc": [
+          170,
+          310
+        ],
+        "pin": [
+          170,
+          310
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@380,290[P_out]",
+        "direction": "in",
+        "id": "Pin@380,290[P_out].p",
+        "kind": "Pin",
+        "label": "P_out",
+        "loc": [
+          380,
+          290
+        ],
+        "pin": [
+          380,
+          290
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@470,200[G_out]",
+        "direction": "in",
+        "id": "Pin@470,200[G_out].p",
+        "kind": "Pin",
+        "label": "G_out",
+        "loc": [
+          470,
+          200
+        ],
+        "pin": [
+          470,
+          200
+        ],
+        "port": "p"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@170,180[G]",
+      "Pin@170,200[P]",
+      "Pin@170,240[G_prev]",
+      "Pin@170,310[P_Prev]"
+    ],
+    "outputs": [
+      "Pin@470,200[G_out]",
+      "Pin@380,290[P_out]"
+    ]
+  },
+  "inventory": {
+    "AND Gate": 2,
+    "OR Gate": 1,
+    "Pin": 6
+  },
+  "source": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        170,
+        180
+      ],
+      "index": 0,
+      "to": [
+        380,
+        180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        170,
+        200
+      ],
+      "index": 1,
+      "to": [
+        240,
+        200
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        170,
+        240
+      ],
+      "index": 2,
+      "to": [
+        270,
+        240
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        170,
+        310
+      ],
+      "index": 3,
+      "to": [
+        270,
+        310
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        240,
+        200
+      ],
+      "index": 4,
+      "to": [
+        240,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        240,
+        200
+      ],
+      "index": 5,
+      "to": [
+        270,
+        200
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        240,
+        270
+      ],
+      "index": 6,
+      "to": [
+        270,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        320,
+        220
+      ],
+      "index": 7,
+      "to": [
+        380,
+        220
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        320,
+        290
+      ],
+      "index": 8,
+      "to": [
+        380,
+        290
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        430,
+        200
+      ],
+      "index": 9,
+      "to": [
+        470,
+        200
+      ]
+    }
+  ]
+}

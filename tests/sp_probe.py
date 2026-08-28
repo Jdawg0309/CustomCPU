@@ -8,8 +8,9 @@ import sys, os, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import push_suite as ps
 
-ps.CIRC = sys.argv[1] if len(sys.argv) > 1 else "/home/junaet/Documents/CustomCPU/armv4t.circ"
-SP0, BASE = 256, 512
+ps.CIRC = sys.argv[1] if len(sys.argv) > 1 else "/home/junaet/Documents/CustomCPU/debug_armv4t.circ"
+# Both must sit above ps.RAM_BASE now that ROM owns 0x0000-0x0FFF.
+SP0, BASE = ps.RAM_BASE + 0x100, ps.RAM_BASE + 0x200
 
 def prog(regs):
     rl = "{" + ",".join(f"r{r}" for r in regs) + "}"
@@ -28,8 +29,8 @@ for regs in ([0], [0,1], [0,1,2], [0,1,2,3], [0,7], [5,6]):
         words = ps.assemble(prog(regs), wd)
         halted, osc, ram = ps.run_rom(words, wd)
     n = len(regs)
-    sp_push = int(ram.get(BASE//4,   "00000000"), 16)
-    sp_pop  = int(ram.get(BASE//4+1, "00000000"), 16)
+    sp_push = int(ram.get((BASE - ps.RAM_BASE)//4,   "00000000"), 16)
+    sp_pop  = int(ram.get((BASE - ps.RAM_BASE)//4+1, "00000000"), 16)
     e_push, e_pop = SP0 - 4*n, SP0
     ok = (sp_push == e_push) and (sp_pop == e_pop)
     tag = "{" + ",".join("r%d"%r for r in regs) + "}"

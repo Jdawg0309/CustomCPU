@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d19" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d18" for="node" attr.name="drivers" attr.type="long"/>
+<key id="d17" for="node" attr.name="points" attr.type="long"/>
+<key id="d16" for="node" attr.name="labels" attr.type="string"/>
+<key id="d15" for="node" attr.name="status" attr.type="string"/>
+<key id="d14" for="node" attr.name="name" attr.type="string"/>
+<key id="d13" for="node" attr.name="index" attr.type="long"/>
+<key id="d12" for="node" attr.name="width" attr.type="long"/>
+<key id="d11" for="node" attr.name="y" attr.type="long"/>
+<key id="d10" for="node" attr.name="x" attr.type="long"/>
+<key id="d9" for="node" attr.name="label" attr.type="string"/>
+<key id="d8" for="node" attr.name="direction" attr.type="string"/>
+<key id="d7" for="node" attr.name="port" attr.type="string"/>
+<key id="d6" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d5" for="node" attr.name="component" attr.type="string"/>
+<key id="d4" for="node" attr.name="node_kind" attr.type="string"/>
+<key id="d3" for="node" attr.name="bipartite" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="undirected"><data key="d0">pg_cell</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">port_net</data>
+<node id="port:Pin@170,180[G].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@170,180[G]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">G</data>
+  <data key="d10">170</data>
+  <data key="d11">180</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:OR Gate@430,200[G_or_PandG_prev].in0">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">OR Gate@430,200[G_or_PandG_prev]</data>
+  <data key="d6">OR Gate</data>
+  <data key="d7">in0</data>
+  <data key="d8">in</data>
+  <data key="d9">G_or_PandG_prev</data>
+  <data key="d10">380</data>
+  <data key="d11">180</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Pin@170,200[P].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@170,200[P]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">P</data>
+  <data key="d10">170</data>
+  <data key="d11">200</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:AND Gate@320,220[PandG_prev].in0">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@320,220[PandG_prev]</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">in0</data>
+  <data key="d8">in</data>
+  <data key="d9">PandG_prev</data>
+  <data key="d10">270</data>
+  <data key="d11">200</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:AND Gate@320,290[P_and_P_prev].in0">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@320,290[P_and_P_prev]</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">in0</data>
+  <data key="d8">in</data>
+  <data key="d9">P_and_P_prev</data>
+  <data key="d10">270</data>
+  <data key="d11">270</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Pin@170,240[G_prev].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@170,240[G_prev]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">G_prev</data>
+  <data key="d10">170</data>
+  <data key="d11">240</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:AND Gate@320,220[PandG_prev].in1">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@320,220[PandG_prev]</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">in1</data>
+  <data key="d8">in</data>
+  <data key="d9">PandG_prev</data>
+  <data key="d10">270</data>
+  <data key="d11">240</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Pin@170,310[P_Prev].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@170,310[P_Prev]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">P_Prev</data>
+  <data key="d10">170</data>
+  <data key="d11">310</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:AND Gate@320,290[P_and_P_prev].in1">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@320,290[P_and_P_prev]</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">in1</data>
+  <data key="d8">in</data>
+  <data key="d9">P_and_P_prev</data>
+  <data key="d10">270</data>
+  <data key="d11">310</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:AND Gate@320,220[PandG_prev].out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@320,220[PandG_prev]</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9">PandG_prev</data>
+  <data key="d10">320</data>
+  <data key="d11">220</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:OR Gate@430,200[G_or_PandG_prev].in1">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">OR Gate@430,200[G_or_PandG_prev]</data>
+  <data key="d6">OR Gate</data>
+  <data key="d7">in1</data>
+  <data key="d8">in</data>
+  <data key="d9">G_or_PandG_prev</data>
+  <data key="d10">380</data>
+  <data key="d11">220</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Pin@380,290[P_out].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@380,290[P_out]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">in</data>
+  <data key="d9">P_out</data>
+  <data key="d10">380</data>
+  <data key="d11">290</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:AND Gate@320,290[P_and_P_prev].out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@320,290[P_and_P_prev]</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9">P_and_P_prev</data>
+  <data key="d10">320</data>
+  <data key="d11">290</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Pin@470,200[G_out].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@470,200[G_out]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">in</data>
+  <data key="d9">G_out</data>
+  <data key="d10">470</data>
+  <data key="d11">200</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:OR Gate@430,200[G_or_PandG_prev].out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">OR Gate@430,200[G_or_PandG_prev]</data>
+  <data key="d6">OR Gate</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9">G_or_PandG_prev</data>
+  <data key="d10">430</data>
+  <data key="d11">200</data>
+  <data key="d12">1</data>
+</node>
+<node id="net:0">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">0</data>
+  <data key="d14">net:G/G_or_PandG_prev</data>
+  <data key="d15">ok</data>
+  <data key="d16">G|G_or_PandG_prev</data>
+  <data key="d17">22</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:1">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">1</data>
+  <data key="d14">net:P/P_and_P_prev</data>
+  <data key="d15">ok</data>
+  <data key="d16">P|P_and_P_prev|PandG_prev</data>
+  <data key="d17">21</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:2">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">2</data>
+  <data key="d14">net:G_prev/PandG_prev</data>
+  <data key="d15">ok</data>
+  <data key="d16">G_prev|PandG_prev</data>
+  <data key="d17">11</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:3">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">3</data>
+  <data key="d14">net:P_Prev/P_and_P_prev</data>
+  <data key="d15">ok</data>
+  <data key="d16">P_Prev|P_and_P_prev</data>
+  <data key="d17">11</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:4">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">4</data>
+  <data key="d14">net:G_or_PandG_prev/PandG_prev</data>
+  <data key="d15">ok</data>
+  <data key="d16">G_or_PandG_prev|PandG_prev</data>
+  <data key="d17">7</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:5">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">5</data>
+  <data key="d14">net:P_and_P_prev/P_out</data>
+  <data key="d15">ok</data>
+  <data key="d16">P_and_P_prev|P_out</data>
+  <data key="d17">7</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:6">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">6</data>
+  <data key="d14">net:G_or_PandG_prev/G_out</data>
+  <data key="d15">ok</data>
+  <data key="d16">G_or_PandG_prev|G_out</data>
+  <data key="d17">5</data>
+  <data key="d18">1</data>
+</node>
+<edge source="port:Pin@170,180[G].p" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:OR Gate@430,200[G_or_PandG_prev].in0" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@170,200[P].p" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@320,220[PandG_prev].in0" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@320,290[P_and_P_prev].in0" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@170,240[G_prev].p" target="net:2" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@320,220[PandG_prev].in1" target="net:2" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@170,310[P_Prev].p" target="net:3" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@320,290[P_and_P_prev].in1" target="net:3" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@320,220[PandG_prev].out" target="net:4" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:OR Gate@430,200[G_or_PandG_prev].in1" target="net:4" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@380,290[P_out].p" target="net:5" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@320,290[P_and_P_prev].out" target="net:5" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@470,200[G_out].p" target="net:6" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:OR Gate@430,200[G_or_PandG_prev].out" target="net:6" id="0">
+  <data key="d19">attached</data>
+</edge>
+</graph></graphml>

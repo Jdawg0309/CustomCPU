@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d19" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d18" for="node" attr.name="drivers" attr.type="long"/>
+<key id="d17" for="node" attr.name="points" attr.type="long"/>
+<key id="d16" for="node" attr.name="labels" attr.type="string"/>
+<key id="d15" for="node" attr.name="status" attr.type="string"/>
+<key id="d14" for="node" attr.name="name" attr.type="string"/>
+<key id="d13" for="node" attr.name="index" attr.type="long"/>
+<key id="d12" for="node" attr.name="width" attr.type="long"/>
+<key id="d11" for="node" attr.name="y" attr.type="long"/>
+<key id="d10" for="node" attr.name="x" attr.type="long"/>
+<key id="d9" for="node" attr.name="label" attr.type="string"/>
+<key id="d8" for="node" attr.name="direction" attr.type="string"/>
+<key id="d7" for="node" attr.name="port" attr.type="string"/>
+<key id="d6" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d5" for="node" attr.name="component" attr.type="string"/>
+<key id="d4" for="node" attr.name="node_kind" attr.type="string"/>
+<key id="d3" for="node" attr.name="bipartite" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="undirected"><data key="d0">pp_row_32</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">port_net</data>
+<node id="port:Pin@130,400[Rs_bit].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@130,400[Rs_bit]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">Rs_bit</data>
+  <data key="d10">130</data>
+  <data key="d11">400</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Bit Extender@180,400.in">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Bit Extender@180,400</data>
+  <data key="d6">Bit Extender</data>
+  <data key="d7">in</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">140</data>
+  <data key="d11">400</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:Pin@180,360[Rm].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@180,360[Rm]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">Rm</data>
+  <data key="d10">180</data>
+  <data key="d11">360</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:AND Gate@270,380.in0">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@270,380</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">in0</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">220</data>
+  <data key="d11">360</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:Bit Extender@180,400.out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Bit Extender@180,400</data>
+  <data key="d6">Bit Extender</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">180</data>
+  <data key="d11">400</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:AND Gate@270,380.in1">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@270,380</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">in1</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">220</data>
+  <data key="d11">400</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:Pin@310,380[result].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@310,380[result]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">in</data>
+  <data key="d9">result</data>
+  <data key="d10">310</data>
+  <data key="d11">380</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:AND Gate@270,380.out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">AND Gate@270,380</data>
+  <data key="d6">AND Gate</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">270</data>
+  <data key="d11">380</data>
+  <data key="d12">32</data>
+</node>
+<node id="net:0">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">0</data>
+  <data key="d14">net:Rs_bit</data>
+  <data key="d15">ok</data>
+  <data key="d16">Rs_bit</data>
+  <data key="d17">2</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:1">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">1</data>
+  <data key="d14">net:Rm</data>
+  <data key="d15">ok</data>
+  <data key="d16">Rm</data>
+  <data key="d17">5</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:2">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">2</data>
+  <data key="d14">net#2</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">5</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:3">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">3</data>
+  <data key="d14">net:result</data>
+  <data key="d15">ok</data>
+  <data key="d16">result</data>
+  <data key="d17">5</data>
+  <data key="d18">1</data>
+</node>
+<edge source="port:Pin@130,400[Rs_bit].p" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Bit Extender@180,400.in" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@180,360[Rm].p" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@270,380.in0" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Bit Extender@180,400.out" target="net:2" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@270,380.in1" target="net:2" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@310,380[result].p" target="net:3" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:AND Gate@270,380.out" target="net:3" id="0">
+  <data key="d19">attached</data>
+</edge>
+</graph></graphml>

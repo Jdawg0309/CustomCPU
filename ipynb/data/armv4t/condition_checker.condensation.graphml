@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="members" attr.type="string"/>
+<key id="d0" for="graph" attr.name="mapping" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">{"AND Gate@730,890.in0": 14, "AND Gate@730,890.in1": 21, "AND Gate@730,890.out": 33, "AND Gate@830,1050.in0": 22, "AND Gate@830,1050.in1": 40, "AND Gate@830,1050.out": 44, "Constant@1200,630.p": 48, "Constant@1200,640.p": 50, "Multiplexer@1240,570.in0": 11, "Multiplexer@1240,570.in1": 23, "Multiplexer@1240,570.in10": 41, "Multiplexer@1240,570.in11": 38, "Multiplexer@1240,570.in12": 43, "Multiplexer@1240,570.in13": 45, "Multiplexer@1240,570.in14": 47, "Multiplexer@1240,570.in15": 49, "Multiplexer@1240,570.in2": 15, "Multiplexer@1240,570.in3": 26, "Multiplexer@1240,570.in4": 6, "Multiplexer@1240,570.in5": 28, "Multiplexer@1240,570.in6": 19, "Multiplexer@1240,570.in7": 30, "Multiplexer@1240,570.in8": 32, "Multiplexer@1240,570.in9": 34, "Multiplexer@1240,570.out": 3, "Multiplexer@1240,570.sel": 0, "NOT Gate@720,470.in": 4, "NOT Gate@720,470.out": 29, "NOT Gate@720,560.in": 8, "NOT Gate@720,560.out": 24, "NOT Gate@720,650.in": 13, "NOT Gate@720,650.out": 27, "NOT Gate@720,750.in": 17, "NOT Gate@720,750.out": 31, "NOT Gate@930,810.in": 37, "NOT Gate@930,810.out": 42, "OR Gate@730,970.in0": 25, "OR Gate@730,970.in1": 9, "OR Gate@730,970.out": 35, "OR Gate@830,1160.in0": 10, "OR Gate@830,1160.in1": 36, "OR Gate@830,1160.out": 46, "Pin@1220,700[cond].p": 1, "Pin@1330,570.p": 2, "Pin@450,470[N].p": 7, "Pin@450,560[Z].p": 12, "Pin@450,650[C].p": 16, "Pin@450,750[V].p": 20, "XOR Gate@740,810.in0": 5, "XOR Gate@740,810.in1": 18, "XOR Gate@740,810.out": 39}</data>
+<node id="0">
+  <data key="d1">Multiplexer@1240,570.sel</data>
+</node>
+<node id="1">
+  <data key="d1">Pin@1220,700[cond].p</data>
+</node>
+<node id="2">
+  <data key="d1">Pin@1330,570.p</data>
+</node>
+<node id="3">
+  <data key="d1">Multiplexer@1240,570.out</data>
+</node>
+<node id="4">
+  <data key="d1">NOT Gate@720,470.in</data>
+</node>
+<node id="5">
+  <data key="d1">XOR Gate@740,810.in0</data>
+</node>
+<node id="6">
+  <data key="d1">Multiplexer@1240,570.in4</data>
+</node>
+<node id="7">
+  <data key="d1">Pin@450,470[N].p</data>
+</node>
+<node id="8">
+  <data key="d1">NOT Gate@720,560.in</data>
+</node>
+<node id="9">
+  <data key="d1">OR Gate@730,970.in1</data>
+</node>
+<node id="10">
+  <data key="d1">OR Gate@830,1160.in0</data>
+</node>
+<node id="11">
+  <data key="d1">Multiplexer@1240,570.in0</data>
+</node>
+<node id="12">
+  <data key="d1">Pin@450,560[Z].p</data>
+</node>
+<node id="13">
+  <data key="d1">NOT Gate@720,650.in</data>
+</node>
+<node id="14">
+  <data key="d1">AND Gate@730,890.in0</data>
+</node>
+<node id="15">
+  <data key="d1">Multiplexer@1240,570.in2</data>
+</node>
+<node id="16">
+  <data key="d1">Pin@450,650[C].p</data>
+</node>
+<node id="17">
+  <data key="d1">NOT Gate@720,750.in</data>
+</node>
+<node id="18">
+  <data key="d1">XOR Gate@740,810.in1</data>
+</node>
+<node id="19">
+  <data key="d1">Multiplexer@1240,570.in6</data>
+</node>
+<node id="20">
+  <data key="d1">Pin@450,750[V].p</data>
+</node>
+<node id="21">
+  <data key="d1">AND Gate@730,890.in1</data>
+</node>
+<node id="22">
+  <data key="d1">AND Gate@830,1050.in0</data>
+</node>
+<node id="23">
+  <data key="d1">Multiplexer@1240,570.in1</data>
+</node>
+<node id="24">
+  <data key="d1">NOT Gate@720,560.out</data>
+</node>
+<node id="25">
+  <data key="d1">OR Gate@730,970.in0</data>
+</node>
+<node id="26">
+  <data key="d1">Multiplexer@1240,570.in3</data>
+</node>
+<node id="27">
+  <data key="d1">NOT Gate@720,650.out</data>
+</node>
+<node id="28">
+  <data key="d1">Multiplexer@1240,570.in5</data>
+</node>
+<node id="29">
+  <data key="d1">NOT Gate@720,470.out</data>
+</node>
+<node id="30">
+  <data key="d1">Multiplexer@1240,570.in7</data>
+</node>
+<node id="31">
+  <data key="d1">NOT Gate@720,750.out</data>
+</node>
+<node id="32">
+  <data key="d1">Multiplexer@1240,570.in8</data>
+</node>
+<node id="33">
+  <data key="d1">AND Gate@730,890.out</data>
+</node>
+<node id="34">
+  <data key="d1">Multiplexer@1240,570.in9</data>
+</node>
+<node id="35">
+  <data key="d1">OR Gate@730,970.out</data>
+</node>
+<node id="36">
+  <data key="d1">OR Gate@830,1160.in1</data>
+</node>
+<node id="37">
+  <data key="d1">NOT Gate@930,810.in</data>
+</node>
+<node id="38">
+  <data key="d1">Multiplexer@1240,570.in11</data>
+</node>
+<node id="39">
+  <data key="d1">XOR Gate@740,810.out</data>
+</node>
+<node id="40">
+  <data key="d1">AND Gate@830,1050.in1</data>
+</node>
+<node id="41">
+  <data key="d1">Multiplexer@1240,570.in10</data>
+</node>
+<node id="42">
+  <data key="d1">NOT Gate@930,810.out</data>
+</node>
+<node id="43">
+  <data key="d1">Multiplexer@1240,570.in12</data>
+</node>
+<node id="44">
+  <data key="d1">AND Gate@830,1050.out</data>
+</node>
+<node id="45">
+  <data key="d1">Multiplexer@1240,570.in13</data>
+</node>
+<node id="46">
+  <data key="d1">OR Gate@830,1160.out</data>
+</node>
+<node id="47">
+  <data key="d1">Multiplexer@1240,570.in14</data>
+</node>
+<node id="48">
+  <data key="d1">Constant@1200,630.p</data>
+</node>
+<node id="49">
+  <data key="d1">Multiplexer@1240,570.in15</data>
+</node>
+<node id="50">
+  <data key="d1">Constant@1200,640.p</data>
+</node>
+<edge source="1" target="0"/>
+<edge source="3" target="2"/>
+<edge source="7" target="4"/>
+<edge source="7" target="5"/>
+<edge source="7" target="6"/>
+<edge source="12" target="8"/>
+<edge source="12" target="9"/>
+<edge source="12" target="10"/>
+<edge source="12" target="11"/>
+<edge source="16" target="13"/>
+<edge source="16" target="14"/>
+<edge source="16" target="15"/>
+<edge source="20" target="17"/>
+<edge source="20" target="18"/>
+<edge source="20" target="19"/>
+<edge source="24" target="21"/>
+<edge source="24" target="22"/>
+<edge source="24" target="23"/>
+<edge source="27" target="25"/>
+<edge source="27" target="26"/>
+<edge source="29" target="28"/>
+<edge source="31" target="30"/>
+<edge source="33" target="32"/>
+<edge source="35" target="34"/>
+<edge source="39" target="36"/>
+<edge source="39" target="37"/>
+<edge source="39" target="38"/>
+<edge source="42" target="40"/>
+<edge source="42" target="41"/>
+<edge source="44" target="43"/>
+<edge source="46" target="45"/>
+<edge source="48" target="47"/>
+<edge source="50" target="49"/>
+</graph></graphml>

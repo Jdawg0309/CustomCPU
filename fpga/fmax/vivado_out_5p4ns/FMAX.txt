@@ -1,0 +1,14 @@
+part            : xc7k480t-ffg901-2
+probe period    : 5.4 ns
+worst slack WNS : -0.152 ns
+achieved period : 5.552 ns
+FMAX            : 180.12 MHz
+
+LUTs            : 1206
+registers       : 618
+DSP slices      : 0
+block RAMs      : 0
+
+Sanity check: a small cell count with a high Fmax means the core was
+optimised away. Expect roughly 1500-2000 LUTs and ~646 registers; if
+registers are near zero the clock never reached the logic.

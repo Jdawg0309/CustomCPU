@@ -1,0 +1,2036 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">block_transfer_control</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Constant@1140,1090">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1140</data>
+  <data key="d6">1090</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Splitter@1140,1890">
+  <data key="d3">Splitter</data>
+  <data key="d4"></data>
+  <data key="d5">1140</data>
+  <data key="d6">1890</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1170,400">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1170</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1170,590">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1170</data>
+  <data key="d6">590</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1230,3330[phase_reg_q]">
+  <data key="d3">Pin</data>
+  <data key="d4">phase_reg_q</data>
+  <data key="d5">1230</data>
+  <data key="d6">3330</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1250,1010[reg_idx]">
+  <data key="d3">Pin</data>
+  <data key="d4">reg_idx</data>
+  <data key="d5">1250</data>
+  <data key="d6">1010</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1260,1090">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1260</data>
+  <data key="d6">1090</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1270,1260">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1270</data>
+  <data key="d6">1260</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1300,380[active]">
+  <data key="d3">Pin</data>
+  <data key="d4">active</data>
+  <data key="d5">1300</data>
+  <data key="d6">380</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1350,2200[base_or_step]">
+  <data key="d3">Probe</data>
+  <data key="d4">base_or_step</data>
+  <data key="d5">1350</data>
+  <data key="d6">2200</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1390,1470">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1390</data>
+  <data key="d6">1470</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1390,1490">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1390</data>
+  <data key="d6">1490</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1400,1580">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1400</data>
+  <data key="d6">1580</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1400,1750">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1400</data>
+  <data key="d6">1750</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1410,1980">
+  <data key="d3">Probe</data>
+  <data key="d4"></data>
+  <data key="d5">1410</data>
+  <data key="d6">1980</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1440,570[done]">
+  <data key="d3">Pin</data>
+  <data key="d4">done</data>
+  <data key="d5">1440</data>
+  <data key="d6">570</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1490,1080[plus_1]">
+  <data key="d3">Probe</data>
+  <data key="d4">plus_1</data>
+  <data key="d5">1490</data>
+  <data key="d6">1080</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1500,1250[minus_1]">
+  <data key="d3">Probe</data>
+  <data key="d4">minus_1</data>
+  <data key="d5">1500</data>
+  <data key="d6">1250</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1550,2700[final_address]">
+  <data key="d3">Pin</data>
+  <data key="d4">final_address</data>
+  <data key="d5">1550</data>
+  <data key="d6">2700</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1590,400[busy]">
+  <data key="d3">Probe</data>
+  <data key="d4">busy</data>
+  <data key="d5">1590</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1600,790[DONE_res]">
+  <data key="d3">Probe</data>
+  <data key="d4">DONE_res</data>
+  <data key="d5">1600</data>
+  <data key="d6">790</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1650,2240">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1650</data>
+  <data key="d6">2240</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1650,2350">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1650</data>
+  <data key="d6">2350</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1680,2210">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1680</data>
+  <data key="d6">2210</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Constant@1680,2320">
+  <data key="d3">Constant</data>
+  <data key="d4"></data>
+  <data key="d5">1680</data>
+  <data key="d6">2320</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1690,1570[idxisf]">
+  <data key="d3">Probe</data>
+  <data key="d4">idxisf</data>
+  <data key="d5">1690</data>
+  <data key="d6">1570</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1690,1740[idxis0]">
+  <data key="d3">Probe</data>
+  <data key="d4">idxis0</data>
+  <data key="d5">1690</data>
+  <data key="d6">1740</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1740,1180[stepped_idx]">
+  <data key="d3">Probe</data>
+  <data key="d4">stepped_idx</data>
+  <data key="d5">1740</data>
+  <data key="d6">1180</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1840,460[block_transfer_idle]">
+  <data key="d3">Probe</data>
+  <data key="d4">block_transfer_idle</data>
+  <data key="d5">1840</data>
+  <data key="d6">460</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1850,670[continue_active]">
+  <data key="d3">Probe</data>
+  <data key="d4">continue_active</data>
+  <data key="d5">1850</data>
+  <data key="d6">670</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1860,1340[scan_or_hold]">
+  <data key="d3">Probe</data>
+  <data key="d4">scan_or_hold</data>
+  <data key="d5">1860</data>
+  <data key="d6">1340</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1860,2550[transfer_address]">
+  <data key="d3">Pin</data>
+  <data key="d4">transfer_address</data>
+  <data key="d5">1860</data>
+  <data key="d6">2550</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1860,2830[load_enable]">
+  <data key="d3">Pin</data>
+  <data key="d4">load_enable</data>
+  <data key="d5">1860</data>
+  <data key="d6">2830</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1880,2230[dec4]">
+  <data key="d3">Probe</data>
+  <data key="d4">dec4</data>
+  <data key="d5">1880</data>
+  <data key="d6">2230</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@1880,2340[inc4]">
+  <data key="d3">Probe</data>
+  <data key="d4">inc4</data>
+  <data key="d5">1880</data>
+  <data key="d6">2340</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1900,2770[store_enable]">
+  <data key="d3">Pin</data>
+  <data key="d4">store_enable</data>
+  <data key="d5">1900</data>
+  <data key="d6">2770</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@2000,2190[stepped_addr]">
+  <data key="d3">Probe</data>
+  <data key="d4">stepped_addr</data>
+  <data key="d5">2000</data>
+  <data key="d6">2190</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@2100,1960[reg_selected]">
+  <data key="d3">Pin</data>
+  <data key="d4">reg_selected</data>
+  <data key="d5">2100</data>
+  <data key="d6">1960</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@2140,360[hold_pc]">
+  <data key="d3">Pin</data>
+  <data key="d4">hold_pc</data>
+  <data key="d5">2140</data>
+  <data key="d6">360</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@2160,450[accept_start]">
+  <data key="d3">Probe</data>
+  <data key="d4">accept_start</data>
+  <data key="d5">2160</data>
+  <data key="d6">450</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Probe@2300,1580[terminal]">
+  <data key="d3">Probe</data>
+  <data key="d4">terminal</data>
+  <data key="d5">2300</data>
+  <data key="d6">1580</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@280,1220[is_pop]">
+  <data key="d3">Pin</data>
+  <data key="d4">is_pop</data>
+  <data key="d5">280</data>
+  <data key="d6">1220</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@280,1880[reg_list_in]">
+  <data key="d3">Pin</data>
+  <data key="d4">reg_list_in</data>
+  <data key="d5">280</data>
+  <data key="d6">1880</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@280,2250[base_value]">
+  <data key="d3">Pin</data>
+  <data key="d4">base_value</data>
+  <data key="d5">280</data>
+  <data key="d6">2250</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@280,370[clk]">
+  <data key="d3">Pin</data>
+  <data key="d4">clk</data>
+  <data key="d5">280</data>
+  <data key="d6">370</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@280,450[rst]">
+  <data key="d3">Pin</data>
+  <data key="d4">rst</data>
+  <data key="d5">280</data>
+  <data key="d6">450</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@280,530[start]">
+  <data key="d3">Pin</data>
+  <data key="d4">start</data>
+  <data key="d5">280</data>
+  <data key="d6">530</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1300,600">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1300</data>
+  <data key="d6">600</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="NOT Gate@1350,3450">
+  <data key="d3">NOT Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1350</data>
+  <data key="d6">3450</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="NOT Gate@1370,690">
+  <data key="d3">NOT Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1370</data>
+  <data key="d6">690</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1390,770">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1390</data>
+  <data key="d6">770</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1440,720">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1440</data>
+  <data key="d6">720</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1480,670">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1480</data>
+  <data key="d6">670</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@1500,400">
+  <data key="d3">OR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1500</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="NOT Gate@1580,2790">
+  <data key="d3">NOT Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1580</data>
+  <data key="d6">2790</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@1660,3600">
+  <data key="d3">OR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1660</data>
+  <data key="d6">3600</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1670,2770">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1670</data>
+  <data key="d6">2770</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1670,2880">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1670</data>
+  <data key="d6">2880</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="NOT Gate@1680,1780">
+  <data key="d3">NOT Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1680</data>
+  <data key="d6">1780</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="NOT Gate@1690,400">
+  <data key="d3">NOT Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1690</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1760,1590">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1760</data>
+  <data key="d6">1590</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1770,1760">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1770</data>
+  <data key="d6">1760</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1820,2830">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1820</data>
+  <data key="d6">2830</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@1910,420">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1910</data>
+  <data key="d6">420</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@1930,1670">
+  <data key="d3">OR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">1930</data>
+  <data key="d6">1670</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@2020,3740">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">2020</data>
+  <data key="d6">3740</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@2030,1960">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">2030</data>
+  <data key="d6">1960</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@2050,1310[idx_adv]">
+  <data key="d3">AND Gate</data>
+  <data key="d4">idx_adv</data>
+  <data key="d5">2050</data>
+  <data key="d6">1310</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@2070,1650">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">2070</data>
+  <data key="d6">1650</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@2080,360">
+  <data key="d3">OR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">2080</data>
+  <data key="d6">360</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@2080,650">
+  <data key="d3">OR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">2080</data>
+  <data key="d6">650</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@2380,2270">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">2380</data>
+  <data key="d6">2270</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@2580,1740[termin_or_idx_adv]">
+  <data key="d3">OR Gate</data>
+  <data key="d4">termin_or_idx_adv</data>
+  <data key="d5">2580</data>
+  <data key="d6">1740</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@2820,1720[reg_sel_and_toi]">
+  <data key="d3">AND Gate</data>
+  <data key="d4">reg_sel_and_toi</data>
+  <data key="d5">2820</data>
+  <data key="d6">1720</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="OR Gate@870,2170">
+  <data key="d3">OR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">870</data>
+  <data key="d6">2170</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1030,1850">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1030</data>
+  <data key="d6">1850</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1140,1040[REG_INDEX]">
+  <data key="d3">Register</data>
+  <data key="d4">REG_INDEX</data>
+  <data key="d5">1140</data>
+  <data key="d6">1040</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1170,3300[PHASE_REG]">
+  <data key="d3">Register</data>
+  <data key="d4">PHASE_REG</data>
+  <data key="d5">1170</data>
+  <data key="d6">3300</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1170,350[ACTIVE_REG]">
+  <data key="d3">Register</data>
+  <data key="d4">ACTIVE_REG</data>
+  <data key="d5">1170</data>
+  <data key="d6">350</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1170,540[DONE_REG]">
+  <data key="d3">Register</data>
+  <data key="d4">DONE_REG</data>
+  <data key="d5">1170</data>
+  <data key="d6">540</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1460,2240[address_reg]">
+  <data key="d3">Register</data>
+  <data key="d4">address_reg</data>
+  <data key="d5">1460</data>
+  <data key="d6">2240</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1090,2200">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1090</data>
+  <data key="d6">2200</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1230,2240">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1230</data>
+  <data key="d6">2240</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1240,1980">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1240</data>
+  <data key="d6">1980</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1420,1480">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1420</data>
+  <data key="d6">1480</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1500,1160">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1500</data>
+  <data key="d6">1160</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1670,1350">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1670</data>
+  <data key="d6">1350</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1810,2550">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1810</data>
+  <data key="d6">2550</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@1960,2280">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">1960</data>
+  <data key="d6">2280</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Multiplexer@2070,1470">
+  <data key="d3">Multiplexer</data>
+  <data key="d4"></data>
+  <data key="d5">2070</data>
+  <data key="d6">1470</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Adder@1300,1080">
+  <data key="d3">Adder</data>
+  <data key="d4"></data>
+  <data key="d5">1300</data>
+  <data key="d6">1080</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Adder@1310,1250">
+  <data key="d3">Adder</data>
+  <data key="d4"></data>
+  <data key="d5">1310</data>
+  <data key="d6">1250</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Comparator@1440,1570">
+  <data key="d3">Comparator</data>
+  <data key="d4"></data>
+  <data key="d5">1440</data>
+  <data key="d6">1570</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Comparator@1440,1740">
+  <data key="d3">Comparator</data>
+  <data key="d4"></data>
+  <data key="d5">1440</data>
+  <data key="d6">1740</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Adder@1700,2230">
+  <data key="d3">Adder</data>
+  <data key="d4"></data>
+  <data key="d5">1700</data>
+  <data key="d6">2230</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Adder@1700,2340">
+  <data key="d3">Adder</data>
+  <data key="d4"></data>
+  <data key="d5">1700</data>
+  <data key="d6">2340</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<edge source="Constant@1140,1090" target="Register@1140,1040[REG_INDEX]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">en</data>
+  <data key="d11">Constant@1140,1090.p</data>
+  <data key="d12">Register@1140,1040[REG_INDEX].en</data>
+  <data key="d13">73</data>
+  <data key="d14">net:REG_INDEX</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="0">
+  <data key="d9">bit0</data>
+  <data key="d10">in0</data>
+  <data key="d11">Splitter@1140,1890.bit0</data>
+  <data key="d12">Multiplexer@1240,1980.in0</data>
+  <data key="d13">12</data>
+  <data key="d14">net#12</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="1">
+  <data key="d9">bit1</data>
+  <data key="d10">in1</data>
+  <data key="d11">Splitter@1140,1890.bit1</data>
+  <data key="d12">Multiplexer@1240,1980.in1</data>
+  <data key="d13">13</data>
+  <data key="d14">net#13</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="2">
+  <data key="d9">bit2</data>
+  <data key="d10">in2</data>
+  <data key="d11">Splitter@1140,1890.bit2</data>
+  <data key="d12">Multiplexer@1240,1980.in2</data>
+  <data key="d13">14</data>
+  <data key="d14">net#14</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="3">
+  <data key="d9">bit3</data>
+  <data key="d10">in3</data>
+  <data key="d11">Splitter@1140,1890.bit3</data>
+  <data key="d12">Multiplexer@1240,1980.in3</data>
+  <data key="d13">15</data>
+  <data key="d14">net#15</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="4">
+  <data key="d9">bit4</data>
+  <data key="d10">in4</data>
+  <data key="d11">Splitter@1140,1890.bit4</data>
+  <data key="d12">Multiplexer@1240,1980.in4</data>
+  <data key="d13">16</data>
+  <data key="d14">net#16</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="5">
+  <data key="d9">bit5</data>
+  <data key="d10">in5</data>
+  <data key="d11">Splitter@1140,1890.bit5</data>
+  <data key="d12">Multiplexer@1240,1980.in5</data>
+  <data key="d13">17</data>
+  <data key="d14">net#17</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="6">
+  <data key="d9">bit6</data>
+  <data key="d10">in6</data>
+  <data key="d11">Splitter@1140,1890.bit6</data>
+  <data key="d12">Multiplexer@1240,1980.in6</data>
+  <data key="d13">18</data>
+  <data key="d14">net#18</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="7">
+  <data key="d9">bit7</data>
+  <data key="d10">in7</data>
+  <data key="d11">Splitter@1140,1890.bit7</data>
+  <data key="d12">Multiplexer@1240,1980.in7</data>
+  <data key="d13">19</data>
+  <data key="d14">net#19</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="8">
+  <data key="d9">bit8</data>
+  <data key="d10">in8</data>
+  <data key="d11">Splitter@1140,1890.bit8</data>
+  <data key="d12">Multiplexer@1240,1980.in8</data>
+  <data key="d13">20</data>
+  <data key="d14">net#20</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="9">
+  <data key="d9">bit9</data>
+  <data key="d10">in9</data>
+  <data key="d11">Splitter@1140,1890.bit9</data>
+  <data key="d12">Multiplexer@1240,1980.in9</data>
+  <data key="d13">21</data>
+  <data key="d14">net#21</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="10">
+  <data key="d9">bit10</data>
+  <data key="d10">in10</data>
+  <data key="d11">Splitter@1140,1890.bit10</data>
+  <data key="d12">Multiplexer@1240,1980.in10</data>
+  <data key="d13">22</data>
+  <data key="d14">net#22</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="11">
+  <data key="d9">bit11</data>
+  <data key="d10">in11</data>
+  <data key="d11">Splitter@1140,1890.bit11</data>
+  <data key="d12">Multiplexer@1240,1980.in11</data>
+  <data key="d13">23</data>
+  <data key="d14">net#23</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="12">
+  <data key="d9">bit12</data>
+  <data key="d10">in12</data>
+  <data key="d11">Splitter@1140,1890.bit12</data>
+  <data key="d12">Multiplexer@1240,1980.in12</data>
+  <data key="d13">24</data>
+  <data key="d14">net#24</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="13">
+  <data key="d9">bit13</data>
+  <data key="d10">in13</data>
+  <data key="d11">Splitter@1140,1890.bit13</data>
+  <data key="d12">Multiplexer@1240,1980.in13</data>
+  <data key="d13">25</data>
+  <data key="d14">net#25</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="14">
+  <data key="d9">bit14</data>
+  <data key="d10">in14</data>
+  <data key="d11">Splitter@1140,1890.bit14</data>
+  <data key="d12">Multiplexer@1240,1980.in14</data>
+  <data key="d13">26</data>
+  <data key="d14">net#26</data>
+</edge>
+<edge source="Splitter@1140,1890" target="Multiplexer@1240,1980" id="15">
+  <data key="d9">bit15</data>
+  <data key="d10">in15</data>
+  <data key="d11">Splitter@1140,1890.bit15</data>
+  <data key="d12">Multiplexer@1240,1980.in15</data>
+  <data key="d13">27</data>
+  <data key="d14">net#27</data>
+</edge>
+<edge source="Constant@1170,400" target="Register@1170,350[ACTIVE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">en</data>
+  <data key="d11">Constant@1170,400.p</data>
+  <data key="d12">Register@1170,350[ACTIVE_REG].en</data>
+  <data key="d13">74</data>
+  <data key="d14">net:ACTIVE_REG</data>
+</edge>
+<edge source="Constant@1170,590" target="Register@1170,540[DONE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">en</data>
+  <data key="d11">Constant@1170,590.p</data>
+  <data key="d12">Register@1170,540[DONE_REG].en</data>
+  <data key="d13">75</data>
+  <data key="d14">net:DONE_REG</data>
+</edge>
+<edge source="Constant@1260,1090" target="Adder@1300,1080" id="0">
+  <data key="d9">p</data>
+  <data key="d10">b</data>
+  <data key="d11">Constant@1260,1090.p</data>
+  <data key="d12">Adder@1300,1080.b</data>
+  <data key="d13">76</data>
+  <data key="d14">net#76</data>
+</edge>
+<edge source="Constant@1270,1260" target="Adder@1310,1250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">b</data>
+  <data key="d11">Constant@1270,1260.p</data>
+  <data key="d12">Adder@1310,1250.b</data>
+  <data key="d13">77</data>
+  <data key="d14">net#77</data>
+</edge>
+<edge source="Constant@1390,1470" target="Multiplexer@1420,1480" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Constant@1390,1470.p</data>
+  <data key="d12">Multiplexer@1420,1480.in0</data>
+  <data key="d13">78</data>
+  <data key="d14">net#78</data>
+</edge>
+<edge source="Constant@1390,1490" target="Multiplexer@1420,1480" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Constant@1390,1490.p</data>
+  <data key="d12">Multiplexer@1420,1480.in1</data>
+  <data key="d13">79</data>
+  <data key="d14">net#79</data>
+</edge>
+<edge source="Constant@1400,1580" target="Comparator@1440,1570" id="0">
+  <data key="d9">p</data>
+  <data key="d10">b</data>
+  <data key="d11">Constant@1400,1580.p</data>
+  <data key="d12">Comparator@1440,1570.b</data>
+  <data key="d13">80</data>
+  <data key="d14">net#80</data>
+</edge>
+<edge source="Constant@1400,1750" target="Comparator@1440,1740" id="0">
+  <data key="d9">p</data>
+  <data key="d10">b</data>
+  <data key="d11">Constant@1400,1750.p</data>
+  <data key="d12">Comparator@1440,1740.b</data>
+  <data key="d13">81</data>
+  <data key="d14">net#81</data>
+</edge>
+<edge source="Constant@1650,2240" target="Adder@1700,2230" id="0">
+  <data key="d9">p</data>
+  <data key="d10">b</data>
+  <data key="d11">Constant@1650,2240.p</data>
+  <data key="d12">Adder@1700,2230.b</data>
+  <data key="d13">51</data>
+  <data key="d14">net#51</data>
+</edge>
+<edge source="Constant@1650,2350" target="Adder@1700,2340" id="0">
+  <data key="d9">p</data>
+  <data key="d10">b</data>
+  <data key="d11">Constant@1650,2350.p</data>
+  <data key="d12">Adder@1700,2340.b</data>
+  <data key="d13">52</data>
+  <data key="d14">net#52</data>
+</edge>
+<edge source="Constant@1680,2210" target="Adder@1700,2230" id="0">
+  <data key="d9">p</data>
+  <data key="d10">cin</data>
+  <data key="d11">Constant@1680,2210.p</data>
+  <data key="d12">Adder@1700,2230.cin</data>
+  <data key="d13">82</data>
+  <data key="d14">net#82</data>
+</edge>
+<edge source="Constant@1680,2320" target="Adder@1700,2340" id="0">
+  <data key="d9">p</data>
+  <data key="d10">cin</data>
+  <data key="d11">Constant@1680,2320.p</data>
+  <data key="d12">Adder@1700,2340.cin</data>
+  <data key="d13">83</data>
+  <data key="d14">net#83</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="NOT Gate@1580,2790" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">NOT Gate@1580,2790.in</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="AND Gate@1670,2880" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">AND Gate@1670,2880.in1</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="NOT Gate@1680,1780" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">NOT Gate@1680,1780.in</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="AND Gate@1760,1590" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">AND Gate@1760,1590.in1</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="Multiplexer@1420,1480" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">Multiplexer@1420,1480.sel</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="Multiplexer@1500,1160" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">Multiplexer@1500,1160.sel</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="Multiplexer@1810,2550" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">Multiplexer@1810,2550.sel</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1220[is_pop]" target="Multiplexer@1960,2280" id="0">
+  <data key="d9">p</data>
+  <data key="d10">sel</data>
+  <data key="d11">Pin@280,1220[is_pop].p</data>
+  <data key="d12">Multiplexer@1960,2280.sel</data>
+  <data key="d13">3</data>
+  <data key="d14">net:is_pop</data>
+</edge>
+<edge source="Pin@280,1880[reg_list_in]" target="Register@1030,1850" id="0">
+  <data key="d9">p</data>
+  <data key="d10">D</data>
+  <data key="d11">Pin@280,1880[reg_list_in].p</data>
+  <data key="d12">Register@1030,1850.D</data>
+  <data key="d13">70</data>
+  <data key="d14">net:reg_list_in</data>
+</edge>
+<edge source="Pin@280,2250[base_value]" target="Multiplexer@1230,2240" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@280,2250[base_value].p</data>
+  <data key="d12">Multiplexer@1230,2240.in1</data>
+  <data key="d13">71</data>
+  <data key="d14">net:base_value</data>
+</edge>
+<edge source="Pin@280,370[clk]" target="Register@1030,1850" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clk</data>
+  <data key="d11">Pin@280,370[clk].p</data>
+  <data key="d12">Register@1030,1850.clk</data>
+  <data key="d13">11</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,370[clk]" target="Register@1140,1040[REG_INDEX]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clk</data>
+  <data key="d11">Pin@280,370[clk].p</data>
+  <data key="d12">Register@1140,1040[REG_INDEX].clk</data>
+  <data key="d13">11</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,370[clk]" target="Register@1170,3300[PHASE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clk</data>
+  <data key="d11">Pin@280,370[clk].p</data>
+  <data key="d12">Register@1170,3300[PHASE_REG].clk</data>
+  <data key="d13">11</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,370[clk]" target="Register@1170,350[ACTIVE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clk</data>
+  <data key="d11">Pin@280,370[clk].p</data>
+  <data key="d12">Register@1170,350[ACTIVE_REG].clk</data>
+  <data key="d13">11</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,370[clk]" target="Register@1170,540[DONE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clk</data>
+  <data key="d11">Pin@280,370[clk].p</data>
+  <data key="d12">Register@1170,540[DONE_REG].clk</data>
+  <data key="d13">11</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,370[clk]" target="Register@1460,2240[address_reg]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clk</data>
+  <data key="d11">Pin@280,370[clk].p</data>
+  <data key="d12">Register@1460,2240[address_reg].clk</data>
+  <data key="d13">11</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,450[rst]" target="Register@1030,1850" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clr</data>
+  <data key="d11">Pin@280,450[rst].p</data>
+  <data key="d12">Register@1030,1850.clr</data>
+  <data key="d13">2</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,450[rst]" target="Register@1140,1040[REG_INDEX]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clr</data>
+  <data key="d11">Pin@280,450[rst].p</data>
+  <data key="d12">Register@1140,1040[REG_INDEX].clr</data>
+  <data key="d13">2</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,450[rst]" target="Register@1170,350[ACTIVE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clr</data>
+  <data key="d11">Pin@280,450[rst].p</data>
+  <data key="d12">Register@1170,350[ACTIVE_REG].clr</data>
+  <data key="d13">2</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,450[rst]" target="Register@1170,540[DONE_REG]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clr</data>
+  <data key="d11">Pin@280,450[rst].p</data>
+  <data key="d12">Register@1170,540[DONE_REG].clr</data>
+  <data key="d13">2</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,450[rst]" target="Register@1460,2240[address_reg]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">clr</data>
+  <data key="d11">Pin@280,450[rst].p</data>
+  <data key="d12">Register@1460,2240[address_reg].clr</data>
+  <data key="d13">2</data>
+  <data key="d14">net:ACTIVE_REG/DONE_REG</data>
+</edge>
+<edge source="Pin@280,530[start]" target="AND Gate@1910,420" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@280,530[start].p</data>
+  <data key="d12">AND Gate@1910,420.in1</data>
+  <data key="d13">64</data>
+  <data key="d14">net:start</data>
+</edge>
+<edge source="Pin@280,530[start]" target="OR Gate@870,2170" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@280,530[start].p</data>
+  <data key="d12">OR Gate@870,2170.in1</data>
+  <data key="d13">64</data>
+  <data key="d14">net:start</data>
+</edge>
+<edge source="AND Gate@1300,600" target="NOT Gate@1370,690" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in</data>
+  <data key="d11">AND Gate@1300,600.out</data>
+  <data key="d12">NOT Gate@1370,690.in</data>
+  <data key="d13">37</data>
+  <data key="d14">net#37</data>
+</edge>
+<edge source="NOT Gate@1350,3450" target="AND Gate@2020,3740" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">NOT Gate@1350,3450.out</data>
+  <data key="d12">AND Gate@2020,3740.in1</data>
+  <data key="d13">39</data>
+  <data key="d14">net#39</data>
+</edge>
+<edge source="NOT Gate@1370,690" target="AND Gate@1480,670" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">NOT Gate@1370,690.out</data>
+  <data key="d12">AND Gate@1480,670.in1</data>
+  <data key="d13">40</data>
+  <data key="d14">net#40</data>
+</edge>
+<edge source="AND Gate@1390,770" target="AND Gate@1440,720" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@1390,770.out</data>
+  <data key="d12">AND Gate@1440,720.in0</data>
+  <data key="d13">41</data>
+  <data key="d14">net#41</data>
+</edge>
+<edge source="AND Gate@1440,720" target="Probe@1600,790[DONE_res]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@1440,720.out</data>
+  <data key="d12">Probe@1600,790[DONE_res].p</data>
+  <data key="d13">5</data>
+  <data key="d14">net:DONE_REG/DONE_res</data>
+</edge>
+<edge source="AND Gate@1440,720" target="Register@1170,540[DONE_REG]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">D</data>
+  <data key="d11">AND Gate@1440,720.out</data>
+  <data key="d12">Register@1170,540[DONE_REG].D</data>
+  <data key="d13">5</data>
+  <data key="d14">net:DONE_REG/DONE_res</data>
+</edge>
+<edge source="AND Gate@1480,670" target="Probe@1850,670[continue_active]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@1480,670.out</data>
+  <data key="d12">Probe@1850,670[continue_active].p</data>
+  <data key="d13">45</data>
+  <data key="d14">net:continue_active/idx_adv</data>
+</edge>
+<edge source="AND Gate@1480,670" target="AND Gate@2050,1310[idx_adv]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@1480,670.out</data>
+  <data key="d12">AND Gate@2050,1310[idx_adv].in0</data>
+  <data key="d13">45</data>
+  <data key="d14">net:continue_active/idx_adv</data>
+</edge>
+<edge source="AND Gate@1480,670" target="OR Gate@2080,650" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">AND Gate@1480,670.out</data>
+  <data key="d12">OR Gate@2080,650.in1</data>
+  <data key="d13">45</data>
+  <data key="d14">net:continue_active/idx_adv</data>
+</edge>
+<edge source="OR Gate@1500,400" target="Probe@1590,400[busy]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">OR Gate@1500,400.out</data>
+  <data key="d12">Probe@1590,400[busy].p</data>
+  <data key="d13">47</data>
+  <data key="d14">net:busy</data>
+</edge>
+<edge source="OR Gate@1500,400" target="NOT Gate@1690,400" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in</data>
+  <data key="d11">OR Gate@1500,400.out</data>
+  <data key="d12">NOT Gate@1690,400.in</data>
+  <data key="d13">47</data>
+  <data key="d14">net:busy</data>
+</edge>
+<edge source="NOT Gate@1580,2790" target="OR Gate@1660,3600" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">NOT Gate@1580,2790.out</data>
+  <data key="d12">OR Gate@1660,3600.in0</data>
+  <data key="d13">49</data>
+  <data key="d14">net#49</data>
+</edge>
+<edge source="NOT Gate@1580,2790" target="AND Gate@1670,2770" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">NOT Gate@1580,2790.out</data>
+  <data key="d12">AND Gate@1670,2770.in1</data>
+  <data key="d13">49</data>
+  <data key="d14">net#49</data>
+</edge>
+<edge source="OR Gate@1660,3600" target="AND Gate@1300,600" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">OR Gate@1660,3600.out</data>
+  <data key="d12">AND Gate@1300,600.in1</data>
+  <data key="d13">35</data>
+  <data key="d14">net:idx_adv</data>
+</edge>
+<edge source="OR Gate@1660,3600" target="AND Gate@1440,720" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">OR Gate@1660,3600.out</data>
+  <data key="d12">AND Gate@1440,720.in1</data>
+  <data key="d13">35</data>
+  <data key="d14">net:idx_adv</data>
+</edge>
+<edge source="OR Gate@1660,3600" target="AND Gate@2050,1310[idx_adv]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">OR Gate@1660,3600.out</data>
+  <data key="d12">AND Gate@2050,1310[idx_adv].in1</data>
+  <data key="d13">35</data>
+  <data key="d14">net:idx_adv</data>
+</edge>
+<edge source="AND Gate@1670,2770" target="Pin@1900,2770[store_enable]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@1670,2770.out</data>
+  <data key="d12">Pin@1900,2770[store_enable].p</data>
+  <data key="d13">54</data>
+  <data key="d14">net:store_enable</data>
+</edge>
+<edge source="AND Gate@1670,2880" target="AND Gate@1820,2830" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@1670,2880.out</data>
+  <data key="d12">AND Gate@1820,2830.in0</data>
+  <data key="d13">55</data>
+  <data key="d14">net#55</data>
+</edge>
+<edge source="NOT Gate@1680,1780" target="AND Gate@1770,1760" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">NOT Gate@1680,1780.out</data>
+  <data key="d12">AND Gate@1770,1760.in1</data>
+  <data key="d13">56</data>
+  <data key="d14">net#56</data>
+</edge>
+<edge source="NOT Gate@1690,400" target="Probe@1840,460[block_transfer_idle]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">NOT Gate@1690,400.out</data>
+  <data key="d12">Probe@1840,460[block_transfer_idle].p</data>
+  <data key="d13">57</data>
+  <data key="d14">net:block_transfer_idle</data>
+</edge>
+<edge source="NOT Gate@1690,400" target="AND Gate@1910,420" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">NOT Gate@1690,400.out</data>
+  <data key="d12">AND Gate@1910,420.in0</data>
+  <data key="d13">57</data>
+  <data key="d14">net:block_transfer_idle</data>
+</edge>
+<edge source="AND Gate@1760,1590" target="OR Gate@1930,1670" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@1760,1590.out</data>
+  <data key="d12">OR Gate@1930,1670.in0</data>
+  <data key="d13">60</data>
+  <data key="d14">net#60</data>
+</edge>
+<edge source="AND Gate@1770,1760" target="OR Gate@1930,1670" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">AND Gate@1770,1760.out</data>
+  <data key="d12">OR Gate@1930,1670.in1</data>
+  <data key="d13">61</data>
+  <data key="d14">net#61</data>
+</edge>
+<edge source="AND Gate@1820,2830" target="Pin@1860,2830[load_enable]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@1820,2830.out</data>
+  <data key="d12">Pin@1860,2830[load_enable].p</data>
+  <data key="d13">63</data>
+  <data key="d14">net:load_enable</data>
+</edge>
+<edge source="AND Gate@1910,420" target="Probe@2160,450[accept_start]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@1910,420.out</data>
+  <data key="d12">Probe@2160,450[accept_start].p</data>
+  <data key="d13">48</data>
+  <data key="d14">net:accept_start</data>
+</edge>
+<edge source="AND Gate@1910,420" target="OR Gate@2080,360" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">AND Gate@1910,420.out</data>
+  <data key="d12">OR Gate@2080,360.in1</data>
+  <data key="d13">48</data>
+  <data key="d14">net:accept_start</data>
+</edge>
+<edge source="AND Gate@1910,420" target="OR Gate@2080,650" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@1910,420.out</data>
+  <data key="d12">OR Gate@2080,650.in0</data>
+  <data key="d13">48</data>
+  <data key="d14">net:accept_start</data>
+</edge>
+<edge source="AND Gate@1910,420" target="Register@1030,1850" id="0">
+  <data key="d9">out</data>
+  <data key="d10">en</data>
+  <data key="d11">AND Gate@1910,420.out</data>
+  <data key="d12">Register@1030,1850.en</data>
+  <data key="d13">48</data>
+  <data key="d14">net:accept_start</data>
+</edge>
+<edge source="AND Gate@1910,420" target="Multiplexer@1230,2240" id="0">
+  <data key="d9">out</data>
+  <data key="d10">sel</data>
+  <data key="d11">AND Gate@1910,420.out</data>
+  <data key="d12">Multiplexer@1230,2240.sel</data>
+  <data key="d13">48</data>
+  <data key="d14">net:accept_start</data>
+</edge>
+<edge source="AND Gate@1910,420" target="Multiplexer@2070,1470" id="0">
+  <data key="d9">out</data>
+  <data key="d10">sel</data>
+  <data key="d11">AND Gate@1910,420.out</data>
+  <data key="d12">Multiplexer@2070,1470.sel</data>
+  <data key="d13">48</data>
+  <data key="d14">net:accept_start</data>
+</edge>
+<edge source="OR Gate@1930,1670" target="AND Gate@2070,1650" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">OR Gate@1930,1670.out</data>
+  <data key="d12">AND Gate@2070,1650.in1</data>
+  <data key="d13">65</data>
+  <data key="d14">net#65</data>
+</edge>
+<edge source="AND Gate@2020,3740" target="Register@1170,3300[PHASE_REG]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">D</data>
+  <data key="d11">AND Gate@2020,3740.out</data>
+  <data key="d12">Register@1170,3300[PHASE_REG].D</data>
+  <data key="d13">0</data>
+  <data key="d14">net:PHASE_REG</data>
+</edge>
+<edge source="AND Gate@2030,1960" target="Pin@2100,1960[reg_selected]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@2030,1960.out</data>
+  <data key="d12">Pin@2100,1960[reg_selected].p</data>
+  <data key="d13">66</data>
+  <data key="d14">net:reg_sel_and_toi/reg_selected</data>
+</edge>
+<edge source="AND Gate@2030,1960" target="AND Gate@1670,2770" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2030,1960.out</data>
+  <data key="d12">AND Gate@1670,2770.in0</data>
+  <data key="d13">66</data>
+  <data key="d14">net:reg_sel_and_toi/reg_selected</data>
+</edge>
+<edge source="AND Gate@2030,1960" target="AND Gate@1670,2880" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2030,1960.out</data>
+  <data key="d12">AND Gate@1670,2880.in0</data>
+  <data key="d13">66</data>
+  <data key="d14">net:reg_sel_and_toi/reg_selected</data>
+</edge>
+<edge source="AND Gate@2030,1960" target="AND Gate@2820,1720[reg_sel_and_toi]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2030,1960.out</data>
+  <data key="d12">AND Gate@2820,1720[reg_sel_and_toi].in0</data>
+  <data key="d13">66</data>
+  <data key="d14">net:reg_sel_and_toi/reg_selected</data>
+</edge>
+<edge source="AND Gate@2030,1960" target="OR Gate@870,2170" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2030,1960.out</data>
+  <data key="d12">OR Gate@870,2170.in0</data>
+  <data key="d13">66</data>
+  <data key="d14">net:reg_sel_and_toi/reg_selected</data>
+</edge>
+<edge source="AND Gate@2050,1310[idx_adv]" target="OR Gate@2580,1740[termin_or_idx_adv]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">AND Gate@2050,1310[idx_adv].out</data>
+  <data key="d12">OR Gate@2580,1740[termin_or_idx_adv].in1</data>
+  <data key="d13">50</data>
+  <data key="d14">net:idx_adv/termin_or_idx_adv</data>
+</edge>
+<edge source="AND Gate@2050,1310[idx_adv]" target="Multiplexer@1670,1350" id="0">
+  <data key="d9">out</data>
+  <data key="d10">sel</data>
+  <data key="d11">AND Gate@2050,1310[idx_adv].out</data>
+  <data key="d12">Multiplexer@1670,1350.sel</data>
+  <data key="d13">50</data>
+  <data key="d14">net:idx_adv/termin_or_idx_adv</data>
+</edge>
+<edge source="AND Gate@2070,1650" target="Probe@2300,1580[terminal]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@2070,1650.out</data>
+  <data key="d12">Probe@2300,1580[terminal].p</data>
+  <data key="d13">1</data>
+  <data key="d14">net:terminal</data>
+</edge>
+<edge source="AND Gate@2070,1650" target="AND Gate@1300,600" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2070,1650.out</data>
+  <data key="d12">AND Gate@1300,600.in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:terminal</data>
+</edge>
+<edge source="AND Gate@2070,1650" target="AND Gate@1390,770" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">AND Gate@2070,1650.out</data>
+  <data key="d12">AND Gate@1390,770.in1</data>
+  <data key="d13">1</data>
+  <data key="d14">net:terminal</data>
+</edge>
+<edge source="AND Gate@2070,1650" target="AND Gate@2380,2270" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2070,1650.out</data>
+  <data key="d12">AND Gate@2380,2270.in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:terminal</data>
+</edge>
+<edge source="OR Gate@2080,360" target="Pin@2140,360[hold_pc]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">OR Gate@2080,360.out</data>
+  <data key="d12">Pin@2140,360[hold_pc].p</data>
+  <data key="d13">67</data>
+  <data key="d14">net:hold_pc</data>
+</edge>
+<edge source="OR Gate@2080,650" target="Register@1170,350[ACTIVE_REG]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">D</data>
+  <data key="d11">OR Gate@2080,650.out</data>
+  <data key="d12">Register@1170,350[ACTIVE_REG].D</data>
+  <data key="d13">28</data>
+  <data key="d14">net:ACTIVE_REG</data>
+</edge>
+<edge source="AND Gate@2380,2270" target="OR Gate@2580,1740[termin_or_idx_adv]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">AND Gate@2380,2270.out</data>
+  <data key="d12">OR Gate@2580,1740[termin_or_idx_adv].in0</data>
+  <data key="d13">68</data>
+  <data key="d14">net:termin_or_idx_adv</data>
+</edge>
+<edge source="OR Gate@2580,1740[termin_or_idx_adv]" target="AND Gate@2820,1720[reg_sel_and_toi]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">OR Gate@2580,1740[termin_or_idx_adv].out</data>
+  <data key="d12">AND Gate@2820,1720[reg_sel_and_toi].in1</data>
+  <data key="d13">69</data>
+  <data key="d14">net:reg_sel_and_toi/termin_or_idx_adv</data>
+</edge>
+<edge source="AND Gate@2820,1720[reg_sel_and_toi]" target="Multiplexer@1090,2200" id="0">
+  <data key="d9">out</data>
+  <data key="d10">sel</data>
+  <data key="d11">AND Gate@2820,1720[reg_sel_and_toi].out</data>
+  <data key="d12">Multiplexer@1090,2200.sel</data>
+  <data key="d13">7</data>
+  <data key="d14">net:reg_sel_and_toi</data>
+</edge>
+<edge source="OR Gate@870,2170" target="Register@1460,2240[address_reg]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">en</data>
+  <data key="d11">OR Gate@870,2170.out</data>
+  <data key="d12">Register@1460,2240[address_reg].en</data>
+  <data key="d13">72</data>
+  <data key="d14">net:address_reg</data>
+</edge>
+<edge source="Register@1030,1850" target="Splitter@1140,1890" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">combined</data>
+  <data key="d11">Register@1030,1850.Q</data>
+  <data key="d12">Splitter@1140,1890.combined</data>
+  <data key="d13">8</data>
+  <data key="d14">net#8</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Pin@1250,1010[reg_idx]" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Pin@1250,1010[reg_idx].p</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Multiplexer@1240,1980" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">sel</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Multiplexer@1240,1980.sel</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Multiplexer@1670,1350" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Multiplexer@1670,1350.in0</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Adder@1300,1080" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">a</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Adder@1300,1080.a</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Adder@1310,1250" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">a</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Adder@1310,1250.a</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Comparator@1440,1570" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">a</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Comparator@1440,1570.a</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1140,1040[REG_INDEX]" target="Comparator@1440,1740" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">a</data>
+  <data key="d11">Register@1140,1040[REG_INDEX].Q</data>
+  <data key="d12">Comparator@1440,1740.a</data>
+  <data key="d13">29</data>
+  <data key="d14">net:REG_INDEX/reg_idx</data>
+</edge>
+<edge source="Register@1170,3300[PHASE_REG]" target="Pin@1230,3330[phase_reg_q]" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1170,3300[PHASE_REG].Q</data>
+  <data key="d12">Pin@1230,3330[phase_reg_q].p</data>
+  <data key="d13">31</data>
+  <data key="d14">net:PHASE_REG/phase_reg_q</data>
+</edge>
+<edge source="Register@1170,3300[PHASE_REG]" target="NOT Gate@1350,3450" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in</data>
+  <data key="d11">Register@1170,3300[PHASE_REG].Q</data>
+  <data key="d12">NOT Gate@1350,3450.in</data>
+  <data key="d13">31</data>
+  <data key="d14">net:PHASE_REG/phase_reg_q</data>
+</edge>
+<edge source="Register@1170,3300[PHASE_REG]" target="OR Gate@1660,3600" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in1</data>
+  <data key="d11">Register@1170,3300[PHASE_REG].Q</data>
+  <data key="d12">OR Gate@1660,3600.in1</data>
+  <data key="d13">31</data>
+  <data key="d14">net:PHASE_REG/phase_reg_q</data>
+</edge>
+<edge source="Register@1170,3300[PHASE_REG]" target="AND Gate@1820,2830" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in1</data>
+  <data key="d11">Register@1170,3300[PHASE_REG].Q</data>
+  <data key="d12">AND Gate@1820,2830.in1</data>
+  <data key="d13">31</data>
+  <data key="d14">net:PHASE_REG/phase_reg_q</data>
+</edge>
+<edge source="Register@1170,3300[PHASE_REG]" target="AND Gate@2380,2270" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in1</data>
+  <data key="d11">Register@1170,3300[PHASE_REG].Q</data>
+  <data key="d12">AND Gate@2380,2270.in1</data>
+  <data key="d13">31</data>
+  <data key="d14">net:PHASE_REG/phase_reg_q</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="Pin@1300,380[active]" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">Pin@1300,380[active].p</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="AND Gate@1390,770" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">AND Gate@1390,770.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="AND Gate@1480,670" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">AND Gate@1480,670.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="OR Gate@1500,400" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">OR Gate@1500,400.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="AND Gate@2020,3740" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">AND Gate@2020,3740.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="AND Gate@2030,1960" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">AND Gate@2030,1960.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="AND Gate@2070,1650" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">AND Gate@2070,1650.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,350[ACTIVE_REG]" target="OR Gate@2080,360" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1170,350[ACTIVE_REG].Q</data>
+  <data key="d12">OR Gate@2080,360.in0</data>
+  <data key="d13">32</data>
+  <data key="d14">net:ACTIVE_REG/active</data>
+</edge>
+<edge source="Register@1170,540[DONE_REG]" target="Pin@1440,570[done]" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1170,540[DONE_REG].Q</data>
+  <data key="d12">Pin@1440,570[done].p</data>
+  <data key="d13">33</data>
+  <data key="d14">net:DONE_REG/done</data>
+</edge>
+<edge source="Register@1170,540[DONE_REG]" target="OR Gate@1500,400" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in1</data>
+  <data key="d11">Register@1170,540[DONE_REG].Q</data>
+  <data key="d12">OR Gate@1500,400.in1</data>
+  <data key="d13">33</data>
+  <data key="d14">net:DONE_REG/done</data>
+</edge>
+<edge source="Register@1460,2240[address_reg]" target="Pin@1550,2700[final_address]" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1460,2240[address_reg].Q</data>
+  <data key="d12">Pin@1550,2700[final_address].p</data>
+  <data key="d13">6</data>
+  <data key="d14">net:address_reg/final_address</data>
+</edge>
+<edge source="Register@1460,2240[address_reg]" target="Multiplexer@1090,2200" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in0</data>
+  <data key="d11">Register@1460,2240[address_reg].Q</data>
+  <data key="d12">Multiplexer@1090,2200.in0</data>
+  <data key="d13">6</data>
+  <data key="d14">net:address_reg/final_address</data>
+</edge>
+<edge source="Register@1460,2240[address_reg]" target="Multiplexer@1810,2550" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">in1</data>
+  <data key="d11">Register@1460,2240[address_reg].Q</data>
+  <data key="d12">Multiplexer@1810,2550.in1</data>
+  <data key="d13">6</data>
+  <data key="d14">net:address_reg/final_address</data>
+</edge>
+<edge source="Register@1460,2240[address_reg]" target="Adder@1700,2230" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">a</data>
+  <data key="d11">Register@1460,2240[address_reg].Q</data>
+  <data key="d12">Adder@1700,2230.a</data>
+  <data key="d13">6</data>
+  <data key="d14">net:address_reg/final_address</data>
+</edge>
+<edge source="Register@1460,2240[address_reg]" target="Adder@1700,2340" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">a</data>
+  <data key="d11">Register@1460,2240[address_reg].Q</data>
+  <data key="d12">Adder@1700,2340.a</data>
+  <data key="d13">6</data>
+  <data key="d14">net:address_reg/final_address</data>
+</edge>
+<edge source="Multiplexer@1090,2200" target="Multiplexer@1230,2240" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Multiplexer@1090,2200.out</data>
+  <data key="d12">Multiplexer@1230,2240.in0</data>
+  <data key="d13">9</data>
+  <data key="d14">net#9</data>
+</edge>
+<edge source="Multiplexer@1230,2240" target="Probe@1350,2200[base_or_step]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@1230,2240.out</data>
+  <data key="d12">Probe@1350,2200[base_or_step].p</data>
+  <data key="d13">30</data>
+  <data key="d14">net:address_reg/base_or_step</data>
+</edge>
+<edge source="Multiplexer@1230,2240" target="Register@1460,2240[address_reg]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">D</data>
+  <data key="d11">Multiplexer@1230,2240.out</data>
+  <data key="d12">Register@1460,2240[address_reg].D</data>
+  <data key="d13">30</data>
+  <data key="d14">net:address_reg/base_or_step</data>
+</edge>
+<edge source="Multiplexer@1240,1980" target="Probe@1410,1980" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@1240,1980.out</data>
+  <data key="d12">Probe@1410,1980.p</data>
+  <data key="d13">34</data>
+  <data key="d14">net#34</data>
+</edge>
+<edge source="Multiplexer@1240,1980" target="AND Gate@2030,1960" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Multiplexer@1240,1980.out</data>
+  <data key="d12">AND Gate@2030,1960.in1</data>
+  <data key="d13">34</data>
+  <data key="d14">net#34</data>
+</edge>
+<edge source="Multiplexer@1420,1480" target="Multiplexer@2070,1470" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Multiplexer@1420,1480.out</data>
+  <data key="d12">Multiplexer@2070,1470.in1</data>
+  <data key="d13">42</data>
+  <data key="d14">net#42</data>
+</edge>
+<edge source="Multiplexer@1500,1160" target="Probe@1740,1180[stepped_idx]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@1500,1160.out</data>
+  <data key="d12">Probe@1740,1180[stepped_idx].p</data>
+  <data key="d13">46</data>
+  <data key="d14">net:stepped_idx</data>
+</edge>
+<edge source="Multiplexer@1500,1160" target="Multiplexer@1670,1350" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Multiplexer@1500,1160.out</data>
+  <data key="d12">Multiplexer@1670,1350.in1</data>
+  <data key="d13">46</data>
+  <data key="d14">net:stepped_idx</data>
+</edge>
+<edge source="Multiplexer@1670,1350" target="Probe@1860,1340[scan_or_hold]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@1670,1350.out</data>
+  <data key="d12">Probe@1860,1340[scan_or_hold].p</data>
+  <data key="d13">53</data>
+  <data key="d14">net:scan_or_hold</data>
+</edge>
+<edge source="Multiplexer@1670,1350" target="Multiplexer@2070,1470" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Multiplexer@1670,1350.out</data>
+  <data key="d12">Multiplexer@2070,1470.in0</data>
+  <data key="d13">53</data>
+  <data key="d14">net:scan_or_hold</data>
+</edge>
+<edge source="Multiplexer@1810,2550" target="Pin@1860,2550[transfer_address]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@1810,2550.out</data>
+  <data key="d12">Pin@1860,2550[transfer_address].p</data>
+  <data key="d13">62</data>
+  <data key="d14">net:transfer_address</data>
+</edge>
+<edge source="Multiplexer@1960,2280" target="Probe@2000,2190[stepped_addr]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Multiplexer@1960,2280.out</data>
+  <data key="d12">Probe@2000,2190[stepped_addr].p</data>
+  <data key="d13">4</data>
+  <data key="d14">net:stepped_addr</data>
+</edge>
+<edge source="Multiplexer@1960,2280" target="Multiplexer@1090,2200" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Multiplexer@1960,2280.out</data>
+  <data key="d12">Multiplexer@1090,2200.in1</data>
+  <data key="d13">4</data>
+  <data key="d14">net:stepped_addr</data>
+</edge>
+<edge source="Multiplexer@2070,1470" target="Register@1140,1040[REG_INDEX]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">D</data>
+  <data key="d11">Multiplexer@2070,1470.out</data>
+  <data key="d12">Register@1140,1040[REG_INDEX].D</data>
+  <data key="d13">10</data>
+  <data key="d14">net:REG_INDEX</data>
+</edge>
+<edge source="Adder@1300,1080" target="Probe@1490,1080[plus_1]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Adder@1300,1080.out</data>
+  <data key="d12">Probe@1490,1080[plus_1].p</data>
+  <data key="d13">36</data>
+  <data key="d14">net:plus_1</data>
+</edge>
+<edge source="Adder@1300,1080" target="Multiplexer@1500,1160" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Adder@1300,1080.out</data>
+  <data key="d12">Multiplexer@1500,1160.in1</data>
+  <data key="d13">36</data>
+  <data key="d14">net:plus_1</data>
+</edge>
+<edge source="Adder@1310,1250" target="Probe@1500,1250[minus_1]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Adder@1310,1250.out</data>
+  <data key="d12">Probe@1500,1250[minus_1].p</data>
+  <data key="d13">38</data>
+  <data key="d14">net:minus_1</data>
+</edge>
+<edge source="Adder@1310,1250" target="Multiplexer@1500,1160" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Adder@1310,1250.out</data>
+  <data key="d12">Multiplexer@1500,1160.in0</data>
+  <data key="d13">38</data>
+  <data key="d14">net:minus_1</data>
+</edge>
+<edge source="Comparator@1440,1570" target="Probe@1690,1570[idxisf]" id="0">
+  <data key="d9">eq</data>
+  <data key="d10">p</data>
+  <data key="d11">Comparator@1440,1570.eq</data>
+  <data key="d12">Probe@1690,1570[idxisf].p</data>
+  <data key="d13">43</data>
+  <data key="d14">net:idxisf</data>
+</edge>
+<edge source="Comparator@1440,1570" target="AND Gate@1760,1590" id="0">
+  <data key="d9">eq</data>
+  <data key="d10">in0</data>
+  <data key="d11">Comparator@1440,1570.eq</data>
+  <data key="d12">AND Gate@1760,1590.in0</data>
+  <data key="d13">43</data>
+  <data key="d14">net:idxisf</data>
+</edge>
+<edge source="Comparator@1440,1740" target="Probe@1690,1740[idxis0]" id="0">
+  <data key="d9">eq</data>
+  <data key="d10">p</data>
+  <data key="d11">Comparator@1440,1740.eq</data>
+  <data key="d12">Probe@1690,1740[idxis0].p</data>
+  <data key="d13">44</data>
+  <data key="d14">net:idxis0</data>
+</edge>
+<edge source="Comparator@1440,1740" target="AND Gate@1770,1760" id="0">
+  <data key="d9">eq</data>
+  <data key="d10">in0</data>
+  <data key="d11">Comparator@1440,1740.eq</data>
+  <data key="d12">AND Gate@1770,1760.in0</data>
+  <data key="d13">44</data>
+  <data key="d14">net:idxis0</data>
+</edge>
+<edge source="Adder@1700,2230" target="Probe@1880,2230[dec4]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Adder@1700,2230.out</data>
+  <data key="d12">Probe@1880,2230[dec4].p</data>
+  <data key="d13">58</data>
+  <data key="d14">net:dec4</data>
+</edge>
+<edge source="Adder@1700,2230" target="Multiplexer@1810,2550" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Adder@1700,2230.out</data>
+  <data key="d12">Multiplexer@1810,2550.in0</data>
+  <data key="d13">58</data>
+  <data key="d14">net:dec4</data>
+</edge>
+<edge source="Adder@1700,2230" target="Multiplexer@1960,2280" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">Adder@1700,2230.out</data>
+  <data key="d12">Multiplexer@1960,2280.in0</data>
+  <data key="d13">58</data>
+  <data key="d14">net:dec4</data>
+</edge>
+<edge source="Adder@1700,2340" target="Probe@1880,2340[inc4]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">Adder@1700,2340.out</data>
+  <data key="d12">Probe@1880,2340[inc4].p</data>
+  <data key="d13">59</data>
+  <data key="d14">net:inc4</data>
+</edge>
+<edge source="Adder@1700,2340" target="Multiplexer@1960,2280" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Adder@1700,2340.out</data>
+  <data key="d12">Multiplexer@1960,2280.in1</data>
+  <data key="d13">59</data>
+  <data key="d14">net:inc4</data>
+</edge>
+</graph></graphml>

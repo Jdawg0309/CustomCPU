@@ -103,12 +103,24 @@ def _decoder_ports(c: Component) -> List[Port]:
     on (20, -10*(i+1))."""
     n = 1 << int(c.attrs.get("select", 1))
     ports = [Port("sel", 0, 0, "in"), Port("en", -10, 0, "in")]
-    ports += [Port("out%d" % i, 20, -10 * (i + 1), "out") for i in range(n)]
+    # Index 0 is the TOP output, not the bottom.  The positions were fitted
+    # against real wire endpoints, which proves the SET of points and says
+    # nothing about their order -- and a reversed order is invisible to every
+    # coverage measurement.  Caught by writing 0xA0+n to register n through
+    # reg16x32_1 and reading back register 15-n.
+    ports += [Port("out%d" % i, 20, -10 * (n - i), "out") for i in range(n)]
     return ports
 
 
 # --- arithmetic -------------------------------------------------------------
 def _adder_ports(c: Component) -> List[Port]:
+    return [Port("a", -40, -10, "in"), Port("b", -40, 10, "in"),
+            Port("cin", -20, -20, "in"), Port("cout", -20, 20, "out"),
+            Port("out", 0, 0, "out")]
+
+
+def _multiplier_ports(c: Component) -> List[Port]:
+    """Arithmetic-library multiplier, matching Logisim Evolution's symbol."""
     return [Port("a", -40, -10, "in"), Port("b", -40, 10, "in"),
             Port("cin", -20, -20, "in"), Port("cout", -20, 20, "out"),
             Port("out", 0, 0, "out")]
@@ -129,21 +141,19 @@ def _register_ports(c: Component) -> List[Port]:
             Port("clr", 30, 90, "in"), Port("Q", 60, 30, "out")]
 
 
-# ROM/RAM use the "logisim_evolution" appearance, whose box size (and so the
-# position of the far-edge data pin) is not recorded in the file.  Only the
-# pins that could be confirmed against real wire endpoints are modelled; the
-# types stay in UNMODELLED so `validate` attributes the gap rather than hiding
-# it behind a guessed coordinate.
+# ROM/RAM evolution-appearance geometry comes from RamAppearance.java.  The
+# symbol width is fixed at 200 and the separated-bus data output is 40 pixels
+# beyond it.  The current design uses one data line, separated input/output
+# buses, and byte-enable style controls, so its control block is 60 pixels for
+# ROM and 90 pixels for synchronous RAM.
 def _rom_ports(c: Component) -> List[Port]:
-    # The one pin that could be confirmed is the address input -- in armv4t it
-    # is driven by pc_fetch.pc_out, which also settles its direction.
-    return [Port("addr", 0, 10, "in")]
+    return [Port("addr", 0, 10, "in"), Port("data_out", 240, 60, "out")]
 
 
 def _ram_ports(c: Component) -> List[Port]:
-    return [Port("addr", 0, 10, "in"), Port("data_in", 0, 50, "in"),
-            Port("sel", 0, 60, "in"), Port("clk", 0, 70, "in"),
-            Port("we", 0, 90, "in")]
+    return [Port("addr", 0, 10, "in"), Port("we", 0, 50, "in"),
+            Port("oe", 0, 60, "in"), Port("clk", 0, 70, "in"),
+            Port("data_in", 0, 90, "in"), Port("data_out", 240, 90, "out")]
 
 
 # --- trivial ----------------------------------------------------------------
@@ -171,12 +181,28 @@ def _splitter_ports(c: Component) -> List[Port]:
         perp = (-d[1], d[0])
     else:
         perp = (d[1], -d[0])
+    # `appear` picks which SIDE the fans sit on.  It does not set the index
+    # order -- that is a fixed screen convention, and getting it from `appear`
+    # is wrong for half the facings.  Measured against live Logisim for all
+    # eight facing/appear combinations by feeding a known 4-bit value through a
+    # splitter with an identity bit map and reading which fan carried bit 3:
+    #
+    #     facing east/west   -> fan 0 is the TOPMOST fan, indices run down (+y)
+    #     facing north/south -> fan 0 is the RIGHTMOST fan, indices run left (-x)
+    #
+    # Only fan 0 or the last fan can tell two orderings apart, so a spot check
+    # on a middle fan proves nothing -- an earlier version of this function
+    # passed exactly such a check while being backwards for west and north.
+    slots = [(d[0] * 20 + perp[0] * (10 + 10 * spacing * k),
+              d[1] * 20 + perp[1] * (10 + 10 * spacing * k))
+             for k in range(fanout)]
+    if d[1] == 0:                       # east / west: top to bottom
+        slots.sort(key=lambda o: o[1])
+    else:                               # north / south: right to left
+        slots.sort(key=lambda o: -o[0])
     ports = [Port("combined", 0, 0, "inout")]
-    for i in range(fanout):
-        off = 10 + 10 * spacing * i
-        ports.append(Port("bit%d" % i,
-                          d[0] * 20 + perp[0] * off,
-                          d[1] * 20 + perp[1] * off, "inout"))
+    for i, (dx, dy) in enumerate(slots):
+        ports.append(Port("bit%d" % i, dx, dy, "inout"))
     return ports
 
 
@@ -192,7 +218,8 @@ BUILTIN = {
     "Power": _single("out"), "Ground": _single("out"),
     "NOT Gate": _not_ports, "Buffer": _not_ports,
     "Multiplexer": _mux_ports, "Demultiplexer": _mux_ports, "Decoder": _decoder_ports,
-    "Adder": _adder_ports, "Subtractor": _adder_ports, "Comparator": _comparator_ports,
+    "Adder": _adder_ports, "Subtractor": _adder_ports,
+    "Multiplier": _multiplier_ports, "Comparator": _comparator_ports,
     "Shifter": _shifter_ports,
     "Register": _register_ports, "ROM": _rom_ports, "RAM": _ram_ports,
     "Splitter": None,
@@ -200,9 +227,9 @@ BUILTIN = {
 for g in _GATES:
     BUILTIN[g] = _gate_ports
 
-# Types whose pin layout is not modelled; listed so `validate` can attribute
-# unmatched endpoints honestly instead of blaming the netlist.
-UNMODELLED = {"ROM", "RAM"}
+# Component types intentionally omitted from the geometry model.  The memory
+# appearances used by this project are now fully represented above.
+UNMODELLED = set()
 
 
 def _subcircuit_box_width(design: Design, name: str) -> int:

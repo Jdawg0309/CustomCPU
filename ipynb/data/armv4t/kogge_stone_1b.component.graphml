@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">kogge_stone_1b</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Pin@140,140[A]">
+  <data key="d3">Pin</data>
+  <data key="d4">A</data>
+  <data key="d5">140</data>
+  <data key="d6">140</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@140,180[B]">
+  <data key="d3">Pin</data>
+  <data key="d4">B</data>
+  <data key="d5">140</data>
+  <data key="d6">180</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@140,330[C_in]">
+  <data key="d3">Pin</data>
+  <data key="d4">C_in</data>
+  <data key="d5">140</data>
+  <data key="d6">330</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@510,160[g]">
+  <data key="d3">Pin</data>
+  <data key="d4">g</data>
+  <data key="d5">510</data>
+  <data key="d6">160</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@510,240[p]">
+  <data key="d3">Pin</data>
+  <data key="d4">p</data>
+  <data key="d5">510</data>
+  <data key="d6">240</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@510,310[sum]">
+  <data key="d3">Pin</data>
+  <data key="d4">sum</data>
+  <data key="d5">510</data>
+  <data key="d6">310</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@260,160[a_and_b]">
+  <data key="d3">AND Gate</data>
+  <data key="d4">a_and_b</data>
+  <data key="d5">260</data>
+  <data key="d6">160</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="XOR Gate@270,240[a_xor_b]">
+  <data key="d3">XOR Gate</data>
+  <data key="d4">a_xor_b</data>
+  <data key="d5">270</data>
+  <data key="d6">240</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="XOR Gate@450,310[p_xor_cin]">
+  <data key="d3">XOR Gate</data>
+  <data key="d4">p_xor_cin</data>
+  <data key="d5">450</data>
+  <data key="d6">310</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<edge source="Pin@140,140[A]" target="AND Gate@260,160[a_and_b]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@140,140[A].p</data>
+  <data key="d12">AND Gate@260,160[a_and_b].in0</data>
+  <data key="d13">0</data>
+  <data key="d14">net:A/a_and_b</data>
+</edge>
+<edge source="Pin@140,140[A]" target="XOR Gate@270,240[a_xor_b]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@140,140[A].p</data>
+  <data key="d12">XOR Gate@270,240[a_xor_b].in0</data>
+  <data key="d13">0</data>
+  <data key="d14">net:A/a_and_b</data>
+</edge>
+<edge source="Pin@140,180[B]" target="AND Gate@260,160[a_and_b]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@140,180[B].p</data>
+  <data key="d12">AND Gate@260,160[a_and_b].in1</data>
+  <data key="d13">1</data>
+  <data key="d14">net:B/a_and_b</data>
+</edge>
+<edge source="Pin@140,180[B]" target="XOR Gate@270,240[a_xor_b]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@140,180[B].p</data>
+  <data key="d12">XOR Gate@270,240[a_xor_b].in1</data>
+  <data key="d13">1</data>
+  <data key="d14">net:B/a_and_b</data>
+</edge>
+<edge source="Pin@140,330[C_in]" target="XOR Gate@450,310[p_xor_cin]" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in1</data>
+  <data key="d11">Pin@140,330[C_in].p</data>
+  <data key="d12">XOR Gate@450,310[p_xor_cin].in1</data>
+  <data key="d13">2</data>
+  <data key="d14">net:C_in/p_xor_cin</data>
+</edge>
+<edge source="AND Gate@260,160[a_and_b]" target="Pin@510,160[g]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@260,160[a_and_b].out</data>
+  <data key="d12">Pin@510,160[g].p</data>
+  <data key="d13">3</data>
+  <data key="d14">net:a_and_b/g</data>
+</edge>
+<edge source="XOR Gate@270,240[a_xor_b]" target="Pin@510,240[p]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">XOR Gate@270,240[a_xor_b].out</data>
+  <data key="d12">Pin@510,240[p].p</data>
+  <data key="d13">4</data>
+  <data key="d14">net:a_xor_b/p</data>
+</edge>
+<edge source="XOR Gate@270,240[a_xor_b]" target="XOR Gate@450,310[p_xor_cin]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in0</data>
+  <data key="d11">XOR Gate@270,240[a_xor_b].out</data>
+  <data key="d12">XOR Gate@450,310[p_xor_cin].in0</data>
+  <data key="d13">4</data>
+  <data key="d14">net:a_xor_b/p</data>
+</edge>
+<edge source="XOR Gate@450,310[p_xor_cin]" target="Pin@510,310[sum]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">XOR Gate@450,310[p_xor_cin].out</data>
+  <data key="d12">Pin@510,310[sum].p</data>
+  <data key="d13">5</data>
+  <data key="d14">net:p_xor_cin/sum</data>
+</edge>
+</graph></graphml>

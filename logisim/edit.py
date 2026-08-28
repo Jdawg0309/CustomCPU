@@ -38,11 +38,20 @@ def add_component(text: str, circuit: str, lib: str, name: str, loc: Point,
                   attrs: Dict[str, str] = None) -> str:
     a, b = _circuit_span(text, circuit)
     body = text[a:b]
-    xml = '    <comp lib="%s" loc="(%d,%d)" name="%s">\n' % (lib, loc[0], loc[1], name)
+    # A subcircuit instance carries no lib attribute -- writing lib="None"
+    # produces a file Logisim will not open.
+    libattr = '' if lib is None else ' lib="%s"' % lib
+    xml = '    <comp%s loc="(%d,%d)" name="%s">\n' % (libattr, loc[0], loc[1], name)
     for k, v in (attrs or {}).items():
         xml += '      <a name="%s" val="%s"/>\n' % (k, v)
     xml += "    </comp>\n"
-    return text[:a] + body.replace("    <wire", xml + "    <wire", 1) + text[b:]
+    # Anchor on the first wire, then the first comp, and fall back to the end of
+    # the circuit body -- an empty circuit has neither, and inserting before a
+    # marker that isn't there silently drops the component.
+    for anchor in ("    <wire", "    <comp"):
+        if anchor in body:
+            return text[:a] + body.replace(anchor, xml + anchor, 1) + text[b:]
+    return text[:a] + body + xml + text[b:]
 
 
 def safe_to_remove(design: Design, circuit: str, seg: Tuple[int, int, int, int]) -> List[Wire]:

@@ -4,8 +4,8 @@ Author: Junaet Mahbub. All ROM programs in this directory were written by the
 author, in assembly or C, and are built reproducibly by `build/build.py`.
 
 This directory is the canonical loadable test bundle for `../armv4t.circ`. It is
-intentionally flat: every ROM, assembly source, C reference, build tool, and
-expected result is directly inside `cpu/`.
+intentionally flat: every ROM lives here, its assembly and C sources in
+`../src/`, and the build and verification tools in `../build/`.
 
 ## Quick Start
 
@@ -15,7 +15,8 @@ expected result is directly inside `cpu/`.
 4. Reset the simulation and tick the clock manually.
 5. Compare registers, CPSR, PC, and RAM with the tables below.
 
-The instruction ROM is 256 words and is addressed by `PC[9:2]`. Regression
+The instruction ROM is 1024 words and is addressed by `PC[11:2]`, so ROM
+occupies `0x0000-0x0FFF` and RAM begins at `0x1000`. Regression
 tests 01 and 02 still contain exactly 16 sequential instructions and should be
 stopped after tick 16. Control-flow, memory, and math programs end in a stable
 branch-to-self loop.
@@ -62,7 +63,7 @@ test is `regression_12_memory.rom`.
 | `helper_stack_store_writeback.rom` | Verify pre-index, post-index, and suppressed store base writeback | R5=FC R13=104 RAM[3F]=AA RAM[40]=55 RAM[42]=33 |
 | `helper_stack_load_writeback.rom` | Verify simultaneous post-index LDR destination and stack-base writeback | R0=0 R1=AA R2=100 R13=100 RAM[3F]=AA |
 | `diagnostic_sync_ram_workaround.rom` | Prove synchronous-read latency with a sacrificial LDR before the real load | R1=AA R2=100 R12=0 R13=100 RAM[3F]=AA |
-| `helper_block_transfer_detect.rom` | Decode canonical `STMDB`/`LDMIA` used as GCC `PUSH`/`POP` | words 0/1: class=4; P/U/W/L fields match `BUILD_BLOCK_TRANSFER.md` |
+| `helper_block_transfer_detect.rom` | Decode canonical `STMDB`/`LDMIA` used as GCC `PUSH`/`POP` | words 0/1: class=4; P/U/W/L fields match `BUILD_BLOCK_TRANSFER.md` (archive branch `archive/full-2026-08-21`) |
 
 For `helper_stack_address_mux.rom`, stop after verifying the first four
 instructions. This test assumes stack base writeback is not connected yet, so
@@ -202,13 +203,14 @@ of the algorithms. They contain no library calls. Their expected outputs can be
 verified on the workstation with:
 
 ```text
-make -C cpu verify-host
+make -C build verify-host
 ```
 
 These C files are legitimate ARM target inputs, but compiler output must remain
 inside the implemented ARM-state subset. The first linked startup plus GCC test
-is `../c_tests/practical_rom`; its exact acceptance procedure is documented in
-`../PRACTICAL_C_CPU_TEST.md`. The matching hand-assembled ROMs remain the
+is `practical_rom` in this directory; its exact acceptance procedure is
+documented in `PRACTICAL_C_CPU_TEST.md` on the `archive/full-2026-08-21`
+branch. The matching hand-assembled ROMs remain the
 canonical algorithm regressions.
 
 ## Rebuild and Verify
@@ -217,12 +219,12 @@ Requirements: Python 3, a host C compiler, and the GNU Arm Embedded tools
 `arm-none-eabi-as` and `arm-none-eabi-objcopy`.
 
 ```text
-make -C cpu clean verify
-make -C cpu manifest
+make -C build clean verify
+make -C build manifest
 ```
 
 `build.py` rebuilds all thirteen math images and rejects programs larger than
-the 256-word instruction ROM. `--check` verifies generated images without
+its `MAX_ROM_WORDS` limit (still 256; the circuit now holds 1024). `--check` verifies generated images without
 changing them. `MANIFEST.sha256` fingerprints the release bundle.
 
 ## Keyboard Input Milestone

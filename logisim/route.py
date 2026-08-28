@@ -34,6 +34,16 @@ class Obstacles:
         return Obstacles(self.orient, self.ends - drop, self.pads - drop)
 
 
+# Components whose true footprint isn't known (see geometry.UNMODELLED --
+# currently ROM/RAM, whose "logisim_evolution" appearance box size isn't
+# recorded in the file) get a much wider keep-out than an ordinary gate.
+# Without this, a route can pass right next to one, undetected, and land on
+# a real pin the geometry model doesn't know exists -- which happened here:
+# a route skimmed past the instruction ROM and silently shorted onto its
+# (unmapped) data-output bus, closing a genuine fetch/decode feedback loop.
+UNKNOWN_FOOTPRINT_PAD = 150
+
+
 def obstacles(design: Design, circ: Circuit, wires: Sequence[Wire] = None,
               pad: int = 30) -> Obstacles:
     wires = list(circ.wires if wires is None else wires)
@@ -49,8 +59,9 @@ def obstacles(design: Design, circ: Circuit, wires: Sequence[Wire] = None,
         for p in geo.port_points(design, c):
             pads.add(p)
         x, y = c.loc
-        for dx in range(-pad, pad + 1, 10):
-            for dy in range(-pad, pad + 1, 10):
+        this_pad = UNKNOWN_FOOTPRINT_PAD if c.name in geo.UNMODELLED else pad
+        for dx in range(-this_pad, this_pad + 1, 10):
+            for dy in range(-this_pad, this_pad + 1, 10):
                 pads.add((x + dx, y + dy))
     return Obstacles(orient, ends, pads)
 

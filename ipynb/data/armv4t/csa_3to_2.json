@@ -1,0 +1,1791 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "csa_3to_2",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    140,
+    180,
+    710,
+    540
+  ],
+  "circuit": "csa_3to_2",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "X",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@140,230[X]",
+      "is_subcircuit": false,
+      "label": "X",
+      "library": "0",
+      "location": [
+        140,
+        230
+      ],
+      "ports": [
+        {
+          "anchor": [
+            140,
+            230
+          ],
+          "direction": "out",
+          "id": "Pin@140,230[X].p",
+          "name": "p",
+          "pin": [
+            140,
+            230
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "Y",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@140,250[Y]",
+      "is_subcircuit": false,
+      "label": "Y",
+      "library": "0",
+      "location": [
+        140,
+        250
+      ],
+      "ports": [
+        {
+          "anchor": [
+            140,
+            250
+          ],
+          "direction": "out",
+          "id": "Pin@140,250[Y].p",
+          "name": "p",
+          "pin": [
+            140,
+            250
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "Z",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@140,270[Z]",
+      "is_subcircuit": false,
+      "label": "Z",
+      "library": "0",
+      "location": [
+        140,
+        270
+      ],
+      "ports": [
+        {
+          "anchor": [
+            140,
+            270
+          ],
+          "direction": "out",
+          "id": "Pin@140,270[Z].p",
+          "name": "p",
+          "pin": [
+            140,
+            270
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "width": "5"
+      },
+      "facing": "east",
+      "id": "Constant@470,450",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        470,
+        450
+      ],
+      "ports": [
+        {
+          "anchor": [
+            470,
+            450
+          ],
+          "direction": "out",
+          "id": "Constant@470,450.p",
+          "name": "p",
+          "pin": [
+            470,
+            450
+          ],
+          "width": 5
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "carry",
+        "output": "true",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "west",
+      "id": "Pin@530,440[carry]",
+      "is_subcircuit": false,
+      "label": "carry",
+      "library": "0",
+      "location": [
+        530,
+        440
+      ],
+      "ports": [
+        {
+          "anchor": [
+            530,
+            440
+          ],
+          "direction": "in",
+          "id": "Pin@530,440[carry].p",
+          "name": "p",
+          "pin": [
+            530,
+            440
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "sum",
+        "output": "true",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "west",
+      "id": "Pin@710,250[sum]",
+      "is_subcircuit": false,
+      "label": "sum",
+      "library": "0",
+      "location": [
+        710,
+        250
+      ],
+      "ports": [
+        {
+          "anchor": [
+            710,
+            250
+          ],
+          "direction": "in",
+          "id": "Pin@710,250[sum].p",
+          "name": "p",
+          "pin": [
+            710,
+            250
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "label": "XandY",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "AND Gate@390,340[XandY]",
+      "is_subcircuit": false,
+      "label": "XandY",
+      "library": "1",
+      "location": [
+        390,
+        340
+      ],
+      "ports": [
+        {
+          "anchor": [
+            390,
+            340
+          ],
+          "direction": "in",
+          "id": "AND Gate@390,340[XandY].in0",
+          "name": "in0",
+          "pin": [
+            340,
+            320
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            390,
+            340
+          ],
+          "direction": "in",
+          "id": "AND Gate@390,340[XandY].in1",
+          "name": "in1",
+          "pin": [
+            340,
+            360
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            390,
+            340
+          ],
+          "direction": "out",
+          "id": "AND Gate@390,340[XandY].out",
+          "name": "out",
+          "pin": [
+            390,
+            340
+          ],
+          "width": 32
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {
+        "label": "XandZ",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "AND Gate@390,430[XandZ]",
+      "is_subcircuit": false,
+      "label": "XandZ",
+      "library": "1",
+      "location": [
+        390,
+        430
+      ],
+      "ports": [
+        {
+          "anchor": [
+            390,
+            430
+          ],
+          "direction": "in",
+          "id": "AND Gate@390,430[XandZ].in0",
+          "name": "in0",
+          "pin": [
+            340,
+            410
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            390,
+            430
+          ],
+          "direction": "in",
+          "id": "AND Gate@390,430[XandZ].in1",
+          "name": "in1",
+          "pin": [
+            340,
+            450
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            390,
+            430
+          ],
+          "direction": "out",
+          "id": "AND Gate@390,430[XandZ].out",
+          "name": "out",
+          "pin": [
+            390,
+            430
+          ],
+          "width": 32
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {
+        "label": "YandZ",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "AND Gate@390,520[YandZ]",
+      "is_subcircuit": false,
+      "label": "YandZ",
+      "library": "1",
+      "location": [
+        390,
+        520
+      ],
+      "ports": [
+        {
+          "anchor": [
+            390,
+            520
+          ],
+          "direction": "in",
+          "id": "AND Gate@390,520[YandZ].in0",
+          "name": "in0",
+          "pin": [
+            340,
+            500
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            390,
+            520
+          ],
+          "direction": "in",
+          "id": "AND Gate@390,520[YandZ].in1",
+          "name": "in1",
+          "pin": [
+            340,
+            540
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            390,
+            520
+          ],
+          "direction": "out",
+          "id": "AND Gate@390,520[YandZ].out",
+          "name": "out",
+          "pin": [
+            390,
+            520
+          ],
+          "width": 32
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "XOR Gate@400,250",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        400,
+        250
+      ],
+      "ports": [
+        {
+          "anchor": [
+            400,
+            250
+          ],
+          "direction": "in",
+          "id": "XOR Gate@400,250.in0",
+          "name": "in0",
+          "pin": [
+            340,
+            230
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            400,
+            250
+          ],
+          "direction": "in",
+          "id": "XOR Gate@400,250.in1",
+          "name": "in1",
+          "pin": [
+            340,
+            270
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            400,
+            250
+          ],
+          "direction": "out",
+          "id": "XOR Gate@400,250.out",
+          "name": "out",
+          "pin": [
+            400,
+            250
+          ],
+          "width": 32
+        }
+      ],
+      "type": "XOR Gate"
+    },
+    {
+      "attributes": {
+        "inputs": "3",
+        "label": "maj",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "OR Gate@460,430[maj]",
+      "is_subcircuit": false,
+      "label": "maj",
+      "library": "1",
+      "location": [
+        460,
+        430
+      ],
+      "ports": [
+        {
+          "anchor": [
+            460,
+            430
+          ],
+          "direction": "in",
+          "id": "OR Gate@460,430[maj].in0",
+          "name": "in0",
+          "pin": [
+            410,
+            410
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            460,
+            430
+          ],
+          "direction": "in",
+          "id": "OR Gate@460,430[maj].in1",
+          "name": "in1",
+          "pin": [
+            410,
+            430
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            460,
+            430
+          ],
+          "direction": "in",
+          "id": "OR Gate@460,430[maj].in2",
+          "name": "in2",
+          "pin": [
+            410,
+            450
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            460,
+            430
+          ],
+          "direction": "out",
+          "id": "OR Gate@460,430[maj].out",
+          "name": "out",
+          "pin": [
+            460,
+            430
+          ],
+          "width": 32
+        }
+      ],
+      "type": "OR Gate"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "XOR Gate@580,250",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        580,
+        250
+      ],
+      "ports": [
+        {
+          "anchor": [
+            580,
+            250
+          ],
+          "direction": "in",
+          "id": "XOR Gate@580,250.in0",
+          "name": "in0",
+          "pin": [
+            520,
+            230
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            580,
+            250
+          ],
+          "direction": "in",
+          "id": "XOR Gate@580,250.in1",
+          "name": "in1",
+          "pin": [
+            520,
+            270
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            580,
+            250
+          ],
+          "direction": "out",
+          "id": "XOR Gate@580,250.out",
+          "name": "out",
+          "pin": [
+            580,
+            250
+          ],
+          "width": 32
+        }
+      ],
+      "type": "XOR Gate"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Shifter@520,440",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        520,
+        440
+      ],
+      "ports": [
+        {
+          "anchor": [
+            520,
+            440
+          ],
+          "direction": "in",
+          "id": "Shifter@520,440.dist",
+          "name": "dist",
+          "pin": [
+            480,
+            450
+          ],
+          "width": 5
+        },
+        {
+          "anchor": [
+            520,
+            440
+          ],
+          "direction": "in",
+          "id": "Shifter@520,440.in",
+          "name": "in",
+          "pin": [
+            480,
+            430
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            520,
+            440
+          ],
+          "direction": "out",
+          "id": "Shifter@520,440.out",
+          "name": "out",
+          "pin": [
+            520,
+            440
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Shifter"
+    }
+  ],
+  "coverage": {
+    "endpoints": 43,
+    "matched": 43,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "csa_3to_2",
+    "edges": [
+      {
+        "dst": "OR Gate@460,430[maj].in0",
+        "net": 3,
+        "src": "AND Gate@390,340[XandY].out"
+      },
+      {
+        "dst": "OR Gate@460,430[maj].in1",
+        "net": 4,
+        "src": "AND Gate@390,430[XandZ].out"
+      },
+      {
+        "dst": "OR Gate@460,430[maj].in2",
+        "net": 5,
+        "src": "AND Gate@390,520[YandZ].out"
+      },
+      {
+        "dst": "Shifter@520,440.dist",
+        "net": 8,
+        "src": "Constant@470,450.p"
+      },
+      {
+        "dst": "Shifter@520,440.in",
+        "net": 7,
+        "src": "OR Gate@460,430[maj].out"
+      },
+      {
+        "dst": "AND Gate@390,340[XandY].in0",
+        "net": 0,
+        "src": "Pin@140,230[X].p"
+      },
+      {
+        "dst": "AND Gate@390,430[XandZ].in0",
+        "net": 0,
+        "src": "Pin@140,230[X].p"
+      },
+      {
+        "dst": "XOR Gate@400,250.in0",
+        "net": 0,
+        "src": "Pin@140,230[X].p"
+      },
+      {
+        "dst": "AND Gate@390,340[XandY].in1",
+        "net": 1,
+        "src": "Pin@140,250[Y].p"
+      },
+      {
+        "dst": "AND Gate@390,520[YandZ].in0",
+        "net": 1,
+        "src": "Pin@140,250[Y].p"
+      },
+      {
+        "dst": "XOR Gate@580,250.in0",
+        "net": 1,
+        "src": "Pin@140,250[Y].p"
+      },
+      {
+        "dst": "AND Gate@390,430[XandZ].in1",
+        "net": 2,
+        "src": "Pin@140,270[Z].p"
+      },
+      {
+        "dst": "AND Gate@390,520[YandZ].in1",
+        "net": 2,
+        "src": "Pin@140,270[Z].p"
+      },
+      {
+        "dst": "XOR Gate@400,250.in1",
+        "net": 2,
+        "src": "Pin@140,270[Z].p"
+      },
+      {
+        "dst": "Pin@530,440[carry].p",
+        "net": 9,
+        "src": "Shifter@520,440.out"
+      },
+      {
+        "dst": "XOR Gate@580,250.in1",
+        "net": 6,
+        "src": "XOR Gate@400,250.out"
+      },
+      {
+        "dst": "Pin@710,250[sum].p",
+        "net": 10,
+        "src": "XOR Gate@580,250.out"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Pin@140,230[X].p"
+        ],
+        "index": 0,
+        "labels": [
+          "X",
+          "XandY",
+          "XandZ"
+        ],
+        "name": "net:X/XandY",
+        "ports": [
+          "AND Gate@390,340[XandY].in0",
+          "AND Gate@390,430[XandZ].in0",
+          "Pin@140,230[X].p",
+          "XOR Gate@400,250.in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@140,250[Y].p"
+        ],
+        "index": 1,
+        "labels": [
+          "XandY",
+          "Y",
+          "YandZ"
+        ],
+        "name": "net:XandY/Y",
+        "ports": [
+          "AND Gate@390,340[XandY].in1",
+          "AND Gate@390,520[YandZ].in0",
+          "Pin@140,250[Y].p",
+          "XOR Gate@580,250.in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@140,270[Z].p"
+        ],
+        "index": 2,
+        "labels": [
+          "XandZ",
+          "YandZ",
+          "Z"
+        ],
+        "name": "net:XandZ/YandZ",
+        "ports": [
+          "AND Gate@390,430[XandZ].in1",
+          "AND Gate@390,520[YandZ].in1",
+          "Pin@140,270[Z].p",
+          "XOR Gate@400,250.in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@390,340[XandY].out"
+        ],
+        "index": 3,
+        "labels": [
+          "XandY",
+          "maj"
+        ],
+        "name": "net:XandY/maj",
+        "ports": [
+          "AND Gate@390,340[XandY].out",
+          "OR Gate@460,430[maj].in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@390,430[XandZ].out"
+        ],
+        "index": 4,
+        "labels": [
+          "XandZ",
+          "maj"
+        ],
+        "name": "net:XandZ/maj",
+        "ports": [
+          "AND Gate@390,430[XandZ].out",
+          "OR Gate@460,430[maj].in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@390,520[YandZ].out"
+        ],
+        "index": 5,
+        "labels": [
+          "YandZ",
+          "maj"
+        ],
+        "name": "net:YandZ/maj",
+        "ports": [
+          "AND Gate@390,520[YandZ].out",
+          "OR Gate@460,430[maj].in2"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "XOR Gate@400,250.out"
+        ],
+        "index": 6,
+        "labels": [],
+        "name": "net#6",
+        "ports": [
+          "XOR Gate@400,250.out",
+          "XOR Gate@580,250.in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "OR Gate@460,430[maj].out"
+        ],
+        "index": 7,
+        "labels": [
+          "maj"
+        ],
+        "name": "net:maj",
+        "ports": [
+          "OR Gate@460,430[maj].out",
+          "Shifter@520,440.in"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@470,450.p"
+        ],
+        "index": 8,
+        "labels": [],
+        "name": "net#8",
+        "ports": [
+          "Constant@470,450.p",
+          "Shifter@520,440.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@520,440.out"
+        ],
+        "index": 9,
+        "labels": [
+          "carry"
+        ],
+        "name": "net:carry",
+        "ports": [
+          "Pin@530,440[carry].p",
+          "Shifter@520,440.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "XOR Gate@580,250.out"
+        ],
+        "index": 10,
+        "labels": [
+          "sum"
+        ],
+        "name": "net:sum",
+        "ports": [
+          "Pin@710,250[sum].p",
+          "XOR Gate@580,250.out"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "AND Gate@390,340[XandY]",
+        "direction": "in",
+        "id": "AND Gate@390,340[XandY].in0",
+        "kind": "AND Gate",
+        "label": "XandY",
+        "loc": [
+          390,
+          340
+        ],
+        "pin": [
+          340,
+          320
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@390,340[XandY]",
+        "direction": "in",
+        "id": "AND Gate@390,340[XandY].in1",
+        "kind": "AND Gate",
+        "label": "XandY",
+        "loc": [
+          390,
+          340
+        ],
+        "pin": [
+          340,
+          360
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@390,340[XandY]",
+        "direction": "out",
+        "id": "AND Gate@390,340[XandY].out",
+        "kind": "AND Gate",
+        "label": "XandY",
+        "loc": [
+          390,
+          340
+        ],
+        "pin": [
+          390,
+          340
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "AND Gate@390,430[XandZ]",
+        "direction": "in",
+        "id": "AND Gate@390,430[XandZ].in0",
+        "kind": "AND Gate",
+        "label": "XandZ",
+        "loc": [
+          390,
+          430
+        ],
+        "pin": [
+          340,
+          410
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@390,430[XandZ]",
+        "direction": "in",
+        "id": "AND Gate@390,430[XandZ].in1",
+        "kind": "AND Gate",
+        "label": "XandZ",
+        "loc": [
+          390,
+          430
+        ],
+        "pin": [
+          340,
+          450
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@390,430[XandZ]",
+        "direction": "out",
+        "id": "AND Gate@390,430[XandZ].out",
+        "kind": "AND Gate",
+        "label": "XandZ",
+        "loc": [
+          390,
+          430
+        ],
+        "pin": [
+          390,
+          430
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "AND Gate@390,520[YandZ]",
+        "direction": "in",
+        "id": "AND Gate@390,520[YandZ].in0",
+        "kind": "AND Gate",
+        "label": "YandZ",
+        "loc": [
+          390,
+          520
+        ],
+        "pin": [
+          340,
+          500
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@390,520[YandZ]",
+        "direction": "in",
+        "id": "AND Gate@390,520[YandZ].in1",
+        "kind": "AND Gate",
+        "label": "YandZ",
+        "loc": [
+          390,
+          520
+        ],
+        "pin": [
+          340,
+          540
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@390,520[YandZ]",
+        "direction": "out",
+        "id": "AND Gate@390,520[YandZ].out",
+        "kind": "AND Gate",
+        "label": "YandZ",
+        "loc": [
+          390,
+          520
+        ],
+        "pin": [
+          390,
+          520
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Constant@470,450",
+        "direction": "out",
+        "id": "Constant@470,450.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          470,
+          450
+        ],
+        "pin": [
+          470,
+          450
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "OR Gate@460,430[maj]",
+        "direction": "in",
+        "id": "OR Gate@460,430[maj].in0",
+        "kind": "OR Gate",
+        "label": "maj",
+        "loc": [
+          460,
+          430
+        ],
+        "pin": [
+          410,
+          410
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "OR Gate@460,430[maj]",
+        "direction": "in",
+        "id": "OR Gate@460,430[maj].in1",
+        "kind": "OR Gate",
+        "label": "maj",
+        "loc": [
+          460,
+          430
+        ],
+        "pin": [
+          410,
+          430
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "OR Gate@460,430[maj]",
+        "direction": "in",
+        "id": "OR Gate@460,430[maj].in2",
+        "kind": "OR Gate",
+        "label": "maj",
+        "loc": [
+          460,
+          430
+        ],
+        "pin": [
+          410,
+          450
+        ],
+        "port": "in2"
+      },
+      {
+        "comp": "OR Gate@460,430[maj]",
+        "direction": "out",
+        "id": "OR Gate@460,430[maj].out",
+        "kind": "OR Gate",
+        "label": "maj",
+        "loc": [
+          460,
+          430
+        ],
+        "pin": [
+          460,
+          430
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Pin@140,230[X]",
+        "direction": "out",
+        "id": "Pin@140,230[X].p",
+        "kind": "Pin",
+        "label": "X",
+        "loc": [
+          140,
+          230
+        ],
+        "pin": [
+          140,
+          230
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@140,250[Y]",
+        "direction": "out",
+        "id": "Pin@140,250[Y].p",
+        "kind": "Pin",
+        "label": "Y",
+        "loc": [
+          140,
+          250
+        ],
+        "pin": [
+          140,
+          250
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@140,270[Z]",
+        "direction": "out",
+        "id": "Pin@140,270[Z].p",
+        "kind": "Pin",
+        "label": "Z",
+        "loc": [
+          140,
+          270
+        ],
+        "pin": [
+          140,
+          270
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@530,440[carry]",
+        "direction": "in",
+        "id": "Pin@530,440[carry].p",
+        "kind": "Pin",
+        "label": "carry",
+        "loc": [
+          530,
+          440
+        ],
+        "pin": [
+          530,
+          440
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@710,250[sum]",
+        "direction": "in",
+        "id": "Pin@710,250[sum].p",
+        "kind": "Pin",
+        "label": "sum",
+        "loc": [
+          710,
+          250
+        ],
+        "pin": [
+          710,
+          250
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Shifter@520,440",
+        "direction": "in",
+        "id": "Shifter@520,440.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          520,
+          440
+        ],
+        "pin": [
+          480,
+          450
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@520,440",
+        "direction": "in",
+        "id": "Shifter@520,440.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          520,
+          440
+        ],
+        "pin": [
+          480,
+          430
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@520,440",
+        "direction": "out",
+        "id": "Shifter@520,440.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          520,
+          440
+        ],
+        "pin": [
+          520,
+          440
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "XOR Gate@400,250",
+        "direction": "in",
+        "id": "XOR Gate@400,250.in0",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          400,
+          250
+        ],
+        "pin": [
+          340,
+          230
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "XOR Gate@400,250",
+        "direction": "in",
+        "id": "XOR Gate@400,250.in1",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          400,
+          250
+        ],
+        "pin": [
+          340,
+          270
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "XOR Gate@400,250",
+        "direction": "out",
+        "id": "XOR Gate@400,250.out",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          400,
+          250
+        ],
+        "pin": [
+          400,
+          250
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "XOR Gate@580,250",
+        "direction": "in",
+        "id": "XOR Gate@580,250.in0",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          580,
+          250
+        ],
+        "pin": [
+          520,
+          230
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "XOR Gate@580,250",
+        "direction": "in",
+        "id": "XOR Gate@580,250.in1",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          580,
+          250
+        ],
+        "pin": [
+          520,
+          270
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "XOR Gate@580,250",
+        "direction": "out",
+        "id": "XOR Gate@580,250.out",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          580,
+          250
+        ],
+        "pin": [
+          580,
+          250
+        ],
+        "port": "out"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@140,230[X]",
+      "Pin@140,250[Y]",
+      "Pin@140,270[Z]"
+    ],
+    "outputs": [
+      "Pin@710,250[sum]",
+      "Pin@530,440[carry]"
+    ]
+  },
+  "inventory": {
+    "AND Gate": 3,
+    "Constant": 1,
+    "OR Gate": 1,
+    "Pin": 5,
+    "Shifter": 1,
+    "XOR Gate": 2
+  },
+  "source": "/home/junaet/Documents/CustomCPU/armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        140,
+        230
+      ],
+      "index": 0,
+      "to": [
+        290,
+        230
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        140,
+        250
+      ],
+      "index": 1,
+      "to": [
+        260,
+        250
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        140,
+        270
+      ],
+      "index": 2,
+      "to": [
+        230,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        230,
+        270
+      ],
+      "index": 3,
+      "to": [
+        230,
+        450
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        230,
+        270
+      ],
+      "index": 4,
+      "to": [
+        340,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        230,
+        450
+      ],
+      "index": 5,
+      "to": [
+        230,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        230,
+        450
+      ],
+      "index": 6,
+      "to": [
+        340,
+        450
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        230,
+        540
+      ],
+      "index": 7,
+      "to": [
+        340,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        180
+      ],
+      "index": 8,
+      "to": [
+        260,
+        250
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        180
+      ],
+      "index": 9,
+      "to": [
+        520,
+        180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        250
+      ],
+      "index": 10,
+      "to": [
+        260,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        360
+      ],
+      "index": 11,
+      "to": [
+        260,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        360
+      ],
+      "index": 12,
+      "to": [
+        340,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        500
+      ],
+      "index": 13,
+      "to": [
+        340,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        230
+      ],
+      "index": 14,
+      "to": [
+        290,
+        320
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        230
+      ],
+      "index": 15,
+      "to": [
+        340,
+        230
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        320
+      ],
+      "index": 16,
+      "to": [
+        290,
+        410
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        320
+      ],
+      "index": 17,
+      "to": [
+        340,
+        320
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        290,
+        410
+      ],
+      "index": 18,
+      "to": [
+        340,
+        410
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        340
+      ],
+      "index": 19,
+      "to": [
+        410,
+        340
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        430
+      ],
+      "index": 20,
+      "to": [
+        410,
+        430
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        520
+      ],
+      "index": 21,
+      "to": [
+        410,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        400,
+        250
+      ],
+      "index": 22,
+      "to": [
+        500,
+        250
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        410,
+        340
+      ],
+      "index": 23,
+      "to": [
+        410,
+        410
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        410,
+        450
+      ],
+      "index": 24,
+      "to": [
+        410,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        460,
+        430
+      ],
+      "index": 25,
+      "to": [
+        480,
+        430
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        450
+      ],
+      "index": 26,
+      "to": [
+        480,
+        450
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        250
+      ],
+      "index": 27,
+      "to": [
+        500,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        270
+      ],
+      "index": 28,
+      "to": [
+        520,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        520,
+        180
+      ],
+      "index": 29,
+      "to": [
+        520,
+        230
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        520,
+        440
+      ],
+      "index": 30,
+      "to": [
+        530,
+        440
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        580,
+        250
+      ],
+      "index": 31,
+      "to": [
+        710,
+        250
+      ]
+    }
+  ]
+}

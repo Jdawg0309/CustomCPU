@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">a_invert</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Pin@220,390[a_inversion]">
+  <data key="d3">Pin</data>
+  <data key="d4">a_inversion</data>
+  <data key="d5">220</data>
+  <data key="d6">390</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@340,340[A]">
+  <data key="d3">Pin</data>
+  <data key="d4">A</data>
+  <data key="d5">340</data>
+  <data key="d6">340</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Bit Extender@360,390">
+  <data key="d3">Bit Extender</data>
+  <data key="d4"></data>
+  <data key="d5">360</data>
+  <data key="d6">390</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@550,390[B]">
+  <data key="d3">Pin</data>
+  <data key="d4">B</data>
+  <data key="d5">550</data>
+  <data key="d6">390</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="XOR Gate@450,370">
+  <data key="d3">XOR Gate</data>
+  <data key="d4"></data>
+  <data key="d5">450</data>
+  <data key="d6">370</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="ks_32b@790,370">
+  <data key="d3">ks_32b</data>
+  <data key="d4"></data>
+  <data key="d5">790</data>
+  <data key="d6">370</data>
+  <data key="d7">east</data>
+  <data key="d8">True</data>
+</node>
+<edge source="Pin@220,390[a_inversion]" target="Bit Extender@360,390" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@220,390[a_inversion].p</data>
+  <data key="d12">Bit Extender@360,390.in</data>
+  <data key="d13">0</data>
+  <data key="d14">net:a_inversion</data>
+</edge>
+<edge source="Pin@220,390[a_inversion]" target="ks_32b@790,370" id="0">
+  <data key="d9">p</data>
+  <data key="d10">Cin</data>
+  <data key="d11">Pin@220,390[a_inversion].p</data>
+  <data key="d12">ks_32b@790,370.Cin</data>
+  <data key="d13">0</data>
+  <data key="d14">net:a_inversion</data>
+</edge>
+<edge source="Pin@340,340[A]" target="XOR Gate@450,370" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@340,340[A].p</data>
+  <data key="d12">XOR Gate@450,370.in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:A</data>
+</edge>
+<edge source="Bit Extender@360,390" target="XOR Gate@450,370" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Bit Extender@360,390.out</data>
+  <data key="d12">XOR Gate@450,370.in1</data>
+  <data key="d13">2</data>
+  <data key="d14">net#2</data>
+</edge>
+<edge source="Pin@550,390[B]" target="ks_32b@790,370" id="0">
+  <data key="d9">p</data>
+  <data key="d10">B</data>
+  <data key="d11">Pin@550,390[B].p</data>
+  <data key="d12">ks_32b@790,370.B</data>
+  <data key="d13">4</data>
+  <data key="d14">net:B</data>
+</edge>
+<edge source="XOR Gate@450,370" target="ks_32b@790,370" id="0">
+  <data key="d9">out</data>
+  <data key="d10">A</data>
+  <data key="d11">XOR Gate@450,370.out</data>
+  <data key="d12">ks_32b@790,370.A</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+</graph></graphml>

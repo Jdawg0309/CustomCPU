@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="members" attr.type="string"/>
+<key id="d0" for="graph" attr.name="mapping" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">{"AND Gate@270,380.in0": 2, "AND Gate@270,380.in1": 4, "AND Gate@270,380.out": 7, "Bit Extender@180,400.in": 0, "Bit Extender@180,400.out": 5, "Pin@130,400[Rs_bit].p": 1, "Pin@180,360[Rm].p": 3, "Pin@310,380[result].p": 6}</data>
+<node id="0">
+  <data key="d1">Bit Extender@180,400.in</data>
+</node>
+<node id="1">
+  <data key="d1">Pin@130,400[Rs_bit].p</data>
+</node>
+<node id="2">
+  <data key="d1">AND Gate@270,380.in0</data>
+</node>
+<node id="3">
+  <data key="d1">Pin@180,360[Rm].p</data>
+</node>
+<node id="4">
+  <data key="d1">AND Gate@270,380.in1</data>
+</node>
+<node id="5">
+  <data key="d1">Bit Extender@180,400.out</data>
+</node>
+<node id="6">
+  <data key="d1">Pin@310,380[result].p</data>
+</node>
+<node id="7">
+  <data key="d1">AND Gate@270,380.out</data>
+</node>
+<edge source="1" target="0"/>
+<edge source="3" target="2"/>
+<edge source="5" target="4"/>
+<edge source="7" target="6"/>
+</graph></graphml>

@@ -1,0 +1,3311 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "condition_checker",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    450,
+    470,
+    1330,
+    1180
+  ],
+  "circuit": "condition_checker",
+  "components": [
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "Constant@1200,630",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        1200,
+        630
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1200,
+            630
+          ],
+          "direction": "out",
+          "id": "Constant@1200,630.p",
+          "name": "p",
+          "pin": [
+            1200,
+            630
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x0"
+      },
+      "facing": "east",
+      "id": "Constant@1200,640",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        1200,
+        640
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1200,
+            640
+          ],
+          "direction": "out",
+          "id": "Constant@1200,640.p",
+          "name": "p",
+          "pin": [
+            1200,
+            640
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "cond",
+        "radix": "16",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Pin@1220,700[cond]",
+      "is_subcircuit": false,
+      "label": "cond",
+      "library": "0",
+      "location": [
+        1220,
+        700
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1220,
+            700
+          ],
+          "direction": "out",
+          "id": "Pin@1220,700[cond].p",
+          "name": "p",
+          "pin": [
+            1220,
+            700
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "output": "true"
+      },
+      "facing": "west",
+      "id": "Pin@1330,570",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        1330,
+        570
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1330,
+            570
+          ],
+          "direction": "in",
+          "id": "Pin@1330,570.p",
+          "name": "p",
+          "pin": [
+            1330,
+            570
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "N"
+      },
+      "facing": "east",
+      "id": "Pin@450,470[N]",
+      "is_subcircuit": false,
+      "label": "N",
+      "library": "0",
+      "location": [
+        450,
+        470
+      ],
+      "ports": [
+        {
+          "anchor": [
+            450,
+            470
+          ],
+          "direction": "out",
+          "id": "Pin@450,470[N].p",
+          "name": "p",
+          "pin": [
+            450,
+            470
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "Z"
+      },
+      "facing": "east",
+      "id": "Pin@450,560[Z]",
+      "is_subcircuit": false,
+      "label": "Z",
+      "library": "0",
+      "location": [
+        450,
+        560
+      ],
+      "ports": [
+        {
+          "anchor": [
+            450,
+            560
+          ],
+          "direction": "out",
+          "id": "Pin@450,560[Z].p",
+          "name": "p",
+          "pin": [
+            450,
+            560
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "C"
+      },
+      "facing": "east",
+      "id": "Pin@450,650[C]",
+      "is_subcircuit": false,
+      "label": "C",
+      "library": "0",
+      "location": [
+        450,
+        650
+      ],
+      "ports": [
+        {
+          "anchor": [
+            450,
+            650
+          ],
+          "direction": "out",
+          "id": "Pin@450,650[C].p",
+          "name": "p",
+          "pin": [
+            450,
+            650
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "V"
+      },
+      "facing": "east",
+      "id": "Pin@450,750[V]",
+      "is_subcircuit": false,
+      "label": "V",
+      "library": "0",
+      "location": [
+        450,
+        750
+      ],
+      "ports": [
+        {
+          "anchor": [
+            450,
+            750
+          ],
+          "direction": "out",
+          "id": "Pin@450,750[V].p",
+          "name": "p",
+          "pin": [
+            450,
+            750
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "NOT Gate@720,470",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        720,
+        470
+      ],
+      "ports": [
+        {
+          "anchor": [
+            720,
+            470
+          ],
+          "direction": "in",
+          "id": "NOT Gate@720,470.in",
+          "name": "in",
+          "pin": [
+            690,
+            470
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            720,
+            470
+          ],
+          "direction": "out",
+          "id": "NOT Gate@720,470.out",
+          "name": "out",
+          "pin": [
+            720,
+            470
+          ],
+          "width": 1
+        }
+      ],
+      "type": "NOT Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "NOT Gate@720,560",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        720,
+        560
+      ],
+      "ports": [
+        {
+          "anchor": [
+            720,
+            560
+          ],
+          "direction": "in",
+          "id": "NOT Gate@720,560.in",
+          "name": "in",
+          "pin": [
+            690,
+            560
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            720,
+            560
+          ],
+          "direction": "out",
+          "id": "NOT Gate@720,560.out",
+          "name": "out",
+          "pin": [
+            720,
+            560
+          ],
+          "width": 1
+        }
+      ],
+      "type": "NOT Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "NOT Gate@720,650",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        720,
+        650
+      ],
+      "ports": [
+        {
+          "anchor": [
+            720,
+            650
+          ],
+          "direction": "in",
+          "id": "NOT Gate@720,650.in",
+          "name": "in",
+          "pin": [
+            690,
+            650
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            720,
+            650
+          ],
+          "direction": "out",
+          "id": "NOT Gate@720,650.out",
+          "name": "out",
+          "pin": [
+            720,
+            650
+          ],
+          "width": 1
+        }
+      ],
+      "type": "NOT Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "NOT Gate@720,750",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        720,
+        750
+      ],
+      "ports": [
+        {
+          "anchor": [
+            720,
+            750
+          ],
+          "direction": "in",
+          "id": "NOT Gate@720,750.in",
+          "name": "in",
+          "pin": [
+            690,
+            750
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            720,
+            750
+          ],
+          "direction": "out",
+          "id": "NOT Gate@720,750.out",
+          "name": "out",
+          "pin": [
+            720,
+            750
+          ],
+          "width": 1
+        }
+      ],
+      "type": "NOT Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "AND Gate@730,890",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        730,
+        890
+      ],
+      "ports": [
+        {
+          "anchor": [
+            730,
+            890
+          ],
+          "direction": "in",
+          "id": "AND Gate@730,890.in0",
+          "name": "in0",
+          "pin": [
+            680,
+            870
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            730,
+            890
+          ],
+          "direction": "in",
+          "id": "AND Gate@730,890.in1",
+          "name": "in1",
+          "pin": [
+            680,
+            910
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            730,
+            890
+          ],
+          "direction": "out",
+          "id": "AND Gate@730,890.out",
+          "name": "out",
+          "pin": [
+            730,
+            890
+          ],
+          "width": 1
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "OR Gate@730,970",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        730,
+        970
+      ],
+      "ports": [
+        {
+          "anchor": [
+            730,
+            970
+          ],
+          "direction": "in",
+          "id": "OR Gate@730,970.in0",
+          "name": "in0",
+          "pin": [
+            680,
+            950
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            730,
+            970
+          ],
+          "direction": "in",
+          "id": "OR Gate@730,970.in1",
+          "name": "in1",
+          "pin": [
+            680,
+            990
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            730,
+            970
+          ],
+          "direction": "out",
+          "id": "OR Gate@730,970.out",
+          "name": "out",
+          "pin": [
+            730,
+            970
+          ],
+          "width": 1
+        }
+      ],
+      "type": "OR Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "XOR Gate@740,810",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        740,
+        810
+      ],
+      "ports": [
+        {
+          "anchor": [
+            740,
+            810
+          ],
+          "direction": "in",
+          "id": "XOR Gate@740,810.in0",
+          "name": "in0",
+          "pin": [
+            680,
+            790
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            740,
+            810
+          ],
+          "direction": "in",
+          "id": "XOR Gate@740,810.in1",
+          "name": "in1",
+          "pin": [
+            680,
+            830
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            740,
+            810
+          ],
+          "direction": "out",
+          "id": "XOR Gate@740,810.out",
+          "name": "out",
+          "pin": [
+            740,
+            810
+          ],
+          "width": 1
+        }
+      ],
+      "type": "XOR Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "AND Gate@830,1050",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        830,
+        1050
+      ],
+      "ports": [
+        {
+          "anchor": [
+            830,
+            1050
+          ],
+          "direction": "in",
+          "id": "AND Gate@830,1050.in0",
+          "name": "in0",
+          "pin": [
+            780,
+            1030
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            830,
+            1050
+          ],
+          "direction": "in",
+          "id": "AND Gate@830,1050.in1",
+          "name": "in1",
+          "pin": [
+            780,
+            1070
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            830,
+            1050
+          ],
+          "direction": "out",
+          "id": "AND Gate@830,1050.out",
+          "name": "out",
+          "pin": [
+            830,
+            1050
+          ],
+          "width": 1
+        }
+      ],
+      "type": "AND Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "OR Gate@830,1160",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        830,
+        1160
+      ],
+      "ports": [
+        {
+          "anchor": [
+            830,
+            1160
+          ],
+          "direction": "in",
+          "id": "OR Gate@830,1160.in0",
+          "name": "in0",
+          "pin": [
+            780,
+            1140
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            830,
+            1160
+          ],
+          "direction": "in",
+          "id": "OR Gate@830,1160.in1",
+          "name": "in1",
+          "pin": [
+            780,
+            1180
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            830,
+            1160
+          ],
+          "direction": "out",
+          "id": "OR Gate@830,1160.out",
+          "name": "out",
+          "pin": [
+            830,
+            1160
+          ],
+          "width": 1
+        }
+      ],
+      "type": "OR Gate"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "NOT Gate@930,810",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "1",
+      "location": [
+        930,
+        810
+      ],
+      "ports": [
+        {
+          "anchor": [
+            930,
+            810
+          ],
+          "direction": "in",
+          "id": "NOT Gate@930,810.in",
+          "name": "in",
+          "pin": [
+            900,
+            810
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            930,
+            810
+          ],
+          "direction": "out",
+          "id": "NOT Gate@930,810.out",
+          "name": "out",
+          "pin": [
+            930,
+            810
+          ],
+          "width": 1
+        }
+      ],
+      "type": "NOT Gate"
+    },
+    {
+      "attributes": {
+        "select": "4"
+      },
+      "facing": "east",
+      "id": "Multiplexer@1240,570",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "4",
+      "location": [
+        1240,
+        570
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in0",
+          "name": "in0",
+          "pin": [
+            1200,
+            490
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in1",
+          "name": "in1",
+          "pin": [
+            1200,
+            500
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in10",
+          "name": "in10",
+          "pin": [
+            1200,
+            590
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in11",
+          "name": "in11",
+          "pin": [
+            1200,
+            600
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in12",
+          "name": "in12",
+          "pin": [
+            1200,
+            610
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in13",
+          "name": "in13",
+          "pin": [
+            1200,
+            620
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in14",
+          "name": "in14",
+          "pin": [
+            1200,
+            630
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in15",
+          "name": "in15",
+          "pin": [
+            1200,
+            640
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in2",
+          "name": "in2",
+          "pin": [
+            1200,
+            510
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in3",
+          "name": "in3",
+          "pin": [
+            1200,
+            520
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in4",
+          "name": "in4",
+          "pin": [
+            1200,
+            530
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in5",
+          "name": "in5",
+          "pin": [
+            1200,
+            540
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in6",
+          "name": "in6",
+          "pin": [
+            1200,
+            550
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in7",
+          "name": "in7",
+          "pin": [
+            1200,
+            560
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in8",
+          "name": "in8",
+          "pin": [
+            1200,
+            570
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.in9",
+          "name": "in9",
+          "pin": [
+            1200,
+            580
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "out",
+          "id": "Multiplexer@1240,570.out",
+          "name": "out",
+          "pin": [
+            1240,
+            570
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            1240,
+            570
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1240,570.sel",
+          "name": "sel",
+          "pin": [
+            1220,
+            650
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Multiplexer"
+    }
+  ],
+  "coverage": {
+    "endpoints": 98,
+    "matched": 98,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "condition_checker",
+    "edges": [
+      {
+        "dst": "Multiplexer@1240,570.in8",
+        "net": 10,
+        "src": "AND Gate@730,890.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in12",
+        "net": 14,
+        "src": "AND Gate@830,1050.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in14",
+        "net": 16,
+        "src": "Constant@1200,630.p"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in15",
+        "net": 17,
+        "src": "Constant@1200,640.p"
+      },
+      {
+        "dst": "Pin@1330,570.p",
+        "net": 1,
+        "src": "Multiplexer@1240,570.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in5",
+        "net": 8,
+        "src": "NOT Gate@720,470.out"
+      },
+      {
+        "dst": "AND Gate@730,890.in1",
+        "net": 6,
+        "src": "NOT Gate@720,560.out"
+      },
+      {
+        "dst": "AND Gate@830,1050.in0",
+        "net": 6,
+        "src": "NOT Gate@720,560.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in1",
+        "net": 6,
+        "src": "NOT Gate@720,560.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in3",
+        "net": 7,
+        "src": "NOT Gate@720,650.out"
+      },
+      {
+        "dst": "OR Gate@730,970.in0",
+        "net": 7,
+        "src": "NOT Gate@720,650.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in7",
+        "net": 9,
+        "src": "NOT Gate@720,750.out"
+      },
+      {
+        "dst": "AND Gate@830,1050.in1",
+        "net": 13,
+        "src": "NOT Gate@930,810.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in10",
+        "net": 13,
+        "src": "NOT Gate@930,810.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in9",
+        "net": 11,
+        "src": "OR Gate@730,970.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in13",
+        "net": 15,
+        "src": "OR Gate@830,1160.out"
+      },
+      {
+        "dst": "Multiplexer@1240,570.sel",
+        "net": 0,
+        "src": "Pin@1220,700[cond].p"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in4",
+        "net": 2,
+        "src": "Pin@450,470[N].p"
+      },
+      {
+        "dst": "NOT Gate@720,470.in",
+        "net": 2,
+        "src": "Pin@450,470[N].p"
+      },
+      {
+        "dst": "XOR Gate@740,810.in0",
+        "net": 2,
+        "src": "Pin@450,470[N].p"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in0",
+        "net": 3,
+        "src": "Pin@450,560[Z].p"
+      },
+      {
+        "dst": "NOT Gate@720,560.in",
+        "net": 3,
+        "src": "Pin@450,560[Z].p"
+      },
+      {
+        "dst": "OR Gate@730,970.in1",
+        "net": 3,
+        "src": "Pin@450,560[Z].p"
+      },
+      {
+        "dst": "OR Gate@830,1160.in0",
+        "net": 3,
+        "src": "Pin@450,560[Z].p"
+      },
+      {
+        "dst": "AND Gate@730,890.in0",
+        "net": 4,
+        "src": "Pin@450,650[C].p"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in2",
+        "net": 4,
+        "src": "Pin@450,650[C].p"
+      },
+      {
+        "dst": "NOT Gate@720,650.in",
+        "net": 4,
+        "src": "Pin@450,650[C].p"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in6",
+        "net": 5,
+        "src": "Pin@450,750[V].p"
+      },
+      {
+        "dst": "NOT Gate@720,750.in",
+        "net": 5,
+        "src": "Pin@450,750[V].p"
+      },
+      {
+        "dst": "XOR Gate@740,810.in1",
+        "net": 5,
+        "src": "Pin@450,750[V].p"
+      },
+      {
+        "dst": "Multiplexer@1240,570.in11",
+        "net": 12,
+        "src": "XOR Gate@740,810.out"
+      },
+      {
+        "dst": "NOT Gate@930,810.in",
+        "net": 12,
+        "src": "XOR Gate@740,810.out"
+      },
+      {
+        "dst": "OR Gate@830,1160.in1",
+        "net": 12,
+        "src": "XOR Gate@740,810.out"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Pin@1220,700[cond].p"
+        ],
+        "index": 0,
+        "labels": [
+          "cond"
+        ],
+        "name": "net:cond",
+        "ports": [
+          "Multiplexer@1240,570.sel",
+          "Pin@1220,700[cond].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Multiplexer@1240,570.out"
+        ],
+        "index": 1,
+        "labels": [],
+        "name": "net#1",
+        "ports": [
+          "Multiplexer@1240,570.out",
+          "Pin@1330,570.p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@450,470[N].p"
+        ],
+        "index": 2,
+        "labels": [
+          "N"
+        ],
+        "name": "net:N",
+        "ports": [
+          "Multiplexer@1240,570.in4",
+          "NOT Gate@720,470.in",
+          "Pin@450,470[N].p",
+          "XOR Gate@740,810.in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@450,560[Z].p"
+        ],
+        "index": 3,
+        "labels": [
+          "Z"
+        ],
+        "name": "net:Z",
+        "ports": [
+          "Multiplexer@1240,570.in0",
+          "NOT Gate@720,560.in",
+          "OR Gate@730,970.in1",
+          "OR Gate@830,1160.in0",
+          "Pin@450,560[Z].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@450,650[C].p"
+        ],
+        "index": 4,
+        "labels": [
+          "C"
+        ],
+        "name": "net:C",
+        "ports": [
+          "AND Gate@730,890.in0",
+          "Multiplexer@1240,570.in2",
+          "NOT Gate@720,650.in",
+          "Pin@450,650[C].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@450,750[V].p"
+        ],
+        "index": 5,
+        "labels": [
+          "V"
+        ],
+        "name": "net:V",
+        "ports": [
+          "Multiplexer@1240,570.in6",
+          "NOT Gate@720,750.in",
+          "Pin@450,750[V].p",
+          "XOR Gate@740,810.in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "NOT Gate@720,560.out"
+        ],
+        "index": 6,
+        "labels": [],
+        "name": "net#6",
+        "ports": [
+          "AND Gate@730,890.in1",
+          "AND Gate@830,1050.in0",
+          "Multiplexer@1240,570.in1",
+          "NOT Gate@720,560.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "NOT Gate@720,650.out"
+        ],
+        "index": 7,
+        "labels": [],
+        "name": "net#7",
+        "ports": [
+          "Multiplexer@1240,570.in3",
+          "NOT Gate@720,650.out",
+          "OR Gate@730,970.in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "NOT Gate@720,470.out"
+        ],
+        "index": 8,
+        "labels": [],
+        "name": "net#8",
+        "ports": [
+          "Multiplexer@1240,570.in5",
+          "NOT Gate@720,470.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "NOT Gate@720,750.out"
+        ],
+        "index": 9,
+        "labels": [],
+        "name": "net#9",
+        "ports": [
+          "Multiplexer@1240,570.in7",
+          "NOT Gate@720,750.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@730,890.out"
+        ],
+        "index": 10,
+        "labels": [],
+        "name": "net#10",
+        "ports": [
+          "AND Gate@730,890.out",
+          "Multiplexer@1240,570.in8"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "OR Gate@730,970.out"
+        ],
+        "index": 11,
+        "labels": [],
+        "name": "net#11",
+        "ports": [
+          "Multiplexer@1240,570.in9",
+          "OR Gate@730,970.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "XOR Gate@740,810.out"
+        ],
+        "index": 12,
+        "labels": [],
+        "name": "net#12",
+        "ports": [
+          "Multiplexer@1240,570.in11",
+          "NOT Gate@930,810.in",
+          "OR Gate@830,1160.in1",
+          "XOR Gate@740,810.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "NOT Gate@930,810.out"
+        ],
+        "index": 13,
+        "labels": [],
+        "name": "net#13",
+        "ports": [
+          "AND Gate@830,1050.in1",
+          "Multiplexer@1240,570.in10",
+          "NOT Gate@930,810.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "AND Gate@830,1050.out"
+        ],
+        "index": 14,
+        "labels": [],
+        "name": "net#14",
+        "ports": [
+          "AND Gate@830,1050.out",
+          "Multiplexer@1240,570.in12"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "OR Gate@830,1160.out"
+        ],
+        "index": 15,
+        "labels": [],
+        "name": "net#15",
+        "ports": [
+          "Multiplexer@1240,570.in13",
+          "OR Gate@830,1160.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@1200,630.p"
+        ],
+        "index": 16,
+        "labels": [],
+        "name": "net#16",
+        "ports": [
+          "Constant@1200,630.p",
+          "Multiplexer@1240,570.in14"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@1200,640.p"
+        ],
+        "index": 17,
+        "labels": [],
+        "name": "net#17",
+        "ports": [
+          "Constant@1200,640.p",
+          "Multiplexer@1240,570.in15"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "AND Gate@730,890",
+        "direction": "in",
+        "id": "AND Gate@730,890.in0",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          730,
+          890
+        ],
+        "pin": [
+          680,
+          870
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@730,890",
+        "direction": "in",
+        "id": "AND Gate@730,890.in1",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          730,
+          890
+        ],
+        "pin": [
+          680,
+          910
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@730,890",
+        "direction": "out",
+        "id": "AND Gate@730,890.out",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          730,
+          890
+        ],
+        "pin": [
+          730,
+          890
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "AND Gate@830,1050",
+        "direction": "in",
+        "id": "AND Gate@830,1050.in0",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          830,
+          1050
+        ],
+        "pin": [
+          780,
+          1030
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "AND Gate@830,1050",
+        "direction": "in",
+        "id": "AND Gate@830,1050.in1",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          830,
+          1050
+        ],
+        "pin": [
+          780,
+          1070
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "AND Gate@830,1050",
+        "direction": "out",
+        "id": "AND Gate@830,1050.out",
+        "kind": "AND Gate",
+        "label": "",
+        "loc": [
+          830,
+          1050
+        ],
+        "pin": [
+          830,
+          1050
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Constant@1200,630",
+        "direction": "out",
+        "id": "Constant@1200,630.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          1200,
+          630
+        ],
+        "pin": [
+          1200,
+          630
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@1200,640",
+        "direction": "out",
+        "id": "Constant@1200,640.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          1200,
+          640
+        ],
+        "pin": [
+          1200,
+          640
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in0",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          490
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in1",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          500
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in10",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          590
+        ],
+        "port": "in10"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in11",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          600
+        ],
+        "port": "in11"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in12",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          610
+        ],
+        "port": "in12"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in13",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          620
+        ],
+        "port": "in13"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in14",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          630
+        ],
+        "port": "in14"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in15",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          640
+        ],
+        "port": "in15"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in2",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          510
+        ],
+        "port": "in2"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in3",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          520
+        ],
+        "port": "in3"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in4",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          530
+        ],
+        "port": "in4"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in5",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          540
+        ],
+        "port": "in5"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in6",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          550
+        ],
+        "port": "in6"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in7",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          560
+        ],
+        "port": "in7"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in8",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          570
+        ],
+        "port": "in8"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.in9",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1200,
+          580
+        ],
+        "port": "in9"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "out",
+        "id": "Multiplexer@1240,570.out",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1240,
+          570
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Multiplexer@1240,570",
+        "direction": "in",
+        "id": "Multiplexer@1240,570.sel",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1240,
+          570
+        ],
+        "pin": [
+          1220,
+          650
+        ],
+        "port": "sel"
+      },
+      {
+        "comp": "NOT Gate@720,470",
+        "direction": "in",
+        "id": "NOT Gate@720,470.in",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          470
+        ],
+        "pin": [
+          690,
+          470
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "NOT Gate@720,470",
+        "direction": "out",
+        "id": "NOT Gate@720,470.out",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          470
+        ],
+        "pin": [
+          720,
+          470
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "NOT Gate@720,560",
+        "direction": "in",
+        "id": "NOT Gate@720,560.in",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          560
+        ],
+        "pin": [
+          690,
+          560
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "NOT Gate@720,560",
+        "direction": "out",
+        "id": "NOT Gate@720,560.out",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          560
+        ],
+        "pin": [
+          720,
+          560
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "NOT Gate@720,650",
+        "direction": "in",
+        "id": "NOT Gate@720,650.in",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          650
+        ],
+        "pin": [
+          690,
+          650
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "NOT Gate@720,650",
+        "direction": "out",
+        "id": "NOT Gate@720,650.out",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          650
+        ],
+        "pin": [
+          720,
+          650
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "NOT Gate@720,750",
+        "direction": "in",
+        "id": "NOT Gate@720,750.in",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          750
+        ],
+        "pin": [
+          690,
+          750
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "NOT Gate@720,750",
+        "direction": "out",
+        "id": "NOT Gate@720,750.out",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          720,
+          750
+        ],
+        "pin": [
+          720,
+          750
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "NOT Gate@930,810",
+        "direction": "in",
+        "id": "NOT Gate@930,810.in",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          930,
+          810
+        ],
+        "pin": [
+          900,
+          810
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "NOT Gate@930,810",
+        "direction": "out",
+        "id": "NOT Gate@930,810.out",
+        "kind": "NOT Gate",
+        "label": "",
+        "loc": [
+          930,
+          810
+        ],
+        "pin": [
+          930,
+          810
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "OR Gate@730,970",
+        "direction": "in",
+        "id": "OR Gate@730,970.in0",
+        "kind": "OR Gate",
+        "label": "",
+        "loc": [
+          730,
+          970
+        ],
+        "pin": [
+          680,
+          950
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "OR Gate@730,970",
+        "direction": "in",
+        "id": "OR Gate@730,970.in1",
+        "kind": "OR Gate",
+        "label": "",
+        "loc": [
+          730,
+          970
+        ],
+        "pin": [
+          680,
+          990
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "OR Gate@730,970",
+        "direction": "out",
+        "id": "OR Gate@730,970.out",
+        "kind": "OR Gate",
+        "label": "",
+        "loc": [
+          730,
+          970
+        ],
+        "pin": [
+          730,
+          970
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "OR Gate@830,1160",
+        "direction": "in",
+        "id": "OR Gate@830,1160.in0",
+        "kind": "OR Gate",
+        "label": "",
+        "loc": [
+          830,
+          1160
+        ],
+        "pin": [
+          780,
+          1140
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "OR Gate@830,1160",
+        "direction": "in",
+        "id": "OR Gate@830,1160.in1",
+        "kind": "OR Gate",
+        "label": "",
+        "loc": [
+          830,
+          1160
+        ],
+        "pin": [
+          780,
+          1180
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "OR Gate@830,1160",
+        "direction": "out",
+        "id": "OR Gate@830,1160.out",
+        "kind": "OR Gate",
+        "label": "",
+        "loc": [
+          830,
+          1160
+        ],
+        "pin": [
+          830,
+          1160
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Pin@1220,700[cond]",
+        "direction": "out",
+        "id": "Pin@1220,700[cond].p",
+        "kind": "Pin",
+        "label": "cond",
+        "loc": [
+          1220,
+          700
+        ],
+        "pin": [
+          1220,
+          700
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@1330,570",
+        "direction": "in",
+        "id": "Pin@1330,570.p",
+        "kind": "Pin",
+        "label": "",
+        "loc": [
+          1330,
+          570
+        ],
+        "pin": [
+          1330,
+          570
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@450,470[N]",
+        "direction": "out",
+        "id": "Pin@450,470[N].p",
+        "kind": "Pin",
+        "label": "N",
+        "loc": [
+          450,
+          470
+        ],
+        "pin": [
+          450,
+          470
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@450,560[Z]",
+        "direction": "out",
+        "id": "Pin@450,560[Z].p",
+        "kind": "Pin",
+        "label": "Z",
+        "loc": [
+          450,
+          560
+        ],
+        "pin": [
+          450,
+          560
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@450,650[C]",
+        "direction": "out",
+        "id": "Pin@450,650[C].p",
+        "kind": "Pin",
+        "label": "C",
+        "loc": [
+          450,
+          650
+        ],
+        "pin": [
+          450,
+          650
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@450,750[V]",
+        "direction": "out",
+        "id": "Pin@450,750[V].p",
+        "kind": "Pin",
+        "label": "V",
+        "loc": [
+          450,
+          750
+        ],
+        "pin": [
+          450,
+          750
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "XOR Gate@740,810",
+        "direction": "in",
+        "id": "XOR Gate@740,810.in0",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          740,
+          810
+        ],
+        "pin": [
+          680,
+          790
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "XOR Gate@740,810",
+        "direction": "in",
+        "id": "XOR Gate@740,810.in1",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          740,
+          810
+        ],
+        "pin": [
+          680,
+          830
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "XOR Gate@740,810",
+        "direction": "out",
+        "id": "XOR Gate@740,810.out",
+        "kind": "XOR Gate",
+        "label": "",
+        "loc": [
+          740,
+          810
+        ],
+        "pin": [
+          740,
+          810
+        ],
+        "port": "out"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@450,470[N]",
+      "Pin@450,560[Z]",
+      "Pin@450,650[C]",
+      "Pin@1220,700[cond]",
+      "Pin@450,750[V]"
+    ],
+    "outputs": [
+      "Pin@1330,570"
+    ]
+  },
+  "inventory": {
+    "AND Gate": 2,
+    "Constant": 2,
+    "Multiplexer": 1,
+    "NOT Gate": 5,
+    "OR Gate": 2,
+    "Pin": 6,
+    "XOR Gate": 1
+  },
+  "source": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        1220,
+        650
+      ],
+      "index": 0,
+      "to": [
+        1220,
+        700
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1240,
+        570
+      ],
+      "index": 1,
+      "to": [
+        1330,
+        570
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        470
+      ],
+      "index": 2,
+      "to": [
+        490,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        560
+      ],
+      "index": 3,
+      "to": [
+        470,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        650
+      ],
+      "index": 4,
+      "to": [
+        470,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        450,
+        750
+      ],
+      "index": 5,
+      "to": [
+        470,
+        750
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        490
+      ],
+      "index": 6,
+      "to": [
+        1200,
+        490
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        490
+      ],
+      "index": 7,
+      "to": [
+        470,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        560
+      ],
+      "index": 8,
+      "to": [
+        480,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        580
+      ],
+      "index": 9,
+      "to": [
+        470,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        580
+      ],
+      "index": 10,
+      "to": [
+        860,
+        580
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        650
+      ],
+      "index": 11,
+      "to": [
+        500,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        660
+      ],
+      "index": 12,
+      "to": [
+        470,
+        750
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        660
+      ],
+      "index": 13,
+      "to": [
+        880,
+        660
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        750
+      ],
+      "index": 14,
+      "to": [
+        470,
+        830
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        750
+      ],
+      "index": 15,
+      "to": [
+        690,
+        750
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        470,
+        830
+      ],
+      "index": 16,
+      "to": [
+        680,
+        830
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        1140
+      ],
+      "index": 17,
+      "to": [
+        780,
+        1140
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        560
+      ],
+      "index": 18,
+      "to": [
+        480,
+        990
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        560
+      ],
+      "index": 19,
+      "to": [
+        690,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        990
+      ],
+      "index": 20,
+      "to": [
+        480,
+        1140
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        990
+      ],
+      "index": 21,
+      "to": [
+        680,
+        990
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        490,
+        470
+      ],
+      "index": 22,
+      "to": [
+        490,
+        530
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        490,
+        470
+      ],
+      "index": 23,
+      "to": [
+        560,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        490,
+        530
+      ],
+      "index": 24,
+      "to": [
+        1200,
+        530
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        650
+      ],
+      "index": 25,
+      "to": [
+        500,
+        870
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        650
+      ],
+      "index": 26,
+      "to": [
+        690,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        870
+      ],
+      "index": 27,
+      "to": [
+        680,
+        870
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        530,
+        1030
+      ],
+      "index": 28,
+      "to": [
+        780,
+        1030
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        530,
+        610
+      ],
+      "index": 29,
+      "to": [
+        530,
+        910
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        530,
+        610
+      ],
+      "index": 30,
+      "to": [
+        750,
+        610
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        530,
+        910
+      ],
+      "index": 31,
+      "to": [
+        530,
+        1030
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        530,
+        910
+      ],
+      "index": 32,
+      "to": [
+        680,
+        910
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        560,
+        470
+      ],
+      "index": 33,
+      "to": [
+        560,
+        790
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        560,
+        470
+      ],
+      "index": 34,
+      "to": [
+        690,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        560,
+        790
+      ],
+      "index": 35,
+      "to": [
+        680,
+        790
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        650,
+        930
+      ],
+      "index": 36,
+      "to": [
+        650,
+        950
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        650,
+        930
+      ],
+      "index": 37,
+      "to": [
+        780,
+        930
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        650,
+        950
+      ],
+      "index": 38,
+      "to": [
+        680,
+        950
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        720,
+        470
+      ],
+      "index": 39,
+      "to": [
+        880,
+        470
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        720,
+        560
+      ],
+      "index": 40,
+      "to": [
+        750,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        720,
+        650
+      ],
+      "index": 41,
+      "to": [
+        780,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        720,
+        750
+      ],
+      "index": 42,
+      "to": [
+        890,
+        750
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        730,
+        890
+      ],
+      "index": 43,
+      "to": [
+        940,
+        890
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        730,
+        970
+      ],
+      "index": 44,
+      "to": [
+        910,
+        970
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        740,
+        810
+      ],
+      "index": 45,
+      "to": [
+        750,
+        810
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        1180
+      ],
+      "index": 46,
+      "to": [
+        780,
+        1180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        560
+      ],
+      "index": 47,
+      "to": [
+        750,
+        610
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        560
+      ],
+      "index": 48,
+      "to": [
+        850,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        810
+      ],
+      "index": 49,
+      "to": [
+        750,
+        1180
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        810
+      ],
+      "index": 50,
+      "to": [
+        900,
+        810
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        780,
+        1070
+      ],
+      "index": 51,
+      "to": [
+        780,
+        1110
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        780,
+        1110
+      ],
+      "index": 52,
+      "to": [
+        930,
+        1110
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        780,
+        650
+      ],
+      "index": 53,
+      "to": [
+        780,
+        930
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        780,
+        650
+      ],
+      "index": 54,
+      "to": [
+        870,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        830,
+        1050
+      ],
+      "index": 55,
+      "to": [
+        950,
+        1050
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        830,
+        1160
+      ],
+      "index": 56,
+      "to": [
+        960,
+        1160
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        850,
+        500
+      ],
+      "index": 57,
+      "to": [
+        1200,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        850,
+        500
+      ],
+      "index": 58,
+      "to": [
+        850,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        860,
+        510
+      ],
+      "index": 59,
+      "to": [
+        1200,
+        510
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        860,
+        510
+      ],
+      "index": 60,
+      "to": [
+        860,
+        580
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        870,
+        520
+      ],
+      "index": 61,
+      "to": [
+        1200,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        870,
+        520
+      ],
+      "index": 62,
+      "to": [
+        870,
+        650
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        880,
+        470
+      ],
+      "index": 63,
+      "to": [
+        880,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        880,
+        540
+      ],
+      "index": 64,
+      "to": [
+        1200,
+        540
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        880,
+        550
+      ],
+      "index": 65,
+      "to": [
+        1200,
+        550
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        880,
+        550
+      ],
+      "index": 66,
+      "to": [
+        880,
+        660
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        890,
+        560
+      ],
+      "index": 67,
+      "to": [
+        1200,
+        560
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        890,
+        560
+      ],
+      "index": 68,
+      "to": [
+        890,
+        750
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        900,
+        600
+      ],
+      "index": 69,
+      "to": [
+        1200,
+        600
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        900,
+        600
+      ],
+      "index": 70,
+      "to": [
+        900,
+        810
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        910,
+        580
+      ],
+      "index": 71,
+      "to": [
+        1200,
+        580
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        910,
+        580
+      ],
+      "index": 72,
+      "to": [
+        910,
+        970
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        930,
+        590
+      ],
+      "index": 73,
+      "to": [
+        1200,
+        590
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        930,
+        590
+      ],
+      "index": 74,
+      "to": [
+        930,
+        810
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        930,
+        810
+      ],
+      "index": 75,
+      "to": [
+        930,
+        1110
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        940,
+        570
+      ],
+      "index": 76,
+      "to": [
+        1200,
+        570
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        940,
+        570
+      ],
+      "index": 77,
+      "to": [
+        940,
+        890
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        950,
+        610
+      ],
+      "index": 78,
+      "to": [
+        1200,
+        610
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        950,
+        610
+      ],
+      "index": 79,
+      "to": [
+        950,
+        1050
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        960,
+        620
+      ],
+      "index": 80,
+      "to": [
+        1200,
+        620
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        960,
+        620
+      ],
+      "index": 81,
+      "to": [
+        960,
+        1160
+      ]
+    }
+  ]
+}

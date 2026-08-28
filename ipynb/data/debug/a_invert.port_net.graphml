@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d19" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d18" for="node" attr.name="drivers" attr.type="long"/>
+<key id="d17" for="node" attr.name="points" attr.type="long"/>
+<key id="d16" for="node" attr.name="labels" attr.type="string"/>
+<key id="d15" for="node" attr.name="status" attr.type="string"/>
+<key id="d14" for="node" attr.name="name" attr.type="string"/>
+<key id="d13" for="node" attr.name="index" attr.type="long"/>
+<key id="d12" for="node" attr.name="width" attr.type="long"/>
+<key id="d11" for="node" attr.name="y" attr.type="long"/>
+<key id="d10" for="node" attr.name="x" attr.type="long"/>
+<key id="d9" for="node" attr.name="label" attr.type="string"/>
+<key id="d8" for="node" attr.name="direction" attr.type="string"/>
+<key id="d7" for="node" attr.name="port" attr.type="string"/>
+<key id="d6" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d5" for="node" attr.name="component" attr.type="string"/>
+<key id="d4" for="node" attr.name="node_kind" attr.type="string"/>
+<key id="d3" for="node" attr.name="bipartite" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="undirected"><data key="d0">a_invert</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">port_net</data>
+<node id="port:Pin@220,390[a_inversion].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@220,390[a_inversion]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">a_inversion</data>
+  <data key="d10">220</data>
+  <data key="d11">390</data>
+  <data key="d12">1</data>
+</node>
+<node id="port:Bit Extender@360,390.in">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Bit Extender@360,390</data>
+  <data key="d6">Bit Extender</data>
+  <data key="d7">in</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">320</data>
+  <data key="d11">390</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.Cin">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">Cin</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">570</data>
+  <data key="d11">410</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:Pin@340,340[A].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@340,340[A]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">A</data>
+  <data key="d10">340</data>
+  <data key="d11">340</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:XOR Gate@450,370.in0">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">XOR Gate@450,370</data>
+  <data key="d6">XOR Gate</data>
+  <data key="d7">in0</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">390</data>
+  <data key="d11">350</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:Bit Extender@360,390.out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Bit Extender@360,390</data>
+  <data key="d6">Bit Extender</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">360</data>
+  <data key="d11">390</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:XOR Gate@450,370.in1">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">XOR Gate@450,370</data>
+  <data key="d6">XOR Gate</data>
+  <data key="d7">in1</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">390</data>
+  <data key="d11">390</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:XOR Gate@450,370.out">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">XOR Gate@450,370</data>
+  <data key="d6">XOR Gate</data>
+  <data key="d7">out</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">450</data>
+  <data key="d11">370</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:ks_32b@790,370.A">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">A</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">570</data>
+  <data key="d11">370</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:Pin@550,390[B].p">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">Pin@550,390[B]</data>
+  <data key="d6">Pin</data>
+  <data key="d7">p</data>
+  <data key="d8">out</data>
+  <data key="d9">B</data>
+  <data key="d10">550</data>
+  <data key="d11">390</data>
+  <data key="d12">32</data>
+</node>
+<node id="port:ks_32b@790,370.B">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">B</data>
+  <data key="d8">in</data>
+  <data key="d9"></data>
+  <data key="d10">570</data>
+  <data key="d11">390</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM31">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM31</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">370</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM30">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM30</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">390</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM29">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM29</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">410</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM28">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM28</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">430</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM27">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM27</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">450</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM26">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM26</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">470</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM25">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM25</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">490</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM24">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM24</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">510</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM23">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM23</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">530</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM22">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM22</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">550</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM21">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM21</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">570</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM20">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM20</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">590</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM19">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM19</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">610</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM18">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM18</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">630</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM17">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM17</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">650</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM16">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM16</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">670</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM15">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM15</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">690</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM14">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM14</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">710</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM13">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM13</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">730</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM12">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM12</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">750</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM11">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM11</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">770</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM10">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM10</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">790</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM9">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM9</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">810</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM8">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM8</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">830</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM7">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM7</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">850</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM6">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM6</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">870</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM5">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM5</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">890</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM4">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM4</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">910</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM3">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM3</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">930</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.SUM2">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">SUM2</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">950</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.sum1">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">sum1</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">970</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.sum0">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">sum0</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">990</data>
+  <data key="d12">0</data>
+</node>
+<node id="port:ks_32b@790,370.Cout">
+  <data key="d3">port</data>
+  <data key="d4">port</data>
+  <data key="d5">ks_32b@790,370</data>
+  <data key="d6">ks_32b</data>
+  <data key="d7">Cout</data>
+  <data key="d8">out</data>
+  <data key="d9"></data>
+  <data key="d10">790</data>
+  <data key="d11">1010</data>
+  <data key="d12">0</data>
+</node>
+<node id="net:0">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">0</data>
+  <data key="d14">net:a_inversion</data>
+  <data key="d15">ok</data>
+  <data key="d16">a_inversion</data>
+  <data key="d17">49</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:1">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">1</data>
+  <data key="d14">net:A</data>
+  <data key="d15">ok</data>
+  <data key="d16">A</data>
+  <data key="d17">7</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:2">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">2</data>
+  <data key="d14">net#2</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">4</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:3">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">13</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:4">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">4</data>
+  <data key="d14">net:B</data>
+  <data key="d15">ok</data>
+  <data key="d16">B</data>
+  <data key="d17">3</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:5">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">5</data>
+  <data key="d14">net#5</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:6">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">6</data>
+  <data key="d14">net#6</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:7">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">7</data>
+  <data key="d14">net#7</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:8">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">8</data>
+  <data key="d14">net#8</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:9">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">9</data>
+  <data key="d14">net#9</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:10">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">10</data>
+  <data key="d14">net#10</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:11">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">11</data>
+  <data key="d14">net#11</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:12">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">12</data>
+  <data key="d14">net#12</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:13">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">13</data>
+  <data key="d14">net#13</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:14">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">14</data>
+  <data key="d14">net#14</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:15">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">15</data>
+  <data key="d14">net#15</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:16">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">16</data>
+  <data key="d14">net#16</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:17">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">17</data>
+  <data key="d14">net#17</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:18">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">18</data>
+  <data key="d14">net#18</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:19">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">19</data>
+  <data key="d14">net#19</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:20">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">20</data>
+  <data key="d14">net#20</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:21">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">21</data>
+  <data key="d14">net#21</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:22">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">22</data>
+  <data key="d14">net#22</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:23">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">23</data>
+  <data key="d14">net#23</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:24">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">24</data>
+  <data key="d14">net#24</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:25">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">25</data>
+  <data key="d14">net#25</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:26">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">26</data>
+  <data key="d14">net#26</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:27">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">27</data>
+  <data key="d14">net#27</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:28">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">28</data>
+  <data key="d14">net#28</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:29">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">29</data>
+  <data key="d14">net#29</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:30">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">30</data>
+  <data key="d14">net#30</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:31">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">31</data>
+  <data key="d14">net#31</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:32">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">32</data>
+  <data key="d14">net#32</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:33">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">33</data>
+  <data key="d14">net#33</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:34">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">34</data>
+  <data key="d14">net#34</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:35">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">35</data>
+  <data key="d14">net#35</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:36">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">36</data>
+  <data key="d14">net#36</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<node id="net:37">
+  <data key="d3">net</data>
+  <data key="d4">net</data>
+  <data key="d13">37</data>
+  <data key="d14">net#37</data>
+  <data key="d15">ok</data>
+  <data key="d16"></data>
+  <data key="d17">1</data>
+  <data key="d18">1</data>
+</node>
+<edge source="port:Pin@220,390[a_inversion].p" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Bit Extender@360,390.in" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.Cin" target="net:0" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@340,340[A].p" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:XOR Gate@450,370.in0" target="net:1" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Bit Extender@360,390.out" target="net:2" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:XOR Gate@450,370.in1" target="net:2" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:XOR Gate@450,370.out" target="net:3" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.A" target="net:3" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:Pin@550,390[B].p" target="net:4" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.B" target="net:4" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM31" target="net:5" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM30" target="net:6" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM29" target="net:7" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM28" target="net:8" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM27" target="net:9" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM26" target="net:10" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM25" target="net:11" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM24" target="net:12" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM23" target="net:13" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM22" target="net:14" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM21" target="net:15" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM20" target="net:16" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM19" target="net:17" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM18" target="net:18" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM17" target="net:19" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM16" target="net:20" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM15" target="net:21" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM14" target="net:22" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM13" target="net:23" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM12" target="net:24" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM11" target="net:25" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM10" target="net:26" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM9" target="net:27" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM8" target="net:28" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM7" target="net:29" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM6" target="net:30" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM5" target="net:31" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM4" target="net:32" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM3" target="net:33" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.SUM2" target="net:34" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.sum1" target="net:35" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.sum0" target="net:36" id="0">
+  <data key="d19">attached</data>
+</edge>
+<edge source="port:ks_32b@790,370.Cout" target="net:37" id="0">
+  <data key="d19">attached</data>
+</edge>
+</graph></graphml>

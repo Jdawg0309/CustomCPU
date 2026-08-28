@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">pc_fetch</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="Multiplexer@1040,920.out">
+  <data key="d3">Multiplexer@1040,920</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1040</data>
+  <data key="d9">920</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1150,840.in1">
+  <data key="d3">Multiplexer@1150,840</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1120</data>
+  <data key="d9">850</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1150,840.out">
+  <data key="d3">Multiplexer@1150,840</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1150</data>
+  <data key="d9">840</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1250,850.in0">
+  <data key="d3">Multiplexer@1250,850</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1220</data>
+  <data key="d9">840</data>
+  <data key="d10">32</data>
+</node>
+<node id="Splitter@500,970.combined">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">combined</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">500</data>
+  <data key="d9">970</data>
+  <data key="d10">32</data>
+</node>
+<node id="Register@430,790[PC].Q">
+  <data key="d3">Register@430,790[PC]</data>
+  <data key="d4">Register</data>
+  <data key="d5">Q</data>
+  <data key="d6">out</data>
+  <data key="d7">PC</data>
+  <data key="d8">490</data>
+  <data key="d9">820</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1250,850.in1">
+  <data key="d3">Multiplexer@1250,850</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1220</data>
+  <data key="d9">860</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@750,830.a">
+  <data key="d3">Adder@750,830</data>
+  <data key="d4">Adder</data>
+  <data key="d5">a</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">710</data>
+  <data key="d9">820</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@750,910.a">
+  <data key="d3">Adder@750,910</data>
+  <data key="d4">Adder</data>
+  <data key="d5">a</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">710</data>
+  <data key="d9">900</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@1230,880[hold].p">
+  <data key="d3">Pin@1230,880[hold]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">hold</data>
+  <data key="d8">1230</data>
+  <data key="d9">880</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1250,850.sel">
+  <data key="d3">Multiplexer@1250,850</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">sel</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1230</data>
+  <data key="d9">870</data>
+  <data key="d10">1</data>
+</node>
+<node id="Register@430,790[PC].D">
+  <data key="d3">Register@430,790[PC]</data>
+  <data key="d4">Register</data>
+  <data key="d5">D</data>
+  <data key="d6">in</data>
+  <data key="d7">PC</data>
+  <data key="d8">430</data>
+  <data key="d9">820</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1250,850.out">
+  <data key="d3">Multiplexer@1250,850</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1250</data>
+  <data key="d9">850</data>
+  <data key="d10">32</data>
+</node>
+<node id="Constant@370,840.p">
+  <data key="d3">Constant@370,840</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">370</data>
+  <data key="d9">840</data>
+  <data key="d10">1</data>
+</node>
+<node id="Register@430,790[PC].en">
+  <data key="d3">Register@430,790[PC]</data>
+  <data key="d4">Register</data>
+  <data key="d5">en</data>
+  <data key="d6">in</data>
+  <data key="d7">PC</data>
+  <data key="d8">430</data>
+  <data key="d9">840</data>
+  <data key="d10">1</data>
+</node>
+<node id="Pin@420,860[CLK].p">
+  <data key="d3">Pin@420,860[CLK]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">CLK</data>
+  <data key="d8">420</data>
+  <data key="d9">860</data>
+  <data key="d10">1</data>
+</node>
+<node id="Register@430,790[PC].clk">
+  <data key="d3">Register@430,790[PC]</data>
+  <data key="d4">Register</data>
+  <data key="d5">clk</data>
+  <data key="d6">in</data>
+  <data key="d7">PC</data>
+  <data key="d8">430</data>
+  <data key="d9">860</data>
+  <data key="d10">1</data>
+</node>
+<node id="Pin@460,970[RST].p">
+  <data key="d3">Pin@460,970[RST]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">RST</data>
+  <data key="d8">460</data>
+  <data key="d9">970</data>
+  <data key="d10">1</data>
+</node>
+<node id="Register@430,790[PC].clr">
+  <data key="d3">Register@430,790[PC]</data>
+  <data key="d4">Register</data>
+  <data key="d5">clr</data>
+  <data key="d6">in</data>
+  <data key="d7">PC</data>
+  <data key="d8">460</data>
+  <data key="d9">880</data>
+  <data key="d10">1</data>
+</node>
+<node id="Constant@610,840.p">
+  <data key="d3">Constant@610,840</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">610</data>
+  <data key="d9">840</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@750,830.b">
+  <data key="d3">Adder@750,830</data>
+  <data key="d4">Adder</data>
+  <data key="d5">b</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">710</data>
+  <data key="d9">840</data>
+  <data key="d10">32</data>
+</node>
+<node id="Splitter@500,970.bit1">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit1</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1100</data>
+  <data key="d10">10</data>
+</node>
+<node id="Pin@640,1030[pc_out].p">
+  <data key="d3">Pin@640,1030[pc_out]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">pc_out</data>
+  <data key="d8">640</data>
+  <data key="d9">1030</data>
+  <data key="d10">10</data>
+</node>
+<node id="Pin@640,920[IMM].p">
+  <data key="d3">Pin@640,920[IMM]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">IMM</data>
+  <data key="d8">640</data>
+  <data key="d9">920</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@750,910.b">
+  <data key="d3">Adder@750,910</data>
+  <data key="d4">Adder</data>
+  <data key="d5">b</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">710</data>
+  <data key="d9">920</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@860,860[pc_plus4].p">
+  <data key="d3">Pin@860,860[pc_plus4]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">pc_plus4</data>
+  <data key="d8">860</data>
+  <data key="d9">860</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1150,840.in0">
+  <data key="d3">Multiplexer@1150,840</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1120</data>
+  <data key="d9">830</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@750,830.out">
+  <data key="d3">Adder@750,830</data>
+  <data key="d4">Adder</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">750</data>
+  <data key="d9">830</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1040,920.in0">
+  <data key="d3">Multiplexer@1040,920</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in0</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1010</data>
+  <data key="d9">910</data>
+  <data key="d10">32</data>
+</node>
+<node id="Adder@750,910.out">
+  <data key="d3">Adder@750,910</data>
+  <data key="d4">Adder</data>
+  <data key="d5">out</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">750</data>
+  <data key="d9">910</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@970,930[abs_target].p">
+  <data key="d3">Pin@970,930[abs_target]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">abs_target</data>
+  <data key="d8">970</data>
+  <data key="d9">930</data>
+  <data key="d10">32</data>
+</node>
+<node id="Multiplexer@1040,920.in1">
+  <data key="d3">Multiplexer@1040,920</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">in1</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1010</data>
+  <data key="d9">930</data>
+  <data key="d10">32</data>
+</node>
+<node id="Pin@1020,940[abs_select].p">
+  <data key="d3">Pin@1020,940[abs_select]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">abs_select</data>
+  <data key="d8">1020</data>
+  <data key="d9">940</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1040,920.sel">
+  <data key="d3">Multiplexer@1040,920</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">sel</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1020</data>
+  <data key="d9">940</data>
+  <data key="d10">1</data>
+</node>
+<node id="Pin@1130,860[BRANCH].p">
+  <data key="d3">Pin@1130,860[BRANCH]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">BRANCH</data>
+  <data key="d8">1130</data>
+  <data key="d9">860</data>
+  <data key="d10">1</data>
+</node>
+<node id="Multiplexer@1150,840.sel">
+  <data key="d3">Multiplexer@1150,840</data>
+  <data key="d4">Multiplexer</data>
+  <data key="d5">sel</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1130</data>
+  <data key="d9">860</data>
+  <data key="d10">1</data>
+</node>
+<node id="Splitter@500,970.bit0">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit0</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1120</data>
+  <data key="d10">2</data>
+</node>
+<node id="Splitter@500,970.bit2">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit2</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1080</data>
+  <data key="d10">0</data>
+</node>
+<node id="Splitter@500,970.bit3">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit3</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1060</data>
+  <data key="d10">4</data>
+</node>
+<node id="Splitter@500,970.bit4">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit4</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1040</data>
+  <data key="d10">4</data>
+</node>
+<node id="Splitter@500,970.bit5">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit5</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1020</data>
+  <data key="d10">4</data>
+</node>
+<node id="Splitter@500,970.bit6">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit6</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">1000</data>
+  <data key="d10">4</data>
+</node>
+<node id="Splitter@500,970.bit7">
+  <data key="d3">Splitter@500,970</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit7</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">480</data>
+  <data key="d9">980</data>
+  <data key="d10">4</data>
+</node>
+<node id="Constant@730,810.p">
+  <data key="d3">Constant@730,810</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">810</data>
+  <data key="d10">1</data>
+</node>
+<node id="Adder@750,830.cin">
+  <data key="d3">Adder@750,830</data>
+  <data key="d4">Adder</data>
+  <data key="d5">cin</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">810</data>
+  <data key="d10">1</data>
+</node>
+<node id="Constant@730,890.p">
+  <data key="d3">Constant@730,890</data>
+  <data key="d4">Constant</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">890</data>
+  <data key="d10">1</data>
+</node>
+<node id="Adder@750,910.cin">
+  <data key="d3">Adder@750,910</data>
+  <data key="d4">Adder</data>
+  <data key="d5">cin</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">890</data>
+  <data key="d10">1</data>
+</node>
+<node id="Adder@750,830.cout">
+  <data key="d3">Adder@750,830</data>
+  <data key="d4">Adder</data>
+  <data key="d5">cout</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">850</data>
+  <data key="d10">1</data>
+</node>
+<node id="Adder@750,910.cout">
+  <data key="d3">Adder@750,910</data>
+  <data key="d4">Adder</data>
+  <data key="d5">cout</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">730</data>
+  <data key="d9">930</data>
+  <data key="d10">1</data>
+</node>
+<edge source="Multiplexer@1040,920.out" target="Multiplexer@1150,840.in1" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net#0</data>
+</edge>
+<edge source="Multiplexer@1150,840.out" target="Multiplexer@1250,850.in0" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net#1</data>
+</edge>
+<edge source="Register@430,790[PC].Q" target="Splitter@500,970.combined" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:PC</data>
+</edge>
+<edge source="Register@430,790[PC].Q" target="Multiplexer@1250,850.in1" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:PC</data>
+</edge>
+<edge source="Register@430,790[PC].Q" target="Adder@750,830.a" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:PC</data>
+</edge>
+<edge source="Register@430,790[PC].Q" target="Adder@750,910.a" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:PC</data>
+</edge>
+<edge source="Pin@1230,880[hold].p" target="Multiplexer@1250,850.sel" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:hold</data>
+</edge>
+<edge source="Multiplexer@1250,850.out" target="Register@430,790[PC].D" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:PC</data>
+</edge>
+<edge source="Constant@370,840.p" target="Register@430,790[PC].en" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net:PC</data>
+</edge>
+<edge source="Pin@420,860[CLK].p" target="Register@430,790[PC].clk" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net:CLK/PC</data>
+</edge>
+<edge source="Pin@460,970[RST].p" target="Register@430,790[PC].clr" id="0">
+  <data key="d11">7</data>
+  <data key="d12">net:PC/RST</data>
+</edge>
+<edge source="Constant@610,840.p" target="Adder@750,830.b" id="0">
+  <data key="d11">8</data>
+  <data key="d12">net#8</data>
+</edge>
+<edge source="Splitter@500,970.bit1" target="Pin@640,1030[pc_out].p" id="0">
+  <data key="d11">9</data>
+  <data key="d12">net:pc_out</data>
+</edge>
+<edge source="Pin@640,920[IMM].p" target="Adder@750,910.b" id="0">
+  <data key="d11">10</data>
+  <data key="d12">net:IMM</data>
+</edge>
+<edge source="Adder@750,830.out" target="Pin@860,860[pc_plus4].p" id="0">
+  <data key="d11">11</data>
+  <data key="d12">net:pc_plus4</data>
+</edge>
+<edge source="Adder@750,830.out" target="Multiplexer@1150,840.in0" id="0">
+  <data key="d11">11</data>
+  <data key="d12">net:pc_plus4</data>
+</edge>
+<edge source="Adder@750,910.out" target="Multiplexer@1040,920.in0" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net#12</data>
+</edge>
+<edge source="Pin@970,930[abs_target].p" target="Multiplexer@1040,920.in1" id="0">
+  <data key="d11">13</data>
+  <data key="d12">net:abs_target</data>
+</edge>
+<edge source="Pin@1020,940[abs_select].p" target="Multiplexer@1040,920.sel" id="0">
+  <data key="d11">14</data>
+  <data key="d12">net:abs_select</data>
+</edge>
+<edge source="Pin@1130,860[BRANCH].p" target="Multiplexer@1150,840.sel" id="0">
+  <data key="d11">15</data>
+  <data key="d12">net:BRANCH</data>
+</edge>
+<edge source="Constant@730,810.p" target="Adder@750,830.cin" id="0">
+  <data key="d11">23</data>
+  <data key="d12">net#23</data>
+</edge>
+<edge source="Constant@730,890.p" target="Adder@750,910.cin" id="0">
+  <data key="d11">24</data>
+  <data key="d12">net#24</data>
+</edge>
+</graph></graphml>

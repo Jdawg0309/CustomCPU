@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">barrel_32b</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="Pin@100,350[amnt].p">
+  <data key="d3">Pin@100,350[amnt]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">amnt</data>
+  <data key="d8">100</data>
+  <data key="d9">350</data>
+  <data key="d10">5</data>
+</node>
+<node id="Splitter@110,350.combined">
+  <data key="d3">Splitter@110,350</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">combined</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">110</data>
+  <data key="d9">350</data>
+  <data key="d10">5</data>
+</node>
+<node id="bs_stage_4@1050,340.out_1">
+  <data key="d3">bs_stage_4@1050,340</data>
+  <data key="d4">bs_stage_4</data>
+  <data key="d5">out_1</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1050</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_8@1290,340.input_32">
+  <data key="d3">bs_stage_8@1290,340</data>
+  <data key="d4">bs_stage_8</data>
+  <data key="d5">input_32</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1070</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="Splitter@110,350.bit3">
+  <data key="d3">Splitter@110,350</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit3</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">130</data>
+  <data key="d9">420</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_8@1290,340.enable">
+  <data key="d3">bs_stage_8@1290,340</data>
+  <data key="d4">bs_stage_8</data>
+  <data key="d5">enable</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1070</data>
+  <data key="d9">360</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@310,380[typ].p">
+  <data key="d3">Pin@310,380[typ]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">typ</data>
+  <data key="d8">310</data>
+  <data key="d9">380</data>
+  <data key="d10">2</data>
+</node>
+<node id="bs_stage_4@1050,340.typ_2">
+  <data key="d3">bs_stage_4@1050,340</data>
+  <data key="d4">bs_stage_4</data>
+  <data key="d5">typ_2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">830</data>
+  <data key="d9">380</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_8@1290,340.typ_2">
+  <data key="d3">bs_stage_8@1290,340</data>
+  <data key="d4">bs_stage_8</data>
+  <data key="d5">typ_2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1070</data>
+  <data key="d9">380</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_16@1520,340.typ_2">
+  <data key="d3">bs_stage_16@1520,340</data>
+  <data key="d4">bs_stage_16</data>
+  <data key="d5">typ_2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1300</data>
+  <data key="d9">380</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_1@580,340.typ_2">
+  <data key="d3">bs_stage_1@580,340</data>
+  <data key="d4">bs_stage_1</data>
+  <data key="d5">typ_2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">360</data>
+  <data key="d9">380</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_2@810,340.typ_2">
+  <data key="d3">bs_stage_2@810,340</data>
+  <data key="d4">bs_stage_2</data>
+  <data key="d5">typ_2</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">590</data>
+  <data key="d9">380</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@110,330[input_32b].p">
+  <data key="d3">Pin@110,330[input_32b]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">input_32b</data>
+  <data key="d8">110</data>
+  <data key="d9">330</data>
+  <data key="d10">32</data>
+</node>
+<node id="bs_stage_1@580,340.input_32">
+  <data key="d3">bs_stage_1@580,340</data>
+  <data key="d4">bs_stage_1</data>
+  <data key="d5">input_32</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">360</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_8@1290,340.out_1">
+  <data key="d3">bs_stage_8@1290,340</data>
+  <data key="d4">bs_stage_8</data>
+  <data key="d5">out_1</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1290</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_16@1520,340.input_32">
+  <data key="d3">bs_stage_16@1520,340</data>
+  <data key="d4">bs_stage_16</data>
+  <data key="d5">input_32</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1300</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="Splitter@110,350.bit4">
+  <data key="d3">Splitter@110,350</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit4</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">130</data>
+  <data key="d9">440</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_16@1520,340.enable">
+  <data key="d3">bs_stage_16@1520,340</data>
+  <data key="d4">bs_stage_16</data>
+  <data key="d5">enable</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">1300</data>
+  <data key="d9">360</data>
+  <data key="d10">0</data>
+</node>
+<node id="Splitter@110,350.bit0">
+  <data key="d3">Splitter@110,350</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit0</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">130</data>
+  <data key="d9">360</data>
+  <data key="d10">5</data>
+</node>
+<node id="bs_stage_1@580,340.enable">
+  <data key="d3">bs_stage_1@580,340</data>
+  <data key="d4">bs_stage_1</data>
+  <data key="d5">enable</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">360</data>
+  <data key="d9">360</data>
+  <data key="d10">0</data>
+</node>
+<node id="Splitter@110,350.bit1">
+  <data key="d3">Splitter@110,350</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit1</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">130</data>
+  <data key="d9">380</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_2@810,340.enable">
+  <data key="d3">bs_stage_2@810,340</data>
+  <data key="d4">bs_stage_2</data>
+  <data key="d5">enable</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">590</data>
+  <data key="d9">360</data>
+  <data key="d10">0</data>
+</node>
+<node id="Splitter@110,350.bit2">
+  <data key="d3">Splitter@110,350</data>
+  <data key="d4">Splitter</data>
+  <data key="d5">bit2</data>
+  <data key="d6">inout</data>
+  <data key="d7"></data>
+  <data key="d8">130</data>
+  <data key="d9">400</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_4@1050,340.enable">
+  <data key="d3">bs_stage_4@1050,340</data>
+  <data key="d4">bs_stage_4</data>
+  <data key="d5">enable</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">830</data>
+  <data key="d9">360</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_1@580,340.out_1">
+  <data key="d3">bs_stage_1@580,340</data>
+  <data key="d4">bs_stage_1</data>
+  <data key="d5">out_1</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">580</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_2@810,340.input_32">
+  <data key="d3">bs_stage_2@810,340</data>
+  <data key="d4">bs_stage_2</data>
+  <data key="d5">input_32</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">590</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_4@1050,340.input_32">
+  <data key="d3">bs_stage_4@1050,340</data>
+  <data key="d4">bs_stage_4</data>
+  <data key="d5">input_32</data>
+  <data key="d6">in</data>
+  <data key="d7"></data>
+  <data key="d8">830</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="bs_stage_2@810,340.out_1">
+  <data key="d3">bs_stage_2@810,340</data>
+  <data key="d4">bs_stage_2</data>
+  <data key="d5">out_1</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">810</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@1520,340[outp].p">
+  <data key="d3">Pin@1520,340[outp]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">outp</data>
+  <data key="d8">1520</data>
+  <data key="d9">340</data>
+  <data key="d10">32</data>
+</node>
+<node id="bs_stage_16@1520,340.out_1">
+  <data key="d3">bs_stage_16@1520,340</data>
+  <data key="d4">bs_stage_16</data>
+  <data key="d5">out_1</data>
+  <data key="d6">out</data>
+  <data key="d7"></data>
+  <data key="d8">1520</data>
+  <data key="d9">340</data>
+  <data key="d10">0</data>
+</node>
+<edge source="Pin@100,350[amnt].p" target="Splitter@110,350.combined" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:amnt</data>
+</edge>
+<edge source="bs_stage_4@1050,340.out_1" target="bs_stage_8@1290,340.input_32" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net#1</data>
+</edge>
+<edge source="Splitter@110,350.bit3" target="bs_stage_8@1290,340.enable" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net#2</data>
+</edge>
+<edge source="Pin@310,380[typ].p" target="bs_stage_4@1050,340.typ_2" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:typ</data>
+</edge>
+<edge source="Pin@310,380[typ].p" target="bs_stage_8@1290,340.typ_2" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:typ</data>
+</edge>
+<edge source="Pin@310,380[typ].p" target="bs_stage_16@1520,340.typ_2" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:typ</data>
+</edge>
+<edge source="Pin@310,380[typ].p" target="bs_stage_1@580,340.typ_2" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:typ</data>
+</edge>
+<edge source="Pin@310,380[typ].p" target="bs_stage_2@810,340.typ_2" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:typ</data>
+</edge>
+<edge source="Pin@110,330[input_32b].p" target="bs_stage_1@580,340.input_32" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:input_32b</data>
+</edge>
+<edge source="bs_stage_8@1290,340.out_1" target="bs_stage_16@1520,340.input_32" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net#5</data>
+</edge>
+<edge source="Splitter@110,350.bit4" target="bs_stage_16@1520,340.enable" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net#6</data>
+</edge>
+<edge source="Splitter@110,350.bit0" target="bs_stage_1@580,340.enable" id="0">
+  <data key="d11">7</data>
+  <data key="d12">net#7</data>
+</edge>
+<edge source="Splitter@110,350.bit1" target="bs_stage_2@810,340.enable" id="0">
+  <data key="d11">8</data>
+  <data key="d12">net#8</data>
+</edge>
+<edge source="Splitter@110,350.bit2" target="bs_stage_4@1050,340.enable" id="0">
+  <data key="d11">9</data>
+  <data key="d12">net#9</data>
+</edge>
+<edge source="bs_stage_1@580,340.out_1" target="bs_stage_2@810,340.input_32" id="0">
+  <data key="d11">10</data>
+  <data key="d12">net#10</data>
+</edge>
+<edge source="bs_stage_2@810,340.out_1" target="bs_stage_4@1050,340.input_32" id="0">
+  <data key="d11">11</data>
+  <data key="d12">net#11</data>
+</edge>
+<edge source="bs_stage_16@1520,340.out_1" target="Pin@1520,340[outp].p" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net:outp</data>
+</edge>
+</graph></graphml>

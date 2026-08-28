@@ -1,0 +1,4215 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "pp_8",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    190,
+    270,
+    680,
+    920
+  ],
+  "circuit": "pp_8",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "initial": "0xbe",
+        "label": "Rm",
+        "radix": "16",
+        "width": "8"
+      },
+      "facing": "east",
+      "id": "Pin@190,270[Rm]",
+      "is_subcircuit": false,
+      "label": "Rm",
+      "library": "0",
+      "location": [
+        190,
+        270
+      ],
+      "ports": [
+        {
+          "anchor": [
+            190,
+            270
+          ],
+          "direction": "out",
+          "id": "Pin@190,270[Rm].p",
+          "name": "p",
+          "pin": [
+            190,
+            270
+          ],
+          "width": 8
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "initial": "0xdeadbeef",
+        "label": "Rs",
+        "radix": "16",
+        "width": "8"
+      },
+      "facing": "east",
+      "id": "Pin@190,350[Rs]",
+      "is_subcircuit": false,
+      "label": "Rs",
+      "library": "0",
+      "location": [
+        190,
+        350
+      ],
+      "ports": [
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "out",
+          "id": "Pin@190,350[Rs].p",
+          "name": "p",
+          "pin": [
+            190,
+            350
+          ],
+          "width": 8
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appear": "right",
+        "fanout": "8",
+        "incoming": "8",
+        "spacing": "8"
+      },
+      "facing": "east",
+      "id": "Splitter@190,350",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        190,
+        350
+      ],
+      "ports": [
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit0",
+          "name": "bit0",
+          "pin": [
+            210,
+            360
+          ],
+          "width": 8
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit1",
+          "name": "bit1",
+          "pin": [
+            210,
+            440
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit2",
+          "name": "bit2",
+          "pin": [
+            210,
+            520
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit3",
+          "name": "bit3",
+          "pin": [
+            210,
+            600
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit4",
+          "name": "bit4",
+          "pin": [
+            210,
+            680
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit5",
+          "name": "bit5",
+          "pin": [
+            210,
+            760
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit6",
+          "name": "bit6",
+          "pin": [
+            210,
+            840
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.bit7",
+          "name": "bit7",
+          "pin": [
+            210,
+            920
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            190,
+            350
+          ],
+          "direction": "inout",
+          "id": "Splitter@190,350.combined",
+          "name": "combined",
+          "pin": [
+            190,
+            350
+          ],
+          "width": 8
+        }
+      ],
+      "type": "Splitter"
+    },
+    {
+      "attributes": {
+        "type": "zero"
+      },
+      "facing": "east",
+      "id": "Bit Extender@230,270",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        230,
+        270
+      ],
+      "ports": [
+        {
+          "anchor": [
+            230,
+            270
+          ],
+          "direction": "in",
+          "id": "Bit Extender@230,270.in",
+          "name": "in",
+          "pin": [
+            190,
+            270
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            230,
+            270
+          ],
+          "direction": "out",
+          "id": "Bit Extender@230,270.out",
+          "name": "out",
+          "pin": [
+            230,
+            270
+          ],
+          "width": null
+        }
+      ],
+      "type": "Bit Extender"
+    },
+    {
+      "attributes": {
+        "value": "0x0",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,360",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        360
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            360
+          ],
+          "direction": "out",
+          "id": "Constant@560,360.p",
+          "name": "p",
+          "pin": [
+            560,
+            360
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,440",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        440
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            440
+          ],
+          "direction": "out",
+          "id": "Constant@560,440.p",
+          "name": "p",
+          "pin": [
+            560,
+            440
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x2",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,520",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        520
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            520
+          ],
+          "direction": "out",
+          "id": "Constant@560,520.p",
+          "name": "p",
+          "pin": [
+            560,
+            520
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x3",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,600",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        600
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            600
+          ],
+          "direction": "out",
+          "id": "Constant@560,600.p",
+          "name": "p",
+          "pin": [
+            560,
+            600
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x4",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,680",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        680
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            680
+          ],
+          "direction": "out",
+          "id": "Constant@560,680.p",
+          "name": "p",
+          "pin": [
+            560,
+            680
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x5",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,760",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        760
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            760
+          ],
+          "direction": "out",
+          "id": "Constant@560,760.p",
+          "name": "p",
+          "pin": [
+            560,
+            760
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x6",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,840",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        840
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            840
+          ],
+          "direction": "out",
+          "id": "Constant@560,840.p",
+          "name": "p",
+          "pin": [
+            560,
+            840
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "value": "0x7",
+        "width": "4"
+      },
+      "facing": "east",
+      "id": "Constant@560,920",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        560,
+        920
+      ],
+      "ports": [
+        {
+          "anchor": [
+            560,
+            920
+          ],
+          "direction": "out",
+          "id": "Constant@560,920.p",
+          "name": "p",
+          "pin": [
+            560,
+            920
+          ],
+          "width": 4
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p0",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,350[p0]",
+      "is_subcircuit": false,
+      "label": "p0",
+      "library": "0",
+      "location": [
+        680,
+        350
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            350
+          ],
+          "direction": "in",
+          "id": "Pin@680,350[p0].p",
+          "name": "p",
+          "pin": [
+            680,
+            350
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p1",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,430[p1]",
+      "is_subcircuit": false,
+      "label": "p1",
+      "library": "0",
+      "location": [
+        680,
+        430
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            430
+          ],
+          "direction": "in",
+          "id": "Pin@680,430[p1].p",
+          "name": "p",
+          "pin": [
+            680,
+            430
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p2",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,510[p2]",
+      "is_subcircuit": false,
+      "label": "p2",
+      "library": "0",
+      "location": [
+        680,
+        510
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            510
+          ],
+          "direction": "in",
+          "id": "Pin@680,510[p2].p",
+          "name": "p",
+          "pin": [
+            680,
+            510
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p3",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,590[p3]",
+      "is_subcircuit": false,
+      "label": "p3",
+      "library": "0",
+      "location": [
+        680,
+        590
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            590
+          ],
+          "direction": "in",
+          "id": "Pin@680,590[p3].p",
+          "name": "p",
+          "pin": [
+            680,
+            590
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p4",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,670[p4]",
+      "is_subcircuit": false,
+      "label": "p4",
+      "library": "0",
+      "location": [
+        680,
+        670
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            670
+          ],
+          "direction": "in",
+          "id": "Pin@680,670[p4].p",
+          "name": "p",
+          "pin": [
+            680,
+            670
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p5",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,750[p5]",
+      "is_subcircuit": false,
+      "label": "p5",
+      "library": "0",
+      "location": [
+        680,
+        750
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            750
+          ],
+          "direction": "in",
+          "id": "Pin@680,750[p5].p",
+          "name": "p",
+          "pin": [
+            680,
+            750
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p6",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,830[p6]",
+      "is_subcircuit": false,
+      "label": "p6",
+      "library": "0",
+      "location": [
+        680,
+        830
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            830
+          ],
+          "direction": "in",
+          "id": "Pin@680,830[p6].p",
+          "name": "p",
+          "pin": [
+            680,
+            830
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "p7",
+        "output": "true",
+        "radix": "16",
+        "width": "16"
+      },
+      "facing": "west",
+      "id": "Pin@680,910[p7]",
+      "is_subcircuit": false,
+      "label": "p7",
+      "library": "0",
+      "location": [
+        680,
+        910
+      ],
+      "ports": [
+        {
+          "anchor": [
+            680,
+            910
+          ],
+          "direction": "in",
+          "id": "Pin@680,910[p7].p",
+          "name": "p",
+          "pin": [
+            680,
+            910
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,350",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        350
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            350
+          ],
+          "direction": "in",
+          "id": "Shifter@600,350.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            360
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            350
+          ],
+          "direction": "in",
+          "id": "Shifter@600,350.in",
+          "name": "in",
+          "pin": [
+            560,
+            340
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            350
+          ],
+          "direction": "out",
+          "id": "Shifter@600,350.out",
+          "name": "out",
+          "pin": [
+            600,
+            350
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,430",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        430
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            430
+          ],
+          "direction": "in",
+          "id": "Shifter@600,430.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            440
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            430
+          ],
+          "direction": "in",
+          "id": "Shifter@600,430.in",
+          "name": "in",
+          "pin": [
+            560,
+            420
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            430
+          ],
+          "direction": "out",
+          "id": "Shifter@600,430.out",
+          "name": "out",
+          "pin": [
+            600,
+            430
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,510",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        510
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            510
+          ],
+          "direction": "in",
+          "id": "Shifter@600,510.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            520
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            510
+          ],
+          "direction": "in",
+          "id": "Shifter@600,510.in",
+          "name": "in",
+          "pin": [
+            560,
+            500
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            510
+          ],
+          "direction": "out",
+          "id": "Shifter@600,510.out",
+          "name": "out",
+          "pin": [
+            600,
+            510
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,590",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        590
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            590
+          ],
+          "direction": "in",
+          "id": "Shifter@600,590.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            600
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            590
+          ],
+          "direction": "in",
+          "id": "Shifter@600,590.in",
+          "name": "in",
+          "pin": [
+            560,
+            580
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            590
+          ],
+          "direction": "out",
+          "id": "Shifter@600,590.out",
+          "name": "out",
+          "pin": [
+            600,
+            590
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,670",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        670
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            670
+          ],
+          "direction": "in",
+          "id": "Shifter@600,670.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            680
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            670
+          ],
+          "direction": "in",
+          "id": "Shifter@600,670.in",
+          "name": "in",
+          "pin": [
+            560,
+            660
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            670
+          ],
+          "direction": "out",
+          "id": "Shifter@600,670.out",
+          "name": "out",
+          "pin": [
+            600,
+            670
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,750",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        750
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            750
+          ],
+          "direction": "in",
+          "id": "Shifter@600,750.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            760
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            750
+          ],
+          "direction": "in",
+          "id": "Shifter@600,750.in",
+          "name": "in",
+          "pin": [
+            560,
+            740
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            750
+          ],
+          "direction": "out",
+          "id": "Shifter@600,750.out",
+          "name": "out",
+          "pin": [
+            600,
+            750
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,830",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        830
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            830
+          ],
+          "direction": "in",
+          "id": "Shifter@600,830.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            840
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            830
+          ],
+          "direction": "in",
+          "id": "Shifter@600,830.in",
+          "name": "in",
+          "pin": [
+            560,
+            820
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            830
+          ],
+          "direction": "out",
+          "id": "Shifter@600,830.out",
+          "name": "out",
+          "pin": [
+            600,
+            830
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {
+        "width": "16"
+      },
+      "facing": "east",
+      "id": "Shifter@600,910",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        600,
+        910
+      ],
+      "ports": [
+        {
+          "anchor": [
+            600,
+            910
+          ],
+          "direction": "in",
+          "id": "Shifter@600,910.dist",
+          "name": "dist",
+          "pin": [
+            560,
+            920
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            600,
+            910
+          ],
+          "direction": "in",
+          "id": "Shifter@600,910.in",
+          "name": "in",
+          "pin": [
+            560,
+            900
+          ],
+          "width": 16
+        },
+        {
+          "anchor": [
+            600,
+            910
+          ],
+          "direction": "out",
+          "id": "Shifter@600,910.out",
+          "name": "out",
+          "pin": [
+            600,
+            910
+          ],
+          "width": 16
+        }
+      ],
+      "type": "Shifter"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,340",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        340
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            340
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,340.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            340
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            340
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,340.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            360
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            340
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,340.result",
+          "name": "result",
+          "pin": [
+            480,
+            340
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,420",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        420
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            420
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,420.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            420
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            420
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,420.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            440
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            420
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,420.result",
+          "name": "result",
+          "pin": [
+            480,
+            420
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,500",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        500
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            500
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,500.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            500
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            500
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,500.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            520
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            500
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,500.result",
+          "name": "result",
+          "pin": [
+            480,
+            500
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,580",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        580
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            580
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,580.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            580
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            580
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,580.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            600
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            580
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,580.result",
+          "name": "result",
+          "pin": [
+            480,
+            580
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,660",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        660
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            660
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,660.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            660
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            660
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,660.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            680
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            660
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,660.result",
+          "name": "result",
+          "pin": [
+            480,
+            660
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,740",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        740
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            740
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,740.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            740
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            740
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,740.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            760
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            740
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,740.result",
+          "name": "result",
+          "pin": [
+            480,
+            740
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,820",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        820
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            820
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,820.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            820
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            820
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,820.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            840
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            820
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,820.result",
+          "name": "result",
+          "pin": [
+            480,
+            820
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "pp_row_16@480,900",
+      "is_subcircuit": true,
+      "label": "",
+      "library": null,
+      "location": [
+        480,
+        900
+      ],
+      "ports": [
+        {
+          "anchor": [
+            480,
+            900
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,900.Rm",
+          "name": "Rm",
+          "pin": [
+            260,
+            900
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            900
+          ],
+          "direction": "in",
+          "id": "pp_row_16@480,900.Rs_bit",
+          "name": "Rs_bit",
+          "pin": [
+            260,
+            920
+          ],
+          "width": null
+        },
+        {
+          "anchor": [
+            480,
+            900
+          ],
+          "direction": "out",
+          "id": "pp_row_16@480,900.result",
+          "name": "result",
+          "pin": [
+            480,
+            900
+          ],
+          "width": null
+        }
+      ],
+      "type": "pp_row_16"
+    }
+  ],
+  "coverage": {
+    "endpoints": 67,
+    "matched": 66,
+    "unmatched": [
+      [
+        270,
+        660
+      ]
+    ],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "pp_8",
+    "edges": [
+      {
+        "dst": "pp_row_16@480,340.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,420.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,500.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,580.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,660.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,740.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,820.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "pp_row_16@480,900.Rm",
+        "net": 8,
+        "src": "Bit Extender@230,270.out"
+      },
+      {
+        "dst": "Shifter@600,350.dist",
+        "net": 27,
+        "src": "Constant@560,360.p"
+      },
+      {
+        "dst": "Shifter@600,430.dist",
+        "net": 28,
+        "src": "Constant@560,440.p"
+      },
+      {
+        "dst": "Shifter@600,510.dist",
+        "net": 29,
+        "src": "Constant@560,520.p"
+      },
+      {
+        "dst": "Shifter@600,590.dist",
+        "net": 30,
+        "src": "Constant@560,600.p"
+      },
+      {
+        "dst": "Shifter@600,670.dist",
+        "net": 31,
+        "src": "Constant@560,680.p"
+      },
+      {
+        "dst": "Shifter@600,750.dist",
+        "net": 32,
+        "src": "Constant@560,760.p"
+      },
+      {
+        "dst": "Shifter@600,830.dist",
+        "net": 33,
+        "src": "Constant@560,840.p"
+      },
+      {
+        "dst": "Shifter@600,910.dist",
+        "net": 34,
+        "src": "Constant@560,920.p"
+      },
+      {
+        "dst": "Bit Extender@230,270.in",
+        "net": 25,
+        "src": "Pin@190,270[Rm].p"
+      },
+      {
+        "dst": "Splitter@190,350.combined",
+        "net": 26,
+        "src": "Pin@190,350[Rs].p"
+      },
+      {
+        "dst": "Pin@680,350[p0].p",
+        "net": 17,
+        "src": "Shifter@600,350.out"
+      },
+      {
+        "dst": "Pin@680,430[p1].p",
+        "net": 18,
+        "src": "Shifter@600,430.out"
+      },
+      {
+        "dst": "Pin@680,510[p2].p",
+        "net": 19,
+        "src": "Shifter@600,510.out"
+      },
+      {
+        "dst": "Pin@680,590[p3].p",
+        "net": 20,
+        "src": "Shifter@600,590.out"
+      },
+      {
+        "dst": "Pin@680,670[p4].p",
+        "net": 21,
+        "src": "Shifter@600,670.out"
+      },
+      {
+        "dst": "Pin@680,750[p5].p",
+        "net": 22,
+        "src": "Shifter@600,750.out"
+      },
+      {
+        "dst": "Pin@680,830[p6].p",
+        "net": 23,
+        "src": "Shifter@600,830.out"
+      },
+      {
+        "dst": "Pin@680,910[p7].p",
+        "net": 24,
+        "src": "Shifter@600,910.out"
+      },
+      {
+        "dst": "pp_row_16@480,340.Rs_bit",
+        "net": 0,
+        "src": "Splitter@190,350.bit0"
+      },
+      {
+        "dst": "pp_row_16@480,420.Rs_bit",
+        "net": 1,
+        "src": "Splitter@190,350.bit1"
+      },
+      {
+        "dst": "pp_row_16@480,500.Rs_bit",
+        "net": 2,
+        "src": "Splitter@190,350.bit2"
+      },
+      {
+        "dst": "pp_row_16@480,580.Rs_bit",
+        "net": 3,
+        "src": "Splitter@190,350.bit3"
+      },
+      {
+        "dst": "pp_row_16@480,660.Rs_bit",
+        "net": 4,
+        "src": "Splitter@190,350.bit4"
+      },
+      {
+        "dst": "pp_row_16@480,740.Rs_bit",
+        "net": 5,
+        "src": "Splitter@190,350.bit5"
+      },
+      {
+        "dst": "pp_row_16@480,820.Rs_bit",
+        "net": 6,
+        "src": "Splitter@190,350.bit6"
+      },
+      {
+        "dst": "pp_row_16@480,900.Rs_bit",
+        "net": 7,
+        "src": "Splitter@190,350.bit7"
+      },
+      {
+        "dst": "Shifter@600,350.in",
+        "net": 9,
+        "src": "pp_row_16@480,340.result"
+      },
+      {
+        "dst": "Shifter@600,430.in",
+        "net": 10,
+        "src": "pp_row_16@480,420.result"
+      },
+      {
+        "dst": "Shifter@600,510.in",
+        "net": 11,
+        "src": "pp_row_16@480,500.result"
+      },
+      {
+        "dst": "Shifter@600,590.in",
+        "net": 12,
+        "src": "pp_row_16@480,580.result"
+      },
+      {
+        "dst": "Shifter@600,670.in",
+        "net": 13,
+        "src": "pp_row_16@480,660.result"
+      },
+      {
+        "dst": "Shifter@600,750.in",
+        "net": 14,
+        "src": "pp_row_16@480,740.result"
+      },
+      {
+        "dst": "Shifter@600,830.in",
+        "net": 15,
+        "src": "pp_row_16@480,820.result"
+      },
+      {
+        "dst": "Shifter@600,910.in",
+        "net": 16,
+        "src": "pp_row_16@480,900.result"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+    "nets": [
+      {
+        "drivers": [],
+        "index": 0,
+        "labels": [],
+        "name": "net#0",
+        "ports": [
+          "Splitter@190,350.bit0",
+          "pp_row_16@480,340.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 1,
+        "labels": [],
+        "name": "net#1",
+        "ports": [
+          "Splitter@190,350.bit1",
+          "pp_row_16@480,420.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 2,
+        "labels": [],
+        "name": "net#2",
+        "ports": [
+          "Splitter@190,350.bit2",
+          "pp_row_16@480,500.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 3,
+        "labels": [],
+        "name": "net#3",
+        "ports": [
+          "Splitter@190,350.bit3",
+          "pp_row_16@480,580.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 4,
+        "labels": [],
+        "name": "net#4",
+        "ports": [
+          "Splitter@190,350.bit4",
+          "pp_row_16@480,660.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 5,
+        "labels": [],
+        "name": "net#5",
+        "ports": [
+          "Splitter@190,350.bit5",
+          "pp_row_16@480,740.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 6,
+        "labels": [],
+        "name": "net#6",
+        "ports": [
+          "Splitter@190,350.bit6",
+          "pp_row_16@480,820.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 7,
+        "labels": [],
+        "name": "net#7",
+        "ports": [
+          "Splitter@190,350.bit7",
+          "pp_row_16@480,900.Rs_bit"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Bit Extender@230,270.out"
+        ],
+        "index": 8,
+        "labels": [],
+        "name": "net#8",
+        "ports": [
+          "Bit Extender@230,270.out",
+          "pp_row_16@480,340.Rm",
+          "pp_row_16@480,420.Rm",
+          "pp_row_16@480,500.Rm",
+          "pp_row_16@480,580.Rm",
+          "pp_row_16@480,660.Rm",
+          "pp_row_16@480,740.Rm",
+          "pp_row_16@480,820.Rm",
+          "pp_row_16@480,900.Rm"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,340.result"
+        ],
+        "index": 9,
+        "labels": [],
+        "name": "net#9",
+        "ports": [
+          "Shifter@600,350.in",
+          "pp_row_16@480,340.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,420.result"
+        ],
+        "index": 10,
+        "labels": [],
+        "name": "net#10",
+        "ports": [
+          "Shifter@600,430.in",
+          "pp_row_16@480,420.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,500.result"
+        ],
+        "index": 11,
+        "labels": [],
+        "name": "net#11",
+        "ports": [
+          "Shifter@600,510.in",
+          "pp_row_16@480,500.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,580.result"
+        ],
+        "index": 12,
+        "labels": [],
+        "name": "net#12",
+        "ports": [
+          "Shifter@600,590.in",
+          "pp_row_16@480,580.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,660.result"
+        ],
+        "index": 13,
+        "labels": [],
+        "name": "net#13",
+        "ports": [
+          "Shifter@600,670.in",
+          "pp_row_16@480,660.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,740.result"
+        ],
+        "index": 14,
+        "labels": [],
+        "name": "net#14",
+        "ports": [
+          "Shifter@600,750.in",
+          "pp_row_16@480,740.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,820.result"
+        ],
+        "index": 15,
+        "labels": [],
+        "name": "net#15",
+        "ports": [
+          "Shifter@600,830.in",
+          "pp_row_16@480,820.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "pp_row_16@480,900.result"
+        ],
+        "index": 16,
+        "labels": [],
+        "name": "net#16",
+        "ports": [
+          "Shifter@600,910.in",
+          "pp_row_16@480,900.result"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,350.out"
+        ],
+        "index": 17,
+        "labels": [
+          "p0"
+        ],
+        "name": "net:p0",
+        "ports": [
+          "Pin@680,350[p0].p",
+          "Shifter@600,350.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,430.out"
+        ],
+        "index": 18,
+        "labels": [
+          "p1"
+        ],
+        "name": "net:p1",
+        "ports": [
+          "Pin@680,430[p1].p",
+          "Shifter@600,430.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,510.out"
+        ],
+        "index": 19,
+        "labels": [
+          "p2"
+        ],
+        "name": "net:p2",
+        "ports": [
+          "Pin@680,510[p2].p",
+          "Shifter@600,510.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,590.out"
+        ],
+        "index": 20,
+        "labels": [
+          "p3"
+        ],
+        "name": "net:p3",
+        "ports": [
+          "Pin@680,590[p3].p",
+          "Shifter@600,590.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,670.out"
+        ],
+        "index": 21,
+        "labels": [
+          "p4"
+        ],
+        "name": "net:p4",
+        "ports": [
+          "Pin@680,670[p4].p",
+          "Shifter@600,670.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,750.out"
+        ],
+        "index": 22,
+        "labels": [
+          "p5"
+        ],
+        "name": "net:p5",
+        "ports": [
+          "Pin@680,750[p5].p",
+          "Shifter@600,750.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,830.out"
+        ],
+        "index": 23,
+        "labels": [
+          "p6"
+        ],
+        "name": "net:p6",
+        "ports": [
+          "Pin@680,830[p6].p",
+          "Shifter@600,830.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Shifter@600,910.out"
+        ],
+        "index": 24,
+        "labels": [
+          "p7"
+        ],
+        "name": "net:p7",
+        "ports": [
+          "Pin@680,910[p7].p",
+          "Shifter@600,910.out"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@190,270[Rm].p"
+        ],
+        "index": 25,
+        "labels": [
+          "Rm"
+        ],
+        "name": "net:Rm",
+        "ports": [
+          "Bit Extender@230,270.in",
+          "Pin@190,270[Rm].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@190,350[Rs].p"
+        ],
+        "index": 26,
+        "labels": [
+          "Rs"
+        ],
+        "name": "net:Rs",
+        "ports": [
+          "Pin@190,350[Rs].p",
+          "Splitter@190,350.combined"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,360.p"
+        ],
+        "index": 27,
+        "labels": [],
+        "name": "net#27",
+        "ports": [
+          "Constant@560,360.p",
+          "Shifter@600,350.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,440.p"
+        ],
+        "index": 28,
+        "labels": [],
+        "name": "net#28",
+        "ports": [
+          "Constant@560,440.p",
+          "Shifter@600,430.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,520.p"
+        ],
+        "index": 29,
+        "labels": [],
+        "name": "net#29",
+        "ports": [
+          "Constant@560,520.p",
+          "Shifter@600,510.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,600.p"
+        ],
+        "index": 30,
+        "labels": [],
+        "name": "net#30",
+        "ports": [
+          "Constant@560,600.p",
+          "Shifter@600,590.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,680.p"
+        ],
+        "index": 31,
+        "labels": [],
+        "name": "net#31",
+        "ports": [
+          "Constant@560,680.p",
+          "Shifter@600,670.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,760.p"
+        ],
+        "index": 32,
+        "labels": [],
+        "name": "net#32",
+        "ports": [
+          "Constant@560,760.p",
+          "Shifter@600,750.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,840.p"
+        ],
+        "index": 33,
+        "labels": [],
+        "name": "net#33",
+        "ports": [
+          "Constant@560,840.p",
+          "Shifter@600,830.dist"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@560,920.p"
+        ],
+        "index": 34,
+        "labels": [],
+        "name": "net#34",
+        "ports": [
+          "Constant@560,920.p",
+          "Shifter@600,910.dist"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "Bit Extender@230,270",
+        "direction": "in",
+        "id": "Bit Extender@230,270.in",
+        "kind": "Bit Extender",
+        "label": "",
+        "loc": [
+          230,
+          270
+        ],
+        "pin": [
+          190,
+          270
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Bit Extender@230,270",
+        "direction": "out",
+        "id": "Bit Extender@230,270.out",
+        "kind": "Bit Extender",
+        "label": "",
+        "loc": [
+          230,
+          270
+        ],
+        "pin": [
+          230,
+          270
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Constant@560,360",
+        "direction": "out",
+        "id": "Constant@560,360.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          360
+        ],
+        "pin": [
+          560,
+          360
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,440",
+        "direction": "out",
+        "id": "Constant@560,440.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          440
+        ],
+        "pin": [
+          560,
+          440
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,520",
+        "direction": "out",
+        "id": "Constant@560,520.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          520
+        ],
+        "pin": [
+          560,
+          520
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,600",
+        "direction": "out",
+        "id": "Constant@560,600.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          600
+        ],
+        "pin": [
+          560,
+          600
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,680",
+        "direction": "out",
+        "id": "Constant@560,680.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          680
+        ],
+        "pin": [
+          560,
+          680
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,760",
+        "direction": "out",
+        "id": "Constant@560,760.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          760
+        ],
+        "pin": [
+          560,
+          760
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,840",
+        "direction": "out",
+        "id": "Constant@560,840.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          840
+        ],
+        "pin": [
+          560,
+          840
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@560,920",
+        "direction": "out",
+        "id": "Constant@560,920.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          560,
+          920
+        ],
+        "pin": [
+          560,
+          920
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@190,270[Rm]",
+        "direction": "out",
+        "id": "Pin@190,270[Rm].p",
+        "kind": "Pin",
+        "label": "Rm",
+        "loc": [
+          190,
+          270
+        ],
+        "pin": [
+          190,
+          270
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@190,350[Rs]",
+        "direction": "out",
+        "id": "Pin@190,350[Rs].p",
+        "kind": "Pin",
+        "label": "Rs",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          190,
+          350
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,350[p0]",
+        "direction": "in",
+        "id": "Pin@680,350[p0].p",
+        "kind": "Pin",
+        "label": "p0",
+        "loc": [
+          680,
+          350
+        ],
+        "pin": [
+          680,
+          350
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,430[p1]",
+        "direction": "in",
+        "id": "Pin@680,430[p1].p",
+        "kind": "Pin",
+        "label": "p1",
+        "loc": [
+          680,
+          430
+        ],
+        "pin": [
+          680,
+          430
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,510[p2]",
+        "direction": "in",
+        "id": "Pin@680,510[p2].p",
+        "kind": "Pin",
+        "label": "p2",
+        "loc": [
+          680,
+          510
+        ],
+        "pin": [
+          680,
+          510
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,590[p3]",
+        "direction": "in",
+        "id": "Pin@680,590[p3].p",
+        "kind": "Pin",
+        "label": "p3",
+        "loc": [
+          680,
+          590
+        ],
+        "pin": [
+          680,
+          590
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,670[p4]",
+        "direction": "in",
+        "id": "Pin@680,670[p4].p",
+        "kind": "Pin",
+        "label": "p4",
+        "loc": [
+          680,
+          670
+        ],
+        "pin": [
+          680,
+          670
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,750[p5]",
+        "direction": "in",
+        "id": "Pin@680,750[p5].p",
+        "kind": "Pin",
+        "label": "p5",
+        "loc": [
+          680,
+          750
+        ],
+        "pin": [
+          680,
+          750
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,830[p6]",
+        "direction": "in",
+        "id": "Pin@680,830[p6].p",
+        "kind": "Pin",
+        "label": "p6",
+        "loc": [
+          680,
+          830
+        ],
+        "pin": [
+          680,
+          830
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@680,910[p7]",
+        "direction": "in",
+        "id": "Pin@680,910[p7].p",
+        "kind": "Pin",
+        "label": "p7",
+        "loc": [
+          680,
+          910
+        ],
+        "pin": [
+          680,
+          910
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Shifter@600,350",
+        "direction": "in",
+        "id": "Shifter@600,350.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          350
+        ],
+        "pin": [
+          560,
+          360
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,350",
+        "direction": "in",
+        "id": "Shifter@600,350.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          350
+        ],
+        "pin": [
+          560,
+          340
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,350",
+        "direction": "out",
+        "id": "Shifter@600,350.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          350
+        ],
+        "pin": [
+          600,
+          350
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,430",
+        "direction": "in",
+        "id": "Shifter@600,430.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          430
+        ],
+        "pin": [
+          560,
+          440
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,430",
+        "direction": "in",
+        "id": "Shifter@600,430.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          430
+        ],
+        "pin": [
+          560,
+          420
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,430",
+        "direction": "out",
+        "id": "Shifter@600,430.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          430
+        ],
+        "pin": [
+          600,
+          430
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,510",
+        "direction": "in",
+        "id": "Shifter@600,510.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          510
+        ],
+        "pin": [
+          560,
+          520
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,510",
+        "direction": "in",
+        "id": "Shifter@600,510.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          510
+        ],
+        "pin": [
+          560,
+          500
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,510",
+        "direction": "out",
+        "id": "Shifter@600,510.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          510
+        ],
+        "pin": [
+          600,
+          510
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,590",
+        "direction": "in",
+        "id": "Shifter@600,590.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          590
+        ],
+        "pin": [
+          560,
+          600
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,590",
+        "direction": "in",
+        "id": "Shifter@600,590.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          590
+        ],
+        "pin": [
+          560,
+          580
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,590",
+        "direction": "out",
+        "id": "Shifter@600,590.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          590
+        ],
+        "pin": [
+          600,
+          590
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,670",
+        "direction": "in",
+        "id": "Shifter@600,670.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          670
+        ],
+        "pin": [
+          560,
+          680
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,670",
+        "direction": "in",
+        "id": "Shifter@600,670.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          670
+        ],
+        "pin": [
+          560,
+          660
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,670",
+        "direction": "out",
+        "id": "Shifter@600,670.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          670
+        ],
+        "pin": [
+          600,
+          670
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,750",
+        "direction": "in",
+        "id": "Shifter@600,750.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          750
+        ],
+        "pin": [
+          560,
+          760
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,750",
+        "direction": "in",
+        "id": "Shifter@600,750.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          750
+        ],
+        "pin": [
+          560,
+          740
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,750",
+        "direction": "out",
+        "id": "Shifter@600,750.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          750
+        ],
+        "pin": [
+          600,
+          750
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,830",
+        "direction": "in",
+        "id": "Shifter@600,830.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          830
+        ],
+        "pin": [
+          560,
+          840
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,830",
+        "direction": "in",
+        "id": "Shifter@600,830.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          830
+        ],
+        "pin": [
+          560,
+          820
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,830",
+        "direction": "out",
+        "id": "Shifter@600,830.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          830
+        ],
+        "pin": [
+          600,
+          830
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Shifter@600,910",
+        "direction": "in",
+        "id": "Shifter@600,910.dist",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          910
+        ],
+        "pin": [
+          560,
+          920
+        ],
+        "port": "dist"
+      },
+      {
+        "comp": "Shifter@600,910",
+        "direction": "in",
+        "id": "Shifter@600,910.in",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          910
+        ],
+        "pin": [
+          560,
+          900
+        ],
+        "port": "in"
+      },
+      {
+        "comp": "Shifter@600,910",
+        "direction": "out",
+        "id": "Shifter@600,910.out",
+        "kind": "Shifter",
+        "label": "",
+        "loc": [
+          600,
+          910
+        ],
+        "pin": [
+          600,
+          910
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit0",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          360
+        ],
+        "port": "bit0"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit1",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          440
+        ],
+        "port": "bit1"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit2",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          520
+        ],
+        "port": "bit2"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit3",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          600
+        ],
+        "port": "bit3"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit4",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          680
+        ],
+        "port": "bit4"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit5",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          760
+        ],
+        "port": "bit5"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit6",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          840
+        ],
+        "port": "bit6"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.bit7",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          210,
+          920
+        ],
+        "port": "bit7"
+      },
+      {
+        "comp": "Splitter@190,350",
+        "direction": "inout",
+        "id": "Splitter@190,350.combined",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          190,
+          350
+        ],
+        "pin": [
+          190,
+          350
+        ],
+        "port": "combined"
+      },
+      {
+        "comp": "pp_row_16@480,340",
+        "direction": "in",
+        "id": "pp_row_16@480,340.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          340
+        ],
+        "pin": [
+          260,
+          340
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,340",
+        "direction": "in",
+        "id": "pp_row_16@480,340.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          340
+        ],
+        "pin": [
+          260,
+          360
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,340",
+        "direction": "out",
+        "id": "pp_row_16@480,340.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          340
+        ],
+        "pin": [
+          480,
+          340
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,420",
+        "direction": "in",
+        "id": "pp_row_16@480,420.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          420
+        ],
+        "pin": [
+          260,
+          420
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,420",
+        "direction": "in",
+        "id": "pp_row_16@480,420.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          420
+        ],
+        "pin": [
+          260,
+          440
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,420",
+        "direction": "out",
+        "id": "pp_row_16@480,420.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          420
+        ],
+        "pin": [
+          480,
+          420
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,500",
+        "direction": "in",
+        "id": "pp_row_16@480,500.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          500
+        ],
+        "pin": [
+          260,
+          500
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,500",
+        "direction": "in",
+        "id": "pp_row_16@480,500.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          500
+        ],
+        "pin": [
+          260,
+          520
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,500",
+        "direction": "out",
+        "id": "pp_row_16@480,500.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          500
+        ],
+        "pin": [
+          480,
+          500
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,580",
+        "direction": "in",
+        "id": "pp_row_16@480,580.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          580
+        ],
+        "pin": [
+          260,
+          580
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,580",
+        "direction": "in",
+        "id": "pp_row_16@480,580.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          580
+        ],
+        "pin": [
+          260,
+          600
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,580",
+        "direction": "out",
+        "id": "pp_row_16@480,580.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          580
+        ],
+        "pin": [
+          480,
+          580
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,660",
+        "direction": "in",
+        "id": "pp_row_16@480,660.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          660
+        ],
+        "pin": [
+          260,
+          660
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,660",
+        "direction": "in",
+        "id": "pp_row_16@480,660.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          660
+        ],
+        "pin": [
+          260,
+          680
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,660",
+        "direction": "out",
+        "id": "pp_row_16@480,660.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          660
+        ],
+        "pin": [
+          480,
+          660
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,740",
+        "direction": "in",
+        "id": "pp_row_16@480,740.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          740
+        ],
+        "pin": [
+          260,
+          740
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,740",
+        "direction": "in",
+        "id": "pp_row_16@480,740.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          740
+        ],
+        "pin": [
+          260,
+          760
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,740",
+        "direction": "out",
+        "id": "pp_row_16@480,740.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          740
+        ],
+        "pin": [
+          480,
+          740
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,820",
+        "direction": "in",
+        "id": "pp_row_16@480,820.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          820
+        ],
+        "pin": [
+          260,
+          820
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,820",
+        "direction": "in",
+        "id": "pp_row_16@480,820.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          820
+        ],
+        "pin": [
+          260,
+          840
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,820",
+        "direction": "out",
+        "id": "pp_row_16@480,820.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          820
+        ],
+        "pin": [
+          480,
+          820
+        ],
+        "port": "result"
+      },
+      {
+        "comp": "pp_row_16@480,900",
+        "direction": "in",
+        "id": "pp_row_16@480,900.Rm",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          900
+        ],
+        "pin": [
+          260,
+          900
+        ],
+        "port": "Rm"
+      },
+      {
+        "comp": "pp_row_16@480,900",
+        "direction": "in",
+        "id": "pp_row_16@480,900.Rs_bit",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          900
+        ],
+        "pin": [
+          260,
+          920
+        ],
+        "port": "Rs_bit"
+      },
+      {
+        "comp": "pp_row_16@480,900",
+        "direction": "out",
+        "id": "pp_row_16@480,900.result",
+        "kind": "pp_row_16",
+        "label": "",
+        "loc": [
+          480,
+          900
+        ],
+        "pin": [
+          480,
+          900
+        ],
+        "port": "result"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@190,270[Rm]",
+      "Pin@190,350[Rs]"
+    ],
+    "outputs": [
+      "Pin@680,350[p0]",
+      "Pin@680,430[p1]",
+      "Pin@680,510[p2]",
+      "Pin@680,590[p3]",
+      "Pin@680,670[p4]",
+      "Pin@680,750[p5]",
+      "Pin@680,830[p6]",
+      "Pin@680,910[p7]"
+    ]
+  },
+  "inventory": {
+    "Bit Extender": 1,
+    "Constant": 8,
+    "Pin": 10,
+    "Shifter": 8,
+    "Splitter": 1,
+    "pp_row_16": 8
+  },
+  "source": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        360
+      ],
+      "index": 0,
+      "to": [
+        260,
+        360
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        440
+      ],
+      "index": 1,
+      "to": [
+        260,
+        440
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        520
+      ],
+      "index": 2,
+      "to": [
+        260,
+        520
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        600
+      ],
+      "index": 3,
+      "to": [
+        260,
+        600
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        680
+      ],
+      "index": 4,
+      "to": [
+        260,
+        680
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        760
+      ],
+      "index": 5,
+      "to": [
+        260,
+        760
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        840
+      ],
+      "index": 6,
+      "to": [
+        260,
+        840
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        210,
+        920
+      ],
+      "index": 7,
+      "to": [
+        260,
+        920
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        230,
+        270
+      ],
+      "index": 8,
+      "to": [
+        250,
+        270
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        270
+      ],
+      "index": 9,
+      "to": [
+        250,
+        340
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        340
+      ],
+      "index": 10,
+      "to": [
+        250,
+        420
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        340
+      ],
+      "index": 11,
+      "to": [
+        260,
+        340
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        420
+      ],
+      "index": 12,
+      "to": [
+        250,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        420
+      ],
+      "index": 13,
+      "to": [
+        260,
+        420
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        500
+      ],
+      "index": 14,
+      "to": [
+        250,
+        580
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        500
+      ],
+      "index": 15,
+      "to": [
+        260,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        580
+      ],
+      "index": 16,
+      "to": [
+        250,
+        660
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        580
+      ],
+      "index": 17,
+      "to": [
+        260,
+        580
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        660
+      ],
+      "index": 18,
+      "to": [
+        250,
+        740
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        660
+      ],
+      "index": 19,
+      "to": [
+        260,
+        660
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        740
+      ],
+      "index": 20,
+      "to": [
+        250,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        740
+      ],
+      "index": 21,
+      "to": [
+        260,
+        740
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        820
+      ],
+      "index": 22,
+      "to": [
+        250,
+        900
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        820
+      ],
+      "index": 23,
+      "to": [
+        260,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        250,
+        900
+      ],
+      "index": 24,
+      "to": [
+        260,
+        900
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        260,
+        660
+      ],
+      "index": 25,
+      "to": [
+        270,
+        660
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        340
+      ],
+      "index": 26,
+      "to": [
+        560,
+        340
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        420
+      ],
+      "index": 27,
+      "to": [
+        560,
+        420
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        500
+      ],
+      "index": 28,
+      "to": [
+        560,
+        500
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        580
+      ],
+      "index": 29,
+      "to": [
+        560,
+        580
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        660
+      ],
+      "index": 30,
+      "to": [
+        560,
+        660
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        740
+      ],
+      "index": 31,
+      "to": [
+        560,
+        740
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        820
+      ],
+      "index": 32,
+      "to": [
+        560,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        480,
+        900
+      ],
+      "index": 33,
+      "to": [
+        560,
+        900
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        350
+      ],
+      "index": 34,
+      "to": [
+        680,
+        350
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        430
+      ],
+      "index": 35,
+      "to": [
+        680,
+        430
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        510
+      ],
+      "index": 36,
+      "to": [
+        680,
+        510
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        590
+      ],
+      "index": 37,
+      "to": [
+        680,
+        590
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        670
+      ],
+      "index": 38,
+      "to": [
+        680,
+        670
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        750
+      ],
+      "index": 39,
+      "to": [
+        680,
+        750
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        830
+      ],
+      "index": 40,
+      "to": [
+        680,
+        830
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        600,
+        910
+      ],
+      "index": 41,
+      "to": [
+        680,
+        910
+      ]
+    }
+  ]
+}

@@ -1,0 +1,732 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">matmul4x4</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Pin@1070,310">
+  <data key="d3">Pin</data>
+  <data key="d4"></data>
+  <data key="d5">1070</data>
+  <data key="d6">310</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Clock@110,250">
+  <data key="d3">Clock</data>
+  <data key="d4"></data>
+  <data key="d5">110</data>
+  <data key="d6">250</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1710,380">
+  <data key="d3">Pin</data>
+  <data key="d4"></data>
+  <data key="d5">1710</data>
+  <data key="d6">380</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1720,250">
+  <data key="d3">Pin</data>
+  <data key="d4"></data>
+  <data key="d5">1720</data>
+  <data key="d6">250</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@1720,520">
+  <data key="d3">Pin</data>
+  <data key="d4"></data>
+  <data key="d5">1720</data>
+  <data key="d6">520</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@290,370[A0]">
+  <data key="d3">Pin</data>
+  <data key="d4">A0</data>
+  <data key="d5">290</data>
+  <data key="d6">370</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@290,470[A1]">
+  <data key="d3">Pin</data>
+  <data key="d4">A1</data>
+  <data key="d5">290</data>
+  <data key="d6">470</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@290,570[A2]">
+  <data key="d3">Pin</data>
+  <data key="d4">A2</data>
+  <data key="d5">290</data>
+  <data key="d6">570</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@290,670[A3]">
+  <data key="d3">Pin</data>
+  <data key="d4">A3</data>
+  <data key="d5">290</data>
+  <data key="d6">670</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@470,350">
+  <data key="d3">Pin</data>
+  <data key="d4"></data>
+  <data key="d5">470</data>
+  <data key="d6">350</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,270[w00]">
+  <data key="d3">Pin</data>
+  <data key="d4">w00</data>
+  <data key="d5">830</data>
+  <data key="d6">270</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,290[w01]">
+  <data key="d3">Pin</data>
+  <data key="d4">w01</data>
+  <data key="d5">830</data>
+  <data key="d6">290</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,310[w02]">
+  <data key="d3">Pin</data>
+  <data key="d4">w02</data>
+  <data key="d5">830</data>
+  <data key="d6">310</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,330[w03]">
+  <data key="d3">Pin</data>
+  <data key="d4">w03</data>
+  <data key="d5">830</data>
+  <data key="d6">330</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,390[w10]">
+  <data key="d3">Pin</data>
+  <data key="d4">w10</data>
+  <data key="d5">830</data>
+  <data key="d6">390</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,410[w11]">
+  <data key="d3">Pin</data>
+  <data key="d4">w11</data>
+  <data key="d5">830</data>
+  <data key="d6">410</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,430[w12]">
+  <data key="d3">Pin</data>
+  <data key="d4">w12</data>
+  <data key="d5">830</data>
+  <data key="d6">430</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,450[w13]">
+  <data key="d3">Pin</data>
+  <data key="d4">w13</data>
+  <data key="d5">830</data>
+  <data key="d6">450</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,490[w20]">
+  <data key="d3">Pin</data>
+  <data key="d4">w20</data>
+  <data key="d5">830</data>
+  <data key="d6">490</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,510[w21]">
+  <data key="d3">Pin</data>
+  <data key="d4">w21</data>
+  <data key="d5">830</data>
+  <data key="d6">510</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,530[w22]">
+  <data key="d3">Pin</data>
+  <data key="d4">w22</data>
+  <data key="d5">830</data>
+  <data key="d6">530</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,550[w23]">
+  <data key="d3">Pin</data>
+  <data key="d4">w23</data>
+  <data key="d5">830</data>
+  <data key="d6">550</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,590[w30]">
+  <data key="d3">Pin</data>
+  <data key="d4">w30</data>
+  <data key="d5">830</data>
+  <data key="d6">590</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,610[w31]">
+  <data key="d3">Pin</data>
+  <data key="d4">w31</data>
+  <data key="d5">830</data>
+  <data key="d6">610</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,630[w32]">
+  <data key="d3">Pin</data>
+  <data key="d4">w32</data>
+  <data key="d5">830</data>
+  <data key="d6">630</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@830,650[w33]">
+  <data key="d3">Pin</data>
+  <data key="d4">w33</data>
+  <data key="d5">830</data>
+  <data key="d6">650</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1380,220">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1380</data>
+  <data key="d6">220</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1380,350">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1380</data>
+  <data key="d6">350</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1380,490">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1380</data>
+  <data key="d6">490</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1490,350">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1490</data>
+  <data key="d6">350</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1500,220">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1500</data>
+  <data key="d6">220</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@1620,220">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">1620</data>
+  <data key="d6">220</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@310,540">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">310</data>
+  <data key="d6">540</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@370,440">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">370</data>
+  <data key="d6">440</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@380,640">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">380</data>
+  <data key="d6">640</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@470,540">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">470</data>
+  <data key="d6">540</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@500,640">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">500</data>
+  <data key="d6">640</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Register@620,640">
+  <data key="d3">Register</data>
+  <data key="d4"></data>
+  <data key="d5">620</data>
+  <data key="d6">640</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="systolic_4x4@1070,250">
+  <data key="d3">systolic_4x4</data>
+  <data key="d4"></data>
+  <data key="d5">1070</data>
+  <data key="d6">250</data>
+  <data key="d7">east</data>
+  <data key="d8">True</data>
+</node>
+<edge source="Clock@110,250" target="Register@1380,220" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@1380,220.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@1380,350" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@1380,350.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@1380,490" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@1380,490.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@1490,350" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@1490,350.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@1500,220" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@1500,220.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@1620,220" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@1620,220.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@310,540" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@310,540.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@370,440" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@370,440.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@380,640" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@380,640.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@470,540" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@470,540.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@500,640" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@500,640.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="Register@620,640" id="0">
+  <data key="d9">out</data>
+  <data key="d10">clk</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">Register@620,640.clk</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Clock@110,250" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">out</data>
+  <data key="d10">CLK</data>
+  <data key="d11">Clock@110,250.out</data>
+  <data key="d12">systolic_4x4@1070,250.CLK</data>
+  <data key="d13">3</data>
+  <data key="d14">net#3</data>
+</edge>
+<edge source="Pin@290,370[A0]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">row0</data>
+  <data key="d11">Pin@290,370[A0].p</data>
+  <data key="d12">systolic_4x4@1070,250.row0</data>
+  <data key="d13">10</data>
+  <data key="d14">net:A0</data>
+</edge>
+<edge source="Pin@290,470[A1]" target="Register@370,440" id="0">
+  <data key="d9">p</data>
+  <data key="d10">D</data>
+  <data key="d11">Pin@290,470[A1].p</data>
+  <data key="d12">Register@370,440.D</data>
+  <data key="d13">11</data>
+  <data key="d14">net:A1</data>
+</edge>
+<edge source="Pin@290,570[A2]" target="Register@310,540" id="0">
+  <data key="d9">p</data>
+  <data key="d10">D</data>
+  <data key="d11">Pin@290,570[A2].p</data>
+  <data key="d12">Register@310,540.D</data>
+  <data key="d13">12</data>
+  <data key="d14">net:A2</data>
+</edge>
+<edge source="Pin@290,670[A3]" target="Register@380,640" id="0">
+  <data key="d9">p</data>
+  <data key="d10">D</data>
+  <data key="d11">Pin@290,670[A3].p</data>
+  <data key="d12">Register@380,640.D</data>
+  <data key="d13">13</data>
+  <data key="d14">net:A3</data>
+</edge>
+<edge source="Pin@470,350" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w_load</data>
+  <data key="d11">Pin@470,350.p</data>
+  <data key="d12">systolic_4x4@1070,250.w_load</data>
+  <data key="d13">17</data>
+  <data key="d14">net#17</data>
+</edge>
+<edge source="Pin@830,270[w00]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w00</data>
+  <data key="d11">Pin@830,270[w00].p</data>
+  <data key="d12">systolic_4x4@1070,250.w00</data>
+  <data key="d13">21</data>
+  <data key="d14">net:w00</data>
+</edge>
+<edge source="Pin@830,290[w01]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w01</data>
+  <data key="d11">Pin@830,290[w01].p</data>
+  <data key="d12">systolic_4x4@1070,250.w01</data>
+  <data key="d13">22</data>
+  <data key="d14">net:w01</data>
+</edge>
+<edge source="Pin@830,310[w02]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w02</data>
+  <data key="d11">Pin@830,310[w02].p</data>
+  <data key="d12">systolic_4x4@1070,250.w02</data>
+  <data key="d13">23</data>
+  <data key="d14">net:w02</data>
+</edge>
+<edge source="Pin@830,330[w03]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w03</data>
+  <data key="d11">Pin@830,330[w03].p</data>
+  <data key="d12">systolic_4x4@1070,250.w03</data>
+  <data key="d13">24</data>
+  <data key="d14">net:w03</data>
+</edge>
+<edge source="Pin@830,390[w10]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w10</data>
+  <data key="d11">Pin@830,390[w10].p</data>
+  <data key="d12">systolic_4x4@1070,250.w10</data>
+  <data key="d13">25</data>
+  <data key="d14">net:w10</data>
+</edge>
+<edge source="Pin@830,410[w11]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w11</data>
+  <data key="d11">Pin@830,410[w11].p</data>
+  <data key="d12">systolic_4x4@1070,250.w11</data>
+  <data key="d13">26</data>
+  <data key="d14">net:w11</data>
+</edge>
+<edge source="Pin@830,430[w12]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w12</data>
+  <data key="d11">Pin@830,430[w12].p</data>
+  <data key="d12">systolic_4x4@1070,250.w12</data>
+  <data key="d13">27</data>
+  <data key="d14">net:w12</data>
+</edge>
+<edge source="Pin@830,450[w13]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w13</data>
+  <data key="d11">Pin@830,450[w13].p</data>
+  <data key="d12">systolic_4x4@1070,250.w13</data>
+  <data key="d13">28</data>
+  <data key="d14">net:w13</data>
+</edge>
+<edge source="Pin@830,490[w20]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w20</data>
+  <data key="d11">Pin@830,490[w20].p</data>
+  <data key="d12">systolic_4x4@1070,250.w20</data>
+  <data key="d13">29</data>
+  <data key="d14">net:w20</data>
+</edge>
+<edge source="Pin@830,510[w21]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w21</data>
+  <data key="d11">Pin@830,510[w21].p</data>
+  <data key="d12">systolic_4x4@1070,250.w21</data>
+  <data key="d13">30</data>
+  <data key="d14">net:w21</data>
+</edge>
+<edge source="Pin@830,530[w22]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w22</data>
+  <data key="d11">Pin@830,530[w22].p</data>
+  <data key="d12">systolic_4x4@1070,250.w22</data>
+  <data key="d13">31</data>
+  <data key="d14">net:w22</data>
+</edge>
+<edge source="Pin@830,550[w23]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w23</data>
+  <data key="d11">Pin@830,550[w23].p</data>
+  <data key="d12">systolic_4x4@1070,250.w23</data>
+  <data key="d13">32</data>
+  <data key="d14">net:w23</data>
+</edge>
+<edge source="Pin@830,590[w30]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w30</data>
+  <data key="d11">Pin@830,590[w30].p</data>
+  <data key="d12">systolic_4x4@1070,250.w30</data>
+  <data key="d13">33</data>
+  <data key="d14">net:w30</data>
+</edge>
+<edge source="Pin@830,610[w31]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w31</data>
+  <data key="d11">Pin@830,610[w31].p</data>
+  <data key="d12">systolic_4x4@1070,250.w31</data>
+  <data key="d13">34</data>
+  <data key="d14">net:w31</data>
+</edge>
+<edge source="Pin@830,630[w32]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w32</data>
+  <data key="d11">Pin@830,630[w32].p</data>
+  <data key="d12">systolic_4x4@1070,250.w32</data>
+  <data key="d13">35</data>
+  <data key="d14">net:w32</data>
+</edge>
+<edge source="Pin@830,650[w33]" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">p</data>
+  <data key="d10">w33</data>
+  <data key="d11">Pin@830,650[w33].p</data>
+  <data key="d12">systolic_4x4@1070,250.w33</data>
+  <data key="d13">36</data>
+  <data key="d14">net:w33</data>
+</edge>
+<edge source="Register@1380,220" target="Register@1500,220" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">D</data>
+  <data key="d11">Register@1380,220.Q</data>
+  <data key="d12">Register@1500,220.D</data>
+  <data key="d13">4</data>
+  <data key="d14">net#4</data>
+</edge>
+<edge source="Register@1380,350" target="Register@1490,350" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">D</data>
+  <data key="d11">Register@1380,350.Q</data>
+  <data key="d12">Register@1490,350.D</data>
+  <data key="d13">5</data>
+  <data key="d14">net#5</data>
+</edge>
+<edge source="Register@1380,490" target="Pin@1720,520" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1380,490.Q</data>
+  <data key="d12">Pin@1720,520.p</data>
+  <data key="d13">6</data>
+  <data key="d14">net#6</data>
+</edge>
+<edge source="Register@1490,350" target="Pin@1710,380" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1490,350.Q</data>
+  <data key="d12">Pin@1710,380.p</data>
+  <data key="d13">7</data>
+  <data key="d14">net#7</data>
+</edge>
+<edge source="Register@1500,220" target="Register@1620,220" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">D</data>
+  <data key="d11">Register@1500,220.Q</data>
+  <data key="d12">Register@1620,220.D</data>
+  <data key="d13">8</data>
+  <data key="d14">net#8</data>
+</edge>
+<edge source="Register@1620,220" target="Pin@1720,250" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">p</data>
+  <data key="d11">Register@1620,220.Q</data>
+  <data key="d12">Pin@1720,250.p</data>
+  <data key="d13">9</data>
+  <data key="d14">net#9</data>
+</edge>
+<edge source="Register@310,540" target="Register@470,540" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">D</data>
+  <data key="d11">Register@310,540.Q</data>
+  <data key="d12">Register@470,540.D</data>
+  <data key="d13">14</data>
+  <data key="d14">net#14</data>
+</edge>
+<edge source="Register@370,440" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">row1</data>
+  <data key="d11">Register@370,440.Q</data>
+  <data key="d12">systolic_4x4@1070,250.row1</data>
+  <data key="d13">15</data>
+  <data key="d14">net#15</data>
+</edge>
+<edge source="Register@380,640" target="Register@500,640" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">D</data>
+  <data key="d11">Register@380,640.Q</data>
+  <data key="d12">Register@500,640.D</data>
+  <data key="d13">16</data>
+  <data key="d14">net#16</data>
+</edge>
+<edge source="Register@470,540" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">row2</data>
+  <data key="d11">Register@470,540.Q</data>
+  <data key="d12">systolic_4x4@1070,250.row2</data>
+  <data key="d13">18</data>
+  <data key="d14">net#18</data>
+</edge>
+<edge source="Register@500,640" target="Register@620,640" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">D</data>
+  <data key="d11">Register@500,640.Q</data>
+  <data key="d12">Register@620,640.D</data>
+  <data key="d13">19</data>
+  <data key="d14">net#19</data>
+</edge>
+<edge source="Register@620,640" target="systolic_4x4@1070,250" id="0">
+  <data key="d9">Q</data>
+  <data key="d10">row3</data>
+  <data key="d11">Register@620,640.Q</data>
+  <data key="d12">systolic_4x4@1070,250.row3</data>
+  <data key="d13">20</data>
+  <data key="d14">net#20</data>
+</edge>
+<edge source="systolic_4x4@1070,250" target="Register@1380,220" id="0">
+  <data key="d9">c_col0</data>
+  <data key="d10">D</data>
+  <data key="d11">systolic_4x4@1070,250.c_col0</data>
+  <data key="d12">Register@1380,220.D</data>
+  <data key="d13">0</data>
+  <data key="d14">net#0</data>
+</edge>
+<edge source="systolic_4x4@1070,250" target="Register@1380,350" id="0">
+  <data key="d9">c_col1</data>
+  <data key="d10">D</data>
+  <data key="d11">systolic_4x4@1070,250.c_col1</data>
+  <data key="d12">Register@1380,350.D</data>
+  <data key="d13">1</data>
+  <data key="d14">net#1</data>
+</edge>
+<edge source="systolic_4x4@1070,250" target="Register@1380,490" id="0">
+  <data key="d9">c_col2</data>
+  <data key="d10">D</data>
+  <data key="d11">systolic_4x4@1070,250.c_col2</data>
+  <data key="d12">Register@1380,490.D</data>
+  <data key="d13">2</data>
+  <data key="d14">net#2</data>
+</edge>
+<edge source="systolic_4x4@1070,250" target="Pin@1070,310" id="0">
+  <data key="d9">c_col3</data>
+  <data key="d10">p</data>
+  <data key="d11">systolic_4x4@1070,250.c_col3</data>
+  <data key="d12">Pin@1070,310.p</data>
+  <data key="d13">37</data>
+  <data key="d14">net#37</data>
+</edge>
+</graph></graphml>

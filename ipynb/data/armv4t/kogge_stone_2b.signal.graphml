@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d11" for="edge" attr.name="net" attr.type="long"/>
+<key id="d10" for="node" attr.name="width" attr.type="long"/>
+<key id="d9" for="node" attr.name="y" attr.type="long"/>
+<key id="d8" for="node" attr.name="x" attr.type="long"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="direction" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="component" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">kogge_stone_2b</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/armv4t.circ</data>
+<data key="d2">signal</data>
+<node id="pg_cell@1020,180[pg1].G_out">
+  <data key="d3">pg_cell@1020,180[pg1]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">G_out</data>
+  <data key="d6">out</data>
+  <data key="d7">pg1</data>
+  <data key="d8">1020</data>
+  <data key="d9">180</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,390[pg2].G_prev">
+  <data key="d3">pg_cell@1020,390[pg2]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">G_prev</data>
+  <data key="d6">in</data>
+  <data key="d7">pg2</data>
+  <data key="d8">800</data>
+  <data key="d9">430</data>
+  <data key="d10">0</data>
+</node>
+<node id="kogge_stone_1b@690,390[bit1].C_in">
+  <data key="d3">kogge_stone_1b@690,390[bit1]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">C_in</data>
+  <data key="d6">in</data>
+  <data key="d7">bit1</data>
+  <data key="d8">470</data>
+  <data key="d9">430</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@440,180[A0].p">
+  <data key="d3">Pin@440,180[A0]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">A0</data>
+  <data key="d8">440</data>
+  <data key="d9">180</data>
+  <data key="d10">1</data>
+</node>
+<node id="kogge_stone_1b@690,180[bit0].A">
+  <data key="d3">kogge_stone_1b@690,180[bit0]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">A</data>
+  <data key="d6">in</data>
+  <data key="d7">bit0</data>
+  <data key="d8">470</data>
+  <data key="d9">180</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@440,200[B0].p">
+  <data key="d3">Pin@440,200[B0]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">B0</data>
+  <data key="d8">440</data>
+  <data key="d9">200</data>
+  <data key="d10">1</data>
+</node>
+<node id="kogge_stone_1b@690,180[bit0].B">
+  <data key="d3">kogge_stone_1b@690,180[bit0]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">B</data>
+  <data key="d6">in</data>
+  <data key="d7">bit0</data>
+  <data key="d8">470</data>
+  <data key="d9">200</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@440,220[CIN].p">
+  <data key="d3">Pin@440,220[CIN]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">CIN</data>
+  <data key="d8">440</data>
+  <data key="d9">220</data>
+  <data key="d10">1</data>
+</node>
+<node id="pg_cell@1020,180[pg1].G_prev">
+  <data key="d3">pg_cell@1020,180[pg1]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">G_prev</data>
+  <data key="d6">in</data>
+  <data key="d7">pg1</data>
+  <data key="d8">800</data>
+  <data key="d9">220</data>
+  <data key="d10">0</data>
+</node>
+<node id="kogge_stone_1b@690,180[bit0].C_in">
+  <data key="d3">kogge_stone_1b@690,180[bit0]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">C_in</data>
+  <data key="d6">in</data>
+  <data key="d7">bit0</data>
+  <data key="d8">470</data>
+  <data key="d9">220</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@440,390[A1].p">
+  <data key="d3">Pin@440,390[A1]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">A1</data>
+  <data key="d8">440</data>
+  <data key="d9">390</data>
+  <data key="d10">1</data>
+</node>
+<node id="kogge_stone_1b@690,390[bit1].A">
+  <data key="d3">kogge_stone_1b@690,390[bit1]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">A</data>
+  <data key="d6">in</data>
+  <data key="d7">bit1</data>
+  <data key="d8">470</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@440,410[B1].p">
+  <data key="d3">Pin@440,410[B1]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">B1</data>
+  <data key="d8">440</data>
+  <data key="d9">410</data>
+  <data key="d10">1</data>
+</node>
+<node id="kogge_stone_1b@690,390[bit1].B">
+  <data key="d3">kogge_stone_1b@690,390[bit1]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">B</data>
+  <data key="d6">in</data>
+  <data key="d7">bit1</data>
+  <data key="d8">470</data>
+  <data key="d9">410</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,180[pg1].G">
+  <data key="d3">pg_cell@1020,180[pg1]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">G</data>
+  <data key="d6">in</data>
+  <data key="d7">pg1</data>
+  <data key="d8">800</data>
+  <data key="d9">180</data>
+  <data key="d10">0</data>
+</node>
+<node id="kogge_stone_1b@690,180[bit0].g">
+  <data key="d3">kogge_stone_1b@690,180[bit0]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">g</data>
+  <data key="d6">out</data>
+  <data key="d7">bit0</data>
+  <data key="d8">690</data>
+  <data key="d9">180</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,180[pg1].P">
+  <data key="d3">pg_cell@1020,180[pg1]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">P</data>
+  <data key="d6">in</data>
+  <data key="d7">pg1</data>
+  <data key="d8">800</data>
+  <data key="d9">200</data>
+  <data key="d10">0</data>
+</node>
+<node id="kogge_stone_1b@690,180[bit0].p">
+  <data key="d3">kogge_stone_1b@690,180[bit0]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">bit0</data>
+  <data key="d8">690</data>
+  <data key="d9">200</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,390[pg2].G">
+  <data key="d3">pg_cell@1020,390[pg2]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">G</data>
+  <data key="d6">in</data>
+  <data key="d7">pg2</data>
+  <data key="d8">800</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="kogge_stone_1b@690,390[bit1].g">
+  <data key="d3">kogge_stone_1b@690,390[bit1]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">g</data>
+  <data key="d6">out</data>
+  <data key="d7">bit1</data>
+  <data key="d8">690</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,390[pg2].P">
+  <data key="d3">pg_cell@1020,390[pg2]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">P</data>
+  <data key="d6">in</data>
+  <data key="d7">pg2</data>
+  <data key="d8">800</data>
+  <data key="d9">410</data>
+  <data key="d10">0</data>
+</node>
+<node id="kogge_stone_1b@690,390[bit1].p">
+  <data key="d3">kogge_stone_1b@690,390[bit1]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">p</data>
+  <data key="d6">out</data>
+  <data key="d7">bit1</data>
+  <data key="d8">690</data>
+  <data key="d9">410</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@1020,390[Cout].p">
+  <data key="d3">Pin@1020,390[Cout]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">Cout</data>
+  <data key="d8">1020</data>
+  <data key="d9">390</data>
+  <data key="d10">1</data>
+</node>
+<node id="pg_cell@1020,390[pg2].G_out">
+  <data key="d3">pg_cell@1020,390[pg2]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">G_out</data>
+  <data key="d6">out</data>
+  <data key="d7">pg2</data>
+  <data key="d8">1020</data>
+  <data key="d9">390</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@690,220[SUM0].p">
+  <data key="d3">Pin@690,220[SUM0]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">SUM0</data>
+  <data key="d8">690</data>
+  <data key="d9">220</data>
+  <data key="d10">1</data>
+</node>
+<node id="kogge_stone_1b@690,180[bit0].sum">
+  <data key="d3">kogge_stone_1b@690,180[bit0]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">sum</data>
+  <data key="d6">out</data>
+  <data key="d7">bit0</data>
+  <data key="d8">690</data>
+  <data key="d9">220</data>
+  <data key="d10">0</data>
+</node>
+<node id="Pin@690,430[SUM1].p">
+  <data key="d3">Pin@690,430[SUM1]</data>
+  <data key="d4">Pin</data>
+  <data key="d5">p</data>
+  <data key="d6">in</data>
+  <data key="d7">SUM1</data>
+  <data key="d8">690</data>
+  <data key="d9">430</data>
+  <data key="d10">1</data>
+</node>
+<node id="kogge_stone_1b@690,390[bit1].sum">
+  <data key="d3">kogge_stone_1b@690,390[bit1]</data>
+  <data key="d4">kogge_stone_1b</data>
+  <data key="d5">sum</data>
+  <data key="d6">out</data>
+  <data key="d7">bit1</data>
+  <data key="d8">690</data>
+  <data key="d9">430</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,180[pg1].P_out">
+  <data key="d3">pg_cell@1020,180[pg1]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">P_out</data>
+  <data key="d6">out</data>
+  <data key="d7">pg1</data>
+  <data key="d8">1020</data>
+  <data key="d9">200</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,180[pg1].P_Prev">
+  <data key="d3">pg_cell@1020,180[pg1]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">P_Prev</data>
+  <data key="d6">in</data>
+  <data key="d7">pg1</data>
+  <data key="d8">800</data>
+  <data key="d9">240</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,390[pg2].P_out">
+  <data key="d3">pg_cell@1020,390[pg2]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">P_out</data>
+  <data key="d6">out</data>
+  <data key="d7">pg2</data>
+  <data key="d8">1020</data>
+  <data key="d9">410</data>
+  <data key="d10">0</data>
+</node>
+<node id="pg_cell@1020,390[pg2].P_Prev">
+  <data key="d3">pg_cell@1020,390[pg2]</data>
+  <data key="d4">pg_cell</data>
+  <data key="d5">P_Prev</data>
+  <data key="d6">in</data>
+  <data key="d7">pg2</data>
+  <data key="d8">800</data>
+  <data key="d9">450</data>
+  <data key="d10">0</data>
+</node>
+<edge source="pg_cell@1020,180[pg1].G_out" target="pg_cell@1020,390[pg2].G_prev" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:bit1/pg1</data>
+</edge>
+<edge source="pg_cell@1020,180[pg1].G_out" target="kogge_stone_1b@690,390[bit1].C_in" id="0">
+  <data key="d11">0</data>
+  <data key="d12">net:bit1/pg1</data>
+</edge>
+<edge source="Pin@440,180[A0].p" target="kogge_stone_1b@690,180[bit0].A" id="0">
+  <data key="d11">1</data>
+  <data key="d12">net:A0/bit0</data>
+</edge>
+<edge source="Pin@440,200[B0].p" target="kogge_stone_1b@690,180[bit0].B" id="0">
+  <data key="d11">2</data>
+  <data key="d12">net:B0/bit0</data>
+</edge>
+<edge source="Pin@440,220[CIN].p" target="pg_cell@1020,180[pg1].G_prev" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:CIN/bit0</data>
+</edge>
+<edge source="Pin@440,220[CIN].p" target="kogge_stone_1b@690,180[bit0].C_in" id="0">
+  <data key="d11">3</data>
+  <data key="d12">net:CIN/bit0</data>
+</edge>
+<edge source="Pin@440,390[A1].p" target="kogge_stone_1b@690,390[bit1].A" id="0">
+  <data key="d11">4</data>
+  <data key="d12">net:A1/bit1</data>
+</edge>
+<edge source="Pin@440,410[B1].p" target="kogge_stone_1b@690,390[bit1].B" id="0">
+  <data key="d11">5</data>
+  <data key="d12">net:B1/bit1</data>
+</edge>
+<edge source="kogge_stone_1b@690,180[bit0].g" target="pg_cell@1020,180[pg1].G" id="0">
+  <data key="d11">6</data>
+  <data key="d12">net:bit0/pg1</data>
+</edge>
+<edge source="kogge_stone_1b@690,180[bit0].p" target="pg_cell@1020,180[pg1].P" id="0">
+  <data key="d11">7</data>
+  <data key="d12">net:bit0/pg1</data>
+</edge>
+<edge source="kogge_stone_1b@690,390[bit1].g" target="pg_cell@1020,390[pg2].G" id="0">
+  <data key="d11">8</data>
+  <data key="d12">net:bit1/pg2</data>
+</edge>
+<edge source="kogge_stone_1b@690,390[bit1].p" target="pg_cell@1020,390[pg2].P" id="0">
+  <data key="d11">9</data>
+  <data key="d12">net:bit1/pg2</data>
+</edge>
+<edge source="pg_cell@1020,390[pg2].G_out" target="Pin@1020,390[Cout].p" id="0">
+  <data key="d11">10</data>
+  <data key="d12">net:Cout/pg2</data>
+</edge>
+<edge source="kogge_stone_1b@690,180[bit0].sum" target="Pin@690,220[SUM0].p" id="0">
+  <data key="d11">11</data>
+  <data key="d12">net:SUM0/bit0</data>
+</edge>
+<edge source="kogge_stone_1b@690,390[bit1].sum" target="Pin@690,430[SUM1].p" id="0">
+  <data key="d11">12</data>
+  <data key="d12">net:SUM1/bit1</data>
+</edge>
+</graph></graphml>

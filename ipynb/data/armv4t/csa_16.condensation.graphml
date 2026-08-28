@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="members" attr.type="string"/>
+<key id="d0" for="graph" attr.name="mapping" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">{"AND Gate@390,340[XandY].in0": 0, "AND Gate@390,340[XandY].in1": 4, "AND Gate@390,340[XandY].out": 13, "AND Gate@390,430[XandZ].in0": 1, "AND Gate@390,430[XandZ].in1": 8, "AND Gate@390,430[XandZ].out": 15, "AND Gate@390,520[YandZ].in0": 5, "AND Gate@390,520[YandZ].in1": 9, "AND Gate@390,520[YandZ].out": 17, "Constant@470,450.p": 23, "OR Gate@460,430[maj].in0": 12, "OR Gate@460,430[maj].in1": 14, "OR Gate@460,430[maj].in2": 16, "OR Gate@460,430[maj].out": 21, "Pin@140,230[X].p": 3, "Pin@140,250[Y].p": 7, "Pin@140,270[Z].p": 11, "Pin@530,440[carry].p": 24, "Pin@710,250[sum].p": 26, "Shifter@520,440.dist": 22, "Shifter@520,440.in": 20, "Shifter@520,440.out": 25, "XOR Gate@400,250.in0": 2, "XOR Gate@400,250.in1": 10, "XOR Gate@400,250.out": 19, "XOR Gate@580,250.in0": 6, "XOR Gate@580,250.in1": 18, "XOR Gate@580,250.out": 27}</data>
+<node id="0">
+  <data key="d1">AND Gate@390,340[XandY].in0</data>
+</node>
+<node id="1">
+  <data key="d1">AND Gate@390,430[XandZ].in0</data>
+</node>
+<node id="2">
+  <data key="d1">XOR Gate@400,250.in0</data>
+</node>
+<node id="3">
+  <data key="d1">Pin@140,230[X].p</data>
+</node>
+<node id="4">
+  <data key="d1">AND Gate@390,340[XandY].in1</data>
+</node>
+<node id="5">
+  <data key="d1">AND Gate@390,520[YandZ].in0</data>
+</node>
+<node id="6">
+  <data key="d1">XOR Gate@580,250.in0</data>
+</node>
+<node id="7">
+  <data key="d1">Pin@140,250[Y].p</data>
+</node>
+<node id="8">
+  <data key="d1">AND Gate@390,430[XandZ].in1</data>
+</node>
+<node id="9">
+  <data key="d1">AND Gate@390,520[YandZ].in1</data>
+</node>
+<node id="10">
+  <data key="d1">XOR Gate@400,250.in1</data>
+</node>
+<node id="11">
+  <data key="d1">Pin@140,270[Z].p</data>
+</node>
+<node id="12">
+  <data key="d1">OR Gate@460,430[maj].in0</data>
+</node>
+<node id="13">
+  <data key="d1">AND Gate@390,340[XandY].out</data>
+</node>
+<node id="14">
+  <data key="d1">OR Gate@460,430[maj].in1</data>
+</node>
+<node id="15">
+  <data key="d1">AND Gate@390,430[XandZ].out</data>
+</node>
+<node id="16">
+  <data key="d1">OR Gate@460,430[maj].in2</data>
+</node>
+<node id="17">
+  <data key="d1">AND Gate@390,520[YandZ].out</data>
+</node>
+<node id="18">
+  <data key="d1">XOR Gate@580,250.in1</data>
+</node>
+<node id="19">
+  <data key="d1">XOR Gate@400,250.out</data>
+</node>
+<node id="20">
+  <data key="d1">Shifter@520,440.in</data>
+</node>
+<node id="21">
+  <data key="d1">OR Gate@460,430[maj].out</data>
+</node>
+<node id="22">
+  <data key="d1">Shifter@520,440.dist</data>
+</node>
+<node id="23">
+  <data key="d1">Constant@470,450.p</data>
+</node>
+<node id="24">
+  <data key="d1">Pin@530,440[carry].p</data>
+</node>
+<node id="25">
+  <data key="d1">Shifter@520,440.out</data>
+</node>
+<node id="26">
+  <data key="d1">Pin@710,250[sum].p</data>
+</node>
+<node id="27">
+  <data key="d1">XOR Gate@580,250.out</data>
+</node>
+<edge source="3" target="0"/>
+<edge source="3" target="1"/>
+<edge source="3" target="2"/>
+<edge source="7" target="4"/>
+<edge source="7" target="5"/>
+<edge source="7" target="6"/>
+<edge source="11" target="8"/>
+<edge source="11" target="9"/>
+<edge source="11" target="10"/>
+<edge source="13" target="12"/>
+<edge source="15" target="14"/>
+<edge source="17" target="16"/>
+<edge source="19" target="18"/>
+<edge source="21" target="20"/>
+<edge source="23" target="22"/>
+<edge source="25" target="24"/>
+<edge source="27" target="26"/>
+</graph></graphml>

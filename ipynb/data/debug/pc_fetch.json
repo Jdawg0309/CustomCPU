@@ -1,0 +1,2808 @@
+{
+  "attributes": {
+    "appearance": "logisim_evolution",
+    "circuit": "pc_fetch",
+    "circuitnamedboxfixedsize": "true",
+    "simulationFrequency": "1000.0"
+  },
+  "bounding_box": [
+    370,
+    730,
+    1330,
+    1060
+  ],
+  "circuit": "pc_fetch",
+  "components": [
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "north",
+        "label": "abs_select"
+      },
+      "facing": "north",
+      "id": "Pin@1020,940[abs_select]",
+      "is_subcircuit": false,
+      "label": "abs_select",
+      "library": "0",
+      "location": [
+        1020,
+        940
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1020,
+            940
+          ],
+          "direction": "out",
+          "id": "Pin@1020,940[abs_select].p",
+          "name": "p",
+          "pin": [
+            1020,
+            940
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "north",
+        "label": "BRANCH"
+      },
+      "facing": "north",
+      "id": "Pin@1130,860[BRANCH]",
+      "is_subcircuit": false,
+      "label": "BRANCH",
+      "library": "0",
+      "location": [
+        1130,
+        860
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1130,
+            860
+          ],
+          "direction": "out",
+          "id": "Pin@1130,860[BRANCH].p",
+          "name": "p",
+          "pin": [
+            1130,
+            860
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "hold"
+      },
+      "facing": "east",
+      "id": "Pin@1230,880[hold]",
+      "is_subcircuit": false,
+      "label": "hold",
+      "library": "0",
+      "location": [
+        1230,
+        880
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1230,
+            880
+          ],
+          "direction": "out",
+          "id": "Pin@1230,880[hold].p",
+          "name": "p",
+          "pin": [
+            1230,
+            880
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {},
+      "facing": "east",
+      "id": "Constant@370,840",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        370,
+        840
+      ],
+      "ports": [
+        {
+          "anchor": [
+            370,
+            840
+          ],
+          "direction": "out",
+          "id": "Constant@370,840.p",
+          "name": "p",
+          "pin": [
+            370,
+            840
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "CLK"
+      },
+      "facing": "east",
+      "id": "Pin@420,860[CLK]",
+      "is_subcircuit": false,
+      "label": "CLK",
+      "library": "0",
+      "location": [
+        420,
+        860
+      ],
+      "ports": [
+        {
+          "anchor": [
+            420,
+            860
+          ],
+          "direction": "out",
+          "id": "Pin@420,860[CLK].p",
+          "name": "p",
+          "pin": [
+            420,
+            860
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "north",
+        "label": "RST"
+      },
+      "facing": "north",
+      "id": "Pin@460,970[RST]",
+      "is_subcircuit": false,
+      "label": "RST",
+      "library": "0",
+      "location": [
+        460,
+        970
+      ],
+      "ports": [
+        {
+          "anchor": [
+            460,
+            970
+          ],
+          "direction": "out",
+          "id": "Pin@460,970[RST].p",
+          "name": "p",
+          "pin": [
+            460,
+            970
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "bit1": "0",
+        "bit10": "1",
+        "bit11": "1",
+        "bit12": "3",
+        "bit13": "3",
+        "bit14": "3",
+        "bit15": "3",
+        "bit16": "4",
+        "bit17": "4",
+        "bit18": "4",
+        "bit19": "4",
+        "bit2": "1",
+        "bit20": "5",
+        "bit21": "5",
+        "bit22": "5",
+        "bit23": "5",
+        "bit24": "6",
+        "bit25": "6",
+        "bit26": "6",
+        "bit27": "6",
+        "bit28": "7",
+        "bit29": "7",
+        "bit3": "1",
+        "bit30": "7",
+        "bit31": "7",
+        "bit4": "1",
+        "bit5": "1",
+        "bit6": "1",
+        "bit7": "1",
+        "bit8": "1",
+        "bit9": "1",
+        "facing": "south",
+        "fanout": "8",
+        "incoming": "32",
+        "spacing": "2"
+      },
+      "facing": "south",
+      "id": "Splitter@500,970",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        500,
+        970
+      ],
+      "ports": [
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit0",
+          "name": "bit0",
+          "pin": [
+            480,
+            1120
+          ],
+          "width": 2
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit1",
+          "name": "bit1",
+          "pin": [
+            480,
+            1100
+          ],
+          "width": 10
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit2",
+          "name": "bit2",
+          "pin": [
+            480,
+            1080
+          ],
+          "width": 0
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit3",
+          "name": "bit3",
+          "pin": [
+            480,
+            1060
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit4",
+          "name": "bit4",
+          "pin": [
+            480,
+            1040
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit5",
+          "name": "bit5",
+          "pin": [
+            480,
+            1020
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit6",
+          "name": "bit6",
+          "pin": [
+            480,
+            1000
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.bit7",
+          "name": "bit7",
+          "pin": [
+            480,
+            980
+          ],
+          "width": 4
+        },
+        {
+          "anchor": [
+            500,
+            970
+          ],
+          "direction": "inout",
+          "id": "Splitter@500,970.combined",
+          "name": "combined",
+          "pin": [
+            500,
+            970
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Splitter"
+    },
+    {
+      "attributes": {
+        "value": "0x4",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Constant@610,840",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        610,
+        840
+      ],
+      "ports": [
+        {
+          "anchor": [
+            610,
+            840
+          ],
+          "direction": "out",
+          "id": "Constant@610,840.p",
+          "name": "p",
+          "pin": [
+            610,
+            840
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "pc_out",
+        "output": "true",
+        "radix": "16",
+        "width": "10"
+      },
+      "facing": "west",
+      "id": "Pin@640,1030[pc_out]",
+      "is_subcircuit": false,
+      "label": "pc_out",
+      "library": "0",
+      "location": [
+        640,
+        1030
+      ],
+      "ports": [
+        {
+          "anchor": [
+            640,
+            1030
+          ],
+          "direction": "in",
+          "id": "Pin@640,1030[pc_out].p",
+          "name": "p",
+          "pin": [
+            640,
+            1030
+          ],
+          "width": 10
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "IMM",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@640,920[IMM]",
+      "is_subcircuit": false,
+      "label": "IMM",
+      "library": "0",
+      "location": [
+        640,
+        920
+      ],
+      "ports": [
+        {
+          "anchor": [
+            640,
+            920
+          ],
+          "direction": "out",
+          "id": "Pin@640,920[IMM].p",
+          "name": "p",
+          "pin": [
+            640,
+            920
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "facing": "south",
+        "value": "0x0"
+      },
+      "facing": "south",
+      "id": "Constant@730,810",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        730,
+        810
+      ],
+      "ports": [
+        {
+          "anchor": [
+            730,
+            810
+          ],
+          "direction": "out",
+          "id": "Constant@730,810.p",
+          "name": "p",
+          "pin": [
+            730,
+            810
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "facing": "south",
+        "value": "0x0"
+      },
+      "facing": "south",
+      "id": "Constant@730,890",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "0",
+      "location": [
+        730,
+        890
+      ],
+      "ports": [
+        {
+          "anchor": [
+            730,
+            890
+          ],
+          "direction": "out",
+          "id": "Constant@730,890.p",
+          "name": "p",
+          "pin": [
+            730,
+            890
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Constant"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "facing": "west",
+        "label": "pc_plus4",
+        "output": "true",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "west",
+      "id": "Pin@860,860[pc_plus4]",
+      "is_subcircuit": false,
+      "label": "pc_plus4",
+      "library": "0",
+      "location": [
+        860,
+        860
+      ],
+      "ports": [
+        {
+          "anchor": [
+            860,
+            860
+          ],
+          "direction": "in",
+          "id": "Pin@860,860[pc_plus4].p",
+          "name": "p",
+          "pin": [
+            860,
+            860
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "NewPins",
+        "label": "abs_target",
+        "radix": "16",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Pin@970,930[abs_target]",
+      "is_subcircuit": false,
+      "label": "abs_target",
+      "library": "0",
+      "location": [
+        970,
+        930
+      ],
+      "ports": [
+        {
+          "anchor": [
+            970,
+            930
+          ],
+          "direction": "out",
+          "id": "Pin@970,930[abs_target].p",
+          "name": "p",
+          "pin": [
+            970,
+            930
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Pin"
+    },
+    {
+      "attributes": {
+        "appearance": "logisim_evolution",
+        "label": "PC",
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Register@430,790[PC]",
+      "is_subcircuit": false,
+      "label": "PC",
+      "library": "2",
+      "location": [
+        430,
+        790
+      ],
+      "ports": [
+        {
+          "anchor": [
+            430,
+            790
+          ],
+          "direction": "in",
+          "id": "Register@430,790[PC].D",
+          "name": "D",
+          "pin": [
+            430,
+            820
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            430,
+            790
+          ],
+          "direction": "out",
+          "id": "Register@430,790[PC].Q",
+          "name": "Q",
+          "pin": [
+            490,
+            820
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            430,
+            790
+          ],
+          "direction": "in",
+          "id": "Register@430,790[PC].clk",
+          "name": "clk",
+          "pin": [
+            430,
+            860
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            430,
+            790
+          ],
+          "direction": "in",
+          "id": "Register@430,790[PC].clr",
+          "name": "clr",
+          "pin": [
+            460,
+            880
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            430,
+            790
+          ],
+          "direction": "in",
+          "id": "Register@430,790[PC].en",
+          "name": "en",
+          "pin": [
+            430,
+            840
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Register"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Multiplexer@1040,920",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "4",
+      "location": [
+        1040,
+        920
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1040,
+            920
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1040,920.in0",
+          "name": "in0",
+          "pin": [
+            1010,
+            910
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1040,
+            920
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1040,920.in1",
+          "name": "in1",
+          "pin": [
+            1010,
+            930
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1040,
+            920
+          ],
+          "direction": "out",
+          "id": "Multiplexer@1040,920.out",
+          "name": "out",
+          "pin": [
+            1040,
+            920
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1040,
+            920
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1040,920.sel",
+          "name": "sel",
+          "pin": [
+            1020,
+            940
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Multiplexer"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Multiplexer@1150,840",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "4",
+      "location": [
+        1150,
+        840
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1150,
+            840
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1150,840.in0",
+          "name": "in0",
+          "pin": [
+            1120,
+            830
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1150,
+            840
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1150,840.in1",
+          "name": "in1",
+          "pin": [
+            1120,
+            850
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1150,
+            840
+          ],
+          "direction": "out",
+          "id": "Multiplexer@1150,840.out",
+          "name": "out",
+          "pin": [
+            1150,
+            840
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1150,
+            840
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1150,840.sel",
+          "name": "sel",
+          "pin": [
+            1130,
+            860
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Multiplexer"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Multiplexer@1250,850",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "4",
+      "location": [
+        1250,
+        850
+      ],
+      "ports": [
+        {
+          "anchor": [
+            1250,
+            850
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1250,850.in0",
+          "name": "in0",
+          "pin": [
+            1220,
+            840
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1250,
+            850
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1250,850.in1",
+          "name": "in1",
+          "pin": [
+            1220,
+            860
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1250,
+            850
+          ],
+          "direction": "out",
+          "id": "Multiplexer@1250,850.out",
+          "name": "out",
+          "pin": [
+            1250,
+            850
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            1250,
+            850
+          ],
+          "direction": "in",
+          "id": "Multiplexer@1250,850.sel",
+          "name": "sel",
+          "pin": [
+            1230,
+            870
+          ],
+          "width": 1
+        }
+      ],
+      "type": "Multiplexer"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Adder@750,830",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        750,
+        830
+      ],
+      "ports": [
+        {
+          "anchor": [
+            750,
+            830
+          ],
+          "direction": "in",
+          "id": "Adder@750,830.a",
+          "name": "a",
+          "pin": [
+            710,
+            820
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            750,
+            830
+          ],
+          "direction": "in",
+          "id": "Adder@750,830.b",
+          "name": "b",
+          "pin": [
+            710,
+            840
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            750,
+            830
+          ],
+          "direction": "in",
+          "id": "Adder@750,830.cin",
+          "name": "cin",
+          "pin": [
+            730,
+            810
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            750,
+            830
+          ],
+          "direction": "out",
+          "id": "Adder@750,830.cout",
+          "name": "cout",
+          "pin": [
+            730,
+            850
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            750,
+            830
+          ],
+          "direction": "out",
+          "id": "Adder@750,830.out",
+          "name": "out",
+          "pin": [
+            750,
+            830
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Adder"
+    },
+    {
+      "attributes": {
+        "width": "32"
+      },
+      "facing": "east",
+      "id": "Adder@750,910",
+      "is_subcircuit": false,
+      "label": "",
+      "library": "5",
+      "location": [
+        750,
+        910
+      ],
+      "ports": [
+        {
+          "anchor": [
+            750,
+            910
+          ],
+          "direction": "in",
+          "id": "Adder@750,910.a",
+          "name": "a",
+          "pin": [
+            710,
+            900
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            750,
+            910
+          ],
+          "direction": "in",
+          "id": "Adder@750,910.b",
+          "name": "b",
+          "pin": [
+            710,
+            920
+          ],
+          "width": 32
+        },
+        {
+          "anchor": [
+            750,
+            910
+          ],
+          "direction": "in",
+          "id": "Adder@750,910.cin",
+          "name": "cin",
+          "pin": [
+            730,
+            890
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            750,
+            910
+          ],
+          "direction": "out",
+          "id": "Adder@750,910.cout",
+          "name": "cout",
+          "pin": [
+            730,
+            930
+          ],
+          "width": 1
+        },
+        {
+          "anchor": [
+            750,
+            910
+          ],
+          "direction": "out",
+          "id": "Adder@750,910.out",
+          "name": "out",
+          "pin": [
+            750,
+            910
+          ],
+          "width": 32
+        }
+      ],
+      "type": "Adder"
+    }
+  ],
+  "coverage": {
+    "endpoints": 47,
+    "matched": 47,
+    "unmatched": [],
+    "unmodelled_types": []
+  },
+  "graph": {
+    "circuit": "pc_fetch",
+    "edges": [
+      {
+        "dst": "Multiplexer@1150,840.in0",
+        "net": 11,
+        "src": "Adder@750,830.out"
+      },
+      {
+        "dst": "Pin@860,860[pc_plus4].p",
+        "net": 11,
+        "src": "Adder@750,830.out"
+      },
+      {
+        "dst": "Multiplexer@1040,920.in0",
+        "net": 12,
+        "src": "Adder@750,910.out"
+      },
+      {
+        "dst": "Register@430,790[PC].en",
+        "net": 5,
+        "src": "Constant@370,840.p"
+      },
+      {
+        "dst": "Adder@750,830.b",
+        "net": 8,
+        "src": "Constant@610,840.p"
+      },
+      {
+        "dst": "Adder@750,830.cin",
+        "net": 23,
+        "src": "Constant@730,810.p"
+      },
+      {
+        "dst": "Adder@750,910.cin",
+        "net": 24,
+        "src": "Constant@730,890.p"
+      },
+      {
+        "dst": "Multiplexer@1150,840.in1",
+        "net": 0,
+        "src": "Multiplexer@1040,920.out"
+      },
+      {
+        "dst": "Multiplexer@1250,850.in0",
+        "net": 1,
+        "src": "Multiplexer@1150,840.out"
+      },
+      {
+        "dst": "Register@430,790[PC].D",
+        "net": 4,
+        "src": "Multiplexer@1250,850.out"
+      },
+      {
+        "dst": "Multiplexer@1040,920.sel",
+        "net": 14,
+        "src": "Pin@1020,940[abs_select].p"
+      },
+      {
+        "dst": "Multiplexer@1150,840.sel",
+        "net": 15,
+        "src": "Pin@1130,860[BRANCH].p"
+      },
+      {
+        "dst": "Multiplexer@1250,850.sel",
+        "net": 3,
+        "src": "Pin@1230,880[hold].p"
+      },
+      {
+        "dst": "Register@430,790[PC].clk",
+        "net": 6,
+        "src": "Pin@420,860[CLK].p"
+      },
+      {
+        "dst": "Register@430,790[PC].clr",
+        "net": 7,
+        "src": "Pin@460,970[RST].p"
+      },
+      {
+        "dst": "Adder@750,910.b",
+        "net": 10,
+        "src": "Pin@640,920[IMM].p"
+      },
+      {
+        "dst": "Multiplexer@1040,920.in1",
+        "net": 13,
+        "src": "Pin@970,930[abs_target].p"
+      },
+      {
+        "dst": "Adder@750,830.a",
+        "net": 2,
+        "src": "Register@430,790[PC].Q"
+      },
+      {
+        "dst": "Adder@750,910.a",
+        "net": 2,
+        "src": "Register@430,790[PC].Q"
+      },
+      {
+        "dst": "Multiplexer@1250,850.in1",
+        "net": 2,
+        "src": "Register@430,790[PC].Q"
+      },
+      {
+        "dst": "Splitter@500,970.combined",
+        "net": 2,
+        "src": "Register@430,790[PC].Q"
+      },
+      {
+        "dst": "Pin@640,1030[pc_out].p",
+        "net": 9,
+        "src": "Splitter@500,970.bit1"
+      }
+    ],
+    "file": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+    "nets": [
+      {
+        "drivers": [
+          "Multiplexer@1040,920.out"
+        ],
+        "index": 0,
+        "labels": [],
+        "name": "net#0",
+        "ports": [
+          "Multiplexer@1040,920.out",
+          "Multiplexer@1150,840.in1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Multiplexer@1150,840.out"
+        ],
+        "index": 1,
+        "labels": [],
+        "name": "net#1",
+        "ports": [
+          "Multiplexer@1150,840.out",
+          "Multiplexer@1250,850.in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Register@430,790[PC].Q"
+        ],
+        "index": 2,
+        "labels": [
+          "PC"
+        ],
+        "name": "net:PC",
+        "ports": [
+          "Adder@750,830.a",
+          "Adder@750,910.a",
+          "Multiplexer@1250,850.in1",
+          "Register@430,790[PC].Q",
+          "Splitter@500,970.combined"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@1230,880[hold].p"
+        ],
+        "index": 3,
+        "labels": [
+          "hold"
+        ],
+        "name": "net:hold",
+        "ports": [
+          "Multiplexer@1250,850.sel",
+          "Pin@1230,880[hold].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Multiplexer@1250,850.out"
+        ],
+        "index": 4,
+        "labels": [
+          "PC"
+        ],
+        "name": "net:PC",
+        "ports": [
+          "Multiplexer@1250,850.out",
+          "Register@430,790[PC].D"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@370,840.p"
+        ],
+        "index": 5,
+        "labels": [
+          "PC"
+        ],
+        "name": "net:PC",
+        "ports": [
+          "Constant@370,840.p",
+          "Register@430,790[PC].en"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@420,860[CLK].p"
+        ],
+        "index": 6,
+        "labels": [
+          "CLK",
+          "PC"
+        ],
+        "name": "net:CLK/PC",
+        "ports": [
+          "Pin@420,860[CLK].p",
+          "Register@430,790[PC].clk"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@460,970[RST].p"
+        ],
+        "index": 7,
+        "labels": [
+          "PC",
+          "RST"
+        ],
+        "name": "net:PC/RST",
+        "ports": [
+          "Pin@460,970[RST].p",
+          "Register@430,790[PC].clr"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@610,840.p"
+        ],
+        "index": 8,
+        "labels": [],
+        "name": "net#8",
+        "ports": [
+          "Adder@750,830.b",
+          "Constant@610,840.p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 9,
+        "labels": [
+          "pc_out"
+        ],
+        "name": "net:pc_out",
+        "ports": [
+          "Pin@640,1030[pc_out].p",
+          "Splitter@500,970.bit1"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@640,920[IMM].p"
+        ],
+        "index": 10,
+        "labels": [
+          "IMM"
+        ],
+        "name": "net:IMM",
+        "ports": [
+          "Adder@750,910.b",
+          "Pin@640,920[IMM].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Adder@750,830.out"
+        ],
+        "index": 11,
+        "labels": [
+          "pc_plus4"
+        ],
+        "name": "net:pc_plus4",
+        "ports": [
+          "Adder@750,830.out",
+          "Multiplexer@1150,840.in0",
+          "Pin@860,860[pc_plus4].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Adder@750,910.out"
+        ],
+        "index": 12,
+        "labels": [],
+        "name": "net#12",
+        "ports": [
+          "Adder@750,910.out",
+          "Multiplexer@1040,920.in0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@970,930[abs_target].p"
+        ],
+        "index": 13,
+        "labels": [
+          "abs_target"
+        ],
+        "name": "net:abs_target",
+        "ports": [
+          "Multiplexer@1040,920.in1",
+          "Pin@970,930[abs_target].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@1020,940[abs_select].p"
+        ],
+        "index": 14,
+        "labels": [
+          "abs_select"
+        ],
+        "name": "net:abs_select",
+        "ports": [
+          "Multiplexer@1040,920.sel",
+          "Pin@1020,940[abs_select].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Pin@1130,860[BRANCH].p"
+        ],
+        "index": 15,
+        "labels": [
+          "BRANCH"
+        ],
+        "name": "net:BRANCH",
+        "ports": [
+          "Multiplexer@1150,840.sel",
+          "Pin@1130,860[BRANCH].p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 16,
+        "labels": [],
+        "name": "net#16",
+        "ports": [
+          "Splitter@500,970.bit0"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 17,
+        "labels": [],
+        "name": "net#17",
+        "ports": [
+          "Splitter@500,970.bit2"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 18,
+        "labels": [],
+        "name": "net#18",
+        "ports": [
+          "Splitter@500,970.bit3"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 19,
+        "labels": [],
+        "name": "net#19",
+        "ports": [
+          "Splitter@500,970.bit4"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 20,
+        "labels": [],
+        "name": "net#20",
+        "ports": [
+          "Splitter@500,970.bit5"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 21,
+        "labels": [],
+        "name": "net#21",
+        "ports": [
+          "Splitter@500,970.bit6"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [],
+        "index": 22,
+        "labels": [],
+        "name": "net#22",
+        "ports": [
+          "Splitter@500,970.bit7"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@730,810.p"
+        ],
+        "index": 23,
+        "labels": [],
+        "name": "net#23",
+        "ports": [
+          "Adder@750,830.cin",
+          "Constant@730,810.p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Constant@730,890.p"
+        ],
+        "index": 24,
+        "labels": [],
+        "name": "net#24",
+        "ports": [
+          "Adder@750,910.cin",
+          "Constant@730,890.p"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Adder@750,830.cout"
+        ],
+        "index": 25,
+        "labels": [],
+        "name": "net#25",
+        "ports": [
+          "Adder@750,830.cout"
+        ],
+        "status": "ok"
+      },
+      {
+        "drivers": [
+          "Adder@750,910.cout"
+        ],
+        "index": 26,
+        "labels": [],
+        "name": "net#26",
+        "ports": [
+          "Adder@750,910.cout"
+        ],
+        "status": "ok"
+      }
+    ],
+    "nodes": [
+      {
+        "comp": "Adder@750,830",
+        "direction": "in",
+        "id": "Adder@750,830.a",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          830
+        ],
+        "pin": [
+          710,
+          820
+        ],
+        "port": "a"
+      },
+      {
+        "comp": "Adder@750,830",
+        "direction": "in",
+        "id": "Adder@750,830.b",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          830
+        ],
+        "pin": [
+          710,
+          840
+        ],
+        "port": "b"
+      },
+      {
+        "comp": "Adder@750,830",
+        "direction": "in",
+        "id": "Adder@750,830.cin",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          830
+        ],
+        "pin": [
+          730,
+          810
+        ],
+        "port": "cin"
+      },
+      {
+        "comp": "Adder@750,830",
+        "direction": "out",
+        "id": "Adder@750,830.cout",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          830
+        ],
+        "pin": [
+          730,
+          850
+        ],
+        "port": "cout"
+      },
+      {
+        "comp": "Adder@750,830",
+        "direction": "out",
+        "id": "Adder@750,830.out",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          830
+        ],
+        "pin": [
+          750,
+          830
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Adder@750,910",
+        "direction": "in",
+        "id": "Adder@750,910.a",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          910
+        ],
+        "pin": [
+          710,
+          900
+        ],
+        "port": "a"
+      },
+      {
+        "comp": "Adder@750,910",
+        "direction": "in",
+        "id": "Adder@750,910.b",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          910
+        ],
+        "pin": [
+          710,
+          920
+        ],
+        "port": "b"
+      },
+      {
+        "comp": "Adder@750,910",
+        "direction": "in",
+        "id": "Adder@750,910.cin",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          910
+        ],
+        "pin": [
+          730,
+          890
+        ],
+        "port": "cin"
+      },
+      {
+        "comp": "Adder@750,910",
+        "direction": "out",
+        "id": "Adder@750,910.cout",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          910
+        ],
+        "pin": [
+          730,
+          930
+        ],
+        "port": "cout"
+      },
+      {
+        "comp": "Adder@750,910",
+        "direction": "out",
+        "id": "Adder@750,910.out",
+        "kind": "Adder",
+        "label": "",
+        "loc": [
+          750,
+          910
+        ],
+        "pin": [
+          750,
+          910
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Constant@370,840",
+        "direction": "out",
+        "id": "Constant@370,840.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          370,
+          840
+        ],
+        "pin": [
+          370,
+          840
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@610,840",
+        "direction": "out",
+        "id": "Constant@610,840.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          610,
+          840
+        ],
+        "pin": [
+          610,
+          840
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@730,810",
+        "direction": "out",
+        "id": "Constant@730,810.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          730,
+          810
+        ],
+        "pin": [
+          730,
+          810
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Constant@730,890",
+        "direction": "out",
+        "id": "Constant@730,890.p",
+        "kind": "Constant",
+        "label": "",
+        "loc": [
+          730,
+          890
+        ],
+        "pin": [
+          730,
+          890
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Multiplexer@1040,920",
+        "direction": "in",
+        "id": "Multiplexer@1040,920.in0",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1040,
+          920
+        ],
+        "pin": [
+          1010,
+          910
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "Multiplexer@1040,920",
+        "direction": "in",
+        "id": "Multiplexer@1040,920.in1",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1040,
+          920
+        ],
+        "pin": [
+          1010,
+          930
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "Multiplexer@1040,920",
+        "direction": "out",
+        "id": "Multiplexer@1040,920.out",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1040,
+          920
+        ],
+        "pin": [
+          1040,
+          920
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Multiplexer@1040,920",
+        "direction": "in",
+        "id": "Multiplexer@1040,920.sel",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1040,
+          920
+        ],
+        "pin": [
+          1020,
+          940
+        ],
+        "port": "sel"
+      },
+      {
+        "comp": "Multiplexer@1150,840",
+        "direction": "in",
+        "id": "Multiplexer@1150,840.in0",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1150,
+          840
+        ],
+        "pin": [
+          1120,
+          830
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "Multiplexer@1150,840",
+        "direction": "in",
+        "id": "Multiplexer@1150,840.in1",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1150,
+          840
+        ],
+        "pin": [
+          1120,
+          850
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "Multiplexer@1150,840",
+        "direction": "out",
+        "id": "Multiplexer@1150,840.out",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1150,
+          840
+        ],
+        "pin": [
+          1150,
+          840
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Multiplexer@1150,840",
+        "direction": "in",
+        "id": "Multiplexer@1150,840.sel",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1150,
+          840
+        ],
+        "pin": [
+          1130,
+          860
+        ],
+        "port": "sel"
+      },
+      {
+        "comp": "Multiplexer@1250,850",
+        "direction": "in",
+        "id": "Multiplexer@1250,850.in0",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1250,
+          850
+        ],
+        "pin": [
+          1220,
+          840
+        ],
+        "port": "in0"
+      },
+      {
+        "comp": "Multiplexer@1250,850",
+        "direction": "in",
+        "id": "Multiplexer@1250,850.in1",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1250,
+          850
+        ],
+        "pin": [
+          1220,
+          860
+        ],
+        "port": "in1"
+      },
+      {
+        "comp": "Multiplexer@1250,850",
+        "direction": "out",
+        "id": "Multiplexer@1250,850.out",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1250,
+          850
+        ],
+        "pin": [
+          1250,
+          850
+        ],
+        "port": "out"
+      },
+      {
+        "comp": "Multiplexer@1250,850",
+        "direction": "in",
+        "id": "Multiplexer@1250,850.sel",
+        "kind": "Multiplexer",
+        "label": "",
+        "loc": [
+          1250,
+          850
+        ],
+        "pin": [
+          1230,
+          870
+        ],
+        "port": "sel"
+      },
+      {
+        "comp": "Pin@1020,940[abs_select]",
+        "direction": "out",
+        "id": "Pin@1020,940[abs_select].p",
+        "kind": "Pin",
+        "label": "abs_select",
+        "loc": [
+          1020,
+          940
+        ],
+        "pin": [
+          1020,
+          940
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@1130,860[BRANCH]",
+        "direction": "out",
+        "id": "Pin@1130,860[BRANCH].p",
+        "kind": "Pin",
+        "label": "BRANCH",
+        "loc": [
+          1130,
+          860
+        ],
+        "pin": [
+          1130,
+          860
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@1230,880[hold]",
+        "direction": "out",
+        "id": "Pin@1230,880[hold].p",
+        "kind": "Pin",
+        "label": "hold",
+        "loc": [
+          1230,
+          880
+        ],
+        "pin": [
+          1230,
+          880
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@420,860[CLK]",
+        "direction": "out",
+        "id": "Pin@420,860[CLK].p",
+        "kind": "Pin",
+        "label": "CLK",
+        "loc": [
+          420,
+          860
+        ],
+        "pin": [
+          420,
+          860
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@460,970[RST]",
+        "direction": "out",
+        "id": "Pin@460,970[RST].p",
+        "kind": "Pin",
+        "label": "RST",
+        "loc": [
+          460,
+          970
+        ],
+        "pin": [
+          460,
+          970
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@640,1030[pc_out]",
+        "direction": "in",
+        "id": "Pin@640,1030[pc_out].p",
+        "kind": "Pin",
+        "label": "pc_out",
+        "loc": [
+          640,
+          1030
+        ],
+        "pin": [
+          640,
+          1030
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@640,920[IMM]",
+        "direction": "out",
+        "id": "Pin@640,920[IMM].p",
+        "kind": "Pin",
+        "label": "IMM",
+        "loc": [
+          640,
+          920
+        ],
+        "pin": [
+          640,
+          920
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@860,860[pc_plus4]",
+        "direction": "in",
+        "id": "Pin@860,860[pc_plus4].p",
+        "kind": "Pin",
+        "label": "pc_plus4",
+        "loc": [
+          860,
+          860
+        ],
+        "pin": [
+          860,
+          860
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Pin@970,930[abs_target]",
+        "direction": "out",
+        "id": "Pin@970,930[abs_target].p",
+        "kind": "Pin",
+        "label": "abs_target",
+        "loc": [
+          970,
+          930
+        ],
+        "pin": [
+          970,
+          930
+        ],
+        "port": "p"
+      },
+      {
+        "comp": "Register@430,790[PC]",
+        "direction": "in",
+        "id": "Register@430,790[PC].D",
+        "kind": "Register",
+        "label": "PC",
+        "loc": [
+          430,
+          790
+        ],
+        "pin": [
+          430,
+          820
+        ],
+        "port": "D"
+      },
+      {
+        "comp": "Register@430,790[PC]",
+        "direction": "out",
+        "id": "Register@430,790[PC].Q",
+        "kind": "Register",
+        "label": "PC",
+        "loc": [
+          430,
+          790
+        ],
+        "pin": [
+          490,
+          820
+        ],
+        "port": "Q"
+      },
+      {
+        "comp": "Register@430,790[PC]",
+        "direction": "in",
+        "id": "Register@430,790[PC].clk",
+        "kind": "Register",
+        "label": "PC",
+        "loc": [
+          430,
+          790
+        ],
+        "pin": [
+          430,
+          860
+        ],
+        "port": "clk"
+      },
+      {
+        "comp": "Register@430,790[PC]",
+        "direction": "in",
+        "id": "Register@430,790[PC].clr",
+        "kind": "Register",
+        "label": "PC",
+        "loc": [
+          430,
+          790
+        ],
+        "pin": [
+          460,
+          880
+        ],
+        "port": "clr"
+      },
+      {
+        "comp": "Register@430,790[PC]",
+        "direction": "in",
+        "id": "Register@430,790[PC].en",
+        "kind": "Register",
+        "label": "PC",
+        "loc": [
+          430,
+          790
+        ],
+        "pin": [
+          430,
+          840
+        ],
+        "port": "en"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit0",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1120
+        ],
+        "port": "bit0"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit1",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1100
+        ],
+        "port": "bit1"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit2",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1080
+        ],
+        "port": "bit2"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit3",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1060
+        ],
+        "port": "bit3"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit4",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1040
+        ],
+        "port": "bit4"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit5",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1020
+        ],
+        "port": "bit5"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit6",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          1000
+        ],
+        "port": "bit6"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.bit7",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          480,
+          980
+        ],
+        "port": "bit7"
+      },
+      {
+        "comp": "Splitter@500,970",
+        "direction": "inout",
+        "id": "Splitter@500,970.combined",
+        "kind": "Splitter",
+        "label": "",
+        "loc": [
+          500,
+          970
+        ],
+        "pin": [
+          500,
+          970
+        ],
+        "port": "combined"
+      }
+    ]
+  },
+  "health": {
+    "dangling_nets": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26
+    ],
+    "dead_components": [],
+    "multi_driver_nets": [],
+    "undriven_nets": []
+  },
+  "interface": {
+    "inputs": [
+      "Pin@420,860[CLK]",
+      "Pin@1130,860[BRANCH]",
+      "Pin@1230,880[hold]",
+      "Pin@640,920[IMM]",
+      "Pin@970,930[abs_target]",
+      "Pin@1020,940[abs_select]",
+      "Pin@460,970[RST]"
+    ],
+    "outputs": [
+      "Pin@860,860[pc_plus4]",
+      "Pin@640,1030[pc_out]"
+    ]
+  },
+  "inventory": {
+    "Adder": 2,
+    "Constant": 4,
+    "Multiplexer": 3,
+    "Pin": 9,
+    "Register": 1,
+    "Splitter": 1
+  },
+  "source": "/home/junaet/Documents/CustomCPU/debug_armv4t.circ",
+  "wires": [
+    {
+      "diagonal": false,
+      "from": [
+        1040,
+        920
+      ],
+      "index": 0,
+      "to": [
+        1090,
+        920
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1090,
+        850
+      ],
+      "index": 1,
+      "to": [
+        1090,
+        920
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1090,
+        850
+      ],
+      "index": 2,
+      "to": [
+        1120,
+        850
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1150,
+        840
+      ],
+      "index": 3,
+      "to": [
+        1220,
+        840
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1190,
+        860
+      ],
+      "index": 4,
+      "to": [
+        1190,
+        1060
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1190,
+        860
+      ],
+      "index": 5,
+      "to": [
+        1220,
+        860
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1230,
+        870
+      ],
+      "index": 6,
+      "to": [
+        1230,
+        880
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1250,
+        850
+      ],
+      "index": 7,
+      "to": [
+        1330,
+        850
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        1330,
+        730
+      ],
+      "index": 8,
+      "to": [
+        1330,
+        850
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        370,
+        840
+      ],
+      "index": 9,
+      "to": [
+        430,
+        840
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        730
+      ],
+      "index": 10,
+      "to": [
+        1330,
+        730
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        730
+      ],
+      "index": 11,
+      "to": [
+        390,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        390,
+        820
+      ],
+      "index": 12,
+      "to": [
+        430,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        420,
+        860
+      ],
+      "index": 13,
+      "to": [
+        430,
+        860
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        460,
+        880
+      ],
+      "index": 14,
+      "to": [
+        460,
+        970
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        490,
+        820
+      ],
+      "index": 15,
+      "to": [
+        500,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        1060
+      ],
+      "index": 16,
+      "to": [
+        1190,
+        1060
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        820
+      ],
+      "index": 17,
+      "to": [
+        500,
+        970
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        820
+      ],
+      "index": 18,
+      "to": [
+        550,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        500,
+        970
+      ],
+      "index": 19,
+      "to": [
+        500,
+        1060
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        550,
+        820
+      ],
+      "index": 20,
+      "to": [
+        550,
+        900
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        550,
+        820
+      ],
+      "index": 21,
+      "to": [
+        710,
+        820
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        550,
+        900
+      ],
+      "index": 22,
+      "to": [
+        710,
+        900
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        610,
+        840
+      ],
+      "index": 23,
+      "to": [
+        710,
+        840
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        630,
+        1030
+      ],
+      "index": 24,
+      "to": [
+        640,
+        1030
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        630,
+        990
+      ],
+      "index": 25,
+      "to": [
+        630,
+        1030
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        640,
+        920
+      ],
+      "index": 26,
+      "to": [
+        710,
+        920
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        830
+      ],
+      "index": 27,
+      "to": [
+        850,
+        830
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        750,
+        910
+      ],
+      "index": 28,
+      "to": [
+        1010,
+        910
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        850,
+        830
+      ],
+      "index": 29,
+      "to": [
+        1120,
+        830
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        850,
+        830
+      ],
+      "index": 30,
+      "to": [
+        850,
+        860
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        850,
+        860
+      ],
+      "index": 31,
+      "to": [
+        860,
+        860
+      ]
+    },
+    {
+      "diagonal": false,
+      "from": [
+        970,
+        930
+      ],
+      "index": 32,
+      "to": [
+        1010,
+        930
+      ]
+    }
+  ]
+}

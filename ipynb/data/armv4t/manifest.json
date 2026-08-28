@@ -1,0 +1,338 @@
+{
+  "circuit_count": 33,
+  "circuits": [
+    {
+      "components": 226,
+      "name": "main",
+      "nets": 256,
+      "ports": 639,
+      "signal_edges": 382,
+      "slug": "main",
+      "strongly_connected_components": 639,
+      "wire_segments": 882
+    },
+    {
+      "components": 9,
+      "name": "kogge_stone_1b",
+      "nets": 6,
+      "ports": 15,
+      "signal_edges": 9,
+      "slug": "kogge_stone_1b",
+      "strongly_connected_components": 15,
+      "wire_segments": 14
+    },
+    {
+      "components": 12,
+      "name": "kogge_stone_2b",
+      "nets": 17,
+      "ports": 32,
+      "signal_edges": 15,
+      "slug": "kogge_stone_2b",
+      "strongly_connected_components": 32,
+      "wire_segments": 24
+    },
+    {
+      "components": 9,
+      "name": "pg_cell",
+      "nets": 7,
+      "ports": 15,
+      "signal_edges": 8,
+      "slug": "pg_cell",
+      "strongly_connected_components": 15,
+      "wire_segments": 10
+    },
+    {
+      "components": 24,
+      "name": "ks_4b",
+      "nets": 34,
+      "ports": 74,
+      "signal_edges": 40,
+      "slug": "ks_4b",
+      "strongly_connected_components": 74,
+      "wire_segments": 76
+    },
+    {
+      "components": 201,
+      "name": "ks_32b",
+      "nets": 424,
+      "ports": 1075,
+      "signal_edges": 651,
+      "slug": "ks_32b",
+      "strongly_connected_components": 1075,
+      "wire_segments": 1416
+    },
+    {
+      "components": 18,
+      "name": "ALU_arithmetic_engine_1",
+      "nets": 48,
+      "ports": 96,
+      "signal_edges": 48,
+      "slug": "ALU_arithmetic_engine_1",
+      "strongly_connected_components": 96,
+      "wire_segments": 49
+    },
+    {
+      "components": 32,
+      "name": "ALU",
+      "nets": 158,
+      "ports": 257,
+      "signal_edges": 99,
+      "slug": "ALU",
+      "strongly_connected_components": 257,
+      "wire_segments": 137
+    },
+    {
+      "components": 6,
+      "name": "a_invert",
+      "nets": 38,
+      "ports": 44,
+      "signal_edges": 6,
+      "slug": "a_invert",
+      "strongly_connected_components": 44,
+      "wire_segments": 10
+    },
+    {
+      "components": 10,
+      "name": "ALU_logic_engine",
+      "nets": 11,
+      "ports": 28,
+      "signal_edges": 17,
+      "slug": "ALU_logic_engine",
+      "strongly_connected_components": 28,
+      "wire_segments": 39
+    },
+    {
+      "components": 5,
+      "name": "pp_row_32",
+      "nets": 4,
+      "ports": 8,
+      "signal_edges": 4,
+      "slug": "pp_row_32",
+      "strongly_connected_components": 8,
+      "wire_segments": 4
+    },
+    {
+      "components": 131,
+      "name": "partial_products",
+      "nets": 130,
+      "ports": 291,
+      "signal_edges": 161,
+      "slug": "partial_products",
+      "strongly_connected_components": 291,
+      "wire_segments": 162
+    },
+    {
+      "components": 13,
+      "name": "csa_3to_2",
+      "nets": 11,
+      "ports": 28,
+      "signal_edges": 17,
+      "slug": "csa_3to_2",
+      "strongly_connected_components": 28,
+      "wire_segments": 32
+    },
+    {
+      "components": 36,
+      "name": "mul_32",
+      "nets": 97,
+      "ports": 189,
+      "signal_edges": 92,
+      "slug": "mul_32",
+      "strongly_connected_components": 189,
+      "wire_segments": 67
+    },
+    {
+      "components": 20,
+      "name": "pc_fetch",
+      "nets": 27,
+      "ports": 49,
+      "signal_edges": 22,
+      "slug": "pc_fetch",
+      "strongly_connected_components": 49,
+      "wire_segments": 33
+    },
+    {
+      "components": 60,
+      "name": "reg16x32",
+      "nets": 57,
+      "ports": 207,
+      "signal_edges": 150,
+      "slug": "reg16x32",
+      "strongly_connected_components": 207,
+      "wire_segments": 467
+    },
+    {
+      "components": 13,
+      "name": "PE_cell",
+      "nets": 50,
+      "ports": 95,
+      "signal_edges": 45,
+      "slug": "PE_cell",
+      "strongly_connected_components": 95,
+      "wire_segments": 27
+    },
+    {
+      "components": 55,
+      "name": "systolic_4x4",
+      "nets": 55,
+      "ports": 151,
+      "signal_edges": 96,
+      "slug": "systolic_4x4",
+      "strongly_connected_components": 151,
+      "wire_segments": 223
+    },
+    {
+      "components": 39,
+      "name": "matmul4x4",
+      "nets": 62,
+      "ports": 112,
+      "signal_edges": 50,
+      "slug": "matmul4x4",
+      "strongly_connected_components": 112,
+      "wire_segments": 75
+    },
+    {
+      "components": 5,
+      "name": "pp_row_16",
+      "nets": 4,
+      "ports": 8,
+      "signal_edges": 4,
+      "slug": "pp_row_16",
+      "strongly_connected_components": 8,
+      "wire_segments": 4
+    },
+    {
+      "components": 13,
+      "name": "csa_16",
+      "nets": 11,
+      "ports": 28,
+      "signal_edges": 17,
+      "slug": "csa_16",
+      "strongly_connected_components": 28,
+      "wire_segments": 32
+    },
+    {
+      "components": 36,
+      "name": "pp_8",
+      "nets": 35,
+      "ports": 77,
+      "signal_edges": 42,
+      "slug": "pp_8",
+      "strongly_connected_components": 77,
+      "wire_segments": 42
+    },
+    {
+      "components": 14,
+      "name": "mul_8",
+      "nets": 59,
+      "ports": 116,
+      "signal_edges": 57,
+      "slug": "mul_8",
+      "strongly_connected_components": 116,
+      "wire_segments": 21
+    },
+    {
+      "components": 11,
+      "name": "bs_stage_1",
+      "nets": 10,
+      "ports": 27,
+      "signal_edges": 17,
+      "slug": "bs_stage_1",
+      "strongly_connected_components": 27,
+      "wire_segments": 36
+    },
+    {
+      "components": 11,
+      "name": "bs_stage_2",
+      "nets": 10,
+      "ports": 27,
+      "signal_edges": 17,
+      "slug": "bs_stage_2",
+      "strongly_connected_components": 27,
+      "wire_segments": 36
+    },
+    {
+      "components": 11,
+      "name": "bs_stage_4",
+      "nets": 10,
+      "ports": 27,
+      "signal_edges": 17,
+      "slug": "bs_stage_4",
+      "strongly_connected_components": 27,
+      "wire_segments": 36
+    },
+    {
+      "components": 11,
+      "name": "bs_stage_8",
+      "nets": 10,
+      "ports": 27,
+      "signal_edges": 17,
+      "slug": "bs_stage_8",
+      "strongly_connected_components": 27,
+      "wire_segments": 36
+    },
+    {
+      "components": 11,
+      "name": "bs_stage_16",
+      "nets": 10,
+      "ports": 27,
+      "signal_edges": 17,
+      "slug": "bs_stage_16",
+      "strongly_connected_components": 27,
+      "wire_segments": 36
+    },
+    {
+      "components": 10,
+      "name": "barrel_32b",
+      "nets": 13,
+      "ports": 30,
+      "signal_edges": 17,
+      "slug": "barrel_32b",
+      "strongly_connected_components": 30,
+      "wire_segments": 35
+    },
+    {
+      "components": 19,
+      "name": "condition_checker",
+      "nets": 18,
+      "ports": 51,
+      "signal_edges": 33,
+      "slug": "condition_checker",
+      "strongly_connected_components": 51,
+      "wire_segments": 82
+    },
+    {
+      "components": 96,
+      "name": "reg16x32_1",
+      "nets": 108,
+      "ports": 340,
+      "signal_edges": 232,
+      "slug": "reg16x32_1",
+      "strongly_connected_components": 340,
+      "wire_segments": 680
+    },
+    {
+      "components": 96,
+      "name": "block_transfer_control",
+      "nets": 96,
+      "ports": 252,
+      "signal_edges": 156,
+      "slug": "block_transfer_control",
+      "strongly_connected_components": 252,
+      "wire_segments": 341
+    },
+    {
+      "components": 17,
+      "name": "ALU_arithmetic_engine",
+      "nets": 16,
+      "ports": 32,
+      "signal_edges": 16,
+      "slug": "ALU_arithmetic_engine",
+      "strongly_connected_components": 32,
+      "wire_segments": 21
+    }
+  ],
+  "main": "main",
+  "sha256": "ee58cb397dd9db6b471e011cdf2541ad9835632d5b8ff4602a179d2712dcdf84",
+  "source": "/home/junaet/Documents/CustomCPU/armv4t.circ"
+}

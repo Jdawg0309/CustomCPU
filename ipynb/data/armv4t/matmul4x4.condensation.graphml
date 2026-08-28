@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="members" attr.type="string"/>
+<key id="d0" for="graph" attr.name="mapping" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">{"Clock@110,250.out": 19, "Pin@1070,310.p": 86, "Pin@1710,380.p": 26, "Pin@1720,250.p": 30, "Pin@1720,520.p": 24, "Pin@290,370[A0].p": 33, "Pin@290,470[A1].p": 35, "Pin@290,570[A2].p": 37, "Pin@290,670[A3].p": 39, "Pin@470,350.p": 47, "Pin@830,270[w00].p": 55, "Pin@830,290[w01].p": 57, "Pin@830,310[w02].p": 59, "Pin@830,330[w03].p": 61, "Pin@830,390[w10].p": 63, "Pin@830,410[w11].p": 65, "Pin@830,430[w12].p": 67, "Pin@830,450[w13].p": 69, "Pin@830,490[w20].p": 71, "Pin@830,510[w21].p": 73, "Pin@830,530[w22].p": 75, "Pin@830,550[w23].p": 77, "Pin@830,590[w30].p": 79, "Pin@830,610[w31].p": 81, "Pin@830,630[w32].p": 83, "Pin@830,650[w33].p": 85, "Register@1380,220.D": 0, "Register@1380,220.Q": 21, "Register@1380,220.clk": 6, "Register@1380,220.clr": 89, "Register@1380,220.en": 88, "Register@1380,350.D": 2, "Register@1380,350.Q": 23, "Register@1380,350.clk": 7, "Register@1380,350.clr": 91, "Register@1380,350.en": 90, "Register@1380,490.D": 4, "Register@1380,490.Q": 25, "Register@1380,490.clk": 8, "Register@1380,490.clr": 93, "Register@1380,490.en": 92, "Register@1490,350.D": 22, "Register@1490,350.Q": 27, "Register@1490,350.clk": 9, "Register@1490,350.clr": 95, "Register@1490,350.en": 94, "Register@1500,220.D": 20, "Register@1500,220.Q": 29, "Register@1500,220.clk": 10, "Register@1500,220.clr": 97, "Register@1500,220.en": 96, "Register@1620,220.D": 28, "Register@1620,220.Q": 31, "Register@1620,220.clk": 11, "Register@1620,220.clr": 99, "Register@1620,220.en": 98, "Register@310,540.D": 36, "Register@310,540.Q": 41, "Register@310,540.clk": 12, "Register@310,540.clr": 101, "Register@310,540.en": 100, "Register@370,440.D": 34, "Register@370,440.Q": 43, "Register@370,440.clk": 13, "Register@370,440.clr": 103, "Register@370,440.en": 102, "Register@380,640.D": 38, "Register@380,640.Q": 45, "Register@380,640.clk": 14, "Register@380,640.clr": 105, "Register@380,640.en": 104, "Register@470,540.D": 40, "Register@470,540.Q": 49, "Register@470,540.clk": 15, "Register@470,540.clr": 107, "Register@470,540.en": 106, "Register@500,640.D": 44, "Register@500,640.Q": 51, "Register@500,640.clk": 16, "Register@500,640.clr": 109, "Register@500,640.en": 108, "Register@620,640.D": 50, "Register@620,640.Q": 53, "Register@620,640.clk": 17, "Register@620,640.clr": 111, "Register@620,640.en": 110, "systolic_4x4@1070,250.CLK": 18, "systolic_4x4@1070,250.c_col0": 1, "systolic_4x4@1070,250.c_col1": 3, "systolic_4x4@1070,250.c_col2": 5, "systolic_4x4@1070,250.c_col3": 87, "systolic_4x4@1070,250.row0": 32, "systolic_4x4@1070,250.row1": 42, "systolic_4x4@1070,250.row2": 48, "systolic_4x4@1070,250.row3": 52, "systolic_4x4@1070,250.w00": 54, "systolic_4x4@1070,250.w01": 56, "systolic_4x4@1070,250.w02": 58, "systolic_4x4@1070,250.w03": 60, "systolic_4x4@1070,250.w10": 62, "systolic_4x4@1070,250.w11": 64, "systolic_4x4@1070,250.w12": 66, "systolic_4x4@1070,250.w13": 68, "systolic_4x4@1070,250.w20": 70, "systolic_4x4@1070,250.w21": 72, "systolic_4x4@1070,250.w22": 74, "systolic_4x4@1070,250.w23": 76, "systolic_4x4@1070,250.w30": 78, "systolic_4x4@1070,250.w31": 80, "systolic_4x4@1070,250.w32": 82, "systolic_4x4@1070,250.w33": 84, "systolic_4x4@1070,250.w_load": 46}</data>
+<node id="0">
+  <data key="d1">Register@1380,220.D</data>
+</node>
+<node id="1">
+  <data key="d1">systolic_4x4@1070,250.c_col0</data>
+</node>
+<node id="2">
+  <data key="d1">Register@1380,350.D</data>
+</node>
+<node id="3">
+  <data key="d1">systolic_4x4@1070,250.c_col1</data>
+</node>
+<node id="4">
+  <data key="d1">Register@1380,490.D</data>
+</node>
+<node id="5">
+  <data key="d1">systolic_4x4@1070,250.c_col2</data>
+</node>
+<node id="6">
+  <data key="d1">Register@1380,220.clk</data>
+</node>
+<node id="7">
+  <data key="d1">Register@1380,350.clk</data>
+</node>
+<node id="8">
+  <data key="d1">Register@1380,490.clk</data>
+</node>
+<node id="9">
+  <data key="d1">Register@1490,350.clk</data>
+</node>
+<node id="10">
+  <data key="d1">Register@1500,220.clk</data>
+</node>
+<node id="11">
+  <data key="d1">Register@1620,220.clk</data>
+</node>
+<node id="12">
+  <data key="d1">Register@310,540.clk</data>
+</node>
+<node id="13">
+  <data key="d1">Register@370,440.clk</data>
+</node>
+<node id="14">
+  <data key="d1">Register@380,640.clk</data>
+</node>
+<node id="15">
+  <data key="d1">Register@470,540.clk</data>
+</node>
+<node id="16">
+  <data key="d1">Register@500,640.clk</data>
+</node>
+<node id="17">
+  <data key="d1">Register@620,640.clk</data>
+</node>
+<node id="18">
+  <data key="d1">systolic_4x4@1070,250.CLK</data>
+</node>
+<node id="19">
+  <data key="d1">Clock@110,250.out</data>
+</node>
+<node id="20">
+  <data key="d1">Register@1500,220.D</data>
+</node>
+<node id="21">
+  <data key="d1">Register@1380,220.Q</data>
+</node>
+<node id="22">
+  <data key="d1">Register@1490,350.D</data>
+</node>
+<node id="23">
+  <data key="d1">Register@1380,350.Q</data>
+</node>
+<node id="24">
+  <data key="d1">Pin@1720,520.p</data>
+</node>
+<node id="25">
+  <data key="d1">Register@1380,490.Q</data>
+</node>
+<node id="26">
+  <data key="d1">Pin@1710,380.p</data>
+</node>
+<node id="27">
+  <data key="d1">Register@1490,350.Q</data>
+</node>
+<node id="28">
+  <data key="d1">Register@1620,220.D</data>
+</node>
+<node id="29">
+  <data key="d1">Register@1500,220.Q</data>
+</node>
+<node id="30">
+  <data key="d1">Pin@1720,250.p</data>
+</node>
+<node id="31">
+  <data key="d1">Register@1620,220.Q</data>
+</node>
+<node id="32">
+  <data key="d1">systolic_4x4@1070,250.row0</data>
+</node>
+<node id="33">
+  <data key="d1">Pin@290,370[A0].p</data>
+</node>
+<node id="34">
+  <data key="d1">Register@370,440.D</data>
+</node>
+<node id="35">
+  <data key="d1">Pin@290,470[A1].p</data>
+</node>
+<node id="36">
+  <data key="d1">Register@310,540.D</data>
+</node>
+<node id="37">
+  <data key="d1">Pin@290,570[A2].p</data>
+</node>
+<node id="38">
+  <data key="d1">Register@380,640.D</data>
+</node>
+<node id="39">
+  <data key="d1">Pin@290,670[A3].p</data>
+</node>
+<node id="40">
+  <data key="d1">Register@470,540.D</data>
+</node>
+<node id="41">
+  <data key="d1">Register@310,540.Q</data>
+</node>
+<node id="42">
+  <data key="d1">systolic_4x4@1070,250.row1</data>
+</node>
+<node id="43">
+  <data key="d1">Register@370,440.Q</data>
+</node>
+<node id="44">
+  <data key="d1">Register@500,640.D</data>
+</node>
+<node id="45">
+  <data key="d1">Register@380,640.Q</data>
+</node>
+<node id="46">
+  <data key="d1">systolic_4x4@1070,250.w_load</data>
+</node>
+<node id="47">
+  <data key="d1">Pin@470,350.p</data>
+</node>
+<node id="48">
+  <data key="d1">systolic_4x4@1070,250.row2</data>
+</node>
+<node id="49">
+  <data key="d1">Register@470,540.Q</data>
+</node>
+<node id="50">
+  <data key="d1">Register@620,640.D</data>
+</node>
+<node id="51">
+  <data key="d1">Register@500,640.Q</data>
+</node>
+<node id="52">
+  <data key="d1">systolic_4x4@1070,250.row3</data>
+</node>
+<node id="53">
+  <data key="d1">Register@620,640.Q</data>
+</node>
+<node id="54">
+  <data key="d1">systolic_4x4@1070,250.w00</data>
+</node>
+<node id="55">
+  <data key="d1">Pin@830,270[w00].p</data>
+</node>
+<node id="56">
+  <data key="d1">systolic_4x4@1070,250.w01</data>
+</node>
+<node id="57">
+  <data key="d1">Pin@830,290[w01].p</data>
+</node>
+<node id="58">
+  <data key="d1">systolic_4x4@1070,250.w02</data>
+</node>
+<node id="59">
+  <data key="d1">Pin@830,310[w02].p</data>
+</node>
+<node id="60">
+  <data key="d1">systolic_4x4@1070,250.w03</data>
+</node>
+<node id="61">
+  <data key="d1">Pin@830,330[w03].p</data>
+</node>
+<node id="62">
+  <data key="d1">systolic_4x4@1070,250.w10</data>
+</node>
+<node id="63">
+  <data key="d1">Pin@830,390[w10].p</data>
+</node>
+<node id="64">
+  <data key="d1">systolic_4x4@1070,250.w11</data>
+</node>
+<node id="65">
+  <data key="d1">Pin@830,410[w11].p</data>
+</node>
+<node id="66">
+  <data key="d1">systolic_4x4@1070,250.w12</data>
+</node>
+<node id="67">
+  <data key="d1">Pin@830,430[w12].p</data>
+</node>
+<node id="68">
+  <data key="d1">systolic_4x4@1070,250.w13</data>
+</node>
+<node id="69">
+  <data key="d1">Pin@830,450[w13].p</data>
+</node>
+<node id="70">
+  <data key="d1">systolic_4x4@1070,250.w20</data>
+</node>
+<node id="71">
+  <data key="d1">Pin@830,490[w20].p</data>
+</node>
+<node id="72">
+  <data key="d1">systolic_4x4@1070,250.w21</data>
+</node>
+<node id="73">
+  <data key="d1">Pin@830,510[w21].p</data>
+</node>
+<node id="74">
+  <data key="d1">systolic_4x4@1070,250.w22</data>
+</node>
+<node id="75">
+  <data key="d1">Pin@830,530[w22].p</data>
+</node>
+<node id="76">
+  <data key="d1">systolic_4x4@1070,250.w23</data>
+</node>
+<node id="77">
+  <data key="d1">Pin@830,550[w23].p</data>
+</node>
+<node id="78">
+  <data key="d1">systolic_4x4@1070,250.w30</data>
+</node>
+<node id="79">
+  <data key="d1">Pin@830,590[w30].p</data>
+</node>
+<node id="80">
+  <data key="d1">systolic_4x4@1070,250.w31</data>
+</node>
+<node id="81">
+  <data key="d1">Pin@830,610[w31].p</data>
+</node>
+<node id="82">
+  <data key="d1">systolic_4x4@1070,250.w32</data>
+</node>
+<node id="83">
+  <data key="d1">Pin@830,630[w32].p</data>
+</node>
+<node id="84">
+  <data key="d1">systolic_4x4@1070,250.w33</data>
+</node>
+<node id="85">
+  <data key="d1">Pin@830,650[w33].p</data>
+</node>
+<node id="86">
+  <data key="d1">Pin@1070,310.p</data>
+</node>
+<node id="87">
+  <data key="d1">systolic_4x4@1070,250.c_col3</data>
+</node>
+<node id="88">
+  <data key="d1">Register@1380,220.en</data>
+</node>
+<node id="89">
+  <data key="d1">Register@1380,220.clr</data>
+</node>
+<node id="90">
+  <data key="d1">Register@1380,350.en</data>
+</node>
+<node id="91">
+  <data key="d1">Register@1380,350.clr</data>
+</node>
+<node id="92">
+  <data key="d1">Register@1380,490.en</data>
+</node>
+<node id="93">
+  <data key="d1">Register@1380,490.clr</data>
+</node>
+<node id="94">
+  <data key="d1">Register@1490,350.en</data>
+</node>
+<node id="95">
+  <data key="d1">Register@1490,350.clr</data>
+</node>
+<node id="96">
+  <data key="d1">Register@1500,220.en</data>
+</node>
+<node id="97">
+  <data key="d1">Register@1500,220.clr</data>
+</node>
+<node id="98">
+  <data key="d1">Register@1620,220.en</data>
+</node>
+<node id="99">
+  <data key="d1">Register@1620,220.clr</data>
+</node>
+<node id="100">
+  <data key="d1">Register@310,540.en</data>
+</node>
+<node id="101">
+  <data key="d1">Register@310,540.clr</data>
+</node>
+<node id="102">
+  <data key="d1">Register@370,440.en</data>
+</node>
+<node id="103">
+  <data key="d1">Register@370,440.clr</data>
+</node>
+<node id="104">
+  <data key="d1">Register@380,640.en</data>
+</node>
+<node id="105">
+  <data key="d1">Register@380,640.clr</data>
+</node>
+<node id="106">
+  <data key="d1">Register@470,540.en</data>
+</node>
+<node id="107">
+  <data key="d1">Register@470,540.clr</data>
+</node>
+<node id="108">
+  <data key="d1">Register@500,640.en</data>
+</node>
+<node id="109">
+  <data key="d1">Register@500,640.clr</data>
+</node>
+<node id="110">
+  <data key="d1">Register@620,640.en</data>
+</node>
+<node id="111">
+  <data key="d1">Register@620,640.clr</data>
+</node>
+<edge source="1" target="0"/>
+<edge source="3" target="2"/>
+<edge source="5" target="4"/>
+<edge source="19" target="6"/>
+<edge source="19" target="7"/>
+<edge source="19" target="8"/>
+<edge source="19" target="9"/>
+<edge source="19" target="10"/>
+<edge source="19" target="11"/>
+<edge source="19" target="12"/>
+<edge source="19" target="13"/>
+<edge source="19" target="14"/>
+<edge source="19" target="15"/>
+<edge source="19" target="16"/>
+<edge source="19" target="17"/>
+<edge source="19" target="18"/>
+<edge source="21" target="20"/>
+<edge source="23" target="22"/>
+<edge source="25" target="24"/>
+<edge source="27" target="26"/>
+<edge source="29" target="28"/>
+<edge source="31" target="30"/>
+<edge source="33" target="32"/>
+<edge source="35" target="34"/>
+<edge source="37" target="36"/>
+<edge source="39" target="38"/>
+<edge source="41" target="40"/>
+<edge source="43" target="42"/>
+<edge source="45" target="44"/>
+<edge source="47" target="46"/>
+<edge source="49" target="48"/>
+<edge source="51" target="50"/>
+<edge source="53" target="52"/>
+<edge source="55" target="54"/>
+<edge source="57" target="56"/>
+<edge source="59" target="58"/>
+<edge source="61" target="60"/>
+<edge source="63" target="62"/>
+<edge source="65" target="64"/>
+<edge source="67" target="66"/>
+<edge source="69" target="68"/>
+<edge source="71" target="70"/>
+<edge source="73" target="72"/>
+<edge source="75" target="74"/>
+<edge source="77" target="76"/>
+<edge source="79" target="78"/>
+<edge source="81" target="80"/>
+<edge source="83" target="82"/>
+<edge source="85" target="84"/>
+<edge source="87" target="86"/>
+</graph></graphml>

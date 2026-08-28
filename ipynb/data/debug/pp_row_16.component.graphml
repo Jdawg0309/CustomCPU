@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="net_name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="net" attr.type="long"/>
+<key id="d12" for="edge" attr.name="destination_node" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source_node" attr.type="string"/>
+<key id="d10" for="edge" attr.name="dst_port" attr.type="string"/>
+<key id="d9" for="edge" attr.name="src_port" attr.type="string"/>
+<key id="d8" for="node" attr.name="is_subcircuit" attr.type="boolean"/>
+<key id="d7" for="node" attr.name="facing" attr.type="string"/>
+<key id="d6" for="node" attr.name="y" attr.type="long"/>
+<key id="d5" for="node" attr.name="x" attr.type="long"/>
+<key id="d4" for="node" attr.name="label" attr.type="string"/>
+<key id="d3" for="node" attr.name="component_type" attr.type="string"/>
+<key id="d2" for="graph" attr.name="graph_kind" attr.type="string"/>
+<key id="d1" for="graph" attr.name="source" attr.type="string"/>
+<key id="d0" for="graph" attr.name="circuit" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">pp_row_16</data>
+<data key="d1">/home/junaet/Documents/CustomCPU/debug_armv4t.circ</data>
+<data key="d2">component</data>
+<node id="Pin@130,400[Rs_bit]">
+  <data key="d3">Pin</data>
+  <data key="d4">Rs_bit</data>
+  <data key="d5">130</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@180,360[Rm]">
+  <data key="d3">Pin</data>
+  <data key="d4">Rm</data>
+  <data key="d5">180</data>
+  <data key="d6">360</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Bit Extender@180,400">
+  <data key="d3">Bit Extender</data>
+  <data key="d4"></data>
+  <data key="d5">180</data>
+  <data key="d6">400</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<node id="Pin@310,380[result]">
+  <data key="d3">Pin</data>
+  <data key="d4">result</data>
+  <data key="d5">310</data>
+  <data key="d6">380</data>
+  <data key="d7">west</data>
+  <data key="d8">False</data>
+</node>
+<node id="AND Gate@270,380">
+  <data key="d3">AND Gate</data>
+  <data key="d4"></data>
+  <data key="d5">270</data>
+  <data key="d6">380</data>
+  <data key="d7">east</data>
+  <data key="d8">False</data>
+</node>
+<edge source="Pin@130,400[Rs_bit]" target="Bit Extender@180,400" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in</data>
+  <data key="d11">Pin@130,400[Rs_bit].p</data>
+  <data key="d12">Bit Extender@180,400.in</data>
+  <data key="d13">0</data>
+  <data key="d14">net:Rs_bit</data>
+</edge>
+<edge source="Pin@180,360[Rm]" target="AND Gate@270,380" id="0">
+  <data key="d9">p</data>
+  <data key="d10">in0</data>
+  <data key="d11">Pin@180,360[Rm].p</data>
+  <data key="d12">AND Gate@270,380.in0</data>
+  <data key="d13">1</data>
+  <data key="d14">net:Rm</data>
+</edge>
+<edge source="Bit Extender@180,400" target="AND Gate@270,380" id="0">
+  <data key="d9">out</data>
+  <data key="d10">in1</data>
+  <data key="d11">Bit Extender@180,400.out</data>
+  <data key="d12">AND Gate@270,380.in1</data>
+  <data key="d13">2</data>
+  <data key="d14">net#2</data>
+</edge>
+<edge source="AND Gate@270,380" target="Pin@310,380[result]" id="0">
+  <data key="d9">out</data>
+  <data key="d10">p</data>
+  <data key="d11">AND Gate@270,380.out</data>
+  <data key="d12">Pin@310,380[result].p</data>
+  <data key="d13">3</data>
+  <data key="d14">net:result</data>
+</edge>
+</graph></graphml>

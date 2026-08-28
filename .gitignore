@@ -3,11 +3,45 @@
 blockdiag.py
 *.svg
 *.png
+
+# ---- Python ----
 *.pyc
 __pycache__/
-/cpu/verify_host
-/c_tests/*.elf
-/c_tests/practical.o
-/c_tests/startup.o
+.pytest_cache/
 
+# ---- compiled host helper (build/verify_host is already tracked; see repo notes) ----
+/cpu/verify_host
+
+# ---- c_tests intermediate build products ----
+/c_tests/*.o
+/c_tests/*.elf
+/c_tests/*.bin
+/c_tests/*.dump
+
+# ---- build/ generated output ----
+# build_regression_roms.py writes here instead of ../roms (see repo notes)
+/build/roms/
+
+# ---- circuit snapshots: ~450 KB each, one per save ----
+# NOTE: the snapshots already committed stay tracked; this only stops new ones.
+backups/
+
+# ---- Vivado / FPGA synthesis output ----
+/fpga/fmax/vivado_out/
+*.jou
+.Xil/
+vivado*.log
+
+# ---- superseded annotated circuit snapshot (already tracked; entry is inert) ----
 /armv4t_ANNOTATED.circ
+
+# The protection rules travel with the repo; the local prefs file does not.
+!.claude/
+.claude/*
+!.claude/settings.json
+!.claude/hooks/
+!.claude/hooks/*
+
+# audit ledger is tracked; the key never is
+!.audit/
+!.audit/*

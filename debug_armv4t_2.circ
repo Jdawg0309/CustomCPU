@@ -12244,7 +12244,7 @@
       <a name="label" val="REG_LARGE_SHIFT"/>
     </comp>
     <comp lib="0" loc="(1300,2800)" name="Tunnel">
-      <a name="label" val="LARGE_SHIFT_SELECT"/>
+      <a name="label" val="LARGE_SHIFT_SEL_A"/>
     </comp>
     <comp lib="0" loc="(700,2770)" name="Splitter">
       <a name="appear" val="right"/>
@@ -12744,6 +12744,45 @@
     <comp lib="0" loc="(1970,4410)" name="Tunnel"><a name="label" val="SHIFTER_CARRY_OUT"/></comp>
     <comp lib="0" loc="(1980,4420)" name="Tunnel"><a name="label" val="useShC"/></comp>
     <comp lib="0" loc="(2000,4400)" name="Tunnel"><a name="label" val="ALU_FLAG_C"/></comp>
+    <comp lib="0" loc="(300,3660)" name="Constant"><a name="value" val="0x80000000"/><a name="width" val="32"/></comp>
+    <wire from="(300,3660)" to="(310,3660)"/>
+    <comp lib="0" loc="(310,3660)" name="Tunnel"><a name="label" val="KMSB32"/><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(300,3720)" name="Constant"><a name="value" val="0x0"/><a name="width" val="32"/></comp>
+    <wire from="(300,3720)" to="(310,3720)"/>
+    <comp lib="0" loc="(310,3720)" name="Tunnel"><a name="label" val="K0_32"/><a name="width" val="32"/></comp>
+    <comp lib="5" loc="(2700,5150)" name="Shifter"><a name="width" val="32"/><a name="shift" val="lr"/></comp>
+    <comp lib="0" loc="(2620,5080)" name="Tunnel"><a name="label" val="SC_VALUE"/><a name="width" val="32"/></comp>
+    <wire from="(2620,5080)" to="(2660,5080)"/>
+    <wire from="(2660,5080)" to="(2660,5140)"/>
+    <comp lib="0" loc="(2620,5220)" name="Tunnel"><a name="label" val="K1_5"/><a name="width" val="5"/></comp>
+    <wire from="(2620,5220)" to="(2660,5220)"/>
+    <wire from="(2660,5220)" to="(2660,5160)"/>
+    <comp lib="0" loc="(2820,5150)" name="Tunnel"><a name="label" val="rrx_shr1"/><a name="width" val="32"/></comp>
+    <wire from="(2700,5150)" to="(2820,5150)"/>
+    <comp lib="4" loc="(2700,5400)" name="Multiplexer"><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(2670,5390)" name="Tunnel"><a name="label" val="K0_32"/><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(2670,5410)" name="Tunnel"><a name="label" val="KMSB32"/><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(2680,5420)" name="Tunnel"><a name="label" val="CURRENT_FLAG_C"/></comp>
+    <comp lib="0" loc="(2700,5400)" name="Tunnel"><a name="label" val="rrx_cinmsb"/><a name="width" val="32"/></comp>
+    <comp lib="5" loc="(3200,5300)" name="Adder"><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(3120,5230)" name="Tunnel"><a name="label" val="rrx_shr1"/><a name="width" val="32"/></comp>
+    <wire from="(3120,5230)" to="(3160,5230)"/>
+    <wire from="(3160,5230)" to="(3160,5290)"/>
+    <comp lib="0" loc="(3120,5370)" name="Tunnel"><a name="label" val="rrx_cinmsb"/><a name="width" val="32"/></comp>
+    <wire from="(3120,5370)" to="(3160,5370)"/>
+    <wire from="(3160,5370)" to="(3160,5310)"/>
+    <comp lib="0" loc="(3320,5300)" name="Tunnel"><a name="label" val="rrx_result"/><a name="width" val="32"/></comp>
+    <wire from="(3200,5300)" to="(3320,5300)"/>
+    <comp lib="4" loc="(2700,5650)" name="Multiplexer"></comp>
+    <comp lib="0" loc="(2670,5640)" name="Tunnel"><a name="label" val="LARGE_SHIFT_SEL_A"/></comp>
+    <comp lib="0" loc="(2670,5660)" name="Tunnel"><a name="label" val="K1"/></comp>
+    <comp lib="0" loc="(2680,5670)" name="Tunnel"><a name="label" val="RRX_ACTIVE"/></comp>
+    <comp lib="0" loc="(2700,5650)" name="Tunnel"><a name="label" val="LARGE_SHIFT_SELECT"/></comp>
+    <comp lib="4" loc="(3200,5650)" name="Multiplexer"><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(3170,5640)" name="Tunnel"><a name="label" val="RRX_LSRES_PRE"/><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(3170,5660)" name="Tunnel"><a name="label" val="rrx_result"/><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(3180,5670)" name="Tunnel"><a name="label" val="RRX_ACTIVE"/></comp>
+    <comp lib="0" loc="(3200,5650)" name="Tunnel"><a name="label" val="RRX_LSRES_POST"/><a name="width" val="32"/></comp>
     <wire from="(1000,1570)" to="(1010,1570)"/>
     <wire from="(1010,1420)" to="(1240,1420)"/>
     <wire from="(1010,2290)" to="(1010,2370)"/>
@@ -13058,7 +13097,8 @@
     <wire from="(910,2430)" to="(990,2430)"/>
     <wire from="(920,1120)" to="(990,1120)"/>
     <wire from="(920,1750)" to="(920,1800)"/>
-    <wire from="(920,1800)" to="(1810,1800)"/>
+    <comp lib="0" loc="(920,1800)" name="Tunnel"><a name="label" val="RRX_LSRES_PRE"/><a name="width" val="32"/></comp>
+    <comp lib="0" loc="(1810,1800)" name="Tunnel"><a name="label" val="RRX_LSRES_POST"/><a name="width" val="32"/></comp>
     <wire from="(930,1320)" to="(930,1490)"/>
     <wire from="(930,1490)" to="(1130,1490)"/>
     <wire from="(940,990)" to="(940,1010)"/>

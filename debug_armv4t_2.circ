@@ -12199,6 +12199,125 @@
     <comp loc="(1790,1410)" name="barrel_32b"/>
     <comp loc="(2050,690)" name="ALU"/>
     <comp loc="(3260,790)" name="condition_checker"/>
+    <!-- shifter-32 decode: route ARM immediate LSR #32 / ASR #32 (encoded amount 0) into the large-shift path -->
+    <comp lib="0" loc="(790,1410)" name="Tunnel">
+      <a name="label" val="SHIFT_AMOUNT_DECODE"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(700,1350)" name="Tunnel">
+      <a name="label" val="IMM_BIT_SHIFT32"/>
+    </comp>
+    <comp lib="0" loc="(700,1900)" name="Tunnel">
+      <a name="label" val="SHIFT_TYPE_DECODE"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(410,2700)" name="Tunnel">
+      <a name="label" val="REG_SHIFT_SHIFT32"/>
+    </comp>
+    <comp lib="0" loc="(2000,1520)" name="Tunnel">
+      <a name="label" val="REG_LARGE_SHIFT"/>
+    </comp>
+    <comp lib="0" loc="(1850,1290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="LARGE_SHIFT_SELECT"/>
+    </comp>
+    <comp lib="0" loc="(650,2750)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="SHIFT_AMOUNT_DECODE"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(650,2890)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="SHIFT_TYPE_DECODE"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(920,2760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IMM_BIT_SHIFT32"/>
+    </comp>
+    <comp lib="0" loc="(920,2840)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REG_SHIFT_SHIFT32"/>
+    </comp>
+    <comp lib="0" loc="(1170,2780)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REG_LARGE_SHIFT"/>
+    </comp>
+    <comp lib="0" loc="(1300,2800)" name="Tunnel">
+      <a name="label" val="LARGE_SHIFT_SELECT"/>
+    </comp>
+    <comp lib="0" loc="(700,2770)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+      <a name="spacing" val="1"/>
+    </comp>
+    <comp lib="1" loc="(800,2800)" name="OR Gate">
+      <a name="inputs" val="5"/>
+      <a name="label" val="SHIFT_AMOUNT_NONZERO"/>
+    </comp>
+    <comp lib="1" loc="(850,2800)" name="NOT Gate">
+      <a name="label" val="SHIFT_AMOUNT_ZERO"/>
+    </comp>
+    <comp lib="0" loc="(700,2890)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="2"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="1" loc="(800,2910)" name="XOR Gate">
+      <a name="label" val="SHIFT_TYPE_LSR_OR_ASR"/>
+    </comp>
+    <comp lib="1" loc="(950,2760)" name="NOT Gate">
+      <a name="label" val="NOT_IMM_SHIFT32"/>
+    </comp>
+    <comp lib="1" loc="(950,2840)" name="NOT Gate">
+      <a name="label" val="NOT_REG_SHIFT32"/>
+    </comp>
+    <comp lib="1" loc="(1100,2800)" name="AND Gate">
+      <a name="inputs" val="4"/>
+      <a name="label" val="IMM_LSR_ASR_32"/>
+    </comp>
+    <comp lib="1" loc="(1250,2800)" name="OR Gate">
+      <a name="label" val="LARGE_SHIFT_OR"/>
+    </comp>
+    <wire from="(790,1410)" to="(790,1440)"/>
+    <wire from="(700,1320)" to="(700,1350)"/>
+    <wire from="(700,1850)" to="(700,1900)"/>
+    <wire from="(410,2660)" to="(410,2700)"/>
+    <wire from="(1940,1520)" to="(2000,1520)"/>
+    <wire from="(1820,1290)" to="(1850,1290)"/>
+    <wire from="(650,2750)" to="(680,2750)"/>
+    <wire from="(680,2750)" to="(680,2770)"/>
+    <wire from="(680,2770)" to="(700,2770)"/>
+    <wire from="(720,2780)" to="(750,2780)"/>
+    <wire from="(720,2790)" to="(750,2790)"/>
+    <wire from="(720,2800)" to="(750,2800)"/>
+    <wire from="(720,2810)" to="(750,2810)"/>
+    <wire from="(720,2820)" to="(750,2820)"/>
+    <wire from="(800,2800)" to="(820,2800)"/>
+    <wire from="(650,2890)" to="(700,2890)"/>
+    <wire from="(720,2900)" to="(740,2900)"/>
+    <wire from="(740,2890)" to="(740,2900)"/>
+    <wire from="(720,2920)" to="(740,2920)"/>
+    <wire from="(740,2920)" to="(740,2930)"/>
+    <wire from="(850,2800)" to="(1020,2800)"/>
+    <wire from="(1020,2780)" to="(1020,2800)"/>
+    <wire from="(1020,2780)" to="(1050,2780)"/>
+    <wire from="(800,2910)" to="(1030,2910)"/>
+    <wire from="(1030,2790)" to="(1030,2910)"/>
+    <wire from="(1030,2790)" to="(1050,2790)"/>
+    <wire from="(950,2760)" to="(1010,2760)"/>
+    <wire from="(1010,2760)" to="(1010,2810)"/>
+    <wire from="(1010,2810)" to="(1050,2810)"/>
+    <wire from="(950,2840)" to="(1040,2840)"/>
+    <wire from="(1040,2820)" to="(1040,2840)"/>
+    <wire from="(1040,2820)" to="(1050,2820)"/>
+    <wire from="(1100,2800)" to="(1140,2800)"/>
+    <wire from="(1140,2800)" to="(1140,2820)"/>
+    <wire from="(1140,2820)" to="(1200,2820)"/>
+    <wire from="(1170,2780)" to="(1200,2780)"/>
+    <wire from="(1250,2800)" to="(1300,2800)"/>
     <wire from="(1000,1570)" to="(1010,1570)"/>
     <wire from="(1010,1420)" to="(1240,1420)"/>
     <wire from="(1010,2290)" to="(1010,2370)"/>
@@ -12312,7 +12431,6 @@
     <wire from="(1800,750)" to="(1800,1270)"/>
     <wire from="(1800,750)" to="(1830,750)"/>
     <wire from="(1810,1300)" to="(1810,1800)"/>
-    <wire from="(1820,1290)" to="(1940,1290)"/>
     <wire from="(1940,1290)" to="(1940,1490)"/>
     <wire from="(1940,1490)" to="(1940,1520)"/>
     <wire from="(410,3100)" to="(440,3100)"/>
@@ -13425,176 +13543,6 @@
       <a name="width" val="3"/>
     </comp>
 
-    <!-- ARM SWP/SWPB: exact local decode and read-modify-write steering. -->
-    <comp lib="0" loc="(440,880)" name="Tunnel"><a name="label" val="SWP_CLASS"/><a name="width" val="3"/></comp>
-    <comp lib="0" loc="(400,1020)" name="Tunnel"><a name="label" val="SWP_OPCODE"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(360,1100)" name="Tunnel"><a name="label" val="SWP_S"/></comp>
-    <comp lib="0" loc="(440,1810)" name="Tunnel"><a name="label" val="SWP_I15"/><a name="width" val="16"/></comp>
-    <comp lib="0" loc="(450,1800)" name="Tunnel"><a name="label" val="SWP_RD_INDEX"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(440,620)" name="Tunnel"><a name="label" val="SWP_BASE"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(480,720)" name="Tunnel"><a name="label" val="SWP_RD_DATA"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(240,2590)" name="Tunnel"><a name="label" val="SWP_RM_DATA"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(430,1940)" name="Tunnel"><a name="label" val="SWP_COND"/></comp>
-    <comp lib="0" loc="(400,420)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(400,520)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-
-    <comp lib="5" loc="(6000,800)" name="Comparator"><a name="width" val="3"/><a name="label" val="SWP_CLASS_ZERO"/></comp>
-    <comp lib="0" loc="(5960,790)" name="Tunnel"><a name="label" val="SWP_CLASS"/><a name="width" val="3"/></comp>
-    <comp lib="0" loc="(5960,810)" name="Constant"><a name="width" val="3"/></comp>
-    <comp lib="0" loc="(6000,800)" name="Tunnel"><a name="label" val="SWP_CLASS_ZERO"/></comp>
-
-    <comp lib="5" loc="(6000,900)" name="Comparator"><a name="width" val="4"/><a name="label" val="SWP_OPCODE8"/></comp>
-    <comp lib="0" loc="(5960,890)" name="Tunnel"><a name="label" val="SWP_OPCODE"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(5960,910)" name="Constant"><a name="value" val="0x8"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(6000,900)" name="Tunnel"><a name="label" val="SWP_EQ8"/></comp>
-    <comp lib="5" loc="(6000,980)" name="Comparator"><a name="width" val="4"/><a name="label" val="SWP_OPCODEA"/></comp>
-    <comp lib="0" loc="(5960,970)" name="Tunnel"><a name="label" val="SWP_OPCODE"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(5960,990)" name="Constant"><a name="value" val="0xa"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(6000,980)" name="Tunnel"><a name="label" val="SWP_EQA"/></comp>
-    <comp lib="1" loc="(6200,940)" name="OR Gate"><a name="label" val="SWP_OPCODE_OK"/></comp>
-    <comp lib="0" loc="(6150,920)" name="Tunnel"><a name="label" val="SWP_EQ8"/></comp>
-    <comp lib="0" loc="(6150,960)" name="Tunnel"><a name="label" val="SWP_EQA"/></comp>
-    <comp lib="0" loc="(6200,940)" name="Tunnel"><a name="label" val="SWP_OPCODE_OK"/></comp>
-
-    <comp lib="1" loc="(6000,1100)" name="AND Gate"><a name="width" val="16"/><a name="label" val="SWP_LOW_MASK"/></comp>
-    <comp lib="0" loc="(5950,1080)" name="Tunnel"><a name="label" val="SWP_I15"/><a name="width" val="16"/></comp>
-    <comp lib="0" loc="(5950,1120)" name="Constant"><a name="value" val="0xff0"/><a name="width" val="16"/></comp>
-    <comp lib="0" loc="(6000,1100)" name="Tunnel"><a name="label" val="SWP_LOW_MASKED"/><a name="width" val="16"/></comp>
-    <comp lib="5" loc="(6200,1100)" name="Comparator"><a name="width" val="16"/><a name="label" val="SWP_LOW_SIGNATURE"/></comp>
-    <comp lib="0" loc="(6160,1090)" name="Tunnel"><a name="label" val="SWP_LOW_MASKED"/><a name="width" val="16"/></comp>
-    <comp lib="0" loc="(6160,1110)" name="Constant"><a name="value" val="0x90"/><a name="width" val="16"/></comp>
-    <comp lib="0" loc="(6200,1100)" name="Tunnel"><a name="label" val="SWP_LOW_OK"/></comp>
-
-    <comp lib="1" loc="(6000,1200)" name="NOT Gate"><a name="label" val="SWP_NOT_S"/></comp>
-    <comp lib="0" loc="(5970,1200)" name="Tunnel"><a name="label" val="SWP_S"/></comp>
-    <comp lib="0" loc="(6000,1200)" name="Tunnel"><a name="label" val="SWP_NOT_S_OUT"/></comp>
-    <comp lib="1" loc="(6500,1000)" name="AND Gate"><a name="inputs" val="4"/><a name="label" val="SWP_DECODE"/></comp>
-    <comp lib="0" loc="(6450,980)" name="Tunnel"><a name="label" val="SWP_CLASS_ZERO"/></comp>
-    <comp lib="0" loc="(6450,990)" name="Tunnel"><a name="label" val="SWP_OPCODE_OK"/></comp>
-    <comp lib="0" loc="(6450,1010)" name="Tunnel"><a name="label" val="SWP_LOW_OK"/></comp>
-    <comp lib="0" loc="(6450,1020)" name="Tunnel"><a name="label" val="SWP_NOT_S_OUT"/></comp>
-    <comp lib="0" loc="(6500,1000)" name="Tunnel"><a name="label" val="IS_SWP"/></comp>
-    <comp lib="1" loc="(6800,1000)" name="AND Gate"><a name="label" val="SWP_EXEC_GATE"/></comp>
-    <comp lib="0" loc="(6750,980)" name="Tunnel"><a name="label" val="IS_SWP"/></comp>
-    <comp lib="0" loc="(6750,1020)" name="Tunnel"><a name="label" val="SWP_COND"/></comp>
-    <comp lib="0" loc="(6800,1000)" name="Tunnel"><a name="label" val="SWP_EXEC"/></comp>
-
-    <comp lib="4" loc="(5500,1400)" name="Multiplexer"><a name="width" val="32"/><a name="label" val="SWP_STORE_MUX"/></comp>
-    <comp lib="0" loc="(5470,1390)" name="Tunnel"><a name="label" val="SWP_RD_DATA"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5470,1410)" name="Tunnel"><a name="label" val="SWP_PENDING_DATA"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5480,1420)" name="Constant"/>
-    <comp lib="0" loc="(5500,1400)" name="Tunnel"><a name="label" val="STORE_SOURCE"/><a name="width" val="32"/></comp>
-
-    <comp lib="4" loc="(5500,1600)" name="Multiplexer"><a name="width" val="32"/><a name="label" val="SWP_ADDR_MUX"/></comp>
-    <comp lib="0" loc="(5470,1590)" name="Tunnel"><a name="label" val="NORMAL_MEM_ADDR"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5470,1610)" name="Tunnel"><a name="label" val="SWP_ADDR_VALUE"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5480,1620)" name="Constant"/>
-    <comp lib="0" loc="(5500,1600)" name="Tunnel"><a name="label" val="SWP_SELECTED_ADDR"/><a name="width" val="32"/></comp>
-    <comp lib="2" loc="(5500,1800)" name="Register"><a name="appearance" val="logisim_evolution"/><a name="label" val="SWP_OLD_VALUE"/><a name="trigger" val="falling"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5500,1830)" name="Tunnel"><a name="label" val="FINAL_LOAD"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5500,1850)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(5500,1870)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-    <comp lib="0" loc="(5530,1890)" name="Tunnel"><a name="label" val="IS_SWP"/></comp>
-    <comp lib="0" loc="(5560,1830)" name="Tunnel"><a name="label" val="SWP_OLD"/><a name="width" val="32"/></comp>
-    <comp lib="4" loc="(5800,1800)" name="Multiplexer"><a name="width" val="32"/><a name="label" val="SWP_LOAD_MUX"/></comp>
-    <comp lib="0" loc="(5770,1790)" name="Tunnel"><a name="label" val="FINAL_LOAD"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5770,1810)" name="Tunnel"><a name="label" val="FINAL_LOAD"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(5780,1820)" name="Constant"/>
-    <comp lib="0" loc="(5800,1800)" name="Tunnel"><a name="label" val="SWP_LOAD_SELECTED"/><a name="width" val="32"/></comp>
-
-    <!-- SWP transaction phase: first falling edge captures, second stores. -->
-    <comp lib="1" loc="(6000,1500)" name="NOT Gate"><a name="label" val="SWP_NOT_PENDING"/></comp>
-    <comp lib="0" loc="(5970,1500)" name="Tunnel"><a name="label" val="SWP_PENDING"/></comp>
-    <comp lib="0" loc="(6000,1500)" name="Tunnel"><a name="label" val="SWP_NOT_PENDING"/></comp>
-    <comp lib="1" loc="(6100,1540)" name="AND Gate"><a name="label" val="SWP_NEXT_PHASE"/></comp>
-    <comp lib="0" loc="(6050,1520)" name="Tunnel"><a name="label" val="SWP_EXEC"/></comp>
-    <comp lib="0" loc="(6050,1560)" name="Tunnel"><a name="label" val="SWP_NOT_PENDING"/></comp>
-    <comp lib="0" loc="(6100,1540)" name="Tunnel"><a name="label" val="SWP_NEXT_PENDING"/></comp>
-    <comp lib="2" loc="(6200,1500)" name="Register"><a name="appearance" val="logisim_evolution"/><a name="label" val="SWP_PHASE"/><a name="trigger" val="falling"/></comp>
-    <comp lib="0" loc="(6200,1530)" name="Tunnel"><a name="label" val="SWP_NEXT_PENDING"/></comp>
-    <comp lib="0" loc="(6200,1550)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(6200,1570)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-    <comp lib="0" loc="(6230,1590)" name="Constant"><a name="value" val="0x1"/></comp>
-    <comp lib="0" loc="(6260,1530)" name="Tunnel"><a name="label" val="SWP_PENDING"/></comp>
-
-    <comp lib="2" loc="(6200,1700)" name="Register"><a name="appearance" val="logisim_evolution"/><a name="label" val="SWP_DATA_HOLD"/><a name="trigger" val="falling"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(6200,1730)" name="Tunnel"><a name="label" val="SWP_RM_DATA"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(6200,1750)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(6200,1770)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-    <comp lib="0" loc="(6230,1790)" name="Tunnel"><a name="label" val="SWP_EXEC"/></comp>
-    <comp lib="0" loc="(6260,1730)" name="Tunnel"><a name="label" val="SWP_PENDING_DATA"/><a name="width" val="32"/></comp>
-    <comp lib="2" loc="(6500,1700)" name="Register"><a name="appearance" val="logisim_evolution"/><a name="label" val="SWP_ADDR_HOLD"/><a name="trigger" val="falling"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(6500,1730)" name="Tunnel"><a name="label" val="SWP_BASE"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(6500,1750)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(6500,1770)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-    <comp lib="0" loc="(6530,1790)" name="Tunnel"><a name="label" val="SWP_EXEC"/></comp>
-    <comp lib="0" loc="(6560,1730)" name="Tunnel"><a name="label" val="SWP_PENDING_ADDR"/><a name="width" val="32"/></comp>
-    <comp lib="2" loc="(6800,1700)" name="Register"><a name="appearance" val="logisim_evolution"/><a name="label" val="SWP_BYTE_HOLD"/><a name="trigger" val="falling"/></comp>
-    <comp lib="0" loc="(6800,1730)" name="Tunnel"><a name="label" val="MEM_B_RAW"/></comp>
-    <comp lib="0" loc="(6800,1750)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(6800,1770)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-    <comp lib="0" loc="(6830,1790)" name="Tunnel"><a name="label" val="SWP_EXEC"/></comp>
-    <comp lib="0" loc="(6860,1730)" name="Tunnel"><a name="label" val="SWP_PENDING_B"/></comp>
-    <comp lib="2" loc="(7100,1700)" name="Register"><a name="appearance" val="logisim_evolution"/><a name="label" val="SWP_RD_HOLD"/><a name="trigger" val="falling"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(7100,1730)" name="Tunnel"><a name="label" val="SWP_RD_INDEX"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(7100,1750)" name="Tunnel"><a name="label" val="SWP_CLK"/></comp>
-    <comp lib="0" loc="(7100,1770)" name="Tunnel"><a name="label" val="SWP_RST"/></comp>
-    <comp lib="0" loc="(7130,1790)" name="Tunnel"><a name="label" val="SWP_EXEC"/></comp>
-    <comp lib="0" loc="(7160,1730)" name="Tunnel"><a name="label" val="SWP_PENDING_RD"/><a name="width" val="4"/></comp>
-
-    <comp lib="1" loc="(6100,1640)" name="OR Gate"><a name="label" val="SWP_PATH_OR"/></comp>
-    <comp lib="0" loc="(6050,1620)" name="Tunnel"><a name="label" val="IS_SWP"/></comp>
-    <comp lib="0" loc="(6050,1660)" name="Tunnel"><a name="label" val="SWP_PENDING"/></comp>
-    <comp lib="0" loc="(6100,1640)" name="Tunnel"><a name="label" val="SWP_PATH"/></comp>
-    <comp lib="4" loc="(6800,1900)" name="Multiplexer"><a name="width" val="32"/><a name="label" val="SWP_PENDING_ADDR_MUX"/></comp>
-    <comp lib="0" loc="(6770,1890)" name="Tunnel"><a name="label" val="SWP_BASE"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(6770,1910)" name="Tunnel"><a name="label" val="SWP_PENDING_ADDR"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(6780,1920)" name="Tunnel"><a name="label" val="SWP_PENDING"/></comp>
-    <comp lib="0" loc="(6800,1900)" name="Tunnel"><a name="label" val="SWP_ADDR_VALUE"/><a name="width" val="32"/></comp>
-    <comp lib="4" loc="(6800,2000)" name="Multiplexer"><a name="label" val="SWP_BYTE_MODE_MUX"/></comp>
-    <comp lib="0" loc="(6770,1990)" name="Tunnel"><a name="label" val="MEM_B_RAW"/></comp>
-    <comp lib="0" loc="(6770,2010)" name="Tunnel"><a name="label" val="SWP_PENDING_B"/></comp>
-    <comp lib="0" loc="(6780,2020)" name="Constant"/>
-    <comp lib="0" loc="(6800,2000)" name="Tunnel"><a name="label" val="MEM_B_UNUSED"/></comp>
-    <comp lib="4" loc="(7100,1900)" name="Multiplexer"><a name="width" val="4"/><a name="label" val="SWP_WA2_MUX"/></comp>
-    <comp lib="0" loc="(7070,1890)" name="Tunnel"><a name="label" val="BLOCK_WA2"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(7070,1910)" name="Constant"><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(7080,1920)" name="Constant"/>
-    <comp lib="0" loc="(7100,1900)" name="Tunnel"><a name="label" val="WA2_WITH_SWP"/><a name="width" val="4"/></comp>
-    <comp lib="4" loc="(7100,2000)" name="Multiplexer"><a name="width" val="32"/><a name="label" val="SWP_WD2_MUX"/></comp>
-    <comp lib="0" loc="(7070,1990)" name="Tunnel"><a name="label" val="BLOCK_WD2"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(7070,2010)" name="Tunnel"><a name="label" val="SWP_OLD"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(7080,2020)" name="Constant"/>
-    <comp lib="0" loc="(7100,2000)" name="Tunnel"><a name="label" val="WD2_WITH_SWP"/><a name="width" val="32"/></comp>
-    <comp lib="1" loc="(7100,2100)" name="OR Gate"><a name="label" val="SWP_WE2_OR"/></comp>
-    <comp lib="0" loc="(7050,2080)" name="Tunnel"><a name="label" val="BLOCK_WE2"/></comp>
-    <comp lib="0" loc="(7050,2120)" name="Constant"/>
-    <comp lib="0" loc="(7100,2100)" name="Tunnel"><a name="label" val="WE2_WITH_SWP"/></comp>
-    <comp lib="0" loc="(2440,740)" name="Tunnel"><a name="label" val="WA2_UNUSED_A"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(2750,740)" name="Tunnel"><a name="label" val="WA2_UNUSED_B"/><a name="width" val="4"/></comp>
-    <comp lib="0" loc="(2620,840)" name="Tunnel"><a name="label" val="WD2_UNUSED_A"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(2750,840)" name="Tunnel"><a name="label" val="WD2_UNUSED_B"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(2640,940)" name="Tunnel"><a name="label" val="WE2_UNUSED_A"/></comp>
-    <comp lib="0" loc="(2750,940)" name="Tunnel"><a name="label" val="WE2_UNUSED_B"/></comp>
-    <comp lib="1" loc="(7400,1000)" name="OR Gate"><a name="label" val="SWP_SUPPRESS_ALU_OR"/></comp>
-    <comp lib="0" loc="(7350,980)" name="Tunnel"><a name="label" val="ORD_DATA_RAM_WE"/></comp>
-    <comp lib="0" loc="(7350,1020)" name="Tunnel"><a name="label" val="IS_SWP"/></comp>
-    <comp lib="0" loc="(7400,1000)" name="Tunnel"><a name="label" val="DATA_RAM_WE_WITH_SWP"/></comp>
-    <comp lib="0" loc="(1850,1050)" name="Tunnel"><a name="label" val="SUPPRESS_UNUSED_A"/></comp>
-    <comp lib="0" loc="(1870,1050)" name="Tunnel"><a name="label" val="SUPPRESS_UNUSED_B"/></comp>
-    <comp lib="1" loc="(6500,2100)" name="AND Gate"><a name="label" val="SWP_HOLD_GATE"/></comp>
-    <comp lib="0" loc="(6450,2080)" name="Tunnel"><a name="label" val="IS_SWP"/></comp>
-    <comp lib="0" loc="(6450,2120)" name="Tunnel"><a name="label" val="SWP_PENDING"/></comp>
-    <comp lib="0" loc="(6500,2100)" name="Tunnel"><a name="label" val="SWP_HOLD"/></comp>
-    <comp lib="1" loc="(6800,2140)" name="OR Gate"><a name="label" val="BT_ACTIVE_SWP_OR"/></comp>
-    <comp lib="0" loc="(6750,2120)" name="Constant"/>
-    <comp lib="0" loc="(6750,2160)" name="Tunnel"><a name="label" val="SWP_HOLD"/></comp>
-    <comp lib="0" loc="(6800,2140)" name="Tunnel"><a name="label" val="HOLD_PC_WITH_SWP"/></comp>
-    <comp lib="0" loc="(1530,2300)" name="Tunnel"><a name="label" val="HOLD_UNUSED_A"/></comp>
-    <comp lib="0" loc="(1780,2300)" name="Tunnel"><a name="label" val="HOLD_UNUSED_B"/></comp>
-    <comp lib="0" loc="(1620,1830)" name="Tunnel"><a name="label" val="NORMAL_MEM_ADDR"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(1660,1830)" name="Tunnel"><a name="label" val="SWP_SELECTED_ADDR"/><a name="width" val="32"/></comp>
-    <comp lib="0" loc="(3600,1200)" name="Constant"/>
     <comp loc="(1530,2300)" name="block_transfer_control"/>
     <comp loc="(560,2590)" name="barrel_32b"/>
     <wire from="(1000,2000)" to="(1010,2000)"/>
@@ -13675,6 +13623,7 @@
     <wire from="(160,800)" to="(430,800)"/>
     <wire from="(1620,1800)" to="(1620,1830)"/>
     <wire from="(1620,1830)" to="(1620,1840)"/>
+    <wire from="(1620,1830)" to="(1660,1830)"/>
     <wire from="(1640,1850)" to="(1640,2400)"/>
     <wire from="(1640,1850)" to="(1660,1850)"/>
     <wire from="(1670,1860)" to="(1670,2320)"/>
@@ -13763,6 +13712,7 @@
     <wire from="(2440,2130)" to="(2500,2130)"/>
     <wire from="(2440,2170)" to="(2500,2170)"/>
     <wire from="(2440,740)" to="(2440,1580)"/>
+    <wire from="(2440,740)" to="(2750,740)"/>
     <wire from="(2480,1190)" to="(2480,1250)"/>
     <wire from="(2480,1190)" to="(2520,1190)"/>
     <wire from="(2520,2010)" to="(2550,2010)"/>
@@ -13788,6 +13738,8 @@
     <wire from="(2630,1880)" to="(2630,1900)"/>
     <wire from="(2630,1960)" to="(2630,2120)"/>
     <wire from="(2640,940)" to="(2640,1170)"/>
+    <wire from="(2620,840)" to="(2750,840)"/>
+    <wire from="(2640,940)" to="(2750,940)"/>
     <wire from="(2690,1860)" to="(2690,1910)"/>
     <wire from="(2690,1910)" to="(2740,1910)"/>
     <wire from="(2730,1800)" to="(2730,1810)"/>
@@ -13821,13 +13773,11 @@
     <wire from="(400,620)" to="(1050,620)"/>
     <wire from="(400,720)" to="(2060,720)"/>
     <wire from="(400,830)" to="(400,880)"/>
-    <wire from="(400,880)" to="(440,880)"/>
     <wire from="(420,1360)" to="(530,1360)"/>
     <wire from="(420,1400)" to="(530,1400)"/>
     <wire from="(420,1440)" to="(530,1440)"/>
     <wire from="(420,1480)" to="(460,1480)"/>
     <wire from="(420,1820)" to="(610,1820)"/>
-    <wire from="(420,1800)" to="(450,1800)"/>
     <wire from="(420,890)" to="(430,890)"/>
     <wire from="(420,930)" to="(540,930)"/>
     <wire from="(420,970)" to="(510,970)"/>

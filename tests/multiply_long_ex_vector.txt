@@ -1,0 +1,5 @@
+clk rst rd_a[32] rd_b[32] alu_ctrl[10] cond[4] class_bits[3] opcode[4] imm_bit imm8[8] shift_amount[5] rot[4] branch_imm24[24] shift_type[2] s_bit instr_27_4[24] reg_shift rs_value[32] is_mult is_mla mul_acc_value[32] mul_long mul_signed mul_long_acc alu_result[32] mul_hi[32] mul_long_we
+0 0 00000007 0xffffffff 000 0xe 0 7 0 00 00 0 000000 0 0 0x0ecb29 0 00000002 0 0 00000005 1 1 1 00000003 00000007 1
+0 0 00000007 0xffffffff 000 0xe 0 5 0 00 00 0 000000 0 0 0x0a7b29 0 00000002 0 0 00000005 1 0 1 00000003 00000009 1
+0 0 00000000 0xffffffff 000 0xe 0 6 0 00 00 0 000000 0 0 0x0c6529 0 00000002 0 0 00000000 1 1 0 0xfffffffe 0xffffffff 1
+0 0 00000000 0xffffffff 000 0xe 0 4 0 00 00 0 000000 0 0 0x086529 0 00000002 0 0 00000000 1 0 0 0xfffffffe 00000001 1

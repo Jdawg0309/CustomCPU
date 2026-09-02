@@ -12,7 +12,7 @@ uint32_t main(uint32_t limit)
         value += 3;
     }
 
-    *(volatile uint32_t *)0x00000104 = total;
+    *(volatile uint32_t *)0x00001104 = total;
     return total;
 }
 

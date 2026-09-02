@@ -14,7 +14,7 @@ uint32_t main(uint32_t limit)
         total += transform(i);
     }
 
-    *(volatile uint32_t *)0x0000010C = total;
+    *(volatile uint32_t *)0x0000110C = total;
     return total;
 }
 

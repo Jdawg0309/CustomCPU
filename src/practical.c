@@ -12,6 +12,6 @@ uint32_t main(uint32_t limit)
         sum += value;
     }
 
-    *(volatile uint32_t *)0x00000100 = sum;
+    *(volatile uint32_t *)0x00001100 = sum;
     return sum;
 }

@@ -6,7 +6,7 @@
 .global _start
 .type _start, %function
 _start:
-    mov sp, #0x400
+    mov sp, #0x1400
     mov r0, #4
     bl main
 1:

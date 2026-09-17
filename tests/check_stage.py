@@ -66,12 +66,17 @@ def report(path, circuit, expect_path=None):
         print()
 
     # --- nets with sinks and no source ------------------------------------
+    # `logisim.netlist.build` already joins nets that share a Tunnel label, so
+    # a net here is the whole electrical net.  Tunnels themselves are not
+    # drivers or sinks -- they are the join.
     undriven, multi = [], []
     for net in g.nets:
         drivers = [g.nodes[p] for p in net.ports
-                   if g.nodes[p].direction == "out" and g.nodes[p].kind != "Probe"]
+                   if g.nodes[p].direction == "out"
+                   and g.nodes[p].kind not in ("Probe", "Tunnel")]
         sinks = [g.nodes[p] for p in net.ports
-                 if g.nodes[p].direction == "in" and g.nodes[p].kind != "Probe"]
+                 if g.nodes[p].direction == "in"
+                 and g.nodes[p].kind not in ("Probe", "Tunnel")]
         eff = getattr(net, "effective_drivers", None)
         eff = eff if eff is not None else drivers
         if sinks and not eff:

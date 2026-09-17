@@ -208,3 +208,8 @@ for group, name, body, expect in CASES:
     elif st == "RAN": extra = f"  result {got:08x} (no reference)"
     print(f"  [{st:^6}] {name}{extra}")
 print("\n" + "  ".join(f"{k}={v}" for k, v in sorted(tally.items())))
+import sys as _sys
+# RAN means "executed, no architectural oracle" -- not a pass, but not a
+# failure either, so it does not set the exit status.
+_bad = sum(v for k, v in tally.items() if k not in ("PASS", "RAN"))
+_sys.exit(1 if _bad else 0)

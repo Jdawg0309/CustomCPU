@@ -62,6 +62,67 @@ _start:
     smulls r5,r6,r1,r2
     movmi r0,#0x77
     str r0,[r14,#48]
+
+    @ Unsigned and signed all-ones products discriminate the high half.
+    mvn r1,#0
+    mvn r2,#0
+    umull r3,r4,r1,r2
+    str r3,[r14,#52]
+    str r4,[r14,#56]
+    smull r5,r6,r1,r2
+    str r5,[r14,#60]
+    str r6,[r14,#64]
+
+    @ Failed conditions must write neither the low nor high destination.
+    mov r0,#0
+    cmp r0,#1
+    mov r3,#0x33
+    muleq r3,r1,r2
+    str r3,[r14,#68]
+    mov r5,#0x55
+    mov r6,#0x66
+    umulleq r5,r6,r1,r2
+    str r5,[r14,#72]
+    str r6,[r14,#76]
+
+    @ N/Z change on MULS, while this implementation deliberately preserves
+    @ C/V (C is architecturally unpredictable for short multiply in ARMv4).
+    cmp r0,r0
+    muls r3,r1,r2
+    mov r7,#0
+    movcs r7,#1
+    movvs r7,#0x80
+    str r7,[r14,#80]
+    mvn r0,#0x80000000
+    adds r0,r0,#1
+    muls r3,r1,r2
+    mov r7,#0
+    movvs r7,#2
+    movcs r7,#0x80
+    str r7,[r14,#84]
+
+    @ A zero 64-bit result sets Z.
+    mov r1,#0
+    umulls r5,r6,r1,r2
+    mov r7,#0
+    moveq r7,#3
+    str r7,[r14,#88]
+
+    @ Full-width accumulation wraps modulo 2^64.
+    mov r1,#1
+    mov r2,#1
+    mvn r5,#0
+    mvn r6,#0
+    umlal r5,r6,r1,r2
+    str r5,[r14,#92]
+    str r6,[r14,#96]
+
+    @ INT32_MIN * -1 = +2^31, exercising the signed correction boundary.
+    mov r1,#0x80000000
+    mvn r2,#0
+    smull r5,r6,r1,r2
+    str r5,[r14,#100]
+    str r6,[r14,#104]
     bx lr
 """
 
@@ -72,6 +133,13 @@ EXPECT = [
     0xFFFFFFFE, 0xFFFFFFFF,
     0x00000003, 0x00000007,
     0x00000055, 0x00000066, 0x00000077,
+    0x00000001, 0xFFFFFFFE,
+    0x00000001, 0x00000000,
+    0x00000033, 0x00000055, 0x00000066,
+    0x00000001, 0x00000002,
+    0x00000003,
+    0x00000000, 0x00000000,
+    0x80000000, 0x00000000,
 ]
 
 
@@ -129,7 +197,7 @@ def main():
     print("[PASS] MUL MLA UMULL UMLAL SMULL SMLAL")
     print("[PASS] 64-bit accumulate carry and signed high halves")
     print("[PASS] MULS/SMULLS N/Z condition behavior")
-    print("13/13 result words correct")
+    print("27/27 result words correct")
     return 0
 
 

@@ -112,6 +112,19 @@ def _decoder_ports(c: Component) -> List[Port]:
     return ports
 
 
+def _bit_selector_ports(c: Component) -> List[Port]:
+    """Plexers-library Bit Selector in its east-facing frame.
+
+    Logisim places the selected group at the anchor, the data input 30 px
+    behind it, and the selector 10 px behind/10 px below for the default
+    bottom-left selector location.  ``group`` controls output width; ``width``
+    controls data width.  Other facings are handled by the normal rotation.
+    """
+    selector_y = -10 if c.attrs.get("selloc") in ("tr", "top-right") else 10
+    return [Port("out", 0, 0, "out"), Port("in", -30, 0, "in"),
+            Port("sel", -10, selector_y, "in")]
+
+
 # --- arithmetic -------------------------------------------------------------
 def _adder_ports(c: Component) -> List[Port]:
     return [Port("a", -40, -10, "in"), Port("b", -40, 10, "in"),
@@ -151,9 +164,29 @@ def _rom_ports(c: Component) -> List[Port]:
 
 
 def _ram_ports(c: Component) -> List[Port]:
-    return [Port("addr", 0, 10, "in"), Port("we", 0, 50, "in"),
-            Port("oe", 0, 60, "in"), Port("clk", 0, 70, "in"),
-            Port("data_in", 0, 90, "in"), Port("data_out", 240, 90, "out")]
+    """Derived from RamAppearance.class (getControlHeight/getWEPort/getOEPort/
+    getClkPort/getDataInPort/getDataOutPort/getBEPort), not guessed -- byte
+    enables insert `ceil(width/8)` new 1-bit ports between `oe` and `clk` and
+    push clk/data_in/data_out down by that many * 10, which is not visible
+    from the XML unless you decode what Logisim itself would compute. A RAM
+    with byte enables turned on and this left un-patched reports its own
+    clk/data_in/data_out as correctly wired when they are actually landing on
+    the new byte-enable pins instead -- confirmed the hard way once already.
+    """
+    width = int(c.attrs.get("dataWidth", "8"))
+    nr_be = 0
+    if c.attrs.get("byteenables") == "byteEnables" and width >= 9:
+        nr_be = (width + 7) // 8
+    clk_y = 70 + nr_be * 10
+    data_y = 90 + nr_be * 10
+    ports = [Port("addr", 0, 10, "in"), Port("we", 0, 50, "in"),
+             Port("oe", 0, 60, "in")]
+    for i in range(nr_be):
+        ports.append(Port("be%d" % i, 0, 70 + (nr_be - i - 1) * 10, "in"))
+    ports.append(Port("clk", 0, clk_y, "in"))
+    ports.append(Port("data_in", 0, data_y, "in"))
+    ports.append(Port("data_out", 240, data_y, "out"))
+    return ports
 
 
 # --- trivial ----------------------------------------------------------------
@@ -218,6 +251,7 @@ BUILTIN = {
     "Power": _single("out"), "Ground": _single("out"),
     "NOT Gate": _not_ports, "Buffer": _not_ports,
     "Multiplexer": _mux_ports, "Demultiplexer": _mux_ports, "Decoder": _decoder_ports,
+    "BitSelector": _bit_selector_ports,
     "Adder": _adder_ports, "Subtractor": _adder_ports,
     "Multiplier": _multiplier_ports, "Comparator": _comparator_ports,
     "Shifter": _shifter_ports,

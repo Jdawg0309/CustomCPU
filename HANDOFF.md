@@ -1,4 +1,19 @@
-# CustomCPU handoff — 2026-08-25
+# CustomCPU handoff — latest pointer
+
+The current measured handoff is:
+
+```text
+docs/HANDOFF_2026-09-02_MULTIPLY.md
+```
+
+It records the 53/54 CPU result, 19/19 memory-lane result, completed six-member
+multiply family, protected-file rule, exact hashes, commands, and remaining
+`SWP` failure. The material below is historical and contains sections that were
+superseded by later work.
+
+---
+
+# Historical handoff — 2026-08-25
 
 State at the end of a long session. Everything below was measured, not inferred;
 where something is unverified it says so.

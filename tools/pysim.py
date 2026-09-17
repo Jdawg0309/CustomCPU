@@ -1,12 +1,24 @@
 #!/usr/bin/env python3
 """Run the CPU in Python, straight out of the live .circ file.
 
-No copy, no ROM patched on disk, no jar, no xvfb.  `armv4t_2.circ` is read at
-call time and never written, so whatever is saved is what runs.
+No copy, no ROM patched on disk, no jar, no xvfb.  The file is read at call
+time and never written, so whatever is saved is what runs.
 
-The top level is assembled here from the stage instances rather than read from
-`main`, so this works while `main` is still empty -- and the wiring is the same
-contract `tools/check_stage_fit.py` verifies, declared once below.
+THE TOP LEVEL COMES FROM `main`.  It is elaborated out of the file -- stage
+instances, tunnels and all -- so rewiring `main` in Logisim changes what this
+runs, immediately, with nothing to edit here.
+
+That was not always true.  This module used to rebuild the top level from a
+hand-typed WIRING table below, and the table went stale silently: it was
+missing ID.reg_shift -> EX.reg_shift, ID.rs_value -> EX.rs_value and
+MEM.bt_active -> WB.bt_active.  That last one is the block-transfer write
+suppress, so every block transfer ran here with the suppress DISCONNECTED and
+corrupted 15 registers -- a defect that existed only in the harness.  A
+harness that keeps its own copy of the netlist will always drift from the
+circuit it is supposed to be testing.
+
+The table survives only as the fallback for a design whose `main` is still
+empty, and `cpu()` says which path it took in `s.top_from_main`.
 """
 import os, re, subprocess, sys, tempfile
 sys.path.insert(0, "/home/junaet/Documents/CustomCPU")
@@ -77,8 +89,46 @@ MEM_WIRING = [
 ]
 
 
+ABBR = {"stage_IF": "IF", "stage_ID": "ID", "stage_EX": "EX",
+        "stage_MEM": "MEM", "stage_WB": "WB"}
+
+
+def _alias_ports(s):
+    """Give every stage port its short `IF.instruction` name.
+
+    Derived from the elaborated labels, not declared: `main` decides what
+    exists.  Top-level tunnel labels are registered under their bare name too,
+    so `s.peek("CLK")` and `s.peek("halt")` work.
+    """
+    for k, raw in list(s.labels.items()):
+        m = re.match(r"^top/(stage_\w+):(\w+)$", k)
+        if m and m.group(1) in ABBR:
+            s.net["%s.%s" % (ABBR[m.group(1)], m.group(2))] = s.dsu.find(raw)
+        elif k.startswith("top:"):
+            s.net.setdefault(k[4:], s.dsu.find(raw))
+
+
+def _main_is_wired(design):
+    m = design.circuits.get("main")
+    return bool(m) and any(c.name in ABBR for c in m.components)
+
+
 def cpu(path=CIRC):
     s = Sim(path)
+    if _main_is_wired(s.design):
+        s.add_instance("top", "main")
+        s.build()
+        _alias_ports(s)
+        s.top_from_main = True
+        s.mem_present = "stage_MEM" in s.design.circuits
+        s.wb_present = "stage_WB" in s.design.circuits
+        s.ties = {}
+        return s
+    s.top_from_main = False
+    return _cpu_legacy(s)
+
+
+def _cpu_legacy(s):
     for inst, circ in (("IF", "stage_IF"), ("ID", "stage_ID"), ("EX", "stage_EX")):
         s.add_instance(inst, circ)
     have_mem = "stage_MEM" in s.design.circuits

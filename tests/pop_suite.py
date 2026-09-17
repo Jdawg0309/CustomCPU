@@ -53,3 +53,7 @@ for name, sp, src, vals, dst, clear in TESTS:
         print(f"[{'PASS' if ok else 'FAIL'}] {name:<22} ({len(words)} words)"
               + ("" if ok else "  " + "; ".join(bad)))
 print(f"\n{len(TESTS)-fails}/{len(TESTS)} passed")
+import sys as _sys
+# Reporting failures and exiting 0 makes every script that chains this read
+# green.  Caught during the 2026-08-30 audit.
+_sys.exit(1 if fails else 0)

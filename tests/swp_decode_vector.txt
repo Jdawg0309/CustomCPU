@@ -1,0 +1,7 @@
+class_bits[3] opcode[4] s_bit instr_15_0[16] swp_decode_debug
+0 8 0 0x0093 1
+0 0xa 0 0x0093 1
+0 8 0 0x1093 1
+0 0 0 0x0093 0
+1 8 0 0x0093 0
+0 8 1 0x0093 0

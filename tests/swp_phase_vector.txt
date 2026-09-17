@@ -1,0 +1,8 @@
+clk rst class_bits[3] opcode[4] s_bit instr_15_0[16] cond_pass swp_decode_debug swp_pending_debug swp_hold_debug
+0 1 0 8 0 0x0093 1 1 0 1
+1 1 0 8 0 0x0093 1 1 0 1
+0 0 0 8 0 0x0093 1 1 0 1
+1 0 0 8 0 0x0093 1 1 1 0
+0 0 0 8 0 0x0093 1 1 1 0
+1 0 0 8 0 0x0093 1 1 0 1
+0 0 1 8 0 0x0093 1 0 0 0

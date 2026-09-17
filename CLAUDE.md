@@ -201,6 +201,39 @@ user has called this out directly.
 
 ---
 
+## 6b. The harness must read the circuit, never a copy of it
+
+`tools/pysim.py` used to rebuild the top level from a hand-typed `WIRING`
+table. The table went stale silently and the failures it produced looked
+exactly like CPU bugs:
+
+| net the user wired | what the stale harness did |
+|---|---|
+| `MEM.bt_active -> WB.bt_active` | ran every block transfer with the write suppress **disconnected** — 15 corrupted registers per LDM/STM |
+| `ID.reg_shift -> EX.reg_shift` | variable shifts untested |
+| `ID.rs_value -> EX.rs_value` | same |
+
+`main` now exists, so `cpu()` elaborates it out of the file — stage instances,
+tunnels and all. Rewiring in Logisim changes what runs, immediately, with
+nothing to edit. `s.top_from_main` says which path was taken.
+
+The same failure mode in the other direction: `smoke_suite.py` attached
+`KNOWN_GAPS["shift_reg"]` **unconditionally**, so it kept reporting
+"register-specified shift amount is not decoded" for weeks after the register
+shifts were wired and working. A note in `KNOWN_GAPS` now only prints on a case
+that actually fails.
+
+```bash
+python3 tools/check_harness.py     # is the harness testing the real file?
+python3 tools/main_suite.py        # discriminators through the real `main`
+```
+
+`check_harness.py` fails if `main` is wired and something still used the table,
+and lists any drift between the two. Run it before believing a failure.
+
+**A harness that keeps its own copy of the netlist cannot know its copy is
+wrong.** Derive the top level; never declare it.
+
 ## 7. Testing
 
 ```bash
@@ -415,3 +448,230 @@ narrower and still worth having — nothing can quietly alter the record.
 
 To undo everything: `rm .claude/settings.json` disables both hooks;
 `rm -rf .audit ~/.config/customcpu` removes the ledger.
+
+---
+
+## 12. Handoff — 2026-08-31, fix 1 and fix 2 landed in the reorganization master
+
+The user hand-wired both fixes from `docs/CPU_DEFECTS.md`'s priority list
+directly into the reorganization master (`armv4t` + `_2.circ`). Codex only
+inspected the file, derived what changed structurally, and ran the test
+suites — it did not write the protected circuit.
+
+### Fix 1 — block-transfer write suppress (`stage_WB`)
+
+Per `specs/fix_1_block_suppress.md`. A new `class_bits` input (width 3, placed
+below `bt_active` so no existing port shifted) feeds a Comparator against
+`Constant 0x4`; the result became the 7th input on what was a 6-input OR
+gate producing `suppress`. `main` carries the new pin over the existing
+`CLASS` tunnel — no new net was needed, just a third destination for one that
+already existed.
+
+**Verified:** `check_stage.py stage_WB` clean. `deep_matrix` block group
+4/7 -> **7/7** (both "does not clobber Rd-field reg" cases now pass — instr[15:12]
+no longer strays into a live register on STM/LDM). `main_suite` 12/15 -> 13/15.
+
+### Fix 2 — logical ops must not write C/V (`stage_EX`)
+
+Per `specs/fix_2_logical_flags.md`. Two 1-bit, select-2 Multiplexers were
+inserted into the CPSR flag path, gated by `ALU.engine_sel` (probe `S_eng`):
+
+```
+MUX_C:  in0/in2/in3 = CUR_C (CPSR_reg.Q's C, same net as ALU.Cflag/condition_checker.C)
+        in1         = ALU.C
+        sel         = S_eng
+        out         -> CPSR-write splitter's C fan (was ALU.C directly)
+
+MUX_V:  in0/in2/in3 = CUR_V (CPSR_reg.Q's V, off the read splitter)
+        in1         = ALU.V
+        sel         = S_eng
+        out         -> CPSR-write splitter's V fan (was ALU.V directly)
+        condition_checker.V rewired from a direct splitter tap onto CUR_V's
+        own net -- now symmetric with condition_checker.C
+```
+
+Both engine_sel=0 (logical) and engine_sel=1 (arithmetic) paths were measured
+directly off the file, not inferred from labels: `and eor tst teq orr mov bic
+mvn` all decode to `S_eng=0`, `sub rsb add adc sbc rsc cmp cmn` to `S_eng=1`.
+N and Z were left untouched — both engines compute them correctly already.
+
+**One wiring pass needed a second look.** The first save put `MUX_V.out` only
+onto `condition_checker.V`, leaving the CPSR-write splitter's V fan still
+wired straight to `ALU.V` — the write path (the actual point of the fix) was
+still unfixed even though the read path looked right. A discriminator caught
+it: `adds` an overflow, then `ands`, then `movvs` — flips to `0` only when V
+survived the `ands`. The user re-wired it in the same session; the corrected
+version routes `MUX_V.out` to the write splitter and `condition_checker.V` to
+the *read*-splitter's own V fan (CUR_V), matching the pattern already
+established for C. Re-traced from the file after the fix — confirmed correct
+both electrically and behaviourally.
+
+**Verified:** `check_stage.py stage_EX` clean (105 comps, 293 wires, 0
+floating/multi-drive/width-mismatch). Discriminators:
+
+```
+C preserved across ands (after cmp sets C)                       -> PASS
+C still updates on arithmetic (subs producing a borrow)          -> PASS
+V still updates on arithmetic (0x7FFFFFFF + 1, true 32-bit ovf)   -> PASS
+V preserved across ands (after that same overflow)                -> PASS
+```
+
+`deep_matrix` flags-logical **5/19 -> 19/19**; flags-adds/subs/cmp/cmn held at
+196/196 (no regression in the paths the fix didn't touch). `main_suite`
+holds 13/15 -- neither remaining failure (`byte_access`, `imm_bit4_not_a_shift`)
+touches the flag path. `regression_py` holds 48/54, identical failing set
+(MUL/MLA/SWP decode-only, register-offset addressing, halfword/signed loads)
+-- fix 2 changed nothing outside its own scope.
+
+### State after both fixes
+
+```
+deep_matrix   233/244   (block 7/7, control 7/7, flags-* all 196/196+19/19,
+                          memory 4/15 unchanged -- fix 3's target)
+main_suite     13/15    (byte lanes, imm-bit-4-not-a-shift remain)
+regression_py  48/54    (MUL/MLA/SWP, register-offset addressing, halfword/signed)
+check_stage    stage_WB and stage_EX both clean
+```
+
+The reorganization master is now ahead of the debug copy on block transfer
+*and* flags, but still behind it on the `imm_bit4_not_a_shift` gap — the
+debug copy's `IMM_BIT_REGSHIFT`/`SHIFT_TYPE_DECODE` family of nets
+(`stage_ID` + `stage_EX`) has no equivalent here yet. Not ported or specced
+against the master.
+
+### Next
+
+`specs/fix_3_register_offset.md` -- register offsets on LDR/STR
+(`ldr r0,[r1,r3]` currently reads the shift:Rm bit pattern as a 12-bit
+immediate). Larger than fixes 1/2: a third register read port in `stage_ID`
+plus a 32-bit mux and a `barrel_32b` instance in `stage_MEM`. `main` needs one
+new tunnel (`rm_value`); `stage_MEM` needs two new pins below `cond_pass`.
+
+Also still open, in the order `docs/CPU_DEFECTS.md` gives: byte lanes and
+halfword/signed loads, then the multiplier (decode is done, only EX/WB
+integration remains).
+
+---
+
+## 13. Handoff — 2026-09-01, halfword transfer in progress; two false alarms and one real hazard found
+
+Long session, hand-wiring `specs/fix_5_halfword.md` (STRH/LDRH/LDRSB/LDRSH)
+into `armv4t_2.circ`. Fix 3 (register offsets) from the prior handoff is
+confirmed landed and stable throughout everything below. Current verified
+state, **on the real Logisim engine, not the Python model**:
+
+```
+python3 tests/adversarial_regression.py armv4t_2.circ
+PASS=49  WRONG=5   (halfword, signed byte, MUL, MLA, SWP -- all pre-existing,
+                     none of tonight's work broke anything else)
+```
+
+### A real bug in the verification tooling itself — read this before trusting `check_stage.py`
+
+`logisim/geometry.py`'s `_mux_ports()` computes the wrong absolute position
+for a 2-input Multiplexer's `sel` pin whenever the component is rotated to
+face **north** (confirmed only for that facing; east-facing muxes, the
+overwhelming majority in this design, are unaffected). This produced a
+recurring, convincing-looking false positive: `check_stage.py` and every
+render built on `netlist.build()` reported the fix-3 offset-select mux's
+`sel` pin as permanently disconnected, across multiple independent-looking
+checks (structural trace, a browser render with computed markers, even a
+*second* browser render with no markers at all — all three shared the same
+underlying geometry bug, so agreeing with each other proved nothing). The
+circuit was correct the entire time; confirmed by running the real jar
+directly. **`logisim/geometry.py` is not yet fixed.** Any future session
+hitting a "disconnected sel pin" report on a north-facing 2-input mux should
+distrust the static checker first and verify with
+`tests/adversarial_regression.py` or `tests/push_suite.py` (both drive the
+actual jar) before touching any wire.
+
+**The standing rule going forward, agreed with the user tonight:** trust the
+real Logisim engine over any Python model for anything behavioral. Use
+`netlist.build()`/`check_stage.py` for structural sanity only, and re-verify
+anything it flags as broken against the real jar before reporting it as a
+defect.
+
+### Two real, no-fault regressions found and fixed tonight — both are worth remembering
+
+1. **`DATA_RAM`'s `trigger` attribute got silently removed** during
+   experimentation with the write-hazard below, defaulting away from its
+   documented, load-bearing `falling` setting (see §6, the "half-cycle
+   memory" trap). With it missing, *nearly every* memory operation in the
+   CPU broke — not just halfword ones. Restored to `trigger=falling`; full
+   regression came back clean. **If RAM behavior ever looks broken CPU-wide,
+   check this attribute first** — it's easy to lose track of during
+   unrelated experiments and the failure mode (everything returns 0) doesn't
+   obviously point at it.
+2. **`bt_active` and `data_ram_we` were swapped** somewhere in the day's
+   wiring — found by the user cross-checking with Codex, not by this session.
+   Confirmed and fixed; restored ordinary memory operations that had gone to
+   0/54 in that group. Worth a general lesson: two same-width, same-timing
+   control signals sitting near each other are an easy accidental swap, and
+   the failure mode (everything reads back 0) looks identical to the trigger
+   bug above. Check both before assuming a deeper redesign is needed.
+
+### The halfword/signed-transfer feature — real progress, one open architectural question
+
+Per `specs/fix_5_halfword.md`, sections 1 and 2 are **built and verified
+correct on the real engine**:
+
+- **Decode (`is_hwxfer`)** — comparator-based, matching the style already
+  established for MUL/MLA decode (`instr_7_4` against `0xB`/`0xD`/`0xF`, OR'd,
+  AND'd with a `class_bits==0` check). Discriminator run: `and`, `mul`, `swp`
+  (the adjacent false-positive risks, since they share the `SH=00` pattern)
+  all correctly stay `0`; `ldrh`/`strh`/`ldrsb`/`ldrsh` all correctly read `1`.
+- **Address offset** — the `immH:immL` / `Rm` offset mux, spliced in after
+  (not inside) fix 3's existing offset-select mux, confirmed not to disturb
+  any ordinary LDR/STR addressing mode.
+- **Register-B select fix** — a real defect found mid-session, *not* originally
+  in the spec: the mux choosing `Rd` vs `Rm` for the store-data register port
+  had its `sel` wired straight to `data_ram_we`, which has never heard of this
+  instruction class. `strh` was reading `Rm` (nonsensical for this encoding,
+  resolves to `r0`) instead of `Rd`, silently storing `0` every time. Fixed
+  with three new gates (`NOT(s_bit) AND is_hwxfer`, OR'd into `data_ram_we`)
+  feeding that mux's `sel` — deliberately **local to that one mux**, not a
+  change to the `data_ram_we` pin itself, because that pin fans out to the
+  RAM write-enable and WB suppress logic, and broadening it there would wrongly
+  suppress writeback on the three *load* variants this same decode covers.
+
+**Section 3 (the write path) hit a real hardware hazard, not a wiring bug:**
+reading `RAM.data_out` for the "old half" while `RAM.we` is asserted the same
+cycle doesn't give reliable pre-write data with this RAM component — its
+output reflects the in-flight write, so `MUX_HI`/`MUX_LO`'s "preserve the
+untouched half" input sees garbage instead of the prior word. Confirmed on
+the real engine (`strh` after a known word produces neither the correct
+merge nor either of the two plausible wrong-but-explicable results — the
+combinational network just settles to something self-consistent and wrong).
+Changing the RAM's trigger edge does not fix this — it's not about *when*
+the write commits, but about `data_out` following `data_in` combinationally
+whenever `we=1`, independent of clock edge.
+
+**Recommended fix, not yet attempted:** Logisim Evolution's `RAM` component
+has a genuine hardware byte-enable mode — confirmed present in the jar
+(`ATTR_ByteEnables`, UI label **"Use byte enables"**), which adds one
+write-enable line per byte. Turning it on and driving those lines directly
+from `is_hwxfer`/`ADDR_1`/`ADDR_0` would let the hardware do the partial-word
+write and **eliminate the merge muxes, the combiner, and the whole hazard**
+outright — no read-modify-write needed at all. This is a smaller change than
+it sounds (delete `MUX_HI`, `MUX_LO`, the combiner, and `MUX_DATAIN`; wire
+byte-enable pins instead) and is the recommended next step over a multi-cycle
+read-modify-write state machine, which would also work but is considerably
+more design effort for the same result.
+
+**Section 4 (LDRH/LDRSB/LDRSH read path)** is fully specced
+(`specs/fix_5_halfword.md` §5) but not started. It has none of the §3 hazard
+— loads never assert `we`, so `RAM.data_out` is trustworthy throughout. Good
+next place to spend time once §3 is resolved by whichever path is chosen.
+
+### State right now
+
+```
+armv4t_2.circ          49/54 real-Logisim regression, 0 new breakage
+debug_armv4t_2.circ     STALE -- last synced hours before tonight's halfword
+                        work; does not reflect any of it. Re-sync with
+                        `cat armv4t_2.circ > debug_armv4t_2.circ` before using
+                        it for anything, or it will report false regressions.
+specs/fix_5_halfword.md  §1 decode: done+verified. §2 address: done+verified.
+                         §3 write: blocked on the RAM hazard above.
+                         §4 read: specced, not started.
+```

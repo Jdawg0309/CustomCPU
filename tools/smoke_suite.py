@@ -279,6 +279,11 @@ def check(name, rows, expect, words):
 # Gaps that belong to stages that DO NOT EXIST YET.  They are printed, never
 # counted as failures -- but they are listed explicitly so that "the suite is
 # green" can never quietly mean "the suite stopped looking".
+# A note here explains a case that FAILS.  It is never attached to a passing
+# case: `shift_reg` carried one unconditionally, so it kept reporting
+# "register-specified shift amount is not decoded" for weeks after the register
+# shifts were wired and working.  A harness that can say a working feature is
+# broken is worse than no harness.
 KNOWN_GAPS = {
     "cond_exec": "alu_we is not gated by cond_pass -- in debug_armv4t.circ that "
                  "AND lives in main-level glue, so it belongs in stage_WB",
@@ -358,9 +363,6 @@ def custom(name, rows):
         elif bne[2]["btaken"]:
             e.append("the third bne was still taken; the loop never exits")
 
-    if name == "shift_reg":
-        gaps.append(KNOWN_GAPS["shift_reg"])
-
     if name == "bl_bx":
         r = at(1)
         if r is None:
@@ -405,6 +407,8 @@ def main():
             print("[WRONG] %-14s %s" % (name, note))
             for x in errs:
                 print("           ! %s" % x)
+            if name in KNOWN_GAPS:
+                print("           ~ %s" % KNOWN_GAPS[name])
             show(rows, words)
         elif gaps:
             print("[ GAP  ] %-14s %s" % (name, note))

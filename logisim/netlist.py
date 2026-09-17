@@ -72,7 +72,8 @@ class _DSU:
             self.p[ra] = rb
 
 
-def build(design: Design, circ: Circuit) -> List[Net]:
+def build(design: Design, circ: Circuit,
+          merge_tunnels: bool = True) -> List[Net]:
     wires = circ.wires
     dsu = _DSU()
     for i in range(len(wires)):
@@ -151,7 +152,59 @@ def build(design: Design, circ: Circuit) -> List[Net]:
     for n in list(groups.values()) + list(loose.values()):
         if id(n) not in seen:
             seen.add(id(n)); out.append(n)
+
+    if merge_tunnels:
+        out = _merge_tunnels(out)
     return out
+
+
+def _merge_tunnels(nets: List[Net]) -> List[Net]:
+    """Join nets that share a Tunnel label.
+
+    A Tunnel connects by LABEL with no geometry at all, so two nets carrying
+    the same label are one electrical net.  Leaving that out makes every
+    tunnel-connected net look undriven, which is not a small error: in
+    `armv4t_2.circ` it produced 66 phantom undriven nets in `main` (114
+    tunnels) -- RST among them -- and 37 in `stage_ID` (58 tunnels), plus 7
+    bogus "is not one electrical net" failures in tools/check_stage_id.py.
+    Every one of those was reported against a circuit that was wired
+    correctly.
+    """
+    by_label: Dict[str, List[Net]] = {}
+    for n in nets:
+        for c, _ in n.pins:
+            if c.name == "Tunnel" and c.label:
+                by_label.setdefault(c.label, []).append(n)
+
+    parent: Dict[int, int] = {}
+
+    def find(i):
+        while parent.setdefault(i, i) != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    idx = {id(n): k for k, n in enumerate(nets)}
+    for group in by_label.values():
+        first = idx[id(group[0])]
+        for g in group[1:]:
+            a, b = find(first), find(idx[id(g)])
+            if a != b:
+                parent[a] = b
+
+    merged: Dict[int, Net] = {}
+    order: List[int] = []
+    for k, n in enumerate(nets):
+        r = find(k)
+        if r not in merged:
+            m = Net(); m.design = n.design
+            merged[r] = m
+            order.append(r)
+        m = merged[r]
+        m.points |= n.points
+        m.wires += n.wires
+        m.pins += n.pins
+    return [merged[r] for r in order]
 
 
 def net_at(design: Design, circ: Circuit, p: Point) -> Optional[Net]:

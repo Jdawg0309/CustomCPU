@@ -1,0 +1,4 @@
+clk rst rd_a[32] rd_b[32] class_bits[3] opcode[4] s_bit rn[4] instr_15_0[16] cond_pass rm_val[32] shift_amount[5] shift_type[2] is_hwxfer wa2[4] mem_read wd2[32] sbwe we2 ldr_reg_we data_ram_we memory_up_base[32]
+0 0 0x000010fe 0x00000000 0 0xd 1 1 0x40b3 1 0x00000002 00 0 1 1 1 0x00001100 0 1 1 0 0x00001100
+0 0 0x00001100 0x00000055 0 4 0 1 0x20b3 1 0x00000002 00 0 1 1 0 0x00001102 1 0 0 1 0x00001102
+0 0 0x00001100 0x00000055 0 4 0 1 0x20b3 0 0x00000002 00 0 1 1 0 0x00001102 0 0 0 0 0x00001102

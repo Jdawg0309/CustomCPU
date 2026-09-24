@@ -11279,7 +11279,7 @@
       <a name="label" val="branch_taken"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(1790,1180)" name="Tunnel">
+    <comp lib="0" loc="(1780,1180)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="RRX_ACTIVE"/>
     </comp>
@@ -11719,6 +11719,10 @@
       <a name="label" val="REGISTER_SHIFTER_CARRY"/>
       <a name="radix" val="16"/>
     </comp>
+    <comp lib="0" loc="(3980,1520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="OPERAND2_CARRY"/>
+    </comp>
     <comp lib="0" loc="(410,2660)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="reg_shift"/>
@@ -11728,6 +11732,10 @@
       <a name="label" val="rs_value"/>
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(4150,1090)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="imm_b"/>
     </comp>
     <comp lib="0" loc="(430,1730)" name="Probe">
       <a name="appearance" val="NewPins"/>
@@ -12190,6 +12198,7 @@
     <comp lib="4" loc="(3890,1960)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
+    <comp lib="4" loc="(4170,1020)" name="Multiplexer"/>
     <comp lib="4" loc="(840,1540)" name="Multiplexer">
       <a name="width" val="5"/>
     </comp>
@@ -12360,6 +12369,7 @@
     <wire from="(1750,1050)" to="(2600,1050)"/>
     <wire from="(1750,850)" to="(1750,1050)"/>
     <wire from="(1750,850)" to="(1830,850)"/>
+    <wire from="(1780,1180)" to="(1790,1180)"/>
     <wire from="(1790,1300)" to="(1790,1330)"/>
     <wire from="(1790,1330)" to="(1790,1370)"/>
     <wire from="(1790,1370)" to="(1790,1410)"/>
@@ -12481,10 +12491,8 @@
     <wire from="(2840,1130)" to="(2860,1130)"/>
     <wire from="(2840,2600)" to="(2850,2600)"/>
     <wire from="(2840,2770)" to="(2850,2770)"/>
-    <wire from="(2840,560)" to="(2840,970)"/>
+    <wire from="(2840,560)" to="(2840,990)"/>
     <wire from="(2840,560)" to="(2890,560)"/>
-    <wire from="(2840,970)" to="(2840,990)"/>
-    <wire from="(2840,970)" to="(2980,970)"/>
     <wire from="(2840,990)" to="(2840,1000)"/>
     <wire from="(2840,990)" to="(2980,990)"/>
     <wire from="(2850,1380)" to="(2930,1380)"/>
@@ -12509,6 +12517,9 @@
     <wire from="(2910,1930)" to="(2930,1930)"/>
     <wire from="(2910,2090)" to="(2960,2090)"/>
     <wire from="(2910,2500)" to="(3090,2500)"/>
+    <wire from="(2920,600)" to="(2920,970)"/>
+    <wire from="(2920,600)" to="(4240,600)"/>
+    <wire from="(2920,970)" to="(2980,970)"/>
     <wire from="(2930,1380)" to="(2930,1470)"/>
     <wire from="(2930,1470)" to="(3020,1470)"/>
     <wire from="(2930,1800)" to="(2930,1930)"/>
@@ -12609,6 +12620,7 @@
     <wire from="(3600,1030)" to="(3660,1030)"/>
     <wire from="(3630,2060)" to="(3630,2080)"/>
     <wire from="(3650,2040)" to="(3730,2040)"/>
+    <wire from="(3660,1030)" to="(4140,1030)"/>
     <wire from="(3660,1370)" to="(3670,1370)"/>
     <wire from="(3660,990)" to="(3660,1030)"/>
     <wire from="(3670,1370)" to="(3670,1410)"/>
@@ -12623,9 +12635,15 @@
     <wire from="(3870,1980)" to="(3870,2010)"/>
     <wire from="(3890,1960)" to="(3980,1960)"/>
     <wire from="(3970,1920)" to="(3980,1920)"/>
+    <wire from="(3980,1010)" to="(3980,1520)"/>
+    <wire from="(3980,1010)" to="(4140,1010)"/>
+    <wire from="(3980,1520)" to="(3980,1920)"/>
     <wire from="(3980,1920)" to="(3980,1960)"/>
     <wire from="(410,2660)" to="(480,2660)"/>
     <wire from="(410,2880)" to="(520,2880)"/>
+    <wire from="(4150,1040)" to="(4150,1090)"/>
+    <wire from="(4170,1020)" to="(4240,1020)"/>
+    <wire from="(4240,600)" to="(4240,1020)"/>
     <wire from="(430,1360)" to="(1090,1360)"/>
     <wire from="(430,1360)" to="(430,1730)"/>
     <wire from="(430,1730)" to="(430,2160)"/>

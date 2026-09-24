@@ -324,6 +324,8 @@ class Sim:
 
     @staticmethod
     def _w(c: Component, default: int = 1) -> int:
+        if c.name == "Comparator":
+            default = 8
         return int(c.attrs.get("width", default))
 
     def _out_widths(self, p: dict) -> Dict[str, int]:
@@ -339,8 +341,10 @@ class Sim:
             return {"out": self._w(c)}
         if n == "Decoder":
             return {"out%d" % i: 1 for i in range(1 << int(c.attrs.get("select", 1)))}
-        if n == "Adder":
+        if n in ("Adder", "Subtractor"):
             return {"out": self._w(c), "cout": 1}
+        if n == "BitSelector":
+            return {"out": int(c.attrs.get("group", 1))}
         if n == "Multiplier":
             return {"out": self._w(c), "cout": self._w(c)}
         if n == "Comparator":
@@ -468,6 +472,16 @@ class Sim:
             s = self._in(p, "a") + self._in(p, "b") + self._in(p, "cin")
             put("out", s, w)
             put("cout", s >> w, 1)
+
+        elif n == "Subtractor":
+            w = self._w(c)
+            difference = self._in(p, "a") - self._in(p, "b") - self._in(p, "cin")
+            put("out", difference, w)
+            put("cout", int(difference < 0), 1)
+
+        elif n == "BitSelector":
+            group = int(c.attrs.get("group", 1))
+            put("out", self._in(p, "in") >> (self._in(p, "sel") * group), group)
 
         elif n == "Multiplier":
             w = self._w(c)
@@ -654,8 +668,13 @@ class Sim:
             if nm == "sel":
                 return int(c.attrs.get("select", 1))
             return 1 if nm == "en" else self._w(c)
-        if n == "Adder":
+        if n in ("Adder", "Subtractor"):
             return 1 if nm == "cin" else self._w(c)
+        if n == "BitSelector":
+            if nm == "in":
+                return self._w(c)
+            groups = (self._w(c) + int(c.attrs.get("group", 1)) - 1) // int(c.attrs.get("group", 1))
+            return max(1, (groups - 1).bit_length())
         if n == "Multiplier":
             return self._w(c)
         if n == "Comparator":

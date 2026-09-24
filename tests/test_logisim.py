@@ -41,6 +41,22 @@ class TestModel(unittest.TestCase):
 
 
 class TestGeometry(unittest.TestCase):
+    def test_mux_screen_order_and_select_location(self):
+        # Expected pin placement from Logisim 3.8 Multiplexer.updatePorts.
+        for facing, inputs, bottom, top in [
+            ('east', [(-30, -10), (-30, 10)], (-20, 20), (-20, -20)),
+            ('west', [(30, -10), (30, 10)], (20, 20), (20, -20)),
+            ('north', [(-10, 30), (10, 30)], (-20, 20), (20, 20)),
+            ('south', [(-10, -30), (10, -30)], (-20, -20), (20, -20)),
+        ]:
+            for selloc, expected in [('bl', bottom), ('tr', top)]:
+                with self.subTest(facing=facing, selloc=selloc):
+                    c = Component('Multiplexer', '4', (0, 0),
+                                  {'facing': facing, 'selloc': selloc})
+                    pins = {p.name: p.at(c) for p in geo.ports(None, c)}
+                    self.assertEqual([pins['in0'], pins['in1']], inputs)
+                    self.assertEqual(pins['sel'], expected)
+
     def test_pc_fetch_instance_pins(self):
         """Relative to the instance, not absolute: the design gets rearranged,
         and a test pinned to old coordinates only ever reports that fact."""

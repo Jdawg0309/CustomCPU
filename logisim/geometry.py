@@ -86,15 +86,35 @@ def _not_ports(c: Component) -> List[Port]:
 def _mux_ports(c: Component) -> List[Port]:
     sel = int(c.attrs.get("select", 1))
     n = 1 << sel
-    if n == 2:
-        return [Port("in0", -30, -10, "in"), Port("in1", -30, 10, "in"),
-                Port("sel", -20, 20, "in"), Port("out", 0, 0, "out")]
-    depth = 40 if n <= 4 else 40
-    top = -(n // 2) * 10
-    ports = [Port("in%d" % i, -depth, top + i * 10, "in") for i in range(n)]
-    ports.append(Port("sel", -depth // 2, (n // 2) * 10, "in"))
-    ports.append(Port("out", 0, 0, "out"))
-    return ports
+    select_side = -1 if c.attrs.get("selloc") in ("tr", "top-right") else 1
+    narrow = c.attrs.get("size") == "20"
+    depth = 20 if narrow else (30 if n == 2 else 40)
+    select_depth = 10 if narrow else 20
+    spread = 20 if n == 2 else n // 2 * 10
+    offsets = [-10, 10] if n == 2 else list(range(-n // 2 * 10, n // 2 * 10, 10))
+    # Logisim orders inputs top-to-bottom or left-to-right regardless of
+    # facing. SELECT_BOTTOM_LEFT names a screen side, not a rotated side.
+    facing = c.facing or "east"
+    horizontal = facing in ("east", "west")
+    if horizontal:
+        sign = -1 if facing == "east" else 1
+        data = [(sign * depth, offset) for offset in offsets]
+        select = (sign * select_depth, select_side * spread)
+        if narrow and select_side == -1:
+            select = (select[0], select[1] - 10)
+    else:
+        sign = 1 if facing == "north" else -1
+        data = [(offset, sign * depth) for offset in offsets]
+        select = (-select_side * spread, sign * select_depth)
+        if narrow and select_side == 1:
+            select = (select[0] - 10, select[1])
+    inverse = {"east": "east", "west": "west", "north": "south", "south": "north"}[facing]
+    def port(name, point, kind):
+        return Port(name, *rotate(*point, inverse), kind)
+    result = [port("in%d" % i, point, "in") for i, point in enumerate(data)]
+    result.append(port("sel", select, "in"))
+    result.append(Port("out", 0, 0, "out"))
+    return result
 
 
 def _decoder_ports(c: Component) -> List[Port]:

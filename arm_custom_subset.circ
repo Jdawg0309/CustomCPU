@@ -12233,7 +12233,9 @@
       <a name="width" val="4"/>
     </comp>
     <comp lib="5" loc="(810,2900)" name="Comparator"/>
-    <comp lib="5" loc="(810,2990)" name="Comparator"/>
+    <comp lib="5" loc="(810,2990)" name="Comparator">
+      <a name="mode" val="unsigned"/>
+    </comp>
     <comp lib="5" loc="(820,2360)" name="Comparator">
       <a name="width" val="24"/>
     </comp>

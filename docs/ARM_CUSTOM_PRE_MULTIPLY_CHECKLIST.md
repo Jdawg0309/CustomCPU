@@ -2,6 +2,12 @@
 
 Date: 2026-09-23
 
+> Status update, 2026-10-24: repairs 1 and 2 are implemented in the master.
+> Repair 2 passed 204/204 direct Logisim shifter cases. See the
+> [verified checkpoint](FIX2_VERIFIED_2026-10-24.md) for results and reproduction.
+> Repair 3 remains outstanding. The text below records the original audit;
+> its source hash and sandbox rebuild instructions refer to that older state.
+
 ## Protected source and sandbox
 
 The protected hand-built source was read but not modified during this audit:

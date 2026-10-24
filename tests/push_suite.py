@@ -12,7 +12,14 @@ import subprocess, sys, re, tempfile, os
 
 AS = "arm-none-eabi-as"
 OC = "arm-none-eabi-objcopy"
-JAR = "/snap/logisim-evolution/current/logisim-evolution/logisim-evolution.jar"
+_JAR_CANDIDATES = (
+    os.environ.get("LOGISIM_JAR"),
+    "/home/junaet/Applications/logisim-evolution/logisim-evolution-5.0.0-all.jar",
+    "/snap/logisim-evolution/current/logisim-evolution/logisim-evolution.jar",
+)
+JAR = next((path for path in _JAR_CANDIDATES
+            if path and os.path.isfile(path)),
+           _JAR_CANDIDATES[-1])
 # Overridable so a candidate build can be tested without editing this file.
 # It silently tested the wrong circuit when passed a path it ignored.
 CIRC = sys.argv[1] if len(sys.argv) > 1 else "/home/junaet/Documents/CustomCPU/debug_armv4t.circ"

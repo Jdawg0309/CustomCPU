@@ -41,9 +41,10 @@ def repair_shift_edges(target: Path):
     new = ('    <comp lib="5" loc="(810,2990)" name="Comparator">\n'
            '      <a name="mode" val="unsigned"/>\n'
            '    </comp>\n')
-    if old not in text:
+    if old in text:
+        text = text.replace(old, new, 1)
+    elif new not in text:
         raise SystemExit("expected Rs-vs-32 comparator was not found")
-    text = text.replace(old, new, 1)
 
     for loc, label, width in [
         ((700, 1850), "SHIFT_TYPE_EDGE", 2),

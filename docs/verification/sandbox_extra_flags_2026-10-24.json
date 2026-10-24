@@ -1,0 +1,682 @@
+[
+  {
+    "name": "adcs boundary 7fffffff,0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "adcs boundary ffffffff,0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1,
+      1,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      1,
+      1,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "adcs boundary 0,0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      1,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "adcs boundary 80000000,1 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "adcs boundary 7fffffff,ffffffff C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      1,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      1,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "adcs boundary 0,ffffffff C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "sbcs boundary 7fffffff,0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      1,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      1,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "sbcs boundary ffffffff,0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "sbcs boundary 0,0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "sbcs boundary 80000000,1 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "sbcs boundary 7fffffff,ffffffff C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "sbcs boundary 0,ffffffff C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      1,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "rscs boundary 7fffffff,0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "rscs boundary ffffffff,0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "rscs boundary 0,0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "rscs boundary 80000000,1 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "rscs boundary 7fffffff,ffffffff C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "rscs boundary 0,ffffffff C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      0,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      0,
+      90
+    ]
+  },
+  {
+    "name": "ands shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      1,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "ands shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "eors shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "eors shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "orrs shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "orrs shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "bics shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "bics shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      1,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "movs shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "movs shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "mvns shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "mvns shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "tst shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      1,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "tst shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      0,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "teq shifter carry and V preservation 80000001",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ],
+    "got": [
+      1,
+      0,
+      1,
+      1,
+      90
+    ]
+  },
+  {
+    "name": "teq shifter carry and V preservation 7ffffffe",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0,
+      0,
+      1,
+      90
+    ],
+    "got": [
+      0,
+      0,
+      0,
+      1,
+      90
+    ]
+  }
+]

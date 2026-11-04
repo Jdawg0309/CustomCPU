@@ -9,6 +9,8 @@ Expected RAM layout is computed independently from ARM STMDB semantics
 and checked against the actual RAM dump.
 """
 import subprocess, sys, re, tempfile, os
+import xml.etree.ElementTree as ET
+from pathlib import Path
 
 AS = "arm-none-eabi-as"
 OC = "arm-none-eabi-objcopy"
@@ -22,12 +24,14 @@ JAR = next((path for path in _JAR_CANDIDATES
            _JAR_CANDIDATES[-1])
 # Overridable so a candidate build can be tested without editing this file.
 # It silently tested the wrong circuit when passed a path it ignored.
-CIRC = sys.argv[1] if len(sys.argv) > 1 else "/home/junaet/Documents/CustomCPU/debug_armv4t.circ"
+CIRC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                    "arm_custom_subset.circ")
 
 # ROM occupies 0x0000-0x0FFF, so RAM starts immediately above it. The two used
 # to overlap at zero, which made an address decode impossible -- see the
 # memory-map note in main. Programs must place data at or above this.
 RAM_BASE = 0x1000
+RUN_TIMEOUT = 120
 
 def mov_imm(reg, val):
     """Emit MOV (or MVN for all-ones) -- every value used in this suite is
@@ -74,7 +78,7 @@ def run_rom(words, workdir):
     match here (not just the first) keeps this working whether the circuit
     has one ROM or two, with no separate code path for either case.
     """
-    src = open(CIRC).read()
+    src = Path(CIRC).read_text()
     # Search the WHOLE file, not just main.  Once the design is split into
     # pipeline stages the instruction ROM lives inside stage_IF, and a
     # main-only search finds nothing and asserts.
@@ -86,7 +90,8 @@ def run_rom(words, workdir):
         m = re.search(r'<comp lib="2"[^>]*name="ROM">.*?</comp>', body[pos:], re.S)
         if not m:
             break
-        if 'val="32"' in m.group(0):
+        attrs = {a.get('name'): a.get('val') for a in ET.fromstring(m.group(0)).findall('a')}
+        if attrs.get('dataWidth') == '32':
             roms.append(m.group(0))
         pos += m.end()
     assert roms, "no 32-bit-data ROM found anywhere in the file"
@@ -105,24 +110,44 @@ def run_rom(words, workdir):
     src2 = src[:mstart] + body2 + src[mend:]
     src2 = src2.replace('label" val="is_BX"', 'label" val="halt"')
     circ = os.path.join(workdir, "t.circ")
-    open(circ, "w").write(src2)
+    Path(circ).write_text(src2)
     ram_img = os.path.join(workdir, "ram.txt")
     cmd = ["xvfb-run", "-a", "java", "-jar", JAR, "--tty", "halt",
            "--save", ram_img, "--toplevel-circuit", "main", circ]
-    p = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+    # A reused directory must never supply a stale successful RAM dump.
+    if os.path.exists(ram_img):
+        os.unlink(ram_img)
+    # GNU timeout also terminates descendants (Java and Xvfb), unlike killing
+    # only the xvfb-run shell on subprocess.TimeoutExpired.
+    p = subprocess.run(['timeout', '--kill-after=5s', str(RUN_TIMEOUT), *cmd],
+                       capture_output=True, text=True, timeout=RUN_TIMEOUT + 15)
+    with open(os.path.join(workdir, 't.log'), 'w') as log:
+        log.write(p.stdout + p.stderr)
+    if p.returncode in (124, 137):
+        raise subprocess.TimeoutExpired(cmd, RUN_TIMEOUT, p.stdout, p.stderr)
+    if p.returncode:
+        raise RuntimeError(f'Logisim exited {p.returncode}: {p.stdout} {p.stderr}')
     halted_clean = "halted due to halt pin" in (p.stdout + p.stderr)
     oscillated = "oscillation" in (p.stdout + p.stderr).lower()
-    ram = {}
-    if os.path.exists(ram_img):
-        toks = []
-        for line in open(ram_img):
-            if line.startswith(("v2.0", "v3.0", "addr/data")):
-                continue
-            toks += line.split()
-        for i, t in enumerate(toks):
-            if t != "00000000":
-                ram[i] = t
+    if not os.path.isfile(ram_img):
+        raise RuntimeError('Logisim produced no RAM dump; results cannot be checked')
+    with open(ram_img) as dump:
+        ram = parse_ram_dump(dump.read())
     return halted_clean, oscillated, ram
+
+
+def parse_ram_dump(text):
+    """Accept the format emitted by --save; reject truncation/unknown formats."""
+    lines = text.strip().splitlines()
+    if not lines or lines[0].strip() != 'v3.0 hex words plain':
+        raise ValueError('Expected Logisim v3.0 hex words plain RAM dump')
+    words = ' '.join(lines[1:]).split()
+    if not words or any(not re.fullmatch(r'[0-9a-fA-F]{1,8}', w) for w in words):
+        raise ValueError('Empty or malformed RAM dump')
+    # This CPU has one 256-word data RAM. Missing words are not implicit zeros.
+    if len(words) != 256:
+        raise ValueError(f'Expected 256 RAM words, got {len(words)}')
+    return {i: f'{int(w, 16):08x}' for i, w in enumerate(words) if int(w, 16)}
 
 def expected_ram(sp_init, pushes):
     """ARM STMDB SP!,{list}: ascending reg# -> ascending address, lowest reg
@@ -152,6 +177,9 @@ TESTS = [
 ]
 
 def main():
+    global CIRC
+    if len(sys.argv) > 1:
+        CIRC = sys.argv[1]
     results = []
     for name, sp_init, pushes in TESTS:
         with tempfile.TemporaryDirectory() as wd:

@@ -1,0 +1,724 @@
+[
+  {
+    "name": "offset: LDR word register offset",
+    "expected": 3405691582,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_000",
+    "got": 3405691582,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDR word shifted register offset",
+    "expected": 3405691582,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_001",
+    "got": 3405691582,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRB register offset lane 3",
+    "expected": 129,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_002",
+    "got": 129,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRB register offset preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_003",
+    "got": 296366916,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH register offset high lane",
+    "expected": 33058,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_004",
+    "got": 33058,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRH register offset preserves neighbors",
+    "expected": 3203347268,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_005",
+    "got": 3203347268,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRSB register offset sign extends",
+    "expected": 4294967168,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_006",
+    "got": 4294967168,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRSH register offset sign extends",
+    "expected": 4294934529,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_007",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH subtract register offset",
+    "expected": 13124,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_008",
+    "got": 13124,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH register pre-index writeback",
+    "expected": 4352,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_009",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRH register post-index writeback",
+    "expected": 4354,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_010",
+    "got": 4354,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses memory",
+    "expected": 287454020,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_011",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_012",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false LDRH preserves destination",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_013",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false LDRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_014",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 0 preserves neighbors",
+    "expected": 287454122,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_015",
+    "got": 287454122,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 1 preserves neighbors",
+    "expected": 287484484,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_016",
+    "got": 287484484,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 2 preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_017",
+    "got": 296366916,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 3 preserves neighbors",
+    "expected": 2854368068,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_018",
+    "got": 2854368068,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 0 zero extends",
+    "expected": 68,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_019",
+    "got": 68,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 1 zero extends",
+    "expected": 51,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_020",
+    "got": 51,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 2 zero extends",
+    "expected": 34,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_021",
+    "got": 34,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 3 zero extends",
+    "expected": 17,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_022",
+    "got": 17,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRH low preserves high half",
+    "expected": 287489775,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_023",
+    "got": 287489775,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRH high preserves low half",
+    "expected": 3203347268,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_024",
+    "got": 3203347268,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRH low zero extends",
+    "expected": 13124,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_025",
+    "got": 13124,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRH high zero extends",
+    "expected": 4386,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_026",
+    "got": 4386,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 0 negative",
+    "expected": 4294967295,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_027",
+    "got": 4294967295,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 1 negative",
+    "expected": 4294967168,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_028",
+    "got": 4294967168,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 2 positive",
+    "expected": 1,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_029",
+    "got": 1,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 3 positive",
+    "expected": 127,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_030",
+    "got": 127,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH low negative",
+    "expected": 4294934529,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_031",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH high positive",
+    "expected": 32767,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_032",
+    "got": 32767,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH high negative",
+    "expected": 4294934529,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_033",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldr r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_034",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrb r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_035",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrh r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_036",
+    "got": 0,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "NZCV preserved: ldrsb r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_037",
+    "got": 0,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "NZCV preserved: ldrsh r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_038",
+    "got": 0,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "NZCV preserved: strh r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_039",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_040",
+    "got": 0,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "NZCV preserved: stmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_041",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 0",
+    "expected": 287454020,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_042",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 1",
+    "expected": 1141973555,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_043",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "word LDR alignment offset 2",
+    "expected": 860098850,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_044",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "word LDR alignment offset 3",
+    "expected": 573785105,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_045",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "ldm_pc_then_stm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_046",
+    "status": "TIMEOUT",
+    "timeout_seconds": 30
+  },
+  {
+    "name": "ldm_pc_then_ldr",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_047",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_no_pc_then_stm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_048",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldr_pc_then_stm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_049",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_pc_then_ldm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_050",
+    "status": "TIMEOUT",
+    "timeout_seconds": 30
+  },
+  {
+    "name": "two stack-return calls",
+    "expected": 2,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_051",
+    "status": "TIMEOUT",
+    "timeout_seconds": 30
+  },
+  {
+    "name": "two MOV-PC return calls control",
+    "expected": 2,
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/directed_052",
+    "got": 2,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "Unicorn dp program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_dp_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_dp_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_cond_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_cond_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_mem_0",
+    "tests": 8,
+    "status": "FAIL",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": [
+      "test0.flags(NZCV): expected 0000000a got 00000008",
+      "test1.flags(NZCV): expected 00000000 got 00000004",
+      "test2.flags(NZCV): expected 00000000 got 00000004",
+      "test3.flags(NZCV): expected 00000008 got 00000006",
+      "test4.flags(NZCV): expected 00000000 got 00000002",
+      "test6.flags(NZCV): expected 00000003 got 00000002",
+      "test7.flags(NZCV): expected 00000000 got 00000002"
+    ]
+  },
+  {
+    "name": "Unicorn mem program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_mem_1",
+    "tests": 8,
+    "status": "FAIL",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": [
+      "mem[0x1118]: expected 4ab15af9 got 4ab10bf9",
+      "mem[0x111c]: expected 43820b8e got 4382bf8e",
+      "test0.flags(NZCV): expected 00000008 got 00000004",
+      "test1.flags(NZCV): expected 00000000 got 00000002",
+      "test3.r7: expected b79a7890 got 00000002",
+      "test3.flags(NZCV): expected 00000000 got 00000002",
+      "test4.flags(NZCV): expected 00000008 got 0000000a",
+      "test5.flags(NZCV): expected 00000003 got 00000009",
+      "test6.r7: expected 0000babe got 0000ff00",
+      "test6.r8: expected 000000ff got 000000be",
+      "test6.flags(NZCV): expected 00000003 got 00000002",
+      "test7.flags(NZCV): expected 00000006 got 00000002"
+    ]
+  },
+  {
+    "name": "Unicorn block program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_block_0",
+    "tests": 8,
+    "status": "FAIL",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": [
+      "mem[0x1114]: expected 81c5957a got f33976fa",
+      "mem[0x1118]: expected 9050eaee got 81c5957a",
+      "mem[0x111c]: expected c43ed67f got 00000020",
+      "test0.flags(NZCV): expected 00000000 got 00000002",
+      "test1.flags(NZCV): expected 00000000 got 00000008",
+      "test3.flags(NZCV): expected 00000002 got 00000000",
+      "test4.flags(NZCV): expected 00000002 got 00000000",
+      "test5.flags(NZCV): expected 00000002 got 00000008",
+      "test7.r6: expected 00000000 got 0000001f",
+      "test7.flags(NZCV): expected 00000009 got 00000002"
+    ]
+  },
+  {
+    "name": "Unicorn block program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_block_1",
+    "tests": 8,
+    "status": "FAIL",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": [
+      "test3.flags(NZCV): expected 00000008 got 0000000a",
+      "test5.flags(NZCV): expected 00000002 got 0000000a",
+      "test6.flags(NZCV): expected 00000008 got 0000000a",
+      "test7.r2: expected 7fffffff got 00000020",
+      "test7.r4: expected 00000020 got 00000002",
+      "test7.r5: expected 00000002 got 00000100"
+    ]
+  },
+  {
+    "name": "Unicorn branch program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_branch_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_branch_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_pc_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_pc_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_mixed_0",
+    "tests": 8,
+    "status": "FAIL",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": [
+      "test0.flags(NZCV): expected 00000008 got 00000004",
+      "test1.flags(NZCV): expected 00000000 got 00000004"
+    ]
+  },
+  {
+    "name": "Unicorn mixed program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators_v2/diff_mixed_1",
+    "tests": 8,
+    "status": "FAIL",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": [
+      "mem[0x1110]: expected 00000063 got 7ffffffe",
+      "mem[0x1114]: expected 00000001 got 7fff0001",
+      "mem[0x1124]: expected c77387eb got 7fffffff",
+      "mem[0x1128]: expected 00000063 got 00000000",
+      "mem[0x112c]: expected 80000000 got 00000001",
+      "mem[0x1130]: expected 80000000 got 00000000",
+      "mem[0x1138]: expected 04140100 got 00000100",
+      "test1.flags(NZCV): expected 00000003 got 00000002",
+      "test3.r2: expected 4dec57e6 got 97d65174",
+      "test3.r6: expected 000002f4 got 0d305a55",
+      "test3.flags(NZCV): expected 00000006 got 0000000a",
+      "test4.r7: expected 7def385d got 00000000",
+      "test5.r1: expected 00000063 got 7ffffffe",
+      "test5.r14: expected 0000939c got 0d30939c",
+      "test5.flags(NZCV): expected 00000003 got 00000001",
+      "test6.r4: expected 00022a6c got 24b8a134",
+      "test6.r5: expected 00000001 got a4e3a713",
+      "test6.r6: expected 37e2d0b0 got 37e2d0af"
+    ]
+  }
+]

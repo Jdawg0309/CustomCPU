@@ -7,15 +7,65 @@ circuit is being rebuilt into.
 
 ---
 
+## 0. Current state (2026-11-02) — read this first; it supersedes §2–§13 where they disagree
+
+Sections 2–13 are history. Several facts in them are now wrong: the file
+names, the test counts, and §8 item 1 (the decoder *does* split on bits 7:4
+now — `is_hwxfer` and the MUL/MLA comparators exist).
+
+**The master is `arm_custom_subset.circ`.** The user hand-wires it. It is the
+circuit every result below was measured on. `armv4t.circ` / `armv4t_2.circ`
+are older masters, untouched since 2026-10-24.
+
+Measured on the master, on the real jar, 2026-10-31:
+
+```
+push 10/10   pop 7/7   stack_stress 8/8
+D3 table 8/8   (hang after pop {..,pc} -- pc_pending.en was tied to its own D)
+D1 flags 12/12 (ldrh/ldrsb/ldrsh no longer clobber NZCV)
+```
+
+Still open, in order:
+
+1. **Byte-enable RAM: simulator and VHDL disagree.** Logisim's simulator and
+   Logisim's own VHDL exporter number DATA_RAM's four byte-enable pins in
+   opposite orders. The master is right in the simulator and wrong in VHDL
+   (strb/strh/ldrb hit the wrong byte; strh leaves the other half undefined).
+   No wiring of byte enables can satisfy both. Fix: four 8-bit RAM banks,
+   `we_j = we AND lane_j` — `tools/build_ram_4bank.py`.
+2. **D2: unaligned `ldr` is not rotated** (6/11 on the master's D2 test). Fix:
+   one rotate-right Shifter on the word path, distance `{addr[1:0],000}`.
+3. **RAM is 256 words and wraps silently** (address bits 9:2 only), so a stack
+   overflow past 1 KB corrupts globals.
+4. MUL/MLA not integrated; SWP not implemented.
+5. **The tests halt on any `bx`** (the runner relabels `is_BX` as `halt`). C
+   compiled for ARMv4T returns with `bx lr`, so compile with `-march=armv4`
+   or add a dedicated halt condition.
+
+`build/memfix/arm_custom_subset_candidate.circ` is the master plus fixes 1
+and 2, built by script on a copy, for the user to compare against while
+wiring. It is not the master.
+
+**Two engines.** `tests/vhdl_run.py` exports `main` with Logisim's own VHDL
+generator, builds it with GHDL and runs a program, so the simulator can be
+checked against what an FPGA would run. A result is only trusted when both
+agree. The single-RAM vs. four-bank difference is handled automatically.
+
 ## 1. The rule
 
-**`armv4t.circ` is read-only. Never write to it.**
+**`arm_custom_subset.circ` is the user's hand-wired master. Never write to it.**
+The same holds for the older masters `armv4t.circ` and `armv4t_2.circ`.
 
-Read it for reference all you like. Do not patch it, do not run a script that
-opens it for writing, do not "just fix one wire." The same now applies to
-`armv4t_2.circ` — the user is hand-wiring that one and owns every wire in it.
+Read them for reference all you like. Do not patch them, do not run a script
+that opens them for writing, do not "just fix one wire." Build fixes on a copy
+under `build/` and give the user wiring steps.
 
-Your writable file is `debug_armv4t.circ`.
+As of 2026-11-02 `arm_custom_subset.circ` is **not yet in the guard's
+`PROTECTED` list** (§11) unless the user has since run
+`./install_protections.sh` with the staged update (check:
+`grep arm_custom_subset .claude/hooks/protect_files.py`). Until then nothing
+machine-enforces this rule for it; check `sha256sum` before and after any run
+that touches a copy.
 
 This isn't bureaucracy. The user wires this CPU by hand on purpose; that is the
 point of the project, and an agent silently editing the master destroys both
@@ -201,38 +251,25 @@ user has called this out directly.
 
 ---
 
-## 6b. The harness must read the circuit, never a copy of it
+## 6b. All behavioural testing runs on the real Logisim engine
 
-`tools/pysim.py` used to rebuild the top level from a hand-typed `WIRING`
-table. The table went stale silently and the failures it produced looked
-exactly like CPU bugs:
+There is no Python simulator of the CPU any more. `logisim/sim.py`,
+`tools/pysim.py` and every suite built on them (`main_suite`, `deep_matrix`,
+`edge_matrix`, `mem_suite`, `regression_py`, `isa_matrix_harness`,
+`check_harness`, `cross_check`) were deleted on 2026-10-25 at the user's
+request. A second model of the circuit can drift from the circuit, and its
+failures look exactly like CPU bugs -- the stale `WIRING` table that ran every
+block transfer with the write suppress disconnected is the standing example.
 
-| net the user wired | what the stale harness did |
-|---|---|
-| `MEM.bt_active -> WB.bt_active` | ran every block transfer with the write suppress **disconnected** — 15 corrupted registers per LDM/STM |
-| `ID.reg_shift -> EX.reg_shift` | variable shifts untested |
-| `ID.rs_value -> EX.rs_value` | same |
+Python still appears in two roles, neither of which simulates anything:
 
-`main` now exists, so `cpu()` elaborates it out of the file — stage instances,
-tunnels and all. Rewiring in Logisim changes what runs, immediately, with
-nothing to edit. `s.top_from_main` says which path was taken.
+- **driving the jar** -- the `tests/*` suites assemble a program, patch the
+  ROMs of a temp copy, run `logisim-evolution` headless, and read the RAM dump;
+- **reading the file** -- the `logisim/` toolkit (`show`, `nets`, `validate`,
+  `viewer`) for structure only.
 
-The same failure mode in the other direction: `smoke_suite.py` attached
-`KNOWN_GAPS["shift_reg"]` **unconditionally**, so it kept reporting
-"register-specified shift amount is not decoded" for weeks after the register
-shifts were wired and working. A note in `KNOWN_GAPS` now only prints on a case
-that actually fails.
-
-```bash
-python3 tools/check_harness.py     # is the harness testing the real file?
-python3 tools/main_suite.py        # discriminators through the real `main`
-```
-
-`check_harness.py` fails if `main` is wired and something still used the table,
-and lists any drift between the two. Run it before believing a failure.
-
-**A harness that keeps its own copy of the netlist cannot know its copy is
-wrong.** Derive the top level; never declare it.
+The deep-matrix case definitions live on in `tests/deep_cases.py`, run on the
+jar by `tools/pre_multiply_audit.py`.
 
 ## 7. Testing
 

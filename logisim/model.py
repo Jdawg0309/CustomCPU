@@ -167,9 +167,15 @@ def load(path: str) -> Design:
         c.attrs = {a.get("name"): a.get("val") for a in ce.findall("a")}
         for e in ce:
             if e.tag == "comp":
+                attrs = {a.get("name"): _aval(a) for a in e.findall("a")}
+                # Logisim 5.0 writes `type="output"`; 3.8.0 wrote
+                # `output="true"`. Normalize so every consumer sees one form --
+                # otherwise a 5.0-saved file has no outputs at all.
+                if e.get("name") == "Pin" and attrs.get("type") == "output":
+                    attrs["output"] = "true"
                 c.components.append(Component(
                     name=e.get("name"), lib=e.get("lib"), loc=_pt(e.get("loc")),
-                    attrs={a.get("name"): _aval(a) for a in e.findall("a")}))
+                    attrs=attrs))
             elif e.tag == "wire":
                 c.wires.append(Wire(_pt(e.get("from")), _pt(e.get("to"))))
         circuits[c.name] = c

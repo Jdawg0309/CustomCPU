@@ -1,0 +1,2858 @@
+[
+  {
+    "name": "imm LSL value=80000001 n=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "imm LSL value=80000001 n=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "imm LSL value=80000001 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2,
+      1
+    ],
+    "got": [
+      2,
+      1
+    ]
+  },
+  {
+    "name": "imm LSL value=80000001 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483648,
+      0
+    ],
+    "got": [
+      2147483648,
+      0
+    ]
+  },
+  {
+    "name": "imm LSL value=7ffffffe n=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "imm LSL value=7ffffffe n=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "imm LSL value=7ffffffe n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      0
+    ],
+    "got": [
+      4294967292,
+      0
+    ]
+  },
+  {
+    "name": "imm LSL value=7ffffffe n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "imm LSL value=12345678 n=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "imm LSL value=12345678 n=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "imm LSL value=12345678 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "imm LSL value=12345678 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm LSR value=80000001 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741824,
+      1
+    ],
+    "got": [
+      1073741824,
+      1
+    ]
+  },
+  {
+    "name": "imm LSR value=80000001 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0
+    ],
+    "got": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "imm LSR value=80000001 n=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "imm LSR value=7ffffffe n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "imm LSR value=7ffffffe n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "imm LSR value=7ffffffe n=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm LSR value=12345678 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "imm LSR value=12345678 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm LSR value=12345678 n=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm ASR value=80000001 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "imm ASR value=80000001 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      0
+    ],
+    "got": [
+      4294967295,
+      0
+    ]
+  },
+  {
+    "name": "imm ASR value=80000001 n=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      1
+    ],
+    "got": [
+      4294967295,
+      1
+    ]
+  },
+  {
+    "name": "imm ASR value=7ffffffe n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "imm ASR value=7ffffffe n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "imm ASR value=7ffffffe n=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm ASR value=12345678 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "imm ASR value=12345678 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm ASR value=12345678 n=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "imm ROR value=80000001 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "imm ROR value=80000001 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3,
+      0
+    ],
+    "got": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "imm ROR value=7ffffffe n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "imm ROR value=7ffffffe n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      1
+    ],
+    "got": [
+      4294967292,
+      1
+    ]
+  },
+  {
+    "name": "imm ROR value=12345678 n=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "imm ROR value=12345678 n=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "imm RRX value=80000001 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741824,
+      1
+    ],
+    "got": [
+      1073741824,
+      1
+    ]
+  },
+  {
+    "name": "imm RRX value=80000001 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "imm RRX value=7ffffffe C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "imm RRX value=7ffffffe C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225471,
+      0
+    ],
+    "got": [
+      3221225471,
+      0
+    ]
+  },
+  {
+    "name": "imm RRX value=12345678 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "imm RRX value=12345678 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2300193596,
+      0
+    ],
+    "got": [
+      2300193596,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2,
+      1
+    ],
+    "got": [
+      2,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483648,
+      0
+    ],
+    "got": [
+      2147483648,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=80000001 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2,
+      1
+    ],
+    "got": [
+      2,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      0
+    ],
+    "got": [
+      4294967292,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=7ffffffe Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      0
+    ],
+    "got": [
+      4294967292,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg LSL value=12345678 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741824,
+      1
+    ],
+    "got": [
+      1073741824,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0
+    ],
+    "got": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=80000001 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741824,
+      1
+    ],
+    "got": [
+      1073741824,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=7ffffffe Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg LSR value=12345678 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      0
+    ],
+    "got": [
+      4294967295,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      1
+    ],
+    "got": [
+      4294967295,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      1
+    ],
+    "got": [
+      4294967295,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      1
+    ],
+    "got": [
+      4294967295,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      1
+    ],
+    "got": [
+      4294967295,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967295,
+      1
+    ],
+    "got": [
+      4294967295,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=80000001 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      1
+    ],
+    "got": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=7ffffffe Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      0,
+      0
+    ],
+    "got": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg ASR value=12345678 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3,
+      0
+    ],
+    "got": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3,
+      0
+    ],
+    "got": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3,
+      0
+    ],
+    "got": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=80000001 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      1
+    ],
+    "got": [
+      4294967292,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      1
+    ],
+    "got": [
+      4294967292,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      4294967292,
+      1
+    ],
+    "got": [
+      4294967292,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      0
+    ],
+    "got": [
+      2147483646,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483646,
+      1
+    ],
+    "got": [
+      2147483646,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=7ffffffe Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1073741823,
+      0
+    ],
+    "got": [
+      1073741823,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=31 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=63 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=64 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      610839792,
+      0
+    ],
+    "got": [
+      610839792,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      0
+    ],
+    "got": [
+      305419896,
+      0
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      305419896,
+      1
+    ],
+    "got": [
+      305419896,
+      1
+    ]
+  },
+  {
+    "name": "reg ROR value=12345678 Rs=257 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      152709948,
+      0
+    ],
+    "got": [
+      152709948,
+      0
+    ]
+  },
+  {
+    "name": "ROR amount register r0=0 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "ROR amount register r0=0 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=1 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=1 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=32 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=32 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=33 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=33 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3221225472,
+      1
+    ],
+    "got": [
+      3221225472,
+      1
+    ]
+  },
+  {
+    "name": "ROR amount register r0=255 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3,
+      0
+    ],
+    "got": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "ROR amount register r0=255 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      3,
+      0
+    ],
+    "got": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "ROR amount register r0=256 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      0
+    ],
+    "got": [
+      2147483649,
+      0
+    ]
+  },
+  {
+    "name": "ROR amount register r0=256 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483649,
+      1
+    ],
+    "got": [
+      2147483649,
+      1
+    ]
+  },
+  {
+    "name": "immediate operand carry 80000000 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483648,
+      1
+    ],
+    "got": [
+      2147483648,
+      1
+    ]
+  },
+  {
+    "name": "immediate operand carry 00000100 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      256,
+      0
+    ],
+    "got": [
+      256,
+      0
+    ]
+  },
+  {
+    "name": "immediate operand carry 00000001 C=0",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      0
+    ],
+    "got": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "immediate operand carry 80000000 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      2147483648,
+      1
+    ],
+    "got": [
+      2147483648,
+      1
+    ]
+  },
+  {
+    "name": "immediate operand carry 00000100 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      256,
+      0
+    ],
+    "got": [
+      256,
+      0
+    ]
+  },
+  {
+    "name": "immediate operand carry 00000001 C=1",
+    "passed": true,
+    "halted": true,
+    "oscillated": false,
+    "expected": [
+      1,
+      1
+    ],
+    "got": [
+      1,
+      1
+    ]
+  }
+]

@@ -45,3 +45,8 @@ vivado*.log
 # audit ledger is tracked; the key never is
 !.audit/
 !.audit/*
+
+# ---- VHDL export + GHDL build cache (tests/vhdl_run.py regenerates it) ----
+/build/vhdl/
+/tb_main
+/e~tb_main.o

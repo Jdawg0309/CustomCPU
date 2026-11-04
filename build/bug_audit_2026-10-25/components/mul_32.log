@@ -1,0 +1,20 @@
+Loading test vector “build/bug_audit_2026-10-25/components/mul.txt”…
+Running 4 vectors…
+1 
+Error on test vector 1:
+  sum = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+  carry = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+2 
+Error on test vector 2:
+  sum = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+  carry = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+3 
+Error on test vector 3:
+  sum = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+  carry = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+4 
+Error on test vector 4:
+  sum = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+  carry = E (expected 0000 0000 0000 0000 0000 0000 0000 0000) oscillating
+
+Passed: 0, Failed: 4

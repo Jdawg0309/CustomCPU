@@ -1,0 +1,3 @@
+[main] ERROR com.cburch.logisim.gui.start.TtyInterface - halted due to halt pin
+Oct 24, 2026 11:22:30 AM java.util.prefs.FileSystemPreferences syncWorld
+WARNING: Couldn't flush user prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.

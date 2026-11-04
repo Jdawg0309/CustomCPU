@@ -1,0 +1,16 @@
+[
+  {
+    "circuit": "ks_32b",
+    "returncode": 0,
+    "passed": 4,
+    "failed": 1,
+    "success": false
+  },
+  {
+    "circuit": "mul_32",
+    "returncode": 0,
+    "passed": 0,
+    "failed": 4,
+    "success": false
+  }
+]

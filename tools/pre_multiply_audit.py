@@ -14,7 +14,7 @@ import push_suite as ps
 
 
 def deep_cases(extra=False):
-    source = (ROOT / 'tools/deep_matrix.py').read_text()
+    source = (ROOT / 'tests/deep_cases.py').read_text()
     tree = ast.parse(source)
     collected = []
     latest = []

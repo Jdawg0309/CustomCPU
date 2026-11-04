@@ -1,0 +1,471 @@
+[
+  {
+    "name": "offset: LDR word register offset",
+    "expected": 3405691582,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_000",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_000/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_000/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDR word shifted register offset",
+    "expected": 3405691582,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_001",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_001/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_001/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDRB register offset lane 3",
+    "expected": 129,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_002",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_002/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_002/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: STRB register offset preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_003",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_003/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_003/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDRH register offset high lane",
+    "expected": 33058,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_004",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_004/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_004/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: STRH register offset preserves neighbors",
+    "expected": 3203347268,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_005",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_005/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_005/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDRSB register offset sign extends",
+    "expected": 4294967168,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_006",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_006/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_006/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDRSH register offset sign extends",
+    "expected": 4294934529,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_007",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_007/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_007/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDRH subtract register offset",
+    "expected": 13124,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_008",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_008/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_008/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: LDRH register pre-index writeback",
+    "expected": 4352,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_009",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_009/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_009/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: STRH register post-index writeback",
+    "expected": 4354,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_010",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_010/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_010/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses memory",
+    "expected": 287454020,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_011",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_011/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_011/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_012",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_012/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_012/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: conditional-false LDRH preserves destination",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_013",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_013/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_013/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "offset: conditional-false LDRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_014",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_014/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_014/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: STRB lane 0 preserves neighbors",
+    "expected": 287454122,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_015",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_015/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_015/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: STRB lane 1 preserves neighbors",
+    "expected": 287484484,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_016",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_016/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_016/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: STRB lane 2 preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_017",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_017/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_017/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: STRB lane 3 preserves neighbors",
+    "expected": 2854368068,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_018",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_018/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_018/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRB lane 0 zero extends",
+    "expected": 68,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_019",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_019/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_019/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRB lane 1 zero extends",
+    "expected": 51,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_020",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_020/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_020/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRB lane 2 zero extends",
+    "expected": 34,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_021",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_021/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_021/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRB lane 3 zero extends",
+    "expected": 17,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_022",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_022/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_022/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: STRH low preserves high half",
+    "expected": 287489775,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_023",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_023/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_023/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: STRH high preserves low half",
+    "expected": 3203347268,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_024",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_024/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_024/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRH low zero extends",
+    "expected": 13124,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_025",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_025/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_025/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRH high zero extends",
+    "expected": 4386,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_026",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_026/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_026/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSB lane 0 negative",
+    "expected": 4294967295,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_027",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_027/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_027/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSB lane 1 negative",
+    "expected": 4294967168,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_028",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_028/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_028/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSB lane 2 positive",
+    "expected": 1,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_029",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_029/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_029/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSB lane 3 positive",
+    "expected": 127,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_030",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_030/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_030/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSH low negative",
+    "expected": 4294934529,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_031",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_031/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_031/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSH high positive",
+    "expected": 32767,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_032",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_032/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_032/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "lane: LDRSH high negative",
+    "expected": 4294934529,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_033",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_033/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_033/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: ldr r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_034",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_034/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_034/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: ldrb r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_035",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_035/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_035/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: ldrh r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_036",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_036/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_036/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: ldrsb r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_037",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_037/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_037/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: ldrsh r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_038",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_038/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_038/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: strh r2,[r10]",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_039",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_039/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_039/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: ldmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_040",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_040/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_040/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "NZCV preserved: stmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_041",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_041/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_041/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "word LDR alignment offset 0",
+    "expected": 287454020,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_042",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_042/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_042/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "word LDR alignment offset 1",
+    "expected": 1141973555,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_043",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_043/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_043/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "word LDR alignment offset 2",
+    "expected": 860098850,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_044",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_044/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_044/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "word LDR alignment offset 3",
+    "expected": 573785105,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_045",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_045/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_045/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "ldm_pc_then_stm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_046",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_046/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_046/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "ldm_pc_then_ldr",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_047",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_047/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_047/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "ldm_no_pc_then_stm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_048",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_048/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_048/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "ldr_pc_then_stm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_049",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_049/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_049/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "ldm_pc_then_ldm",
+    "expected": 90,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_050",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_050/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_050/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "two stack-return calls",
+    "expected": 2,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_051",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_051/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_051/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "two MOV-PC return calls control",
+    "expected": 2,
+    "directory": "build/bug_audit_2026-10-25/discriminators/directed_052",
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/directed_052/t.o', 'build/bug_audit_2026-10-25/discriminators/directed_052/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn dp program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_dp_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_dp_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_dp_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn dp program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_dp_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_dp_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_dp_1/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn cond program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_cond_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_cond_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_cond_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn cond program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_cond_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_cond_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_cond_1/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn mem program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_mem_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_mem_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_mem_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn mem program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_mem_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_mem_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_mem_1/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn block program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_block_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_block_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_block_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn block program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_block_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_block_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_block_1/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn branch program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_branch_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_branch_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_branch_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn branch program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_branch_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_branch_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_branch_1/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn pc program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_pc_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_pc_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_pc_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn pc program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_pc_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_pc_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_pc_1/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn mixed program 0",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_mixed_0",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_mixed_0/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_mixed_0/t.S']' returned non-zero exit status 1."
+  },
+  {
+    "name": "Unicorn mixed program 1",
+    "directory": "build/bug_audit_2026-10-25/discriminators/diff_mixed_1",
+    "tests": 8,
+    "status": "HARNESS_ERROR",
+    "error": "Command '['arm-none-eabi-as', '-march=armv4t', '-o', 'build/bug_audit_2026-10-25/discriminators/diff_mixed_1/t.o', 'build/bug_audit_2026-10-25/discriminators/diff_mixed_1/t.S']' returned non-zero exit status 1."
+  }
+]

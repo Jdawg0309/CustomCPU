@@ -1,0 +1,10 @@
+Loading test vector “build/bug_audit_2026-10-25/components/ks.txt”…
+Running 5 vectors…
+1 
+2 
+3 
+4 
+Error on test vector 4:
+  SUM30 = 0 (expected 1)
+5 
+Passed: 4, Failed: 1

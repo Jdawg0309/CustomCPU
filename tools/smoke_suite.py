@@ -15,13 +15,16 @@ import os, re, subprocess, sys, tempfile
 
 AS = "arm-none-eabi-as"
 OC = "arm-none-eabi-objcopy"
-JAR = "/snap/logisim-evolution/current/logisim-evolution/logisim-evolution.jar"
-ENGINE = "python"
+_JAR_CANDIDATES = (
+    os.environ.get("LOGISIM_JAR"),
+    "/home/junaet/Applications/logisim-evolution/logisim-evolution-5.0.0-all.jar",
+    "/snap/logisim-evolution/current/logisim-evolution/logisim-evolution.jar",
+)
+JAR = next((path for path in _JAR_CANDIDATES
+            if path and os.path.isfile(path)),
+           _JAR_CANDIDATES[-1])
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
-for a in sys.argv[1:]:
-    if a.startswith("--engine="):
-        ENGINE = a.split("=", 1)[1]
-CIRC = args[0] if args else ("armv4t_2.circ" if ENGINE == "python" else "smoke.circ")
+CIRC = args[0] if args else "smoke.circ"
 ONLY = args[1] if len(args) > 1 else None
 
 # --tty table prints one row per settled cycle: the output pins of `main`,
@@ -30,31 +33,9 @@ COLS = ["pc", "instr", "alu", "wa", "we", "cpsr", "pass", "btaken", "bltaken"]
 
 
 def run(asm, timeout=90):
-    """Execute one program and return (rows, timed_out, words).
-
-    Two engines, deliberately.  `python` flattens the live .circ and evaluates
-    it here -- fast, no copy, no jar.  `logisim` drives the real simulator on a
-    prepared copy.  Running both and comparing is the only way either one earns
-    trust; neither is checking the other by construction.
-    """
-    if ENGINE == "python":
-        return _run_python(asm)
+    """Execute one program on the real Logisim jar and return
+    (rows, timed_out, words)."""
     return _run_logisim(asm, timeout)
-
-
-_KEYMAP = {"pc": "pc_word_addr", "instr": "instruction", "alu": "alu_result",
-           "wa": "wa", "we": "alu_we", "cpsr": "cpsr", "pass": "cond_pass",
-           "btaken": "branch_taken", "bltaken": "bl_taken"}
-
-
-def _run_python(asm):
-    sys.path.insert(0, "/home/junaet/Documents/CustomCPU")
-    import importlib
-    P = importlib.import_module("tools.pysim")
-    raw, words, _ = P.run(asm, max_cycles=200, path=CIRC)
-    rows = [{k: r[v] for k, v in _KEYMAP.items()} for r in raw]
-    timed_out = not (rows and rows[-1] and raw[-1]["bx_taken"])
-    return rows, timed_out, ["%08x" % w for w in words]
 
 
 def _run_logisim(asm, timeout=90):
@@ -416,7 +397,7 @@ def main():
             print("[ PASS ] %-14s %s" % (name, note))
         for g in gaps:
             print("           ~ %s" % g)
-    print("\nengine=%s  circuit=%s" % (ENGINE, CIRC))
+    print("\ncircuit=%s" % CIRC)
     print("%d/%d correct for what IF+ID+EX own" % (total - fails, total))
     return 1 if fails else 0
 

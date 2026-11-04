@@ -23,6 +23,8 @@ R = ps.RAM_BASE + 0x200              # result area, 0x1200
 def w(byte_addr): return (byte_addr - ps.RAM_BASE) // 4
 
 TESTS = []
+# Every case ends in `bx lr`, which is also the halt.  lr must be even: an odd
+# target is a Thumb switch, which this ARM-only CPU does not take, so it never halts.
 def T(name, lines, expect, allow_extra=()):
     TESTS.append((name, lines, expect, set(allow_extra)))
 
@@ -66,11 +68,11 @@ T("preserves_others", [
 
 # --- function prologue/epilogue shape: callee-saved + LR -----------------
 T("lr_call_pattern", [
-    "    mov sp, #0x1100", "    mov r14, #153", "    mov r4, #68",
+    "    mov sp, #0x1100", "    mov r14, #152", "    mov r4, #68",
     "    push {r4,r14}", "    mov r4, #0", "    mov r14, #0",
     "    pop {r4,r14}", "    mov r11, #0x1200",
     "    str r4, [r11]", "    str r14, [r11, #4]", "    str r13, [r11, #8]"],
-  {w(R):0x44, w(R+4):0x99, w(R+8):STACK_TOP},
+  {w(R):0x44, w(R+4):0x98, w(R+8):STACK_TOP},
   allow_extra=[w(STACK_TOP-8), w(STACK_TOP-4)])
 
 # --- boundary values through the whole path -----------------------------
@@ -83,10 +85,10 @@ T("zero_and_all_ones", [
 
 # --- stack at the very top of RAM ---------------------------------------
 T("stack_at_ram_top", [
-    "    mov sp, #0x1400", "    mov r0, #119", "    mov r14, #187",
+    "    mov sp, #0x1400", "    mov r0, #119", "    mov r14, #186",
     "    push {r0,r14}", "    pop {r1,r2}", "    mov r11, #0x1200",
     "    str r1, [r11]", "    str r2, [r11, #4]", "    str r13, [r11, #8]"],
-  {w(R):0x77, w(R+4):0xBB, w(R+8):RAM_TOP},
+  {w(R):0x77, w(R+4):0xBA, w(R+8):RAM_TOP},
   allow_extra=[w(RAM_TOP-8), w(RAM_TOP-4)])
 
 # --- high registers only -------------------------------------------------

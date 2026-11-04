@@ -1,0 +1,19 @@
+[
+  {
+    "name": "reference infinite loop rejected",
+    "passed": true,
+    "message": "Unicorn exhausted its instruction budget before halt_here"
+  },
+  {
+    "name": "legitimate zero accepted",
+    "passed": true,
+    "halted": true,
+    "completed": true
+  },
+  {
+    "name": "early halt rejected",
+    "passed": true,
+    "halted": true,
+    "completed": false
+  }
+]

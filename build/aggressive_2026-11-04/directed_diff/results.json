@@ -1,0 +1,1372 @@
+[
+  {
+    "name": "offset: LDR word register offset",
+    "expected": 3405691582,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_000",
+    "got": 3405691582,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDR word shifted register offset",
+    "expected": 3405691582,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_001",
+    "got": 3405691582,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRB register offset lane 3",
+    "expected": 129,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_002",
+    "got": 129,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRB register offset preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_003",
+    "got": 296366916,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH register offset high lane",
+    "expected": 33058,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_004",
+    "got": 33058,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRH register offset preserves neighbors",
+    "expected": 3203347268,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_005",
+    "got": 3203347268,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRSB register offset sign extends",
+    "expected": 4294967168,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_006",
+    "got": 4294967168,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRSH register offset sign extends",
+    "expected": 4294934529,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_007",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH subtract register offset",
+    "expected": 13124,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_008",
+    "got": 13124,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH register pre-index writeback",
+    "expected": 4352,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_009",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRH register post-index writeback",
+    "expected": 4354,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_010",
+    "got": 4354,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses memory",
+    "expected": 287454020,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_011",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_012",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false LDRH preserves destination",
+    "expected": 90,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_013",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false LDRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_014",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 0 preserves neighbors",
+    "expected": 287454122,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_015",
+    "got": 287454122,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 1 preserves neighbors",
+    "expected": 287484484,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_016",
+    "got": 287484484,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 2 preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_017",
+    "got": 296366916,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 3 preserves neighbors",
+    "expected": 2854368068,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_018",
+    "got": 2854368068,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 0 zero extends",
+    "expected": 68,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_019",
+    "got": 68,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 1 zero extends",
+    "expected": 51,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_020",
+    "got": 51,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 2 zero extends",
+    "expected": 34,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_021",
+    "got": 34,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 3 zero extends",
+    "expected": 17,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_022",
+    "got": 17,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRH low preserves high half",
+    "expected": 287489775,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_023",
+    "got": 287489775,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRH high preserves low half",
+    "expected": 3203347268,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_024",
+    "got": 3203347268,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRH low zero extends",
+    "expected": 13124,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_025",
+    "got": 13124,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRH high zero extends",
+    "expected": 4386,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_026",
+    "got": 4386,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 0 negative",
+    "expected": 4294967295,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_027",
+    "got": 4294967295,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 1 negative",
+    "expected": 4294967168,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_028",
+    "got": 4294967168,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 2 positive",
+    "expected": 1,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_029",
+    "got": 1,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 3 positive",
+    "expected": 127,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_030",
+    "got": 127,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH low negative",
+    "expected": 4294934529,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_031",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH high positive",
+    "expected": 32767,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_032",
+    "got": 32767,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH high negative",
+    "expected": 4294934529,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_033",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldr r2,[r10]",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_034",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrb r2,[r10]",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_035",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrh r2,[r10]",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_036",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrsb r2,[r10]",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_037",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrsh r2,[r10]",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_038",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: strh r2,[r10]",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_039",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_040",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: stmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_041",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 0",
+    "expected": 287454020,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_042",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 1",
+    "expected": 1141973555,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_043",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "word LDR alignment offset 2",
+    "expected": 860098850,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_044",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "word LDR alignment offset 3",
+    "expected": 573785105,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_045",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "FAIL"
+  },
+  {
+    "name": "ldm_pc_then_stm",
+    "expected": 90,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_046",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_pc_then_ldr",
+    "expected": 90,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_047",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_no_pc_then_stm",
+    "expected": 90,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_048",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldr_pc_then_stm",
+    "expected": 90,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_049",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_pc_then_ldm",
+    "expected": 90,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_050",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "two stack-return calls",
+    "expected": 2,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_051",
+    "got": 2,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "two MOV-PC return calls control",
+    "expected": 2,
+    "directory": "build/aggressive_2026-11-04/directed_diff/directed_052",
+    "got": 2,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "Unicorn dp program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn dp program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_dp_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn cond program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_cond_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mem program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mem_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn block program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_block_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn branch program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_branch_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn pc program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_pc_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 0",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_0",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 1",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_1",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 2",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_2",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 3",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_3",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 4",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_4",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 5",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_5",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 6",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_6",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 7",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_7",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 8",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_8",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 9",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_9",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 10",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_10",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  },
+  {
+    "name": "Unicorn mixed program 11",
+    "directory": "build/aggressive_2026-11-04/directed_diff/diff_mixed_11",
+    "tests": 8,
+    "status": "PASS",
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "differences": []
+  }
+]

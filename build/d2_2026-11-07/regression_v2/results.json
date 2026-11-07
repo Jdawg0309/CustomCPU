@@ -1,0 +1,532 @@
+[
+  {
+    "name": "offset: LDR word register offset",
+    "expected": 3405691582,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_000",
+    "got": 3405691582,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDR word shifted register offset",
+    "expected": 3405691582,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_001",
+    "got": 3405691582,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRB register offset lane 3",
+    "expected": 129,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_002",
+    "got": 129,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRB register offset preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_003",
+    "got": 296366916,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH register offset high lane",
+    "expected": 33058,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_004",
+    "got": 33058,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRH register offset preserves neighbors",
+    "expected": 3203347268,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_005",
+    "got": 3203347268,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRSB register offset sign extends",
+    "expected": 4294967168,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_006",
+    "got": 4294967168,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRSH register offset sign extends",
+    "expected": 4294934529,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_007",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH subtract register offset",
+    "expected": 13124,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_008",
+    "got": 13124,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: LDRH register pre-index writeback",
+    "expected": 4352,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_009",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: STRH register post-index writeback",
+    "expected": 4354,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_010",
+    "got": 4354,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses memory",
+    "expected": 287454020,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_011",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false STRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_012",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false LDRH preserves destination",
+    "expected": 90,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_013",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "offset: conditional-false LDRH suppresses writeback",
+    "expected": 4352,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_014",
+    "got": 4352,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 0 preserves neighbors",
+    "expected": 287454122,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_015",
+    "got": 287454122,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 1 preserves neighbors",
+    "expected": 287484484,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_016",
+    "got": 287484484,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 2 preserves neighbors",
+    "expected": 296366916,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_017",
+    "got": 296366916,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRB lane 3 preserves neighbors",
+    "expected": 2854368068,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_018",
+    "got": 2854368068,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 0 zero extends",
+    "expected": 68,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_019",
+    "got": 68,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 1 zero extends",
+    "expected": 51,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_020",
+    "got": 51,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 2 zero extends",
+    "expected": 34,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_021",
+    "got": 34,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRB lane 3 zero extends",
+    "expected": 17,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_022",
+    "got": 17,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRH low preserves high half",
+    "expected": 287489775,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_023",
+    "got": 287489775,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: STRH high preserves low half",
+    "expected": 3203347268,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_024",
+    "got": 3203347268,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRH low zero extends",
+    "expected": 13124,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_025",
+    "got": 13124,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRH high zero extends",
+    "expected": 4386,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_026",
+    "got": 4386,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 0 negative",
+    "expected": 4294967295,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_027",
+    "got": 4294967295,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 1 negative",
+    "expected": 4294967168,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_028",
+    "got": 4294967168,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 2 positive",
+    "expected": 1,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_029",
+    "got": 1,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSB lane 3 positive",
+    "expected": 127,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_030",
+    "got": 127,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH low negative",
+    "expected": 4294934529,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_031",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH high positive",
+    "expected": 32767,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_032",
+    "got": 32767,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "lane: LDRSH high negative",
+    "expected": 4294934529,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_033",
+    "got": 4294934529,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldr r2,[r10]",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_034",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrb r2,[r10]",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_035",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrh r2,[r10]",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_036",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrsb r2,[r10]",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_037",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldrsh r2,[r10]",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_038",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: strh r2,[r10]",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_039",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: ldmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_040",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "NZCV preserved: stmia r10,{r2}",
+    "expected": 8,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_041",
+    "got": 8,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 0",
+    "expected": 287454020,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_042",
+    "got": 287454020,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 1",
+    "expected": 1141973555,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_043",
+    "got": 1141973555,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 2",
+    "expected": 860098850,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_044",
+    "got": 860098850,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "word LDR alignment offset 3",
+    "expected": 573785105,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_045",
+    "got": 573785105,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_pc_then_stm",
+    "expected": 90,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_046",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_pc_then_ldr",
+    "expected": 90,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_047",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_no_pc_then_stm",
+    "expected": 90,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_048",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldr_pc_then_stm",
+    "expected": 90,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_049",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "ldm_pc_then_ldm",
+    "expected": 90,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_050",
+    "got": 90,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "two stack-return calls",
+    "expected": 2,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_051",
+    "got": 2,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  },
+  {
+    "name": "two MOV-PC return calls control",
+    "expected": 2,
+    "directory": "build/d2_2026-11-07/regression_v2/directed_052",
+    "got": 2,
+    "halted": true,
+    "oscillated": false,
+    "completed": true,
+    "status": "PASS"
+  }
+]

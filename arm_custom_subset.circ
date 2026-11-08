@@ -11153,7 +11153,6 @@
     <comp lib="0" loc="(1130,4110)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="is_hwxfer"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(1160,3730)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -13340,6 +13339,11 @@
       <a name="facing" val="north"/>
       <a name="label" val="IS_HWXFER"/>
     </comp>
+    <comp lib="0" loc="(3070,2100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B1_HI"/>
+      <a name="width" val="16"/>
+    </comp>
     <comp lib="0" loc="(3090,1860)" name="Splitter">
       <a name="appear" val="right"/>
       <a name="bit0" val="3"/>
@@ -13437,6 +13441,11 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="32"/>
       <a name="spacing" val="4"/>
+    </comp>
+    <comp lib="0" loc="(3420,2080)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B1_LO"/>
+      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(3470,1580)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -13593,6 +13602,55 @@
       <a name="facing" val="east"/>
       <a name="label" val="D2_AMT"/>
       <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(4100,2640)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="0"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="1"/>
+      <a name="bit17" val="1"/>
+      <a name="bit18" val="1"/>
+      <a name="bit19" val="1"/>
+      <a name="bit2" val="0"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="1"/>
+      <a name="bit22" val="1"/>
+      <a name="bit23" val="1"/>
+      <a name="bit24" val="1"/>
+      <a name="bit25" val="1"/>
+      <a name="bit26" val="1"/>
+      <a name="bit27" val="1"/>
+      <a name="bit28" val="1"/>
+      <a name="bit29" val="1"/>
+      <a name="bit3" val="0"/>
+      <a name="bit30" val="1"/>
+      <a name="bit31" val="1"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="0"/>
+      <a name="incoming" val="32"/>
+      <a name="spacing" val="4"/>
+    </comp>
+    <comp lib="0" loc="(4100,2640)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="D2_WORD"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(4120,2650)" name="Tunnel">
+      <a name="label" val="B1_LO"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(4120,2690)" name="Tunnel">
+      <a name="label" val="B1_HI"/>
+      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(4140,2080)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -14107,15 +14165,11 @@
     <wire from="(2760,1210)" to="(2880,1210)"/>
     <wire from="(2760,1480)" to="(2860,1480)"/>
     <wire from="(2770,1930)" to="(2790,1930)"/>
-    <wire from="(2770,1970)" to="(2770,2100)"/>
-    <wire from="(2770,2100)" to="(2770,2110)"/>
-    <wire from="(2770,2100)" to="(3440,2100)"/>
+    <wire from="(2770,1970)" to="(2770,2110)"/>
     <wire from="(2770,2110)" to="(2870,2110)"/>
     <wire from="(2780,2490)" to="(2780,3100)"/>
     <wire from="(2780,2490)" to="(3730,2490)"/>
-    <wire from="(2790,1930)" to="(2790,2080)"/>
-    <wire from="(2790,2080)" to="(2790,2190)"/>
-    <wire from="(2790,2080)" to="(3440,2080)"/>
+    <wire from="(2790,1930)" to="(2790,2190)"/>
     <wire from="(2790,2190)" to="(2870,2190)"/>
     <wire from="(280,2530)" to="(1150,2530)"/>
     <wire from="(280,2530)" to="(280,2590)"/>
@@ -14177,6 +14231,7 @@
     <wire from="(3070,1720)" to="(3070,1930)"/>
     <wire from="(3070,1720)" to="(3880,1720)"/>
     <wire from="(3070,1930)" to="(3110,1930)"/>
+    <wire from="(3070,2100)" to="(3440,2100)"/>
     <wire from="(3090,1490)" to="(3090,1860)"/>
     <wire from="(3090,1490)" to="(3340,1490)"/>
     <wire from="(3100,1800)" to="(3100,1810)"/>
@@ -14209,6 +14264,7 @@
     <wire from="(3380,2000)" to="(3450,2000)"/>
     <wire from="(3410,1920)" to="(3410,1930)"/>
     <wire from="(3410,1920)" to="(4140,1920)"/>
+    <wire from="(3420,2080)" to="(3440,2080)"/>
     <wire from="(3420,420)" to="(3420,1310)"/>
     <wire from="(3440,1320)" to="(3490,1320)"/>
     <wire from="(3450,1980)" to="(3450,2000)"/>

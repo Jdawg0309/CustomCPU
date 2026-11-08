@@ -9,6 +9,16 @@ circuit is being rebuilt into.
 
 ## 0. Current state (2026-11-02) — read this first; it supersedes §2–§13 where they disagree
 
+**Newer checkpoint:** see `docs/ARM_STATE_BASELINE_2026-11-07.md` for the
+post-D2 baseline and its completion status. D2 is now manually wired and
+verified in the master (SHA-256 starts `0cff847845b6`). The remaining confirmed
+implemented-path defects are ROM halfword loads (B1) and special memory-address
+shifts (B2). ARM-to-ARM BX has passed tests with a terminal-PC halt observer.
+Multiply is unfinished work, not a regression in completed functionality.
+For this baseline, direct Logisim is the primary CPU test; freshly exported
+VHDL is a separate export/testbench cross-check. The older open-item list below
+must be read with these updates.
+
 Sections 2–13 are history. Several facts in them are now wrong: the file
 names, the test counts, and §8 item 1 (the decoder *does* split on bits 7:4
 now — `is_hwxfer` and the MUL/MLA comparators exist).

@@ -50,3 +50,6 @@ vivado*.log
 /build/vhdl/
 /tb_main
 /e~tb_main.o
+
+# Retained as one evidence archive under docs/verification/.
+/build/baseline_arm_state_2026-11-07/

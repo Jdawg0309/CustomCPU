@@ -143,6 +143,15 @@ def main():
                 cases.append((f'immediate operand carry {immediate:08x} C={carry}',
                               suite.make_program(0, carry, f'movs r0,#0x{immediate:x}'),
                               (immediate, expected_carry), suite.RESULT))
+        # A zero result and zero carry must not pass if execution never reaches
+        # the stores. r11 is the result pointer in make_program().
+        marked = []
+        for name, asm, expected, address in cases:
+            assert asm.count('    bx lr') == 1
+            asm = asm.replace('    bx lr',
+                              '    mov r10,#0x5a\n    str r10,[r11,#8]\n    bx lr')
+            marked.append((name, asm, tuple(expected) + (0x5a,), address))
+        cases = marked
     cases = [case for case in cases if args.match in case[0]]
     if args.limit:
         cases = cases[:args.limit]

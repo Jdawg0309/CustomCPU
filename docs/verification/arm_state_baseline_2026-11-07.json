@@ -1,0 +1,1261 @@
+{
+  "source_sha256": "0cff847845b6d324276c266dbff70c3b2d833c647a4be7b92bc2ff3e9236eea1",
+  "source_commit": "95dd0a6bdd4ef4b84bef73c70139dcda243ee270",
+  "suites": {
+    "deep": {
+      "passed": 243,
+      "total": 244,
+      "failures": [
+        {
+          "name": "swp word",
+          "passed": false,
+          "halted": true,
+          "oscillated": false,
+          "expected": [
+            170,
+            90
+          ],
+          "got": [
+            0,
+            90
+          ]
+        }
+      ]
+    },
+    "shifter": {
+      "passed": 204,
+      "total": 204,
+      "failures": []
+    },
+    "extra": {
+      "passed": 34,
+      "total": 34,
+      "failures": []
+    },
+    "directed": {
+      "passed": 53,
+      "total": 53,
+      "generated_test_blocks": 0,
+      "failures": []
+    },
+    "differential": {
+      "passed": 84,
+      "total": 84,
+      "generated_test_blocks": 672,
+      "failures": []
+    },
+    "chaos": {
+      "passed": 16,
+      "total": 16,
+      "generated_test_blocks": 128,
+      "failures": []
+    },
+    "condition_checker": {
+      "passed": 240,
+      "total": 240,
+      "category": "implemented"
+    },
+    "ks_32b": {
+      "passed": 548,
+      "total": 549,
+      "category": "unfinished_multiply"
+    },
+    "mul_32": {
+      "passed": 0,
+      "total": 4,
+      "category": "unfinished_multiply"
+    }
+  },
+  "implemented_supplemental": [
+    {
+      "name": "observer control MOV-PC return",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/000",
+      "terminal_observer": true,
+      "expected": [
+        7
+      ],
+      "got": [
+        7
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "BX two ARM returns",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/001",
+      "terminal_observer": true,
+      "expected": [
+        14
+      ],
+      "got": [
+        14
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "BX register redirect",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/002",
+      "terminal_observer": true,
+      "expected": [
+        37
+      ],
+      "got": [
+        37
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "BX failed condition falls through",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/003",
+      "terminal_observer": true,
+      "expected": [
+        38
+      ],
+      "got": [
+        38
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "BX taken condition redirects",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/004",
+      "terminal_observer": true,
+      "expected": [
+        39
+      ],
+      "got": [
+        39
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDR offset 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/034",
+      "terminal_observer": false,
+      "expected": [
+        2164167039
+      ],
+      "got": [
+        2164167039
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRB offset 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/035",
+      "terminal_observer": false,
+      "expected": [
+        127
+      ],
+      "got": [
+        127
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRB offset 1",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/036",
+      "terminal_observer": false,
+      "expected": [
+        145
+      ],
+      "got": [
+        145
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRB offset 2",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/037",
+      "terminal_observer": false,
+      "expected": [
+        254
+      ],
+      "got": [
+        254
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRB offset 3",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/038",
+      "terminal_observer": false,
+      "expected": [
+        128
+      ],
+      "got": [
+        128
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRH offset 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/039",
+      "terminal_observer": false,
+      "expected": [
+        37247
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "ROM LDRH offset 2",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/040",
+      "terminal_observer": false,
+      "expected": [
+        33022
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "ROM LDRSB offset 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/041",
+      "terminal_observer": false,
+      "expected": [
+        127
+      ],
+      "got": [
+        127
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRSB offset 1",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/042",
+      "terminal_observer": false,
+      "expected": [
+        4294967185
+      ],
+      "got": [
+        4294967185
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRSB offset 2",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/043",
+      "terminal_observer": false,
+      "expected": [
+        4294967294
+      ],
+      "got": [
+        4294967294
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRSB offset 3",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/044",
+      "terminal_observer": false,
+      "expected": [
+        4294967168
+      ],
+      "got": [
+        4294967168
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROM LDRSH offset 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/045",
+      "terminal_observer": false,
+      "expected": [
+        4294939007
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "ROM LDRSH offset 2",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/046",
+      "terminal_observer": false,
+      "expected": [
+        4294934782
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address shift LDRB lsr #32 Rm=4",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/051",
+      "terminal_observer": false,
+      "expected": [
+        136
+      ],
+      "got": [
+        204
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address shift STRB lsr #32 Rm=4",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/052",
+      "terminal_observer": false,
+      "expected": [
+        238
+      ],
+      "got": [
+        136
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address shift LDRB asr #32 Rm=4",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/053",
+      "terminal_observer": false,
+      "expected": [
+        136
+      ],
+      "got": [
+        204
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address shift STRB asr #32 Rm=4",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/054",
+      "terminal_observer": false,
+      "expected": [
+        238
+      ],
+      "got": [
+        136
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address shift LDRB asr #32 Rm=ffffffff",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/055",
+      "terminal_observer": false,
+      "expected": [
+        17
+      ],
+      "got": [
+        17
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "address shift STRB asr #32 Rm=ffffffff",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/056",
+      "terminal_observer": false,
+      "expected": [
+        238
+      ],
+      "got": [
+        238
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "address shift LDRB rrx Rm=8",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/057",
+      "terminal_observer": false,
+      "expected": [
+        204
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address shift STRB rrx Rm=8",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/058",
+      "terminal_observer": false,
+      "expected": [
+        238
+      ],
+      "got": [
+        204
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "address RRX carry=1 subtraction",
+      "directory": "build/baseline_arm_state_2026-11-07/address_final/059",
+      "terminal_observer": false,
+      "expected": [
+        102
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "boundary LDM base in list without writeback",
+      "directory": "build/baseline_arm_state_2026-11-07/boundary/002",
+      "terminal_observer": false,
+      "expected": [
+        23,
+        47
+      ],
+      "got": [
+        23,
+        47
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "boundary STM base first with writeback",
+      "directory": "build/baseline_arm_state_2026-11-07/boundary/003",
+      "terminal_observer": false,
+      "expected": [
+        4352,
+        4360,
+        47
+      ],
+      "got": [
+        4352,
+        4360,
+        47
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "confirm ROM halfword source",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm/058",
+      "terminal_observer": false,
+      "expected": [
+        37247,
+        4294934782,
+        2164167039
+      ],
+      "got": [
+        22136,
+        4660,
+        2164167039
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "confirm address LDR lsr #32",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm/059",
+      "terminal_observer": false,
+      "expected": [
+        287454020
+      ],
+      "got": [
+        1432778632
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "confirm address STR lsr #32",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm/060",
+      "terminal_observer": false,
+      "expected": [
+        2864434397
+      ],
+      "got": [
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "confirm address LDR asr #32",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm/061",
+      "terminal_observer": false,
+      "expected": [
+        287454020
+      ],
+      "got": [
+        1432778632
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "confirm address STR asr #32",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm/062",
+      "terminal_observer": false,
+      "expected": [
+        2864434397
+      ],
+      "got": [
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "confirm address LDR rrx",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm_retry/063",
+      "terminal_observer": false,
+      "expected": [
+        1432778632
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "confirm address STR rrx",
+      "directory": "build/baseline_arm_state_2026-11-07/confirm/064",
+      "terminal_observer": false,
+      "expected": [
+        2864434397
+      ],
+      "got": [
+        1432778632
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    }
+  ],
+  "unfinished_feature_probes": [
+    {
+      "name": "MUL result",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/005",
+      "terminal_observer": false,
+      "expected": [
+        4294967294
+      ],
+      "got": [
+        4
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MLA result",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/006",
+      "terminal_observer": false,
+      "expected": [
+        1
+      ],
+      "got": [
+        4294967289
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "UMULL result",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/007",
+      "terminal_observer": false,
+      "expected": [
+        4294967294,
+        1
+      ],
+      "got": [
+        3,
+        7
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "UMLAL result",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/008",
+      "terminal_observer": false,
+      "expected": [
+        3,
+        9
+      ],
+      "got": [
+        3,
+        7
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SMULL result",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/009",
+      "terminal_observer": false,
+      "expected": [
+        4294967294,
+        4294967295
+      ],
+      "got": [
+        10,
+        7
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SMLAL result",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/010",
+      "terminal_observer": false,
+      "expected": [
+        3,
+        7
+      ],
+      "got": [
+        4294967284,
+        7
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MULS NZ zero=False",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/011",
+      "terminal_observer": false,
+      "expected": [
+        2
+      ],
+      "got": [
+        1
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MULS NZ zero=True",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/012",
+      "terminal_observer": false,
+      "expected": [
+        1
+      ],
+      "got": [
+        1
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "UMULLS NZ zero=False",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/013",
+      "terminal_observer": false,
+      "expected": [
+        0
+      ],
+      "got": [
+        2
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "UMULLS NZ zero=True",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/014",
+      "terminal_observer": false,
+      "expected": [
+        1
+      ],
+      "got": [
+        1
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "SMULLS NZ zero=False",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/015",
+      "terminal_observer": false,
+      "expected": [
+        2
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SMULLS NZ zero=True",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/016",
+      "terminal_observer": false,
+      "expected": [
+        1
+      ],
+      "got": [
+        2
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MUL failed condition preserves destination",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/017",
+      "terminal_observer": false,
+      "expected": [
+        23
+      ],
+      "got": [
+        23
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "SWP lane 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/018",
+      "terminal_observer": false,
+      "expected": [
+        287454020,
+        2864434397
+      ],
+      "got": [
+        0,
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SWPB lane 0",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/019",
+      "terminal_observer": false,
+      "expected": [
+        68,
+        287454173
+      ],
+      "got": [
+        0,
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SWPB lane 1",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/020",
+      "terminal_observer": false,
+      "expected": [
+        51,
+        287497540
+      ],
+      "got": [
+        0,
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SWPB lane 2",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/021",
+      "terminal_observer": false,
+      "expected": [
+        34,
+        299709252
+      ],
+      "got": [
+        0,
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "SWPB lane 3",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/022",
+      "terminal_observer": false,
+      "expected": [
+        17,
+        3710006084
+      ],
+      "got": [
+        0,
+        287454020
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MRS reads known NZCV",
+      "directory": "build/baseline_arm_state_2026-11-07/gaps/023",
+      "terminal_observer": false,
+      "expected": [
+        8
+      ],
+      "got": [
+        0
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags immediate 0",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/028",
+      "terminal_observer": false,
+      "expected": [
+        0
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags immediate 2",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/029",
+      "terminal_observer": false,
+      "expected": [
+        2
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags immediate 4",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/030",
+      "terminal_observer": false,
+      "expected": [
+        4
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags immediate 8",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/031",
+      "terminal_observer": false,
+      "expected": [
+        8
+      ],
+      "got": [
+        6
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags immediate f",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/032",
+      "terminal_observer": false,
+      "expected": [
+        15
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags register 0",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/033",
+      "terminal_observer": false,
+      "expected": [
+        0
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags register 2",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/034",
+      "terminal_observer": false,
+      "expected": [
+        2
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags register 4",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/035",
+      "terminal_observer": false,
+      "expected": [
+        4
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags register 8",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/036",
+      "terminal_observer": false,
+      "expected": [
+        8
+      ],
+      "got": [
+        6
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "MSR flags register f",
+      "directory": "build/baseline_arm_state_2026-11-07/msr_discriminator/037",
+      "terminal_observer": false,
+      "expected": [
+        15
+      ],
+      "got": [
+        8
+      ],
+      "halted": true,
+      "oscillated": false,
+      "completed": true,
+      "status": "FAIL"
+    }
+  ],
+  "known_implemented_failure_families": {
+    "B1": "ROM halfword loads use raw RAM data",
+    "B2": "Memory-address special shifts LSR/ASR #32 and RRX"
+  },
+  "secondary_vhdl": {
+    "memory": {
+      "status": "OK",
+      "expected": [
+        "11223344",
+        "1122aa44",
+        "80feaa44",
+        "0000aa44",
+        "ffff80fe",
+        "ffffffaa",
+        "0000005a"
+      ],
+      "got": [
+        "11223344",
+        "11aa3344",
+        "11aaXXXX",
+        "0000XXXX",
+        "000011aa",
+        "XXXXXXXX",
+        "0000005a"
+      ],
+      "ram": {
+        "64": "11aaXXXX",
+        "128": "11223344",
+        "129": "11aa3344",
+        "130": "11aaXXXX",
+        "131": "0000XXXX",
+        "132": "000011aa",
+        "133": "XXXXXXXX",
+        "134": "0000005a"
+      },
+      "registers": {
+        "cpsr": 0,
+        "pc": 88,
+        "R0": 90,
+        "R1": 4352,
+        "R2": 33022,
+        "R3": 0,
+        "R4": 0,
+        "R5": 0,
+        "R6": 0,
+        "R7": 0,
+        "R8": 0,
+        "R9": 0,
+        "R10": 0,
+        "R11": 0,
+        "R12": 4608,
+        "R13": 0,
+        "R14": 0,
+        "R15": 0,
+        "cycles": 23
+      },
+      "passed": false
+    },
+    "memory_logisim_control": {
+      "halted": true,
+      "oscillated": false,
+      "expected": [
+        "11223344",
+        "1122aa44",
+        "80feaa44",
+        "0000aa44",
+        "ffff80fe",
+        "ffffffaa",
+        "0000005a"
+      ],
+      "got": [
+        "11223344",
+        "1122aa44",
+        "80feaa44",
+        "0000aa44",
+        "ffff80fe",
+        "ffffffaa",
+        "0000005a"
+      ],
+      "passed": true
+    },
+    "d2": {
+      "status": "OK",
+      "expected": [
+        "11223344",
+        "44112233",
+        "33441122",
+        "22334411",
+        "80000001",
+        "01800000",
+        "00018000",
+        "00000180",
+        "ff00aa55",
+        "55ff00aa",
+        "aa55ff00",
+        "00aa55ff",
+        "01020304",
+        "04010203",
+        "03040102",
+        "02030401",
+        "00000000",
+        "00000000",
+        "00000000",
+        "00000000",
+        "ffffffff",
+        "ffffffff",
+        "ffffffff",
+        "ffffffff",
+        "a1b2c3d4",
+        "d4a1b2c3",
+        "c3d4a1b2",
+        "b2c3d4a1",
+        "44112233",
+        "00001101",
+        "44112233",
+        "00001103",
+        "0000005a"
+      ],
+      "got": [
+        "11223344",
+        "44112233",
+        "33441122",
+        "22334411",
+        "80000001",
+        "01800000",
+        "00018000",
+        "00000180",
+        "ff00aa55",
+        "55ff00aa",
+        "aa55ff00",
+        "00aa55ff",
+        "01020304",
+        "04010203",
+        "03040102",
+        "02030401",
+        "00000000",
+        "00000000",
+        "00000000",
+        "00000000",
+        "ffffffff",
+        "ffffffff",
+        "ffffffff",
+        "ffffffff",
+        "a1b2c3d4",
+        "d4a1b2c3",
+        "c3d4a1b2",
+        "b2c3d4a1",
+        "44112233",
+        "00001101",
+        "44112233",
+        "00001103",
+        "0000005a"
+      ],
+      "passed": true,
+      "registers": {
+        "cpsr": 0,
+        "pc": 328,
+        "R0": 90,
+        "R1": 4355,
+        "R2": 287454020,
+        "R3": 0,
+        "R4": 0,
+        "R5": 0,
+        "R6": 0,
+        "R7": 0,
+        "R8": 0,
+        "R9": 0,
+        "R10": 0,
+        "R11": 0,
+        "R12": 4608,
+        "R13": 0,
+        "R14": 0,
+        "R15": 0,
+        "cycles": 83
+      }
+    }
+  },
+  "exclusions": [
+    "Thumb and state switching",
+    "privileged modes, SPSR and exceptions",
+    "coprocessors and undefined instruction handling",
+    "unpredictable operand combinations",
+    "physical FPGA timing and hardware behavior",
+    "large memory maps"
+  ]
+}
